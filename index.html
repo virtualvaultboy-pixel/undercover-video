@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0d0d12">
+  <title>Undercover Vidéo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ÉCRAN 1 : Accueil / Setup -->
+  <section id="screen-setup" class="screen active">
+    <h1>🎬 Undercover Vidéo</h1>
+    <p class="subtitle">L'app distribue les rôles. À vous de jouer.</p>
+
+    <label class="field">
+      Nombre de joueurs
+      <div class="counter">
+        <button id="players-minus" type="button">−</button>
+        <span id="players-count">4</span>
+        <button id="players-plus" type="button">+</button>
+      </div>
+    </label>
+
+    <label class="field">
+      Catégorie
+      <select id="category-select"></select>
+    </label>
+
+    <button id="btn-start" class="primary">Suivant</button>
+  </section>
+
+  <!-- ÉCRAN 1.5 : Saisie des noms -->
+  <section id="screen-names" class="screen">
+    <h2>👥 Noms des joueurs</h2>
+    <p class="subtitle">Laisse vide pour garder le nom par défaut.</p>
+    <div id="names-list" class="names-list"></div>
+    <button id="btn-names-confirm" class="primary">Lancer la partie</button>
+    <button id="btn-names-back" class="secondary">Retour</button>
+  </section>
+
+  <!-- ÉCRAN 2 : Transition (passe le téléphone) -->
+  <section id="screen-transition" class="screen">
+    <h2>📱 Passe le téléphone à</h2>
+    <p class="big-player" id="transition-player">Joueur 1</p>
+    <button id="btn-ready" class="primary">Je suis prêt à voir ma vidéo</button>
+  </section>
+
+  <!-- ÉCRAN 3 : Vidéo -->
+  <section id="screen-video" class="screen">
+    <div id="video-container"></div>
+    <button id="btn-hide" class="primary">✅ J'ai vu, cacher</button>
+  </section>
+
+  <!-- ÉCRAN 4 : Fin de distribution / Tour de parole -->
+  <section id="screen-play" class="screen">
+    <h2>🎤 À vous de jouer !</h2>
+    <p class="subtitle">Décrivez votre vidéo à tour de rôle.<br>Trouvez l'undercover.</p>
+    <p class="order">Ordre de parole :</p>
+    <p id="speaking-order" class="big-text"></p>
+    <button id="btn-go-vote" class="primary">Passer au vote</button>
+    <button id="btn-restart-play" class="secondary">Abandonner la partie</button>
+  </section>
+
+  <!-- ÉCRAN 5 : Vote -->
+  <section id="screen-vote" class="screen">
+    <h2>🗳️ Qui est l'undercover ?</h2>
+    <p class="subtitle">Touchez le nom du joueur que vous voulez démasquer.</p>
+    <div id="vote-grid" class="vote-grid"></div>
+  </section>
+
+  <!-- ÉCRAN 6 : Victoire civils (bon vote) -->
+  <section id="screen-victory" class="screen victory">
+    <h2>🎉 Civils victorieux !</h2>
+    <p class="big-player" id="victory-name">?</p>
+    <p class="subtitle">était bien l'undercover.</p>
+    <div class="compare-zone" id="victory-compare"></div>
+    <button id="btn-restart" class="primary">Nouvelle partie</button>
+  </section>
+
+  <!-- ÉCRAN 7 : Raté (mauvais vote, partie continue) -->
+  <section id="screen-miss" class="screen miss">
+    <h2>❌ Raté !</h2>
+    <p class="big-player" id="miss-name">?</p>
+    <p class="subtitle">n'est <strong>pas</strong> l'undercover.<br>On repart pour un tour de parole.</p>
+    <button id="btn-new-round" class="primary">Nouveau tour de parole</button>
+    <button id="btn-restart-miss" class="secondary">Abandonner la partie</button>
+  </section>
+
+  <!-- ÉCRAN 8 : Victoire undercover (tous civils élim.) -->
+  <section id="screen-undercover-wins" class="screen undercover-wins">
+    <h2>🕵️ L'undercover gagne !</h2>
+    <p class="big-player" id="undercover-name">?</p>
+    <p class="subtitle">a réussi à passer inaperçu jusqu'au bout.</p>
+    <div class="compare-zone" id="undercover-compare"></div>
+    <button id="btn-restart-uc" class="primary">Nouvelle partie</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

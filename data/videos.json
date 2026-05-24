@@ -1,0 +1,797 @@
+{
+  "categories": [
+    {
+      "id": "animal-compagnie",
+      "name": "Animal de compagnie",
+      "emoji": "🐾",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-compagnie_1.mp4",
+          "title": "Chat",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-compagnie_2.mp4",
+          "title": "Chien",
+          "duration": 5
+        }
+      ]
+    },
+    {
+      "id": "boisson-chaude",
+      "name": "Boisson chaude",
+      "emoji": "☕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-chaude_1.mp4",
+          "title": "Café versé",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-chaude_2.mp4",
+          "title": "Thé versé",
+          "duration": 11
+        }
+      ]
+    },
+    {
+      "id": "agrume",
+      "name": "Agrume coupé",
+      "emoji": "🍊",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/agrume_1.mp4",
+          "title": "Orange",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/agrume_2.mp4",
+          "title": "Citron",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "fleur",
+      "name": "Fleur",
+      "emoji": "🌷",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fleur_1.mp4",
+          "title": "Rose",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/fleur_2.mp4",
+          "title": "Tulipe",
+          "duration": 6
+        }
+      ]
+    },
+    {
+      "id": "vehicule",
+      "name": "Véhicule en mouvement",
+      "emoji": "🚗",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/vehicule_1.mp4",
+          "title": "Voiture",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/vehicule_2.mp4",
+          "title": "Moto",
+          "duration": 23
+        }
+      ]
+    },
+    {
+      "id": "eau",
+      "name": "Élément d'eau",
+      "emoji": "💧",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/eau_1.mp4",
+          "title": "Vagues",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/eau_2.mp4",
+          "title": "Cascade",
+          "duration": 12
+        }
+      ]
+    },
+    {
+      "id": "sport-extreme",
+      "name": "Sport extreme",
+      "emoji": "🛹",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-extreme_1.mp4",
+          "title": "Skate trick",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-extreme_2.mp4",
+          "title": "BMX trick",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "spectacle-nuit",
+      "name": "Spectacle nocturne",
+      "emoji": "🎆",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/spectacle-nuit_1.mp4",
+          "title": "Feu d'artifice",
+          "duration": 3
+        },
+        {
+          "source": "local",
+          "url": "videos/spectacle-nuit_2.mp4",
+          "title": "Orage",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "slow-motion",
+      "name": "Slow motion eclat",
+      "emoji": "💥",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/slow-motion_1.mp4",
+          "title": "Eclat d'eau",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/slow-motion_2.mp4",
+          "title": "Eclat de peinture",
+          "duration": 15
+        }
+      ]
+    },
+    {
+      "id": "vue-aerienne",
+      "name": "Vue aerienne",
+      "emoji": "🚁",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/vue-aerienne_1.mp4",
+          "title": "Drone foret",
+          "duration": 5
+        },
+        {
+          "source": "local",
+          "url": "videos/vue-aerienne_2.mp4",
+          "title": "Drone ocean",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "flammes",
+      "name": "Flammes",
+      "emoji": "🔥",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/flammes_1.mp4",
+          "title": "Feu de camp",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/flammes_2.mp4",
+          "title": "Bougie",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "danse-urbaine",
+      "name": "Danse urbaine",
+      "emoji": "🕺",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/danse-urbaine_1.mp4",
+          "title": "Hip-hop",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/danse-urbaine_2.mp4",
+          "title": "Breakdance",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "animal-danse",
+      "name": "Animal qui danse",
+      "emoji": "💃",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-danse_1.mp4",
+          "title": "Chat qui danse"
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-danse_2.mp4",
+          "title": "Chien qui danse"
+        }
+      ]
+    },
+    {
+      "id": "engin-volant",
+      "name": "Engin volant fantastique",
+      "emoji": "🚀",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/engin-volant_1.mp4",
+          "title": "Voiture volante"
+        },
+        {
+          "source": "local",
+          "url": "videos/engin-volant_2.mp4",
+          "title": "Bateau volant"
+        }
+      ]
+    },
+    {
+      "id": "creature-mythique",
+      "name": "Creature mythique",
+      "emoji": "🦄",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/creature-mythique_1.mp4",
+          "title": "Licorne"
+        },
+        {
+          "source": "local",
+          "url": "videos/creature-mythique_2.mp4",
+          "title": "Dragon"
+        }
+      ]
+    },
+    {
+      "id": "magie-cartoon",
+      "name": "Magie cartoon",
+      "emoji": "🧙",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/magie-cartoon_1.mp4",
+          "title": "Magicien"
+        },
+        {
+          "source": "local",
+          "url": "videos/magie-cartoon_2.mp4",
+          "title": "Sorciere"
+        }
+      ]
+    },
+    {
+      "id": "nourriture-vivante",
+      "name": "Nourriture qui bouge",
+      "emoji": "🍕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nourriture-vivante_1.mp4",
+          "title": "Pizza qui danse"
+        },
+        {
+          "source": "local",
+          "url": "videos/nourriture-vivante_2.mp4",
+          "title": "Banane qui danse"
+        }
+      ]
+    },
+    {
+      "id": "reaction-meme",
+      "name": "Reaction expressive",
+      "emoji": "🤯",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/reaction-meme_1.mp4",
+          "title": "Mind blown"
+        },
+        {
+          "source": "local",
+          "url": "videos/reaction-meme_2.mp4",
+          "title": "Choque"
+        }
+      ]
+    },
+    {
+      "id": "monstre-nuit",
+      "name": "Monstre de la nuit",
+      "emoji": "🧛",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/monstre-nuit_1.mp4",
+          "title": "Zombie"
+        },
+        {
+          "source": "local",
+          "url": "videos/monstre-nuit_2.mp4",
+          "title": "Vampire"
+        }
+      ]
+    },
+    {
+      "id": "etre-etrange",
+      "name": "Etre etrange",
+      "emoji": "👽",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/etre-etrange_1.mp4",
+          "title": "Alien"
+        },
+        {
+          "source": "local",
+          "url": "videos/etre-etrange_2.mp4",
+          "title": "Robot"
+        }
+      ]
+    },
+    {
+      "id": "animal-calin",
+      "name": "Animal calin",
+      "emoji": "🐼",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-calin_1.mp4",
+          "title": "Panda"
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-calin_2.mp4",
+          "title": "Koala"
+        }
+      ]
+    },
+    {
+      "id": "super-heros",
+      "name": "Super heros",
+      "emoji": "🦸",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/super-heros_1.mp4",
+          "title": "Batman"
+        },
+        {
+          "source": "local",
+          "url": "videos/super-heros_2.mp4",
+          "title": "Superman"
+        }
+      ]
+    },
+    {
+      "id": "halloween",
+      "name": "Halloween",
+      "emoji": "🎃",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/halloween_1.mp4",
+          "title": "Citrouille"
+        },
+        {
+          "source": "local",
+          "url": "videos/halloween_2.mp4",
+          "title": "Chauve-souris"
+        }
+      ]
+    },
+    {
+      "id": "reaction-sociale",
+      "name": "Reaction sociale",
+      "emoji": "🙄",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/reaction-sociale_1.mp4",
+          "title": "Facepalm"
+        },
+        {
+          "source": "local",
+          "url": "videos/reaction-sociale_2.mp4",
+          "title": "Applaudissements"
+        }
+      ]
+    },
+    {
+      "id": "perso-jeuvideo",
+      "name": "Personnage jeu video",
+      "emoji": "🎮",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/perso-jeuvideo_1.mp4",
+          "title": "Pikachu"
+        },
+        {
+          "source": "local",
+          "url": "videos/perso-jeuvideo_2.mp4",
+          "title": "Mario"
+        }
+      ]
+    },
+    {
+      "id": "combattant",
+      "name": "Combattant japonais",
+      "emoji": "🥷",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/combattant_1.mp4",
+          "title": "Ninja"
+        },
+        {
+          "source": "local",
+          "url": "videos/combattant_2.mp4",
+          "title": "Samourai"
+        }
+      ]
+    },
+    {
+      "id": "emotion-forte",
+      "name": "Emotion forte",
+      "emoji": "😂",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/emotion-forte_1.mp4",
+          "title": "Pleurer"
+        },
+        {
+          "source": "local",
+          "url": "videos/emotion-forte_2.mp4",
+          "title": "Rire"
+        }
+      ]
+    },
+    {
+      "id": "doge-meme",
+      "name": "Chien meme",
+      "emoji": "🐕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/doge-meme_1.mp4",
+          "title": "Doge"
+        },
+        {
+          "source": "local",
+          "url": "videos/doge-meme_2.mp4",
+          "title": "Cheems"
+        }
+      ]
+    },
+    {
+      "id": "animal-majestueux",
+      "name": "Animal majestueux",
+      "emoji": "🦅",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-majestueux_1.mp4",
+          "title": "Aigle",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-majestueux_2.mp4",
+          "title": "Loup",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "ville-nuit",
+      "name": "Ville la nuit",
+      "emoji": "🌃",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/ville-nuit_1.mp4",
+          "title": "Tokyo",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/ville-nuit_2.mp4",
+          "title": "New York",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "sous-marin",
+      "name": "Dessin anime sous-marin",
+      "emoji": "🧽",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sous-marin_1.mp4",
+          "title": "SpongeBob"
+        },
+        {
+          "source": "local",
+          "url": "videos/sous-marin_2.mp4",
+          "title": "Patrick"
+        }
+      ]
+    },
+    {
+      "id": "vilain-dc",
+      "name": "Vilain DC",
+      "emoji": "🃏",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/vilain-dc_1.mp4",
+          "title": "Joker"
+        },
+        {
+          "source": "local",
+          "url": "videos/vilain-dc_2.mp4",
+          "title": "Riddler"
+        }
+      ]
+    },
+    {
+      "id": "simpsons",
+      "name": "Famille Simpson",
+      "emoji": "🍩",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/simpsons_1.mp4",
+          "title": "Bart"
+        },
+        {
+          "source": "local",
+          "url": "videos/simpsons_2.mp4",
+          "title": "Homer"
+        }
+      ]
+    },
+    {
+      "id": "sonic-univers",
+      "name": "Univers Sonic",
+      "emoji": "🦔",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sonic-univers_1.mp4",
+          "title": "Sonic"
+        },
+        {
+          "source": "local",
+          "url": "videos/sonic-univers_2.mp4",
+          "title": "Tails"
+        }
+      ]
+    },
+    {
+      "id": "jeu-retro",
+      "name": "Jeu retro",
+      "emoji": "🕹️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/jeu-retro_1.mp4",
+          "title": "Tetris"
+        },
+        {
+          "source": "local",
+          "url": "videos/jeu-retro_2.mp4",
+          "title": "Pac-Man"
+        }
+      ]
+    },
+    {
+      "id": "primate",
+      "name": "Primate",
+      "emoji": "🐒",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/primate_1.mp4",
+          "title": "Singe"
+        },
+        {
+          "source": "local",
+          "url": "videos/primate_2.mp4",
+          "title": "Gorille"
+        }
+      ]
+    },
+    {
+      "id": "petit-animal",
+      "name": "Petit animal",
+      "emoji": "🐰",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/petit-animal_1.mp4",
+          "title": "Lapin"
+        },
+        {
+          "source": "local",
+          "url": "videos/petit-animal_2.mp4",
+          "title": "Hamster"
+        }
+      ]
+    },
+    {
+      "id": "snack-rapide",
+      "name": "Snack rapide",
+      "emoji": "🌭",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/snack-rapide_1.mp4",
+          "title": "Burger"
+        },
+        {
+          "source": "local",
+          "url": "videos/snack-rapide_2.mp4",
+          "title": "Hot dog"
+        }
+      ]
+    },
+    {
+      "id": "patisserie",
+      "name": "Patisserie",
+      "emoji": "🍰",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/patisserie_1.mp4",
+          "title": "Donut"
+        },
+        {
+          "source": "local",
+          "url": "videos/patisserie_2.mp4",
+          "title": "Cupcake"
+        }
+      ]
+    },
+    {
+      "id": "sport-combat",
+      "name": "Sport de combat",
+      "emoji": "🥊",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-combat_1.mp4",
+          "title": "Boxe"
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-combat_2.mp4",
+          "title": "Karate"
+        }
+      ]
+    },
+    {
+      "id": "engin-aerien",
+      "name": "Engin aerien",
+      "emoji": "✈️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/engin-aerien_1.mp4",
+          "title": "Avion"
+        },
+        {
+          "source": "local",
+          "url": "videos/engin-aerien_2.mp4",
+          "title": "Helicoptere"
+        }
+      ]
+    },
+    {
+      "id": "medical",
+      "name": "Personnel medical",
+      "emoji": "👨‍⚕️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/medical_1.mp4",
+          "title": "Docteur"
+        },
+        {
+          "source": "local",
+          "url": "videos/medical_2.mp4",
+          "title": "Infirmiere"
+        }
+      ]
+    },
+    {
+      "id": "metier-aventure",
+      "name": "Metier d'aventure",
+      "emoji": "🚀",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/metier-aventure_1.mp4",
+          "title": "Pilote"
+        },
+        {
+          "source": "local",
+          "url": "videos/metier-aventure_2.mp4",
+          "title": "Astronaute"
+        }
+      ]
+    },
+    {
+      "id": "catastrophe",
+      "name": "Catastrophe naturelle",
+      "emoji": "🌋",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/catastrophe_1.mp4",
+          "title": "Volcan"
+        },
+        {
+          "source": "local",
+          "url": "videos/catastrophe_2.mp4",
+          "title": "Tornade"
+        }
+      ]
+    },
+    {
+      "id": "phenomene-ciel",
+      "name": "Phenomene celeste",
+      "emoji": "🌈",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/phenomene-ciel_1.mp4",
+          "title": "Arc-en-ciel"
+        },
+        {
+          "source": "local",
+          "url": "videos/phenomene-ciel_2.mp4",
+          "title": "Eclair"
+        }
+      ]
+    }
+  ]
+}
