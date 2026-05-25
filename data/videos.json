@@ -1302,6 +1302,261 @@
           "title": "Bisou"
         }
       ]
+    },
+    {
+      "id": "activite-quotidienne",
+      "name": "Activite quotidienne",
+      "emoji": "😴",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/activite-quotidienne_1.mp4",
+          "title": "Dormir"
+        },
+        {
+          "source": "local",
+          "url": "videos/activite-quotidienne_2.mp4",
+          "title": "Se reveiller"
+        }
+      ]
+    },
+    {
+      "id": "genre-musique",
+      "name": "Genre de musique",
+      "emoji": "🎸",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/genre-musique_1.mp4",
+          "title": "Rock"
+        },
+        {
+          "source": "local",
+          "url": "videos/genre-musique_2.mp4",
+          "title": "Techno"
+        }
+      ]
+    },
+    {
+      "id": "saison-douce",
+      "name": "Saison douce",
+      "emoji": "🍂",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/saison-douce_1.mp4",
+          "title": "Automne"
+        },
+        {
+          "source": "local",
+          "url": "videos/saison-douce_2.mp4",
+          "title": "Printemps"
+        }
+      ]
+    },
+    {
+      "id": "outil-cuisine",
+      "name": "Outil de cuisine",
+      "emoji": "🍳",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outil-cuisine_1.mp4",
+          "title": "Poele"
+        },
+        {
+          "source": "local",
+          "url": "videos/outil-cuisine_2.mp4",
+          "title": "Casserole"
+        }
+      ]
+    },
+    {
+      "id": "boisson-fraiche",
+      "name": "Boisson fraiche",
+      "emoji": "🥤",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-fraiche_1.mp4",
+          "title": "Soda"
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-fraiche_2.mp4",
+          "title": "Jus"
+        }
+      ]
+    },
+    {
+      "id": "personnage-marvel",
+      "name": "Personnage Marvel",
+      "emoji": "🕷️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/personnage-marvel_1.mp4",
+          "title": "Spider-Man"
+        },
+        {
+          "source": "local",
+          "url": "videos/personnage-marvel_2.mp4",
+          "title": "Hulk"
+        }
+      ]
+    },
+    {
+      "id": "manga-shonen",
+      "name": "Manga shonen",
+      "emoji": "🍥",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/manga-shonen_1.mp4",
+          "title": "Naruto"
+        },
+        {
+          "source": "local",
+          "url": "videos/manga-shonen_2.mp4",
+          "title": "Goku"
+        }
+      ]
+    },
+    {
+      "id": "meme-culte",
+      "name": "Meme culte",
+      "emoji": "🤨",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/meme-culte_1.mp4",
+          "title": "Pikachu surpris"
+        },
+        {
+          "source": "local",
+          "url": "videos/meme-culte_2.mp4",
+          "title": "Drake"
+        }
+      ]
+    },
+    {
+      "id": "animal-ferme",
+      "name": "Animal de ferme",
+      "emoji": "🐄",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-ferme_1.mp4",
+          "title": "Vache"
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-ferme_2.mp4",
+          "title": "Cochon"
+        }
+      ]
+    },
+    {
+      "id": "animal-savane",
+      "name": "Animal de savane",
+      "emoji": "🦒",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-savane_1.mp4",
+          "title": "Girafe"
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-savane_2.mp4",
+          "title": "Elephant"
+        }
+      ]
+    },
+    {
+      "id": "sport-olympique",
+      "name": "Sport olympique",
+      "emoji": "🏊",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-olympique_1.mp4",
+          "title": "Natation"
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-olympique_2.mp4",
+          "title": "Athletisme"
+        }
+      ]
+    },
+    {
+      "id": "freres-mario",
+      "name": "Freres Mario",
+      "emoji": "🍄",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/freres-mario_1.mp4",
+          "title": "Mario"
+        },
+        {
+          "source": "local",
+          "url": "videos/freres-mario_2.mp4",
+          "title": "Luigi"
+        }
+      ]
+    },
+    {
+      "id": "pokemon-starter",
+      "name": "Pokemon starter",
+      "emoji": "🐢",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/pokemon-starter_1.mp4",
+          "title": "Carapuce"
+        },
+        {
+          "source": "local",
+          "url": "videos/pokemon-starter_2.mp4",
+          "title": "Bulbizarre"
+        }
+      ]
+    },
+    {
+      "id": "celebration",
+      "name": "Celebration",
+      "emoji": "🙌",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/celebration_1.mp4",
+          "title": "High five"
+        },
+        {
+          "source": "local",
+          "url": "videos/celebration_2.mp4",
+          "title": "Fete"
+        }
+      ]
+    },
+    {
+      "id": "emoji-coeur",
+      "name": "Emoji coeur",
+      "emoji": "❤️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/emoji-coeur_1.mp4",
+          "title": "Coeur dans les yeux"
+        },
+        {
+          "source": "local",
+          "url": "videos/emoji-coeur_2.mp4",
+          "title": "Bisou coeur"
+        }
+      ]
     }
   ]
 }

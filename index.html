@@ -74,6 +74,34 @@
     <div class="stats-row" id="stats-row"></div>
   </section>
 
+  <!-- ÉCRAN 1.6 : Custom AI (saisie 2 idées) -->
+  <section id="screen-custom-ai" class="screen">
+    <h2 data-i18n="customAiTitle">✨ Mode Personnalisé</h2>
+    <p class="subtitle" data-i18n="customAiSubtitle">Entrez 2 idées proches. L'IA va générer une image pour chacune.</p>
+
+    <label class="field">
+      <span data-i18n="customAiIdea1">Idée des civils</span>
+      <input type="text" id="custom-idea-1" maxlength="60"
+             data-i18n-placeholder="customAiIdea1Placeholder"
+             placeholder="Ex : un chat qui danse">
+    </label>
+    <label class="field">
+      <span data-i18n="customAiIdea2">Idée de l'undercover</span>
+      <input type="text" id="custom-idea-2" maxlength="60"
+             data-i18n-placeholder="customAiIdea2Placeholder"
+             placeholder="Ex : un chien qui danse">
+    </label>
+
+    <button id="btn-custom-generate" class="primary" data-i18n="customAiGenerate">🎨 Générer & lancer</button>
+    <button id="btn-custom-back" class="secondary" data-i18n="customAiBack">Retour</button>
+  </section>
+
+  <!-- ÉCRAN 1.7 : Loading IA -->
+  <section id="screen-ai-loading" class="screen">
+    <div class="ai-spinner"></div>
+    <p class="subtitle" data-i18n="customAiGenerating">Génération des images en cours…</p>
+  </section>
+
   <!-- ÉCRAN 2.5 : Vidéo Mr White -->
   <section id="screen-mrwhite-video" class="screen mrwhite-screen">
     <h2 data-i18n="mrWhiteTitle">🃏 Tu es Mr White !</h2>
@@ -180,6 +208,7 @@
 
   <script src="i18n.js"></script>
   <script src="play-billing.js"></script>
+  <script src="ai-generator.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

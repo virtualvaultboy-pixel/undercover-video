@@ -141,6 +141,13 @@ function buildLangSelect() {
 function buildCategorySelect() {
   const sel = document.getElementById('category-select');
   sel.innerHTML = '';
+
+  // Option Custom AI tout en haut
+  const optCustom = document.createElement('option');
+  optCustom.value = 'custom-ai';
+  optCustom.textContent = i18n.t('customAiOption') + (isPremium() ? '' : '  ' + i18n.t('categoryLocked'));
+  sel.appendChild(optCustom);
+
   const optRandom = document.createElement('option');
   optRandom.value = 'random';
   optRandom.textContent = i18n.t('categoryRandom');
@@ -189,16 +196,26 @@ function bindEvents() {
   document.getElementById('players-minus').onclick = () => changePlayers(-1);
   document.getElementById('players-plus').onclick = () => changePlayers(1);
   document.getElementById('category-select').onchange = e => {
-    const cat = state.categories.find(c => c.id === e.target.value);
+    const val = e.target.value;
+    // Custom AI : premium only
+    if (val === 'custom-ai' && !isPremium()) {
+      alert(i18n.t('customAiPremiumOnly'));
+      e.target.value = state.selectedCategoryId;
+      goToPaywall();
+      return;
+    }
+    const cat = state.categories.find(c => c.id === val);
     if (cat && !isCategoryAvailable(cat)) {
       alert(i18n.t('alertCategoryLocked'));
       e.target.value = state.selectedCategoryId;
       goToPaywall();
       return;
     }
-    state.selectedCategoryId = e.target.value;
+    state.selectedCategoryId = val;
   };
-  document.getElementById('btn-start').onclick = goToNamesScreen;
+  document.getElementById('btn-start').onclick = handleStartClick;
+  document.getElementById('btn-custom-back').onclick = () => switchScreen('screen-setup');
+  document.getElementById('btn-custom-generate').onclick = handleCustomGenerate;
   document.getElementById('btn-help').onclick = () => switchScreen('screen-help');
   document.getElementById('btn-help-close').onclick = () => switchScreen('screen-setup');
   document.getElementById('btn-show-paywall').onclick = goToPaywall;
@@ -256,6 +273,61 @@ function changePlayers(delta) {
   document.getElementById('players-count').textContent = next;
 }
 
+// ----------- Aiguillage Suivant -----------
+function handleStartClick() {
+  if (state.selectedCategoryId === 'custom-ai') {
+    if (!isPremium()) {
+      alert(i18n.t('customAiPremiumOnly'));
+      goToPaywall();
+      return;
+    }
+    switchScreen('screen-custom-ai');
+    return;
+  }
+  goToNamesScreen();
+}
+
+// ----------- Custom AI -----------
+async function handleCustomGenerate() {
+  const idea1 = document.getElementById('custom-idea-1').value.trim();
+  const idea2 = document.getElementById('custom-idea-2').value.trim();
+
+  if (!idea1 || !idea2) {
+    alert(i18n.t('customAiInvalid'));
+    return;
+  }
+
+  switchScreen('screen-ai-loading');
+
+  // Generation via Pollinations (URLs construites + prefetch)
+  const pair = aiGenerator.generatePair(idea1, idea2, i18n.current);
+  state.customCivils = pair.civils;
+  state.customUndercover = pair.undercover;
+
+  // Prefetch en parallele pour que les images soient pretes au moment du 1er joueur
+  try {
+    await Promise.all([
+      preloadImage(pair.civils.url),
+      preloadImage(pair.undercover.url),
+    ]);
+  } catch (e) {
+    console.warn('[AI] Prefetch failed, on continue quand meme', e);
+  }
+
+  goToNamesScreen();
+}
+
+function preloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error('image_load_failed'));
+    img.src = url;
+    // Timeout 25s pour ne pas bloquer indefiniment
+    setTimeout(() => reject(new Error('image_load_timeout')), 25000);
+  });
+}
+
 // ----------- Saisie des noms -----------
 function goToNamesScreen() {
   const list = document.getElementById('names-list');
@@ -292,20 +364,26 @@ function collectNames() {
 function startGame() {
   collectNames();
 
-  const cat = state.selectedCategoryId === 'random'
-    ? pickRandomCategory()
-    : state.categories.find(c => c.id === state.selectedCategoryId);
+  // Mode Custom AI : on utilise les images deja generees
+  if (state.selectedCategoryId === 'custom-ai' && state.customCivils && state.customUndercover) {
+    state.civilsVideo = state.customCivils;
+    state.undercoverVideo = state.customUndercover;
+  } else {
+    const cat = state.selectedCategoryId === 'random'
+      ? pickRandomCategory()
+      : state.categories.find(c => c.id === state.selectedCategoryId);
 
-  if (!cat || cat.videos.length < 2) {
-    alert("Catégorie indisponible.");
-    return;
+    if (!cat || cat.videos.length < 2) {
+      alert("Catégorie indisponible.");
+      return;
+    }
+
+    pushRecentCategory(cat.id);
+
+    const shuffled = [...cat.videos].sort(() => Math.random() - 0.5);
+    state.civilsVideo = shuffled[0];
+    state.undercoverVideo = shuffled[1];
   }
-
-  pushRecentCategory(cat.id);
-
-  const shuffled = [...cat.videos].sort(() => Math.random() - 0.5);
-  state.civilsVideo = shuffled[0];
-  state.undercoverVideo = shuffled[1];
 
   state.undercoverIndex = Math.floor(Math.random() * state.playersCount);
 
@@ -354,7 +432,14 @@ function renderVideo(video) {
   const container = document.getElementById('video-container');
   container.innerHTML = '';
 
-  if (video.source === 'local') {
+  if (video.source === 'ai-image') {
+    const img = document.createElement('img');
+    img.src = video.url;
+    img.alt = video.title || '';
+    img.className = 'ai-image-full';
+    img.onerror = () => showVideoError(container);
+    container.appendChild(img);
+  } else if (video.source === 'local') {
     const vid = document.createElement('video');
     vid.src = video.url;
     vid.controls = true;
@@ -475,6 +560,14 @@ function renderCompare(containerId) {
 
 function mountComparisonVideo(slot, video) {
   slot.innerHTML = '';
+  if (video.source === 'ai-image') {
+    const img = document.createElement('img');
+    img.src = video.url;
+    img.alt = video.title || '';
+    img.className = 'ai-image-compare';
+    slot.appendChild(img);
+    return;
+  }
   if (video.source === 'local') {
     const vid = document.createElement('video');
     vid.src = video.url;

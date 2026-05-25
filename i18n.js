@@ -105,6 +105,20 @@ const I18N = {
     statsGames: "Parties",
     statsCivilsWin: "Civils",
     statsUndercoverWin: "Undercover",
+
+    // Custom AI
+    customAiOption: "✨ Personnalisé (IA)",
+    customAiTitle: "✨ Mode Personnalisé",
+    customAiSubtitle: "Entrez 2 idées proches. L'IA va générer une image pour chacune.",
+    customAiIdea1: "Idée des civils",
+    customAiIdea1Placeholder: "Ex : un chat qui danse",
+    customAiIdea2: "Idée de l'undercover",
+    customAiIdea2Placeholder: "Ex : un chien qui danse",
+    customAiGenerate: "🎨 Générer & lancer",
+    customAiBack: "Retour",
+    customAiGenerating: "Génération des images en cours…",
+    customAiPremiumOnly: "Le mode Personnalisé est réservé aux utilisateurs Premium.",
+    customAiInvalid: "Renseigne les 2 idées avant de lancer.",
   },
 
   en: {
@@ -193,6 +207,19 @@ const I18N = {
     statsGames: "Games",
     statsCivilsWin: "Civilians",
     statsUndercoverWin: "Undercover",
+
+    customAiOption: "✨ Custom (AI)",
+    customAiTitle: "✨ Custom Mode",
+    customAiSubtitle: "Type 2 similar ideas. AI will generate an image for each.",
+    customAiIdea1: "Civilians' idea",
+    customAiIdea1Placeholder: "Ex: a dancing cat",
+    customAiIdea2: "Undercover's idea",
+    customAiIdea2Placeholder: "Ex: a dancing dog",
+    customAiGenerate: "🎨 Generate & start",
+    customAiBack: "Back",
+    customAiGenerating: "Generating images…",
+    customAiPremiumOnly: "Custom mode is reserved for Premium users.",
+    customAiInvalid: "Fill in both ideas before starting.",
   },
 
   es: {
@@ -281,6 +308,19 @@ const I18N = {
     statsGames: "Partidas",
     statsCivilsWin: "Civiles",
     statsUndercoverWin: "Infiltrado",
+
+    customAiOption: "✨ Personalizado (IA)",
+    customAiTitle: "✨ Modo Personalizado",
+    customAiSubtitle: "Escribe 2 ideas parecidas. La IA generará una imagen para cada una.",
+    customAiIdea1: "Idea de los civiles",
+    customAiIdea1Placeholder: "Ej: un gato bailando",
+    customAiIdea2: "Idea del infiltrado",
+    customAiIdea2Placeholder: "Ej: un perro bailando",
+    customAiGenerate: "🎨 Generar y empezar",
+    customAiBack: "Volver",
+    customAiGenerating: "Generando imágenes…",
+    customAiPremiumOnly: "El modo Personalizado está reservado a los usuarios Premium.",
+    customAiInvalid: "Rellena las 2 ideas antes de empezar.",
   },
 };
 
