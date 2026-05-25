@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.deponchy.undercovervideo",
+        "sha256_cert_fingerprints": ["37:1E:8B:18:2B:64:93:99:D0:AD:D6:B1:B3:D2:1D:49:D7:B1:FF:C8:3D:73:B4:68:FA:EA:01:7F:83:E7:49:D8"]
+      }
+    }]
