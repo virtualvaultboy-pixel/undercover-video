@@ -236,11 +236,34 @@ button:active {
   font-size: 0.9rem;
 }
 
-/* ----- Bouton info & compteur catégories ----- */
-.icon-button {
+/* ----- Top bar (langue + aide) ----- */
+.top-bar {
   position: absolute;
   top: 20px;
+  left: 20px;
   right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.lang-select {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 12px;
+  appearance: none;
+  cursor: pointer;
+  min-width: 120px;
+  text-align: left;
+}
+
+/* ----- Bouton info ----- */
+.icon-button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -253,10 +276,64 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
 }
 
 .icon-button:active { transform: scale(0.95); }
+
+/* ----- Lien-bouton (call to action discret) ----- */
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+  text-underline-offset: 4px;
+}
+.link-btn:disabled { opacity: 0.7; cursor: default; text-decoration: none; }
+
+button.small {
+  padding: 12px 18px !important;
+  font-size: 0.9rem !important;
+}
+
+/* ----- Paywall ----- */
+.paywall-features {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.paywall-feature {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.paywall-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 8px 0;
+}
+
+.paywall-note {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-style: italic;
+}
 
 .cat-counter {
   color: var(--text-dim);

@@ -1,26 +1,50 @@
 // ============================================================
-// Undercover Vidéo — game master
+// Undercover Vidéo — game master (avec i18n + freemium)
 // ============================================================
 
 const state = {
   playersCount: 4,
   categories: [],
   selectedCategoryId: 'random',
-  playerNames: [],          // ['Alice', 'Bob', ...]
-  // état de la partie
+  playerNames: [],
   civilsVideo: null,
   undercoverVideo: null,
-  undercoverIndex: 0,       // index dans assignments (0-based)
-  assignments: [],          // [{ name, video, isUndercover }, ...]
+  undercoverIndex: 0,
+  assignments: [],
   currentPlayerIndex: 0,
-  wrongVotes: [],           // noms des joueurs déjà accusés à tort
+  wrongVotes: [],
 };
+
+// Les 25 premières catégories du JSON sont gratuites, le reste = premium
+const FREE_COUNT = 25;
+const PREMIUM_KEY = 'undercover_premium';
+
+// ----------- Premium -----------
+function isPremium() {
+  try { return localStorage.getItem(PREMIUM_KEY) === 'true'; }
+  catch { return false; }
+}
+function unlockPremium() {
+  try { localStorage.setItem(PREMIUM_KEY, 'true'); } catch {}
+}
+
+function isCategoryFree(catId) {
+  const idx = state.categories.findIndex(c => c.id === catId);
+  return idx >= 0 && idx < FREE_COUNT;
+}
+function isCategoryAvailable(cat) {
+  if (cat.videos.length < 2) return false;
+  return isPremium() || isCategoryFree(cat.id);
+}
 
 // ----------- Init -----------
 async function init() {
   await loadVideos();
+  buildLangSelect();
+  i18n.applyI18n();
   buildCategorySelect();
   bindEvents();
+  refreshPremiumUI();
 }
 
 async function loadVideos() {
@@ -33,28 +57,108 @@ async function loadVideos() {
 function updateCategoryCounter() {
   const el = document.getElementById('cat-counter');
   if (!el) return;
-  const n = state.categories.filter(c => c.videos.length >= 2).length;
-  el.textContent = `${n} catégories disponibles`;
+  const total = state.categories.filter(c => c.videos.length >= 2).length;
+  const free = state.categories.slice(0, FREE_COUNT).filter(c => c.videos.length >= 2).length;
+  const n = isPremium() ? total : free;
+  el.textContent = i18n.t('catCounterTpl', { n: `${n}/${total}` });
+}
+
+function buildLangSelect() {
+  const sel = document.getElementById('lang-select');
+  sel.innerHTML = '';
+  const labels = { fr: 'FR · Français', en: 'EN · English', es: 'ES · Español' };
+  i18n.all.forEach(l => {
+    const opt = document.createElement('option');
+    opt.value = l;
+    opt.textContent = labels[l] || l;
+    if (l === i18n.current) opt.selected = true;
+    sel.appendChild(opt);
+  });
+  sel.onchange = e => {
+    i18n.setLang(e.target.value);
+    buildCategorySelect();
+    updateCategoryCounter();
+    refreshPremiumUI();
+    renderPaywallFeatures();
+  };
 }
 
 function buildCategorySelect() {
   const sel = document.getElementById('category-select');
-  sel.innerHTML = '<option value="random">🎲 Aléatoire</option>';
+  sel.innerHTML = '';
+  const optRandom = document.createElement('option');
+  optRandom.value = 'random';
+  optRandom.textContent = i18n.t('categoryRandom');
+  sel.appendChild(optRandom);
+
   state.categories.forEach(cat => {
+    if (cat.videos.length < 2) return;
     const opt = document.createElement('option');
     opt.value = cat.id;
-    opt.textContent = `${cat.emoji} ${cat.name}`;
+    const locked = !isCategoryAvailable(cat);
+    opt.textContent = `${cat.emoji} ${cat.name}${locked ? '  ' + i18n.t('categoryLocked') : ''}`;
+    opt.dataset.locked = locked ? '1' : '0';
     sel.appendChild(opt);
   });
+
+  sel.value = state.selectedCategoryId === 'random' ? 'random' : state.selectedCategoryId;
+}
+
+function refreshPremiumUI() {
+  const btn = document.getElementById('btn-show-paywall');
+  if (!btn) return;
+  if (isPremium()) {
+    btn.textContent = i18n.t('paywallActive');
+    btn.disabled = true;
+  } else {
+    btn.textContent = i18n.t('btnPremium');
+    btn.disabled = false;
+  }
+}
+
+function renderPaywallFeatures() {
+  const list = document.getElementById('paywall-features');
+  if (!list) return;
+  const feats = i18n.t('paywallFeatures') || [];
+  list.innerHTML = '';
+  feats.forEach(f => {
+    const div = document.createElement('div');
+    div.className = 'paywall-feature';
+    div.textContent = f;
+    list.appendChild(div);
+  });
+  document.getElementById('paywall-price').textContent = i18n.t('paywallPrice');
 }
 
 function bindEvents() {
   document.getElementById('players-minus').onclick = () => changePlayers(-1);
   document.getElementById('players-plus').onclick = () => changePlayers(1);
-  document.getElementById('category-select').onchange = e => state.selectedCategoryId = e.target.value;
+  document.getElementById('category-select').onchange = e => {
+    const cat = state.categories.find(c => c.id === e.target.value);
+    if (cat && !isCategoryAvailable(cat)) {
+      alert(i18n.t('alertCategoryLocked'));
+      e.target.value = state.selectedCategoryId;
+      goToPaywall();
+      return;
+    }
+    state.selectedCategoryId = e.target.value;
+  };
   document.getElementById('btn-start').onclick = goToNamesScreen;
   document.getElementById('btn-help').onclick = () => switchScreen('screen-help');
   document.getElementById('btn-help-close').onclick = () => switchScreen('screen-setup');
+  document.getElementById('btn-show-paywall').onclick = goToPaywall;
+  document.getElementById('btn-paywall-close').onclick = () => switchScreen('screen-setup');
+  document.getElementById('btn-paywall-buy').onclick = () => {
+    // Pour l'instant : redirection / message. Sera connecté à Google Play Billing en v1.2.
+    alert(i18n.t('paywallSoon'));
+  };
+  document.getElementById('btn-paywall-demo').onclick = () => {
+    unlockPremium();
+    refreshPremiumUI();
+    buildCategorySelect();
+    updateCategoryCounter();
+    switchScreen('screen-setup');
+  };
   document.getElementById('btn-names-back').onclick = () => switchScreen('screen-setup');
   document.getElementById('btn-names-confirm').onclick = startGame;
   document.getElementById('btn-ready').onclick = showVideo;
@@ -65,6 +169,11 @@ function bindEvents() {
   document.getElementById('btn-restart-play').onclick = restart;
   document.getElementById('btn-restart-miss').onclick = restart;
   document.getElementById('btn-restart-uc').onclick = restart;
+}
+
+function goToPaywall() {
+  renderPaywallFeatures();
+  switchScreen('screen-paywall');
 }
 
 // ----------- Setup -----------
@@ -87,7 +196,7 @@ function goToNamesScreen() {
     label.textContent = `${i + 1}.`;
     const input = document.createElement('input');
     input.type = 'text';
-    input.placeholder = `Joueur ${i + 1}`;
+    input.placeholder = i18n.t('playerPlaceholderTpl', { n: i + 1 });
     input.maxLength = 20;
     input.value = state.playerNames[i] || '';
     input.dataset.index = i;
@@ -103,7 +212,7 @@ function collectNames() {
   state.playerNames = [];
   inputs.forEach((inp, i) => {
     const val = inp.value.trim();
-    state.playerNames.push(val || `Joueur ${i + 1}`);
+    state.playerNames.push(val || i18n.t('playerPlaceholderTpl', { n: i + 1 }));
   });
 }
 
@@ -111,28 +220,23 @@ function collectNames() {
 function startGame() {
   collectNames();
 
-  // 1. Choisir une catégorie (en évitant les récentes en mode aléatoire)
   const cat = state.selectedCategoryId === 'random'
     ? pickRandomCategory()
     : state.categories.find(c => c.id === state.selectedCategoryId);
 
   if (!cat || cat.videos.length < 2) {
-    alert("Cette catégorie n'a pas assez de vidéos (minimum 2).");
+    alert("Catégorie indisponible.");
     return;
   }
 
-  // Mémoriser pour éviter de retomber dessus tout de suite
   pushRecentCategory(cat.id);
 
-  // 2. Piocher 2 vidéos différentes
   const shuffled = [...cat.videos].sort(() => Math.random() - 0.5);
   state.civilsVideo = shuffled[0];
   state.undercoverVideo = shuffled[1];
 
-  // 3. Désigner l'undercover (index 0-based)
   state.undercoverIndex = Math.floor(Math.random() * state.playersCount);
 
-  // 4. Construire les assignations dans l'ordre des joueurs
   state.assignments = state.playerNames.map((name, i) => ({
     name,
     video: i === state.undercoverIndex ? state.undercoverVideo : state.civilsVideo,
@@ -213,8 +317,8 @@ function showVideoError(container) {
   container.innerHTML = `
     <div class="video-error">
       <div class="video-error-emoji">📡</div>
-      <p>Impossible de charger la vidéo.</p>
-      <p class="video-error-sub">Vérifie ta connexion internet.</p>
+      <p>${i18n.t('videoErrorTitle')}</p>
+      <p class="video-error-sub">${i18n.t('videoErrorSub')}</p>
     </div>
   `;
 }
@@ -238,7 +342,7 @@ function goToVote() {
   const grid = document.getElementById('vote-grid');
   grid.innerHTML = '';
   state.assignments.forEach((a, idx) => {
-    if (state.wrongVotes.includes(a.name)) return; // déjà éliminé
+    if (state.wrongVotes.includes(a.name)) return;
     const btn = document.createElement('button');
     btn.className = 'vote-btn';
     btn.textContent = a.name;
@@ -257,7 +361,6 @@ function handleVote(idx) {
 
   state.wrongVotes.push(voted.name);
 
-  // Si tous les civils sont éliminés, l'undercover gagne
   const remaining = state.assignments.filter(a => !state.wrongVotes.includes(a.name));
   const onlyUndercoverLeft = remaining.length === 1 && remaining[0].isUndercover;
   if (onlyUndercoverLeft) {
@@ -271,12 +374,12 @@ function renderCompare(containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = `
     <div class="compare-half">
-      <div class="compare-label">👥 Civils</div>
+      <div class="compare-label">${i18n.t('compareCivils')}</div>
       <div class="compare-video" data-role="civils"></div>
       <div class="compare-title">${state.civilsVideo.title}</div>
     </div>
     <div class="compare-half">
-      <div class="compare-label">🕵️ Undercover</div>
+      <div class="compare-label">${i18n.t('compareUndercover')}</div>
       <div class="compare-video" data-role="undercover"></div>
       <div class="compare-title">${state.undercoverVideo.title}</div>
     </div>
@@ -350,26 +453,23 @@ const RECENT_KEY = 'undercover_recent_categories';
 const RECENT_MAX = 5;
 
 function getRecentCategories() {
-  try {
-    return JSON.parse(localStorage.getItem(RECENT_KEY) || '[]');
-  } catch {
-    return [];
-  }
+  try { return JSON.parse(localStorage.getItem(RECENT_KEY) || '[]'); }
+  catch { return []; }
 }
 
 function pushRecentCategory(catId) {
   const recent = getRecentCategories();
   recent.push(catId);
   while (recent.length > RECENT_MAX) recent.shift();
-  try { localStorage.setItem(RECENT_KEY, JSON.stringify(recent)); } catch { /* ignore */ }
+  try { localStorage.setItem(RECENT_KEY, JSON.stringify(recent)); } catch {}
 }
 
 function pickRandomCategory() {
-  const playable = state.categories.filter(c => c.videos.length >= 2);
+  // En mode aléatoire, on ne pioche que dans les catégories accessibles à l'utilisateur
+  const playable = state.categories.filter(c => isCategoryAvailable(c));
   if (playable.length === 0) return null;
 
   const recent = getRecentCategories();
-  // On exclut au plus (playable.length - 1) catégories pour toujours avoir un choix
   const excludeCount = Math.min(recent.length, playable.length - 1);
   const recentSet = new Set(recent.slice(-excludeCount));
   const eligible = playable.filter(c => !recentSet.has(c.id));
@@ -379,7 +479,7 @@ function pickRandomCategory() {
 // ----------- Service worker (PWA) -----------
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(() => { /* offline non critique */ });
+    navigator.serviceWorker.register('sw.js').catch(() => {});
   });
 }
 
