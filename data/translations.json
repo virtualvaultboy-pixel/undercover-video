@@ -1,79 +1,260 @@
 {
   "categories": {
-    "animal-compagnie":   { "en": "Pet animal",            "es": "Mascota" },
-    "boisson-chaude":     { "en": "Hot drink",             "es": "Bebida caliente" },
-    "agrume":             { "en": "Sliced citrus",         "es": "Cítrico cortado" },
-    "fleur":              { "en": "Flower",                "es": "Flor" },
-    "vehicule":           { "en": "Moving vehicle",        "es": "Vehículo en movimiento" },
-    "eau":                { "en": "Water element",         "es": "Elemento de agua" },
-    "sport-extreme":      { "en": "Extreme sport",         "es": "Deporte extremo" },
-    "spectacle-nuit":     { "en": "Night spectacle",       "es": "Espectáculo nocturno" },
-    "slow-motion":        { "en": "Slow-mo splash",        "es": "Salpicadura lenta" },
-    "vue-aerienne":       { "en": "Aerial view",           "es": "Vista aérea" },
-    "flammes":            { "en": "Flames",                "es": "Llamas" },
-    "danse-urbaine":      { "en": "Urban dance",           "es": "Baile urbano" },
-    "animal-danse":       { "en": "Dancing animal",        "es": "Animal bailando" },
-    "engin-volant":       { "en": "Flying contraption",    "es": "Artefacto volador" },
-    "creature-mythique":  { "en": "Mythical creature",     "es": "Criatura mítica" },
-    "magie-cartoon":      { "en": "Cartoon magic",         "es": "Magia animada" },
-    "nourriture-vivante": { "en": "Moving food",           "es": "Comida que se mueve" },
-    "reaction-meme":      { "en": "Expressive reaction",   "es": "Reacción expresiva" },
-    "monstre-nuit":       { "en": "Night monster",         "es": "Monstruo nocturno" },
-    "etre-etrange":       { "en": "Strange being",         "es": "Ser extraño" },
-    "animal-calin":       { "en": "Cuddly animal",         "es": "Animal tierno" },
-    "super-heros":        { "en": "Superhero",             "es": "Superhéroe" },
-    "halloween":          { "en": "Halloween",             "es": "Halloween" },
-    "reaction-sociale":   { "en": "Social reaction",       "es": "Reacción social" },
-    "perso-jeuvideo":     { "en": "Video game character",  "es": "Personaje de videojuego" },
-    "combattant":         { "en": "Japanese fighter",      "es": "Luchador japonés" },
-    "emotion-forte":      { "en": "Strong emotion",        "es": "Emoción fuerte" },
-    "doge-meme":          { "en": "Dog meme",              "es": "Meme perro" },
-    "animal-majestueux":  { "en": "Majestic animal",       "es": "Animal majestuoso" },
-    "ville-nuit":         { "en": "City at night",         "es": "Ciudad de noche" },
-    "sous-marin":         { "en": "Underwater cartoon",    "es": "Dibujo submarino" },
-    "vilain-dc":          { "en": "DC villain",            "es": "Villano DC" },
-    "simpsons":           { "en": "Simpson family",        "es": "Familia Simpson" },
-    "sonic-univers":      { "en": "Sonic universe",        "es": "Universo Sonic" },
-    "jeu-retro":          { "en": "Retro game",            "es": "Juego retro" },
-    "primate":            { "en": "Primate",               "es": "Primate" },
-    "petit-animal":       { "en": "Small animal",          "es": "Animal pequeño" },
-    "snack-rapide":       { "en": "Quick snack",           "es": "Snack rápido" },
-    "patisserie":         { "en": "Pastry",                "es": "Pastelería" },
-    "sport-combat":       { "en": "Combat sport",          "es": "Deporte de combate" },
-    "engin-aerien":       { "en": "Aerial vehicle",        "es": "Vehículo aéreo" },
-    "medical":            { "en": "Medical staff",         "es": "Personal médico" },
-    "metier-aventure":    { "en": "Adventure job",         "es": "Trabajo de aventura" },
-    "catastrophe":        { "en": "Natural disaster",      "es": "Catástrofe natural" },
-    "phenomene-ciel":     { "en": "Sky phenomenon",        "es": "Fenómeno celeste" },
-    "ours":               { "en": "Bear",                  "es": "Oso" },
-    "felin-sauvage":      { "en": "Wild feline",           "es": "Felino salvaje" },
-    "reptile":            { "en": "Reptile",               "es": "Reptil" },
-    "oiseau-tropical":    { "en": "Tropical bird",         "es": "Ave tropical" },
-    "insecte":            { "en": "Insect",                "es": "Insecto" },
-    "poisson":            { "en": "Fish",                  "es": "Pez" },
-    "marin-mammif":       { "en": "Marine mammal",         "es": "Mamífero marino" },
-    "boisson-fete":       { "en": "Party drink",           "es": "Bebida de fiesta" },
-    "gourmand":           { "en": "Sweet treat",           "es": "Dulce" },
-    "fruit-pop":          { "en": "Popular fruit",         "es": "Fruta popular" },
-    "legume":             { "en": "Vegetable",             "es": "Verdura" },
-    "personnage-disney":  { "en": "Disney character",      "es": "Personaje Disney" },
-    "anti-heros":         { "en": "Marvel anti-hero",      "es": "Antihéroe Marvel" },
-    "studio-ghibli":      { "en": "Studio Ghibli",         "es": "Studio Ghibli" },
-    "duo-clown":          { "en": "Classic clown duo",     "es": "Dúo de payasos" },
-    "pirate-mer":         { "en": "Sea pirate",            "es": "Pirata marino" },
-    "espace":             { "en": "Space",                 "es": "Espacio" },
-    "vacances-ete":       { "en": "Summer vacation",       "es": "Vacaciones de verano" },
-    "saison-hiver":       { "en": "Snowy winter",          "es": "Invierno nevado" },
-    "outil-bricolage":    { "en": "DIY tool",              "es": "Herramienta de bricolaje" },
-    "instrument-musique": { "en": "Musical instrument",    "es": "Instrumento musical" },
-    "danse-classique":    { "en": "Classical dance",       "es": "Baile clásico" },
-    "spectacle-cirque":   { "en": "Circus show",           "es": "Espectáculo de circo" },
-    "metier-uniforme":    { "en": "Uniformed profession",  "es": "Profesión con uniforme" },
-    "creature-marine":    { "en": "Strange sea creature",  "es": "Criatura marina extraña" },
-    "dinosaure":          { "en": "Dinosaur",              "es": "Dinosaurio" },
-    "vehicule-utilitaire":{ "en": "Utility vehicle",       "es": "Vehículo utilitario" },
-    "moyen-transport":    { "en": "Means of transport",    "es": "Medio de transporte" },
-    "geste-victoire":     { "en": "Victory gesture",       "es": "Gesto de victoria" },
-    "salutation":         { "en": "Greeting",              "es": "Saludo" }
+    "animal-compagnie": {
+      "en": "Pet animal",
+      "es": "Mascota"
+    },
+    "boisson-chaude": {
+      "en": "Hot drink",
+      "es": "Bebida caliente"
+    },
+    "agrume": {
+      "en": "Sliced citrus",
+      "es": "Cítrico cortado"
+    },
+    "fleur": {
+      "en": "Flower",
+      "es": "Flor"
+    },
+    "vehicule": {
+      "en": "Moving vehicle",
+      "es": "Vehículo en movimiento"
+    },
+    "eau": {
+      "en": "Water element",
+      "es": "Elemento de agua"
+    },
+    "sport-extreme": {
+      "en": "Extreme sport",
+      "es": "Deporte extremo"
+    },
+    "spectacle-nuit": {
+      "en": "Night spectacle",
+      "es": "Espectáculo nocturno"
+    },
+    "slow-motion": {
+      "en": "Slow-mo splash",
+      "es": "Salpicadura lenta"
+    },
+    "vue-aerienne": {
+      "en": "Aerial view",
+      "es": "Vista aérea"
+    },
+    "flammes": {
+      "en": "Flames",
+      "es": "Llamas"
+    },
+    "danse-urbaine": {
+      "en": "Urban dance",
+      "es": "Baile urbano"
+    },
+    "animal-danse": {
+      "en": "Dancing animal",
+      "es": "Animal bailando"
+    },
+    "engin-volant": {
+      "en": "Flying contraption",
+      "es": "Artefacto volador"
+    },
+    "creature-mythique": {
+      "en": "Mythical creature",
+      "es": "Criatura mítica"
+    },
+    "magie-cartoon": {
+      "en": "Cartoon magic",
+      "es": "Magia animada"
+    },
+    "nourriture-vivante": {
+      "en": "Moving food",
+      "es": "Comida que se mueve"
+    },
+    "reaction-meme": {
+      "en": "Expressive reaction",
+      "es": "Reacción expresiva"
+    },
+    "monstre-nuit": {
+      "en": "Night monster",
+      "es": "Monstruo nocturno"
+    },
+    "etre-etrange": {
+      "en": "Strange being",
+      "es": "Ser extraño"
+    },
+    "animal-calin": {
+      "en": "Cuddly animal",
+      "es": "Animal tierno"
+    },
+    "halloween": {
+      "en": "Halloween",
+      "es": "Halloween"
+    },
+    "reaction-sociale": {
+      "en": "Social reaction",
+      "es": "Reacción social"
+    },
+    "combattant": {
+      "en": "Japanese fighter",
+      "es": "Luchador japonés"
+    },
+    "emotion-forte": {
+      "en": "Strong emotion",
+      "es": "Emoción fuerte"
+    },
+    "animal-majestueux": {
+      "en": "Majestic animal",
+      "es": "Animal majestuoso"
+    },
+    "ville-nuit": {
+      "en": "City at night",
+      "es": "Ciudad de noche"
+    },
+    "primate": {
+      "en": "Primate",
+      "es": "Primate"
+    },
+    "petit-animal": {
+      "en": "Small animal",
+      "es": "Animal pequeño"
+    },
+    "snack-rapide": {
+      "en": "Quick snack",
+      "es": "Snack rápido"
+    },
+    "patisserie": {
+      "en": "Pastry",
+      "es": "Pastelería"
+    },
+    "sport-combat": {
+      "en": "Combat sport",
+      "es": "Deporte de combate"
+    },
+    "engin-aerien": {
+      "en": "Aerial vehicle",
+      "es": "Vehículo aéreo"
+    },
+    "medical": {
+      "en": "Medical staff",
+      "es": "Personal médico"
+    },
+    "metier-aventure": {
+      "en": "Adventure job",
+      "es": "Trabajo de aventura"
+    },
+    "catastrophe": {
+      "en": "Natural disaster",
+      "es": "Catástrofe natural"
+    },
+    "phenomene-ciel": {
+      "en": "Sky phenomenon",
+      "es": "Fenómeno celeste"
+    },
+    "ours": {
+      "en": "Bear",
+      "es": "Oso"
+    },
+    "felin-sauvage": {
+      "en": "Wild feline",
+      "es": "Felino salvaje"
+    },
+    "reptile": {
+      "en": "Reptile",
+      "es": "Reptil"
+    },
+    "oiseau-tropical": {
+      "en": "Tropical bird",
+      "es": "Ave tropical"
+    },
+    "insecte": {
+      "en": "Insect",
+      "es": "Insecto"
+    },
+    "poisson": {
+      "en": "Fish",
+      "es": "Pez"
+    },
+    "marin-mammif": {
+      "en": "Marine mammal",
+      "es": "Mamífero marino"
+    },
+    "boisson-fete": {
+      "en": "Party drink",
+      "es": "Bebida de fiesta"
+    },
+    "gourmand": {
+      "en": "Sweet treat",
+      "es": "Dulce"
+    },
+    "fruit-pop": {
+      "en": "Popular fruit",
+      "es": "Fruta popular"
+    },
+    "legume": {
+      "en": "Vegetable",
+      "es": "Verdura"
+    },
+    "duo-clown": {
+      "en": "Classic clown duo",
+      "es": "Dúo de payasos"
+    },
+    "pirate-mer": {
+      "en": "Sea pirate",
+      "es": "Pirata marino"
+    },
+    "espace": {
+      "en": "Space",
+      "es": "Espacio"
+    },
+    "vacances-ete": {
+      "en": "Summer vacation",
+      "es": "Vacaciones de verano"
+    },
+    "saison-hiver": {
+      "en": "Snowy winter",
+      "es": "Invierno nevado"
+    },
+    "outil-bricolage": {
+      "en": "DIY tool",
+      "es": "Herramienta de bricolaje"
+    },
+    "instrument-musique": {
+      "en": "Musical instrument",
+      "es": "Instrumento musical"
+    },
+    "danse-classique": {
+      "en": "Classical dance",
+      "es": "Baile clásico"
+    },
+    "spectacle-cirque": {
+      "en": "Circus show",
+      "es": "Espectáculo de circo"
+    },
+    "metier-uniforme": {
+      "en": "Uniformed profession",
+      "es": "Profesión con uniforme"
+    },
+    "creature-marine": {
+      "en": "Strange sea creature",
+      "es": "Criatura marina extraña"
+    },
+    "dinosaure": {
+      "en": "Dinosaur",
+      "es": "Dinosaurio"
+    },
+    "vehicule-utilitaire": {
+      "en": "Utility vehicle",
+      "es": "Vehículo utilitario"
+    },
+    "moyen-transport": {
+      "en": "Means of transport",
+      "es": "Medio de transporte"
+    },
+    "geste-victoire": {
+      "en": "Victory gesture",
+      "es": "Gesto de victoria"
+    },
+    "salutation": {
+      "en": "Greeting",
+      "es": "Saludo"
+    }
   }
 }

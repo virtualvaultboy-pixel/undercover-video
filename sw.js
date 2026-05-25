@@ -1,5 +1,5 @@
 // Service Worker — cache du shell de l'app
-const CACHE_NAME = 'undercover-video-v5';
+const CACHE_NAME = 'undercover-video-v6';
 const SHELL_FILES = [
   './',
   'index.html',
@@ -9,6 +9,7 @@ const SHELL_FILES = [
   'ai-generator.js',
   'style.css',
   'manifest.json',
+  'privacy.html',
   'data/videos.json',
   'data/translations.json',
   'icons/icon-192.png',

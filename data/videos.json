@@ -382,23 +382,6 @@
       ]
     },
     {
-      "id": "super-heros",
-      "name": "Super heros",
-      "emoji": "🦸",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/super-heros_1.mp4",
-          "title": "Batman"
-        },
-        {
-          "source": "local",
-          "url": "videos/super-heros_2.mp4",
-          "title": "Superman"
-        }
-      ]
-    },
-    {
       "id": "halloween",
       "name": "Halloween",
       "emoji": "🎃",
@@ -429,23 +412,6 @@
           "source": "local",
           "url": "videos/reaction-sociale_2.mp4",
           "title": "Applaudissements"
-        }
-      ]
-    },
-    {
-      "id": "perso-jeuvideo",
-      "name": "Personnage jeu video",
-      "emoji": "🎮",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/perso-jeuvideo_1.mp4",
-          "title": "Pikachu"
-        },
-        {
-          "source": "local",
-          "url": "videos/perso-jeuvideo_2.mp4",
-          "title": "Mario"
         }
       ]
     },
@@ -484,23 +450,6 @@
       ]
     },
     {
-      "id": "doge-meme",
-      "name": "Chien meme",
-      "emoji": "🐕",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/doge-meme_1.mp4",
-          "title": "Doge"
-        },
-        {
-          "source": "local",
-          "url": "videos/doge-meme_2.mp4",
-          "title": "Cheems"
-        }
-      ]
-    },
-    {
       "id": "animal-majestueux",
       "name": "Animal majestueux",
       "emoji": "🦅",
@@ -535,91 +484,6 @@
           "url": "videos/ville-nuit_2.mp4",
           "title": "New York",
           "duration": 7
-        }
-      ]
-    },
-    {
-      "id": "sous-marin",
-      "name": "Dessin anime sous-marin",
-      "emoji": "🧽",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sous-marin_1.mp4",
-          "title": "SpongeBob"
-        },
-        {
-          "source": "local",
-          "url": "videos/sous-marin_2.mp4",
-          "title": "Patrick"
-        }
-      ]
-    },
-    {
-      "id": "vilain-dc",
-      "name": "Vilain DC",
-      "emoji": "🃏",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/vilain-dc_1.mp4",
-          "title": "Joker"
-        },
-        {
-          "source": "local",
-          "url": "videos/vilain-dc_2.mp4",
-          "title": "Riddler"
-        }
-      ]
-    },
-    {
-      "id": "simpsons",
-      "name": "Famille Simpson",
-      "emoji": "🍩",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/simpsons_1.mp4",
-          "title": "Bart"
-        },
-        {
-          "source": "local",
-          "url": "videos/simpsons_2.mp4",
-          "title": "Homer"
-        }
-      ]
-    },
-    {
-      "id": "sonic-univers",
-      "name": "Univers Sonic",
-      "emoji": "🦔",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sonic-univers_1.mp4",
-          "title": "Sonic"
-        },
-        {
-          "source": "local",
-          "url": "videos/sonic-univers_2.mp4",
-          "title": "Tails"
-        }
-      ]
-    },
-    {
-      "id": "jeu-retro",
-      "name": "Jeu retro",
-      "emoji": "🕹️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/jeu-retro_1.mp4",
-          "title": "Tetris"
-        },
-        {
-          "source": "local",
-          "url": "videos/jeu-retro_2.mp4",
-          "title": "Pac-Man"
         }
       ]
     },
@@ -981,57 +845,6 @@
       ]
     },
     {
-      "id": "personnage-disney",
-      "name": "Personnage Disney",
-      "emoji": "🐭",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/personnage-disney_1.mp4",
-          "title": "Mickey"
-        },
-        {
-          "source": "local",
-          "url": "videos/personnage-disney_2.mp4",
-          "title": "Donald"
-        }
-      ]
-    },
-    {
-      "id": "anti-heros",
-      "name": "Anti-heros Marvel",
-      "emoji": "🦹",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/anti-heros_1.mp4",
-          "title": "Deadpool"
-        },
-        {
-          "source": "local",
-          "url": "videos/anti-heros_2.mp4",
-          "title": "Venom"
-        }
-      ]
-    },
-    {
-      "id": "studio-ghibli",
-      "name": "Studio Ghibli",
-      "emoji": "🐱",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/studio-ghibli_1.mp4",
-          "title": "Totoro"
-        },
-        {
-          "source": "local",
-          "url": "videos/studio-ghibli_2.mp4",
-          "title": "Ponyo"
-        }
-      ]
-    },
-    {
       "id": "duo-clown",
       "name": "Duo clown classique",
       "emoji": "🤡",
@@ -1389,57 +1202,6 @@
       ]
     },
     {
-      "id": "personnage-marvel",
-      "name": "Personnage Marvel",
-      "emoji": "🕷️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/personnage-marvel_1.mp4",
-          "title": "Spider-Man"
-        },
-        {
-          "source": "local",
-          "url": "videos/personnage-marvel_2.mp4",
-          "title": "Hulk"
-        }
-      ]
-    },
-    {
-      "id": "manga-shonen",
-      "name": "Manga shonen",
-      "emoji": "🍥",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/manga-shonen_1.mp4",
-          "title": "Naruto"
-        },
-        {
-          "source": "local",
-          "url": "videos/manga-shonen_2.mp4",
-          "title": "Goku"
-        }
-      ]
-    },
-    {
-      "id": "meme-culte",
-      "name": "Meme culte",
-      "emoji": "🤨",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/meme-culte_1.mp4",
-          "title": "Pikachu surpris"
-        },
-        {
-          "source": "local",
-          "url": "videos/meme-culte_2.mp4",
-          "title": "Drake"
-        }
-      ]
-    },
-    {
       "id": "animal-ferme",
       "name": "Animal de ferme",
       "emoji": "🐄",
@@ -1487,40 +1249,6 @@
           "source": "local",
           "url": "videos/sport-olympique_2.mp4",
           "title": "Athletisme"
-        }
-      ]
-    },
-    {
-      "id": "freres-mario",
-      "name": "Freres Mario",
-      "emoji": "🍄",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/freres-mario_1.mp4",
-          "title": "Mario"
-        },
-        {
-          "source": "local",
-          "url": "videos/freres-mario_2.mp4",
-          "title": "Luigi"
-        }
-      ]
-    },
-    {
-      "id": "pokemon-starter",
-      "name": "Pokemon starter",
-      "emoji": "🐢",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/pokemon-starter_1.mp4",
-          "title": "Carapuce"
-        },
-        {
-          "source": "local",
-          "url": "videos/pokemon-starter_2.mp4",
-          "title": "Bulbizarre"
         }
       ]
     },

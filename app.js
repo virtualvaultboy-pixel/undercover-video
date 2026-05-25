@@ -135,6 +135,7 @@ function buildLangSelect() {
     updateCategoryCounter();
     refreshPremiumUI();
     renderPaywallFeatures();
+    renderStats(); // labels stats peuvent changer de langue
   };
 }
 
@@ -199,14 +200,14 @@ function bindEvents() {
     const val = e.target.value;
     // Custom AI : premium only
     if (val === 'custom-ai' && !isPremium()) {
-      alert(i18n.t('customAiPremiumOnly'));
+      toast(i18n.t('customAiPremiumOnly'));
       e.target.value = state.selectedCategoryId;
       goToPaywall();
       return;
     }
     const cat = state.categories.find(c => c.id === val);
     if (cat && !isCategoryAvailable(cat)) {
-      alert(i18n.t('alertCategoryLocked'));
+      toast(i18n.t('alertCategoryLocked'));
       e.target.value = state.selectedCategoryId;
       goToPaywall();
       return;
@@ -230,11 +231,11 @@ function bindEvents() {
         switchScreen('screen-setup');
       } catch (e) {
         if (e && e.name === 'AbortError') return; // user cancelled
-        alert('Erreur achat : ' + (e.message || e));
+        toast(i18n.t('errorPurchase') + ' : ' + (e.message || e));
       }
     } else {
       // PWA web : pas d'achat possible, on redirige sur le Play Store
-      alert(i18n.t('paywallSoon'));
+      toast(i18n.t('paywallSoon'));
     }
   };
   document.getElementById('btn-paywall-demo').onclick = () => {
@@ -249,8 +250,15 @@ function bindEvents() {
   document.getElementById('btn-ready').onclick = showVideo;
   document.getElementById('btn-hide').onclick = nextPlayer;
   document.getElementById('btn-hide-mrwhite').onclick = nextPlayer;
-  document.getElementById('mr-white-toggle').onchange = e => {
+  const mrToggle = document.getElementById('mr-white-toggle');
+  // Restaurer l'etat depuis localStorage
+  try {
+    state.mrWhiteMode = localStorage.getItem('undercover_mrwhite') === 'true';
+    mrToggle.checked = state.mrWhiteMode;
+  } catch {}
+  mrToggle.onchange = e => {
     state.mrWhiteMode = e.target.checked;
+    try { localStorage.setItem('undercover_mrwhite', String(state.mrWhiteMode)); } catch {}
   };
   document.getElementById('btn-go-vote').onclick = goToVote;
   document.getElementById('btn-new-round').onclick = newSpeakingRound;
@@ -277,7 +285,7 @@ function changePlayers(delta) {
 function handleStartClick() {
   if (state.selectedCategoryId === 'custom-ai') {
     if (!isPremium()) {
-      alert(i18n.t('customAiPremiumOnly'));
+      toast(i18n.t('customAiPremiumOnly'));
       goToPaywall();
       return;
     }
@@ -288,33 +296,42 @@ function handleStartClick() {
 }
 
 // ----------- Custom AI -----------
+let _customGenerating = false;
+
 async function handleCustomGenerate() {
+  if (_customGenerating) return; // anti double-clic
+
   const idea1 = document.getElementById('custom-idea-1').value.trim();
   const idea2 = document.getElementById('custom-idea-2').value.trim();
 
   if (!idea1 || !idea2) {
-    alert(i18n.t('customAiInvalid'));
+    toast(i18n.t('customAiInvalid'));
     return;
   }
 
+  _customGenerating = true;
+  const btn = document.getElementById('btn-custom-generate');
+  btn.disabled = true;
   switchScreen('screen-ai-loading');
 
-  // Generation via Pollinations (URLs construites + prefetch)
   const pair = aiGenerator.generatePair(idea1, idea2, i18n.current);
-  state.customCivils = pair.civils;
-  state.customUndercover = pair.undercover;
 
-  // Prefetch en parallele pour que les images soient pretes au moment du 1er joueur
   try {
     await Promise.all([
       preloadImage(pair.civils.url),
       preloadImage(pair.undercover.url),
     ]);
+    state.customCivils = pair.civils;
+    state.customUndercover = pair.undercover;
+    goToNamesScreen();
   } catch (e) {
-    console.warn('[AI] Prefetch failed, on continue quand meme', e);
+    console.warn('[AI] Generation failed', e);
+    toast(i18n.t('videoErrorTitle') + ' (' + (e.message || 'unknown') + ')');
+    switchScreen('screen-custom-ai');
+  } finally {
+    btn.disabled = false;
+    _customGenerating = false;
   }
-
-  goToNamesScreen();
 }
 
 function preloadImage(url) {
@@ -374,7 +391,7 @@ function startGame() {
       : state.categories.find(c => c.id === state.selectedCategoryId);
 
     if (!cat || cat.videos.length < 2) {
-      alert("Catégorie indisponible.");
+      toast(i18n.t('categoryUnavailable'));
       return;
     }
 
@@ -534,27 +551,40 @@ function handleVote(idx) {
 
 function renderCompare(containerId) {
   const container = document.getElementById(containerId);
+  container.innerHTML = '';
   const ucIsMrWhite = state.mrWhiteMode;
   const ucTitle = ucIsMrWhite ? '🃏 Mr White' : state.undercoverVideo.title;
-  container.innerHTML = `
-    <div class="compare-half">
-      <div class="compare-label">${i18n.t('compareCivils')}</div>
-      <div class="compare-video" data-role="civils"></div>
-      <div class="compare-title">${state.civilsVideo.title}</div>
-    </div>
-    <div class="compare-half">
-      <div class="compare-label">${i18n.t('compareUndercover')}</div>
-      <div class="compare-video" data-role="undercover"></div>
-      <div class="compare-title">${ucTitle}</div>
-    </div>
-  `;
-  const civilsSlot = container.querySelector('[data-role="civils"]');
-  const undercoverSlot = container.querySelector('[data-role="undercover"]');
-  mountComparisonVideo(civilsSlot, state.civilsVideo);
+
+  function buildHalf(labelKey, title) {
+    const half = document.createElement('div');
+    half.className = 'compare-half';
+    const label = document.createElement('div');
+    label.className = 'compare-label';
+    label.textContent = i18n.t(labelKey); // safe (controlled)
+    const video = document.createElement('div');
+    video.className = 'compare-video';
+    const t = document.createElement('div');
+    t.className = 'compare-title';
+    t.textContent = title; // safe (user input -> textContent)
+    half.appendChild(label);
+    half.appendChild(video);
+    half.appendChild(t);
+    return { half, video };
+  }
+
+  const civils = buildHalf('compareCivils', state.civilsVideo.title);
+  const undercover = buildHalf('compareUndercover', ucTitle);
+  container.appendChild(civils.half);
+  container.appendChild(undercover.half);
+
+  mountComparisonVideo(civils.video, state.civilsVideo);
   if (ucIsMrWhite) {
-    undercoverSlot.innerHTML = '<div class="compare-placeholder">🃏</div>';
+    const placeholder = document.createElement('div');
+    placeholder.className = 'compare-placeholder';
+    placeholder.textContent = '🃏';
+    undercover.video.appendChild(placeholder);
   } else {
-    mountComparisonVideo(undercoverSlot, state.undercoverVideo);
+    mountComparisonVideo(undercover.video, state.undercoverVideo);
   }
 }
 
@@ -624,6 +654,17 @@ function switchScreen(id) {
 
 function pickRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
+}
+
+// ----------- Toast system (remplace alert) -----------
+let _toastTimer = null;
+function toast(message, duration = 2800) {
+  const el = document.getElementById('toast');
+  if (!el) { console.log('[toast]', message); return; }
+  el.textContent = message;
+  el.classList.add('show');
+  if (_toastTimer) clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => el.classList.remove('show'), duration);
 }
 
 // ----------- Mémoire des catégories récentes -----------

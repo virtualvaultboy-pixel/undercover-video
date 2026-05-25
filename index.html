@@ -49,9 +49,9 @@
     <label class="field">
       <span data-i18n="playersLabel">Nombre de joueurs</span>
       <div class="counter">
-        <button id="players-minus" type="button">−</button>
-        <span id="players-count">4</span>
-        <button id="players-plus" type="button">+</button>
+        <button id="players-minus" type="button" aria-label="Moins de joueurs">−</button>
+        <span id="players-count" aria-live="polite">4</span>
+        <button id="players-plus" type="button" aria-label="Plus de joueurs">+</button>
       </div>
     </label>
 
@@ -152,7 +152,7 @@
   <!-- ÉCRAN 2 : Transition (passe le téléphone) -->
   <section id="screen-transition" class="screen">
     <h2 data-i18n="passPhoneTo">📱 Passe le téléphone à</h2>
-    <p class="big-player" id="transition-player">Joueur 1</p>
+    <p class="big-player" id="transition-player" aria-live="polite">Joueur 1</p>
     <button id="btn-ready" class="primary" data-i18n="btnReady">Je suis prêt à voir ma vidéo</button>
   </section>
 
@@ -205,6 +205,9 @@
     <div class="compare-zone" id="undercover-compare"></div>
     <button id="btn-restart-uc" class="primary" data-i18n="btnNewGame">Nouvelle partie</button>
   </section>
+
+  <!-- Toast (notifications discretes, role status pour SR) -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <script src="i18n.js"></script>
   <script src="play-billing.js"></script>

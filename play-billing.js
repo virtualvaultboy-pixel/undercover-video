@@ -65,7 +65,6 @@ const playBilling = {
     const details = await this.fetchDetails();
     if (!details) throw new Error('sku_unavailable');
 
-    // PaymentRequest (W3C) pour TWA + Google Play
     const paymentMethod = [{
       supportedMethods: PLAY_BILLING_URL,
       data: { sku: SKU_PREMIUM },
@@ -81,11 +80,15 @@ const playBilling = {
     const response = await request.show();
     const token = response.details.purchaseToken;
 
-    // Acquittement obligatoire (sinon le user est rembourse au bout de 3 jours)
+    // Acquittement OBLIGATOIRE : sinon Google rembourse a J+3 silencieusement.
+    // Si l'acknowledge echoue, on doit considerer l'achat comme echoue cote app
+    // pour ne pas debloquer un Premium qui sera revoque.
     try {
       await this.service.acknowledge(token, 'onetime');
     } catch (e) {
-      console.warn('[Billing] acknowledge failed :', e);
+      console.error('[Billing] acknowledge failed, marking purchase as failed:', e);
+      try { await response.complete('fail'); } catch {}
+      throw new Error('acknowledge_failed');
     }
 
     await response.complete('success');

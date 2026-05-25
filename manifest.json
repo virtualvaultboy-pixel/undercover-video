@@ -36,31 +36,31 @@
   "screenshots": [
     {
       "src": "screenshots/screen-setup.png",
-      "sizes": "540x1170",
+      "sizes": "1080x2340",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Accueil — choix du nombre de joueurs et de la catégorie"
     },
     {
+      "src": "screenshots/screen-help.png",
+      "sizes": "1080x2340",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Règles du jeu en un écran"
+    },
+    {
       "src": "screenshots/screen-video.png",
-      "sizes": "540x1170",
+      "sizes": "1080x2340",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Lecture de la vidéo secrète pour chaque joueur"
     },
     {
       "src": "screenshots/screen-vote.png",
-      "sizes": "540x1170",
+      "sizes": "1080x2340",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Vote pour démasquer l'undercover"
-    },
-    {
-      "src": "screenshots/screen-victory.png",
-      "sizes": "540x1170",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Comparatif des 2 vidéos en fin de partie"
     }
   ],
   "shortcuts": [

@@ -119,6 +119,8 @@ const I18N = {
     customAiGenerating: "Génération des images en cours…",
     customAiPremiumOnly: "Le mode Personnalisé est réservé aux utilisateurs Premium.",
     customAiInvalid: "Renseigne les 2 idées avant de lancer.",
+    errorPurchase: "Erreur lors de l'achat",
+    categoryUnavailable: "Catégorie indisponible.",
   },
 
   en: {
@@ -220,6 +222,8 @@ const I18N = {
     customAiGenerating: "Generating images…",
     customAiPremiumOnly: "Custom mode is reserved for Premium users.",
     customAiInvalid: "Fill in both ideas before starting.",
+    errorPurchase: "Purchase error",
+    categoryUnavailable: "Category unavailable.",
   },
 
   es: {
@@ -321,6 +325,8 @@ const I18N = {
     customAiGenerating: "Generando imágenes…",
     customAiPremiumOnly: "El modo Personalizado está reservado a los usuarios Premium.",
     customAiInvalid: "Rellena las 2 ideas antes de empezar.",
+    errorPurchase: "Error en la compra",
+    categoryUnavailable: "Categoría no disponible.",
   },
 };
 
