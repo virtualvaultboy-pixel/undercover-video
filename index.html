@@ -2,18 +2,45 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#0d0d12">
-  <title>Undercover Vidéo</title>
+  <meta name="description" content="Le jeu Undercover en version vidéo. Mode pass-and-play sur un seul téléphone : chaque joueur regarde sa vidéo en secret, puis débat à l'oral pour démasquer l'undercover. Plus de 75 paires de vidéos surprenantes.">
+  <meta name="keywords" content="undercover, jeu, party game, vidéo, soirée, entre amis, multijoueur, pass and play">
+  <meta name="author" content="Deponchy Studio">
+
+  <title>Undercover Vidéo — Party Game</title>
+
+  <!-- PWA -->
   <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Undercover">
+
+  <!-- Icônes -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+
+  <!-- Open Graph (partage) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Undercover Vidéo — Party Game">
+  <meta property="og:description" content="Le jeu Undercover en version vidéo. Plus de 75 paires de vidéos surprenantes.">
+  <meta property="og:image" content="icons/icon-512.png">
+  <meta property="og:url" content="https://virtualvaultboy-pixel.github.io/undercover-video/">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- ÉCRAN 1 : Accueil / Setup -->
   <section id="screen-setup" class="screen active">
+    <button id="btn-help" class="icon-button" type="button" aria-label="Comment jouer">?</button>
     <h1>🎬 Undercover Vidéo</h1>
     <p class="subtitle">L'app distribue les rôles. À vous de jouer.</p>
+    <p class="cat-counter" id="cat-counter">— catégories disponibles</p>
 
     <label class="field">
       Nombre de joueurs
@@ -30,6 +57,22 @@
     </label>
 
     <button id="btn-start" class="primary">Suivant</button>
+  </section>
+
+  <!-- ÉCRAN 1.2 : Comment jouer -->
+  <section id="screen-help" class="screen">
+    <h2>📖 Comment jouer</h2>
+    <div class="help-content">
+      <p><strong>🎯 Le but :</strong> démasquer l'undercover, le joueur qui n'a pas vu la même vidéo que les autres.</p>
+      <p><strong>1.</strong> L'app distribue les rôles. Tous les joueurs voient la <em>même</em> vidéo… <strong>sauf un</strong> (l'undercover) qui en voit une légèrement différente.</p>
+      <p><strong>2.</strong> Le téléphone passe de main en main. Chacun regarde sa vidéo en secret.</p>
+      <p><strong>3.</strong> À l'oral, chacun décrit sa vidéo à tour de rôle. Sois assez précis pour ne pas être soupçonné, mais assez vague pour ne pas griller l'undercover si c'est toi.</p>
+      <p><strong>4.</strong> Vous votez pour démasquer l'undercover.</p>
+      <p>✅ Si le vote est bon → <strong>les civils gagnent</strong></p>
+      <p>❌ Si le vote est mauvais → ce joueur est éliminé, on recommence un tour</p>
+      <p>🕵️ Si tous les civils sont éliminés → <strong>l'undercover gagne</strong></p>
+    </div>
+    <button id="btn-help-close" class="primary">J'ai compris</button>
   </section>
 
   <!-- ÉCRAN 1.5 : Saisie des noms -->

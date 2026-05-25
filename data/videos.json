@@ -792,6 +792,516 @@
           "title": "Eclair"
         }
       ]
+    },
+    {
+      "id": "ours",
+      "name": "Ours",
+      "emoji": "🐻",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/ours_1.mp4",
+          "title": "Ours brun"
+        },
+        {
+          "source": "local",
+          "url": "videos/ours_2.mp4",
+          "title": "Ours polaire"
+        }
+      ]
+    },
+    {
+      "id": "felin-sauvage",
+      "name": "Felin sauvage",
+      "emoji": "🐆",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/felin-sauvage_1.mp4",
+          "title": "Tigre"
+        },
+        {
+          "source": "local",
+          "url": "videos/felin-sauvage_2.mp4",
+          "title": "Leopard"
+        }
+      ]
+    },
+    {
+      "id": "reptile",
+      "name": "Reptile",
+      "emoji": "🐍",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/reptile_1.mp4",
+          "title": "Serpent"
+        },
+        {
+          "source": "local",
+          "url": "videos/reptile_2.mp4",
+          "title": "Crocodile"
+        }
+      ]
+    },
+    {
+      "id": "oiseau-tropical",
+      "name": "Oiseau tropical",
+      "emoji": "🦜",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/oiseau-tropical_1.mp4",
+          "title": "Perroquet"
+        },
+        {
+          "source": "local",
+          "url": "videos/oiseau-tropical_2.mp4",
+          "title": "Toucan"
+        }
+      ]
+    },
+    {
+      "id": "insecte",
+      "name": "Insecte",
+      "emoji": "🦋",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/insecte_1.mp4",
+          "title": "Papillon"
+        },
+        {
+          "source": "local",
+          "url": "videos/insecte_2.mp4",
+          "title": "Abeille"
+        }
+      ]
+    },
+    {
+      "id": "poisson",
+      "name": "Poisson",
+      "emoji": "🐠",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/poisson_1.mp4",
+          "title": "Poisson clown"
+        },
+        {
+          "source": "local",
+          "url": "videos/poisson_2.mp4",
+          "title": "Requin"
+        }
+      ]
+    },
+    {
+      "id": "marin-mammif",
+      "name": "Mammifere marin",
+      "emoji": "🐬",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/marin-mammif_1.mp4",
+          "title": "Dauphin"
+        },
+        {
+          "source": "local",
+          "url": "videos/marin-mammif_2.mp4",
+          "title": "Baleine"
+        }
+      ]
+    },
+    {
+      "id": "boisson-fete",
+      "name": "Boisson de fete",
+      "emoji": "🍹",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-fete_1.mp4",
+          "title": "Cocktail"
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-fete_2.mp4",
+          "title": "Champagne"
+        }
+      ]
+    },
+    {
+      "id": "gourmand",
+      "name": "Sucrerie",
+      "emoji": "🍫",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/gourmand_1.mp4",
+          "title": "Chocolat"
+        },
+        {
+          "source": "local",
+          "url": "videos/gourmand_2.mp4",
+          "title": "Glace"
+        }
+      ]
+    },
+    {
+      "id": "fruit-pop",
+      "name": "Fruit populaire",
+      "emoji": "🍎",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fruit-pop_1.mp4",
+          "title": "Pomme"
+        },
+        {
+          "source": "local",
+          "url": "videos/fruit-pop_2.mp4",
+          "title": "Banane"
+        }
+      ]
+    },
+    {
+      "id": "legume",
+      "name": "Legume",
+      "emoji": "🥕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/legume_1.mp4",
+          "title": "Carotte"
+        },
+        {
+          "source": "local",
+          "url": "videos/legume_2.mp4",
+          "title": "Brocoli"
+        }
+      ]
+    },
+    {
+      "id": "personnage-disney",
+      "name": "Personnage Disney",
+      "emoji": "🐭",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/personnage-disney_1.mp4",
+          "title": "Mickey"
+        },
+        {
+          "source": "local",
+          "url": "videos/personnage-disney_2.mp4",
+          "title": "Donald"
+        }
+      ]
+    },
+    {
+      "id": "anti-heros",
+      "name": "Anti-heros Marvel",
+      "emoji": "🦹",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/anti-heros_1.mp4",
+          "title": "Deadpool"
+        },
+        {
+          "source": "local",
+          "url": "videos/anti-heros_2.mp4",
+          "title": "Venom"
+        }
+      ]
+    },
+    {
+      "id": "studio-ghibli",
+      "name": "Studio Ghibli",
+      "emoji": "🐱",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/studio-ghibli_1.mp4",
+          "title": "Totoro"
+        },
+        {
+          "source": "local",
+          "url": "videos/studio-ghibli_2.mp4",
+          "title": "Ponyo"
+        }
+      ]
+    },
+    {
+      "id": "duo-clown",
+      "name": "Duo clown classique",
+      "emoji": "🤡",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/duo-clown_1.mp4",
+          "title": "Clown joyeux"
+        },
+        {
+          "source": "local",
+          "url": "videos/duo-clown_2.mp4",
+          "title": "Clown effrayant"
+        }
+      ]
+    },
+    {
+      "id": "pirate-mer",
+      "name": "Pirate des mers",
+      "emoji": "🏴‍☠️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/pirate-mer_1.mp4",
+          "title": "Pirate"
+        },
+        {
+          "source": "local",
+          "url": "videos/pirate-mer_2.mp4",
+          "title": "Navire"
+        }
+      ]
+    },
+    {
+      "id": "espace",
+      "name": "Espace",
+      "emoji": "🌌",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/espace_1.mp4",
+          "title": "Terre"
+        },
+        {
+          "source": "local",
+          "url": "videos/espace_2.mp4",
+          "title": "Saturne"
+        }
+      ]
+    },
+    {
+      "id": "vacances-ete",
+      "name": "Vacances d'ete",
+      "emoji": "🏖️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/vacances-ete_1.mp4",
+          "title": "Plage vacances"
+        },
+        {
+          "source": "local",
+          "url": "videos/vacances-ete_2.mp4",
+          "title": "Bronzage"
+        }
+      ]
+    },
+    {
+      "id": "saison-hiver",
+      "name": "Hiver enneige",
+      "emoji": "❄️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/saison-hiver_1.mp4",
+          "title": "Bonhomme de neige"
+        },
+        {
+          "source": "local",
+          "url": "videos/saison-hiver_2.mp4",
+          "title": "Flocon"
+        }
+      ]
+    },
+    {
+      "id": "outil-bricolage",
+      "name": "Outil de bricolage",
+      "emoji": "🔨",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outil-bricolage_1.mp4",
+          "title": "Marteau"
+        },
+        {
+          "source": "local",
+          "url": "videos/outil-bricolage_2.mp4",
+          "title": "Scie"
+        }
+      ]
+    },
+    {
+      "id": "instrument-musique",
+      "name": "Instrument de musique",
+      "emoji": "🎸",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/instrument-musique_1.mp4",
+          "title": "Guitare"
+        },
+        {
+          "source": "local",
+          "url": "videos/instrument-musique_2.mp4",
+          "title": "Piano"
+        }
+      ]
+    },
+    {
+      "id": "danse-classique",
+      "name": "Danse classique",
+      "emoji": "🩰",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/danse-classique_1.mp4",
+          "title": "Ballet"
+        },
+        {
+          "source": "local",
+          "url": "videos/danse-classique_2.mp4",
+          "title": "Salsa"
+        }
+      ]
+    },
+    {
+      "id": "spectacle-cirque",
+      "name": "Spectacle de cirque",
+      "emoji": "🎪",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/spectacle-cirque_1.mp4",
+          "title": "Jongleur"
+        },
+        {
+          "source": "local",
+          "url": "videos/spectacle-cirque_2.mp4",
+          "title": "Acrobate"
+        }
+      ]
+    },
+    {
+      "id": "metier-uniforme",
+      "name": "Metier en uniforme",
+      "emoji": "👮",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/metier-uniforme_1.mp4",
+          "title": "Policier"
+        },
+        {
+          "source": "local",
+          "url": "videos/metier-uniforme_2.mp4",
+          "title": "Pompier"
+        }
+      ]
+    },
+    {
+      "id": "creature-marine",
+      "name": "Creature marine etrange",
+      "emoji": "🐙",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/creature-marine_1.mp4",
+          "title": "Pieuvre"
+        },
+        {
+          "source": "local",
+          "url": "videos/creature-marine_2.mp4",
+          "title": "Meduse"
+        }
+      ]
+    },
+    {
+      "id": "dinosaure",
+      "name": "Dinosaure",
+      "emoji": "🦖",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/dinosaure_1.mp4",
+          "title": "T-Rex"
+        },
+        {
+          "source": "local",
+          "url": "videos/dinosaure_2.mp4",
+          "title": "Velociraptor"
+        }
+      ]
+    },
+    {
+      "id": "vehicule-utilitaire",
+      "name": "Vehicule utilitaire",
+      "emoji": "🚒",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/vehicule-utilitaire_1.mp4",
+          "title": "Camion pompier"
+        },
+        {
+          "source": "local",
+          "url": "videos/vehicule-utilitaire_2.mp4",
+          "title": "Ambulance"
+        }
+      ]
+    },
+    {
+      "id": "moyen-transport",
+      "name": "Moyen de transport",
+      "emoji": "🚂",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/moyen-transport_1.mp4",
+          "title": "Train"
+        },
+        {
+          "source": "local",
+          "url": "videos/moyen-transport_2.mp4",
+          "title": "Bus"
+        }
+      ]
+    },
+    {
+      "id": "geste-victoire",
+      "name": "Geste de victoire",
+      "emoji": "💪",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/geste-victoire_1.mp4",
+          "title": "Pouce leve"
+        },
+        {
+          "source": "local",
+          "url": "videos/geste-victoire_2.mp4",
+          "title": "Biceps"
+        }
+      ]
+    },
+    {
+      "id": "salutation",
+      "name": "Salutation",
+      "emoji": "👋",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/salutation_1.mp4",
+          "title": "Coucou"
+        },
+        {
+          "source": "local",
+          "url": "videos/salutation_2.mp4",
+          "title": "Bisou"
+        }
+      ]
     }
   ]
 }

@@ -27,6 +27,14 @@ async function loadVideos() {
   const res = await fetch('data/videos.json');
   const data = await res.json();
   state.categories = data.categories;
+  updateCategoryCounter();
+}
+
+function updateCategoryCounter() {
+  const el = document.getElementById('cat-counter');
+  if (!el) return;
+  const n = state.categories.filter(c => c.videos.length >= 2).length;
+  el.textContent = `${n} catégories disponibles`;
 }
 
 function buildCategorySelect() {
@@ -45,6 +53,8 @@ function bindEvents() {
   document.getElementById('players-plus').onclick = () => changePlayers(1);
   document.getElementById('category-select').onchange = e => state.selectedCategoryId = e.target.value;
   document.getElementById('btn-start').onclick = goToNamesScreen;
+  document.getElementById('btn-help').onclick = () => switchScreen('screen-help');
+  document.getElementById('btn-help-close').onclick = () => switchScreen('screen-setup');
   document.getElementById('btn-names-back').onclick = () => switchScreen('screen-setup');
   document.getElementById('btn-names-confirm').onclick = startGame;
   document.getElementById('btn-ready').onclick = showVideo;
@@ -171,6 +181,7 @@ function renderVideo(video) {
     vid.loop = true;
     vid.playsInline = true;
     vid.muted = false;
+    vid.onerror = () => showVideoError(container);
     container.appendChild(vid);
   } else if (video.source === 'youtube') {
     const iframe = document.createElement('iframe');
@@ -196,6 +207,16 @@ function renderVideo(video) {
     script.async = true;
     document.body.appendChild(script);
   }
+}
+
+function showVideoError(container) {
+  container.innerHTML = `
+    <div class="video-error">
+      <div class="video-error-emoji">📡</div>
+      <p>Impossible de charger la vidéo.</p>
+      <p class="video-error-sub">Vérifie ta connexion internet.</p>
+    </div>
+  `;
 }
 
 // ----------- Tour de parole -----------

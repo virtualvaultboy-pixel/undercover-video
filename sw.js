@@ -1,5 +1,5 @@
-// Service Worker minimal — cache du shell de l'app
-const CACHE_NAME = 'undercover-video-v1';
+// Service Worker — cache du shell de l'app
+const CACHE_NAME = 'undercover-video-v2';
 const SHELL_FILES = [
   './',
   'index.html',
@@ -7,6 +7,11 @@ const SHELL_FILES = [
   'style.css',
   'manifest.json',
   'data/videos.json',
+  'icons/icon-192.png',
+  'icons/icon-512.png',
+  'icons/icon-maskable-512.png',
+  'icons/apple-touch-icon.png',
+  'icons/favicon-32.png',
 ];
 
 self.addEventListener('install', event => {

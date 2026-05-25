@@ -213,6 +213,84 @@ button:active {
   max-width: 100% !important;
 }
 
+.video-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px;
+  color: var(--text);
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  gap: 12px;
+}
+
+.video-error-emoji {
+  font-size: 4rem;
+}
+
+.video-error-sub {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+/* ----- Bouton info & compteur catégories ----- */
+.icon-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.icon-button:active { transform: scale(0.95); }
+
+.cat-counter {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: -8px;
+}
+
+/* ----- Écran d'aide ----- */
+.help-content {
+  width: 100%;
+  max-width: 360px;
+  text-align: left;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.help-content p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.help-content p:last-child { margin-bottom: 0; }
+.help-content strong { color: var(--accent); }
+.help-content em { color: var(--text-dim); font-style: normal; }
+
 /* ----- Saisie des noms ----- */
 .names-list {
   width: 100%;
