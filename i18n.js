@@ -94,6 +94,17 @@ const I18N = {
 
     // Langue
     languageLabel: "Langue",
+
+    // Mr White
+    mrWhiteToggle: "Mode Mr White",
+    mrWhiteToggleHint: "Un joueur n'a pas de vidéo et doit bluffer",
+    mrWhiteTitle: "🃏 Tu es Mr White !",
+    mrWhiteSubtitle: "Tu n'as pas de vidéo. À toi de bluffer pour ne pas te faire griller.",
+
+    // Stats
+    statsGames: "Parties",
+    statsCivilsWin: "Civils",
+    statsUndercoverWin: "Undercover",
   },
 
   en: {
@@ -173,6 +184,15 @@ const I18N = {
     alertCategoryLocked: "This category is reserved for Premium users.",
 
     languageLabel: "Language",
+
+    mrWhiteToggle: "Mr White mode",
+    mrWhiteToggleHint: "One player has no video and must bluff",
+    mrWhiteTitle: "🃏 You are Mr White!",
+    mrWhiteSubtitle: "You have no video. Bluff your way through to avoid being caught.",
+
+    statsGames: "Games",
+    statsCivilsWin: "Civilians",
+    statsUndercoverWin: "Undercover",
   },
 
   es: {
@@ -252,6 +272,15 @@ const I18N = {
     alertCategoryLocked: "Esta categoría está reservada para usuarios Premium.",
 
     languageLabel: "Idioma",
+
+    mrWhiteToggle: "Modo Mr White",
+    mrWhiteToggleHint: "Un jugador no tiene vídeo y debe farolear",
+    mrWhiteTitle: "🃏 ¡Eres Mr White!",
+    mrWhiteSubtitle: "No tienes vídeo. Tienes que farolear para no ser descubierto.",
+
+    statsGames: "Partidas",
+    statsCivilsWin: "Civiles",
+    statsUndercoverWin: "Infiltrado",
   },
 };
 

@@ -5,15 +5,45 @@
 const state = {
   playersCount: 4,
   categories: [],
+  translations: {},
   selectedCategoryId: 'random',
   playerNames: [],
   civilsVideo: null,
   undercoverVideo: null,
   undercoverIndex: 0,
+  mrWhiteMode: false,
   assignments: [],
   currentPlayerIndex: 0,
   wrongVotes: [],
 };
+
+// ----------- Stats locales -----------
+const STATS_KEY = 'undercover_stats';
+function getStats() {
+  try {
+    const s = JSON.parse(localStorage.getItem(STATS_KEY) || '{}');
+    return { games: s.games || 0, civils: s.civils || 0, undercover: s.undercover || 0 };
+  } catch { return { games: 0, civils: 0, undercover: 0 }; }
+}
+function bumpStats(winner) {
+  const s = getStats();
+  s.games++;
+  if (winner === 'civils') s.civils++;
+  if (winner === 'undercover') s.undercover++;
+  try { localStorage.setItem(STATS_KEY, JSON.stringify(s)); } catch {}
+  renderStats();
+}
+function renderStats() {
+  const el = document.getElementById('stats-row');
+  if (!el) return;
+  const s = getStats();
+  if (s.games === 0) { el.innerHTML = ''; return; }
+  el.innerHTML = `
+    <div class="stat"><div class="stat-num">${s.games}</div><div class="stat-lbl">${i18n.t('statsGames')}</div></div>
+    <div class="stat"><div class="stat-num">${s.civils}</div><div class="stat-lbl">${i18n.t('statsCivilsWin')}</div></div>
+    <div class="stat"><div class="stat-num">${s.undercover}</div><div class="stat-lbl">${i18n.t('statsUndercoverWin')}</div></div>
+  `;
+}
 
 // Les 25 premières catégories du JSON sont gratuites, le reste = premium
 const FREE_COUNT = 25;
@@ -44,14 +74,39 @@ async function init() {
   i18n.applyI18n();
   buildCategorySelect();
   bindEvents();
+  // Init Play Billing (silencieux si hors TWA)
+  if (window.playBilling) {
+    await window.playBilling.init();
+  }
   refreshPremiumUI();
+  updateCategoryCounter();
+  renderStats();
 }
 
 async function loadVideos() {
-  const res = await fetch('data/videos.json');
-  const data = await res.json();
+  const [resV, resT] = await Promise.all([
+    fetch('data/videos.json'),
+    fetch('data/translations.json').catch(() => null),
+  ]);
+  const data = await resV.json();
   state.categories = data.categories;
+  if (resT && resT.ok) {
+    try {
+      const tr = await resT.json();
+      state.translations = tr.categories || {};
+    } catch { state.translations = {}; }
+  } else {
+    state.translations = {};
+  }
   updateCategoryCounter();
+}
+
+function categoryName(cat) {
+  const lang = i18n.current;
+  if (lang === 'fr') return cat.name;
+  const tr = state.translations[cat.id];
+  if (tr && tr[lang]) return tr[lang];
+  return cat.name; // fallback FR
 }
 
 function updateCategoryCounter() {
@@ -96,7 +151,7 @@ function buildCategorySelect() {
     const opt = document.createElement('option');
     opt.value = cat.id;
     const locked = !isCategoryAvailable(cat);
-    opt.textContent = `${cat.emoji} ${cat.name}${locked ? '  ' + i18n.t('categoryLocked') : ''}`;
+    opt.textContent = `${cat.emoji} ${categoryName(cat)}${locked ? '  ' + i18n.t('categoryLocked') : ''}`;
     opt.dataset.locked = locked ? '1' : '0';
     sel.appendChild(opt);
   });
@@ -148,9 +203,22 @@ function bindEvents() {
   document.getElementById('btn-help-close').onclick = () => switchScreen('screen-setup');
   document.getElementById('btn-show-paywall').onclick = goToPaywall;
   document.getElementById('btn-paywall-close').onclick = () => switchScreen('screen-setup');
-  document.getElementById('btn-paywall-buy').onclick = () => {
-    // Pour l'instant : redirection / message. Sera connecté à Google Play Billing en v1.2.
-    alert(i18n.t('paywallSoon'));
+  document.getElementById('btn-paywall-buy').onclick = async () => {
+    if (window.playBilling && window.playBilling.available) {
+      try {
+        await window.playBilling.buy();
+        refreshPremiumUI();
+        buildCategorySelect();
+        updateCategoryCounter();
+        switchScreen('screen-setup');
+      } catch (e) {
+        if (e && e.name === 'AbortError') return; // user cancelled
+        alert('Erreur achat : ' + (e.message || e));
+      }
+    } else {
+      // PWA web : pas d'achat possible, on redirige sur le Play Store
+      alert(i18n.t('paywallSoon'));
+    }
   };
   document.getElementById('btn-paywall-demo').onclick = () => {
     unlockPremium();
@@ -163,6 +231,10 @@ function bindEvents() {
   document.getElementById('btn-names-confirm').onclick = startGame;
   document.getElementById('btn-ready').onclick = showVideo;
   document.getElementById('btn-hide').onclick = nextPlayer;
+  document.getElementById('btn-hide-mrwhite').onclick = nextPlayer;
+  document.getElementById('mr-white-toggle').onchange = e => {
+    state.mrWhiteMode = e.target.checked;
+  };
   document.getElementById('btn-go-vote').onclick = goToVote;
   document.getElementById('btn-new-round').onclick = newSpeakingRound;
   document.getElementById('btn-restart').onclick = restart;
@@ -257,6 +329,11 @@ function showTransition() {
 
 function showVideo() {
   const a = state.assignments[state.currentPlayerIndex];
+  // Mr White : pas de vidéo, on affiche l'écran spécial bluff
+  if (a.isUndercover && state.mrWhiteMode) {
+    switchScreen('screen-mrwhite-video');
+    return;
+  }
   renderVideo(a.video);
   switchScreen('screen-video');
 }
@@ -372,6 +449,8 @@ function handleVote(idx) {
 
 function renderCompare(containerId) {
   const container = document.getElementById(containerId);
+  const ucIsMrWhite = state.mrWhiteMode;
+  const ucTitle = ucIsMrWhite ? '🃏 Mr White' : state.undercoverVideo.title;
   container.innerHTML = `
     <div class="compare-half">
       <div class="compare-label">${i18n.t('compareCivils')}</div>
@@ -381,13 +460,17 @@ function renderCompare(containerId) {
     <div class="compare-half">
       <div class="compare-label">${i18n.t('compareUndercover')}</div>
       <div class="compare-video" data-role="undercover"></div>
-      <div class="compare-title">${state.undercoverVideo.title}</div>
+      <div class="compare-title">${ucTitle}</div>
     </div>
   `;
   const civilsSlot = container.querySelector('[data-role="civils"]');
   const undercoverSlot = container.querySelector('[data-role="undercover"]');
   mountComparisonVideo(civilsSlot, state.civilsVideo);
-  mountComparisonVideo(undercoverSlot, state.undercoverVideo);
+  if (ucIsMrWhite) {
+    undercoverSlot.innerHTML = '<div class="compare-placeholder">🃏</div>';
+  } else {
+    mountComparisonVideo(undercoverSlot, state.undercoverVideo);
+  }
 }
 
 function mountComparisonVideo(slot, video) {
@@ -412,6 +495,7 @@ function mountComparisonVideo(slot, video) {
 function showVictory(voted) {
   document.getElementById('victory-name').textContent = voted.name;
   renderCompare('victory-compare');
+  bumpStats('civils');
   switchScreen('screen-victory');
 }
 
@@ -419,6 +503,7 @@ function showUndercoverWins() {
   const uc = state.assignments.find(a => a.isUndercover);
   document.getElementById('undercover-name').textContent = uc.name;
   renderCompare('undercover-compare');
+  bumpStats('undercover');
   switchScreen('screen-undercover-wins');
 }
 

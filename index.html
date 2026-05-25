@@ -60,8 +60,25 @@
       <select id="category-select"></select>
     </label>
 
+    <label class="toggle-row" for="mr-white-toggle">
+      <div>
+        <div class="toggle-label" data-i18n="mrWhiteToggle">Mode Mr White</div>
+        <div class="toggle-hint" data-i18n="mrWhiteToggleHint">Un joueur n'a pas de vidéo et doit bluffer</div>
+      </div>
+      <input type="checkbox" id="mr-white-toggle" role="switch">
+    </label>
+
     <button id="btn-start" class="primary" data-i18n="btnNext">Suivant</button>
     <button id="btn-show-paywall" class="link-btn" data-i18n="btnPremium">💎 Devenir Premium</button>
+
+    <div class="stats-row" id="stats-row"></div>
+  </section>
+
+  <!-- ÉCRAN 2.5 : Vidéo Mr White -->
+  <section id="screen-mrwhite-video" class="screen mrwhite-screen">
+    <h2 data-i18n="mrWhiteTitle">🃏 Tu es Mr White !</h2>
+    <p class="subtitle" data-i18n="mrWhiteSubtitle">Tu n'as pas de vidéo. À toi de bluffer.</p>
+    <button id="btn-hide-mrwhite" class="primary" data-i18n="btnHide">✅ J'ai vu, cacher</button>
   </section>
 
   <!-- ÉCRAN 1.2 : Comment jouer -->
@@ -162,6 +179,7 @@
   </section>
 
   <script src="i18n.js"></script>
+  <script src="play-billing.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
