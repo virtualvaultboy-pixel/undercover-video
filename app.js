@@ -10,13 +10,38 @@ const state = {
   playerNames: [],
   civilsVideo: null,
   undercoverVideo: null,
-  undercoverIndex: null,    // null si pas d'undercover dans la variante surprise
-  mrWhiteIndex: null,       // null si pas de Mr White dans la variante surprise
-  mrWhiteMode: false,       // toggle UI = "Mode Surprise"
+  undercoverIndex: null,    // null si pas d'undercover
+  undercoverIndex2: null,   // 2e undercover (option Premium)
+  mrWhiteIndex: null,       // null si pas de Mr White
+  mrWhiteMode: false,       // Mode Surprise
+  twoUndercovers: false,    // 2 undercovers (≥ 8 joueurs)
+  muteByDefault: false,     // vidéos sans son
+  timerSeconds: 0,          // 0 = pas de timer
   assignments: [],
   currentPlayerIndex: 0,
   wrongVotes: [],
 };
+
+const PREFS_KEY = 'undercover_prefs';
+function loadPrefs() {
+  try {
+    const p = JSON.parse(localStorage.getItem(PREFS_KEY) || '{}');
+    state.mrWhiteMode    = !!p.mrWhiteMode;
+    state.twoUndercovers = !!p.twoUndercovers;
+    state.muteByDefault  = !!p.muteByDefault;
+    state.timerSeconds   = Number(p.timerSeconds) || 0;
+  } catch {}
+}
+function savePrefs() {
+  try {
+    localStorage.setItem(PREFS_KEY, JSON.stringify({
+      mrWhiteMode: state.mrWhiteMode,
+      twoUndercovers: state.twoUndercovers,
+      muteByDefault: state.muteByDefault,
+      timerSeconds: state.timerSeconds,
+    }));
+  } catch {}
+}
 
 // ----------- Stats locales -----------
 const STATS_KEY = 'undercover_stats';
@@ -251,16 +276,28 @@ function bindEvents() {
   document.getElementById('btn-ready').onclick = showVideo;
   document.getElementById('btn-hide').onclick = nextPlayer;
   document.getElementById('btn-hide-mrwhite').onclick = nextPlayer;
+
+  // Restaure les préférences depuis localStorage
+  loadPrefs();
+
   const mrToggle = document.getElementById('mr-white-toggle');
-  // Restaurer l'etat depuis localStorage
-  try {
-    state.mrWhiteMode = localStorage.getItem('undercover_mrwhite') === 'true';
-    mrToggle.checked = state.mrWhiteMode;
-  } catch {}
-  mrToggle.onchange = e => {
-    state.mrWhiteMode = e.target.checked;
-    try { localStorage.setItem('undercover_mrwhite', String(state.mrWhiteMode)); } catch {}
-  };
+  mrToggle.checked = state.mrWhiteMode;
+  mrToggle.onchange = e => { state.mrWhiteMode = e.target.checked; savePrefs(); };
+
+  const twoUcToggle = document.getElementById('two-uc-toggle');
+  twoUcToggle.checked = state.twoUndercovers;
+  twoUcToggle.onchange = e => { state.twoUndercovers = e.target.checked; savePrefs(); };
+
+  const muteToggle = document.getElementById('mute-toggle');
+  muteToggle.checked = state.muteByDefault;
+  muteToggle.onchange = e => { state.muteByDefault = e.target.checked; savePrefs(); };
+
+  const timerSel = document.getElementById('timer-select');
+  timerSel.value = String(state.timerSeconds);
+  timerSel.onchange = e => { state.timerSeconds = Number(e.target.value); savePrefs(); };
+
+  const btnTimerRestart = document.getElementById('btn-timer-restart');
+  if (btnTimerRestart) btnTimerRestart.onclick = startTurnTimer;
   document.getElementById('btn-go-vote').onclick = goToVote;
   document.getElementById('btn-new-round').onclick = newSpeakingRound;
   document.getElementById('btn-restart').onclick = restart;
@@ -425,14 +462,18 @@ function startGame() {
     hasMrWhite   = (variant === 'mrwhite' || variant === 'both');
   }
 
+  // 2e undercover (option premium hors mode Surprise, ≥ 8 joueurs)
+  const has2ndUC = !state.mrWhiteMode && state.twoUndercovers && state.playersCount >= 8 && hasUndercover;
+
   // Tire des indices distincts pour les imposteurs
   const allIndices = [...Array(state.playersCount).keys()].sort(() => Math.random() - 0.5);
   let cursor = 0;
-  state.undercoverIndex = hasUndercover ? allIndices[cursor++] : null;
-  state.mrWhiteIndex    = hasMrWhite    ? allIndices[cursor++] : null;
+  state.undercoverIndex  = hasUndercover ? allIndices[cursor++] : null;
+  state.undercoverIndex2 = has2ndUC      ? allIndices[cursor++] : null;
+  state.mrWhiteIndex     = hasMrWhite    ? allIndices[cursor++] : null;
 
   state.assignments = state.playerNames.map((name, i) => {
-    if (i === state.undercoverIndex) {
+    if (i === state.undercoverIndex || i === state.undercoverIndex2) {
       return { name, video: state.undercoverVideo, role: 'undercover', isUndercover: true };
     }
     if (i === state.mrWhiteIndex) {
@@ -494,7 +535,7 @@ function renderVideo(video) {
     vid.autoplay = true;
     vid.loop = true;
     vid.playsInline = true;
-    vid.muted = false;
+    vid.muted = state.muteByDefault === true; // pref user
     vid.onerror = () => showVideoError(container);
     container.appendChild(vid);
   } else if (video.source === 'youtube') {
@@ -541,14 +582,47 @@ function showPlayScreen() {
   order.sort(() => Math.random() - 0.5);
   document.getElementById('speaking-order').textContent = order.join(' → ');
   switchScreen('screen-play');
+  startTurnTimer();
 }
 
 function newSpeakingRound() {
   showPlayScreen();
 }
 
+// ----------- Timer par tour -----------
+let _timerInterval = null;
+function startTurnTimer() {
+  stopTurnTimer();
+  const wrap = document.getElementById('turn-timer');
+  if (!wrap) return;
+  if (!state.timerSeconds || state.timerSeconds <= 0) {
+    wrap.hidden = true;
+    return;
+  }
+  wrap.hidden = false;
+  const valEl = wrap.querySelector('.turn-timer-value');
+  let remaining = state.timerSeconds;
+  const render = () => {
+    valEl.textContent = remaining > 0 ? `${remaining}s` : i18n.t('timerEnd');
+    wrap.dataset.state = remaining <= 0 ? 'over' : (remaining <= 5 ? 'warn' : 'ok');
+  };
+  render();
+  _timerInterval = setInterval(() => {
+    remaining--;
+    render();
+    if (remaining <= 0) {
+      clearInterval(_timerInterval);
+      _timerInterval = null;
+    }
+  }, 1000);
+}
+function stopTurnTimer() {
+  if (_timerInterval) { clearInterval(_timerInterval); _timerInterval = null; }
+}
+
 // ----------- Vote -----------
 function goToVote() {
+  stopTurnTimer();
   const grid = document.getElementById('vote-grid');
   grid.innerHTML = '';
   state.assignments.forEach((a, idx) => {
@@ -677,6 +751,7 @@ function showMiss(voted) {
 
 // ----------- Restart -----------
 function restart() {
+  stopTurnTimer();
   document.getElementById('video-container').innerHTML = '';
   const vc = document.getElementById('victory-compare');
   const uc = document.getElementById('undercover-compare');

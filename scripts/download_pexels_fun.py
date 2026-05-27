@@ -60,6 +60,32 @@ FUN_PAIRS = [
          ("tokyo neon night", "Tokyo"),
          ("new york night", "New York"),
      ]},
+    # --- Pack 7 ---
+    {"id": "paysage-montagne", "name": "Paysage de montagne", "emoji": "🏔️",
+     "items": [
+         ("snow mountain peak", "Montagne enneigee"),
+         ("mountain forest valley", "Vallee verte"),
+     ]},
+    {"id": "espace-cosmos", "name": "Espace cosmique", "emoji": "🌠",
+     "items": [
+         ("galaxy stars cosmos", "Galaxie"),
+         ("planet earth space", "Planete"),
+     ]},
+    {"id": "fast-cooking", "name": "Cuisine rapide", "emoji": "🍔",
+     "items": [
+         ("chef cooking pan flame", "Cuisson poele"),
+         ("dough kneading bread", "Petrissage pate"),
+     ]},
+    {"id": "macro-insecte", "name": "Macro insecte", "emoji": "🪲",
+     "items": [
+         ("bee flower macro", "Abeille fleur"),
+         ("butterfly wings macro", "Papillon ailes"),
+     ]},
+    {"id": "course-vitesse", "name": "Course de vitesse", "emoji": "🏎️",
+     "items": [
+         ("formula car race track", "Voiture course"),
+         ("motorcycle race speed", "Moto course"),
+     ]},
 ]
 
 

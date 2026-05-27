@@ -68,6 +68,37 @@
       <input type="checkbox" id="mr-white-toggle" role="switch">
     </label>
 
+    <details class="advanced-options">
+      <summary data-i18n="advancedOptions">⚙️ Options avancées</summary>
+
+      <label class="field timer-field">
+        <span data-i18n="timerLabel">⏱️ Timer par tour</span>
+        <select id="timer-select">
+          <option value="0" data-i18n="timerOff">Désactivé</option>
+          <option value="15">15 s</option>
+          <option value="30">30 s</option>
+          <option value="60">60 s</option>
+          <option value="90">90 s</option>
+        </select>
+      </label>
+
+      <label class="toggle-row" for="mute-toggle">
+        <div>
+          <div class="toggle-label" data-i18n="muteByDefaultLabel">🔇 Vidéos sans son par défaut</div>
+          <div class="toggle-hint" data-i18n="muteByDefaultHint">Pratique dans les lieux publics</div>
+        </div>
+        <input type="checkbox" id="mute-toggle" role="switch">
+      </label>
+
+      <label class="toggle-row" for="two-uc-toggle">
+        <div>
+          <div class="toggle-label" data-i18n="twoUndercoversLabel">👥 2 undercovers (≥ 8 joueurs)</div>
+          <div class="toggle-hint" data-i18n="twoUndercoversHint">Plus dur pour les civils.</div>
+        </div>
+        <input type="checkbox" id="two-uc-toggle" role="switch">
+      </label>
+    </details>
+
     <button id="btn-start" class="primary" data-i18n="btnNext">Suivant</button>
     <button id="btn-show-paywall" class="link-btn" data-i18n="btnPremium">💎 Devenir Premium</button>
 
@@ -169,6 +200,10 @@
     <p class="subtitle" data-i18n="playSubtitle"></p>
     <p class="order" data-i18n="speakingOrder">Ordre de parole :</p>
     <p id="speaking-order" class="big-text"></p>
+    <div id="turn-timer" class="turn-timer" hidden>
+      <div class="turn-timer-value">--</div>
+      <button id="btn-timer-restart" class="link-btn" type="button">↻</button>
+    </div>
     <button id="btn-go-vote" class="primary" data-i18n="btnGoVote">Passer au vote</button>
     <button id="btn-restart-play" class="secondary" data-i18n="btnAbandon">Abandonner la partie</button>
   </section>

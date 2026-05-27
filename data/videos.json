@@ -1285,6 +1285,441 @@
           "title": "Bisou coeur"
         }
       ]
+    },
+    {
+      "id": "paysage-montagne",
+      "name": "Paysage de montagne",
+      "emoji": "🏔️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/paysage-montagne_1.mp4",
+          "title": "Montagne enneigee",
+          "duration": 14
+        },
+        {
+          "source": "local",
+          "url": "videos/paysage-montagne_2.mp4",
+          "title": "Vallee verte",
+          "duration": 11
+        }
+      ]
+    },
+    {
+      "id": "espace-cosmos",
+      "name": "Espace cosmique",
+      "emoji": "🌠",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/espace-cosmos_1.mp4",
+          "title": "Galaxie",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/espace-cosmos_2.mp4",
+          "title": "Planete",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "fast-cooking",
+      "name": "Cuisine rapide",
+      "emoji": "🍔",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fast-cooking_1.mp4",
+          "title": "Cuisson poele",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/fast-cooking_2.mp4",
+          "title": "Petrissage pate",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "macro-insecte",
+      "name": "Macro insecte",
+      "emoji": "🪲",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/macro-insecte_1.mp4",
+          "title": "Abeille fleur",
+          "duration": 12
+        },
+        {
+          "source": "local",
+          "url": "videos/macro-insecte_2.mp4",
+          "title": "Papillon ailes",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "course-vitesse",
+      "name": "Course de vitesse",
+      "emoji": "🏎️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/course-vitesse_1.mp4",
+          "title": "Voiture course",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/course-vitesse_2.mp4",
+          "title": "Moto course",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "lever-coucher",
+      "name": "Lever ou coucher de soleil",
+      "emoji": "🌅",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/lever-coucher_1.mp4",
+          "title": "Lever de soleil"
+        },
+        {
+          "source": "local",
+          "url": "videos/lever-coucher_2.mp4",
+          "title": "Coucher de soleil"
+        }
+      ]
+    },
+    {
+      "id": "ile-paradis",
+      "name": "Ile paradisiaque",
+      "emoji": "🏝️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/ile-paradis_1.mp4",
+          "title": "Plage tropicale"
+        },
+        {
+          "source": "local",
+          "url": "videos/ile-paradis_2.mp4",
+          "title": "Lagon bleu"
+        }
+      ]
+    },
+    {
+      "id": "fete-evenement",
+      "name": "Fete d'evenement",
+      "emoji": "🎂",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fete-evenement_1.mp4",
+          "title": "Mariage"
+        },
+        {
+          "source": "local",
+          "url": "videos/fete-evenement_2.mp4",
+          "title": "Anniversaire"
+        }
+      ]
+    },
+    {
+      "id": "boisson-tropicale",
+      "name": "Boisson tropicale",
+      "emoji": "🍹",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-tropicale_1.mp4",
+          "title": "Mojito"
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-tropicale_2.mp4",
+          "title": "Pina colada"
+        }
+      ]
+    },
+    {
+      "id": "plat-italien",
+      "name": "Plat italien",
+      "emoji": "🍝",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/plat-italien_1.mp4",
+          "title": "Pates"
+        },
+        {
+          "source": "local",
+          "url": "videos/plat-italien_2.mp4",
+          "title": "Risotto"
+        }
+      ]
+    },
+    {
+      "id": "fromage-charcuterie",
+      "name": "Fromage ou charcuterie",
+      "emoji": "🧀",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fromage-charcuterie_1.mp4",
+          "title": "Fromage"
+        },
+        {
+          "source": "local",
+          "url": "videos/fromage-charcuterie_2.mp4",
+          "title": "Charcuterie"
+        }
+      ]
+    },
+    {
+      "id": "phenomene-rare",
+      "name": "Phenomene celeste rare",
+      "emoji": "🌌",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/phenomene-rare_1.mp4",
+          "title": "Aurore boreale"
+        },
+        {
+          "source": "local",
+          "url": "videos/phenomene-rare_2.mp4",
+          "title": "Etoiles filantes"
+        }
+      ]
+    },
+    {
+      "id": "art-creatif",
+      "name": "Art creatif",
+      "emoji": "🎨",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/art-creatif_1.mp4",
+          "title": "Aquarelle"
+        },
+        {
+          "source": "local",
+          "url": "videos/art-creatif_2.mp4",
+          "title": "Peinture huile"
+        }
+      ]
+    },
+    {
+      "id": "sport-raquette",
+      "name": "Sport de raquette",
+      "emoji": "🎾",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-raquette_1.mp4",
+          "title": "Tennis"
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-raquette_2.mp4",
+          "title": "Badminton"
+        }
+      ]
+    },
+    {
+      "id": "sport-glace",
+      "name": "Sport de glace",
+      "emoji": "⛸️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-glace_1.mp4",
+          "title": "Hockey"
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-glace_2.mp4",
+          "title": "Patinage"
+        }
+      ]
+    },
+    {
+      "id": "sport-nautique",
+      "name": "Sport nautique",
+      "emoji": "⛵",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-nautique_1.mp4",
+          "title": "Voile"
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-nautique_2.mp4",
+          "title": "Kayak"
+        }
+      ]
+    },
+    {
+      "id": "deux-roues",
+      "name": "Vehicule deux roues",
+      "emoji": "🚲",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/deux-roues_1.mp4",
+          "title": "Velo"
+        },
+        {
+          "source": "local",
+          "url": "videos/deux-roues_2.mp4",
+          "title": "Trottinette"
+        }
+      ]
+    },
+    {
+      "id": "sport-hiver",
+      "name": "Sport d'hiver",
+      "emoji": "🎿",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-hiver_1.mp4",
+          "title": "Ski"
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-hiver_2.mp4",
+          "title": "Snowboard"
+        }
+      ]
+    },
+    {
+      "id": "rongeur-mignon",
+      "name": "Petit rongeur",
+      "emoji": "🐹",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/rongeur-mignon_1.mp4",
+          "title": "Hamster"
+        },
+        {
+          "source": "local",
+          "url": "videos/rongeur-mignon_2.mp4",
+          "title": "Ecureuil"
+        }
+      ]
+    },
+    {
+      "id": "canide-sauvage",
+      "name": "Canide sauvage",
+      "emoji": "🦊",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/canide-sauvage_1.mp4",
+          "title": "Renard"
+        },
+        {
+          "source": "local",
+          "url": "videos/canide-sauvage_2.mp4",
+          "title": "Loup"
+        }
+      ]
+    },
+    {
+      "id": "mammifere-marin-2",
+      "name": "Mammifere marin 2",
+      "emoji": "🦭",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/mammifere-marin-2_1.mp4",
+          "title": "Phoque"
+        },
+        {
+          "source": "local",
+          "url": "videos/mammifere-marin-2_2.mp4",
+          "title": "Otarie"
+        }
+      ]
+    },
+    {
+      "id": "reptile-lent",
+      "name": "Reptile lent",
+      "emoji": "🐢",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/reptile-lent_1.mp4",
+          "title": "Tortue"
+        },
+        {
+          "source": "local",
+          "url": "videos/reptile-lent_2.mp4",
+          "title": "Lezard"
+        }
+      ]
+    },
+    {
+      "id": "creature-mer-mystere",
+      "name": "Creature de mer mysterieuse",
+      "emoji": "🪼",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/creature-mer-mystere_1.mp4",
+          "title": "Meduse"
+        },
+        {
+          "source": "local",
+          "url": "videos/creature-mer-mystere_2.mp4",
+          "title": "Etoile de mer"
+        }
+      ]
+    },
+    {
+      "id": "art-japonais",
+      "name": "Art japonais",
+      "emoji": "🎴",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/art-japonais_1.mp4",
+          "title": "Origami"
+        },
+        {
+          "source": "local",
+          "url": "videos/art-japonais_2.mp4",
+          "title": "Calligraphie"
+        }
+      ]
+    },
+    {
+      "id": "metro-tram",
+      "name": "Transport urbain rail",
+      "emoji": "🚇",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/metro-tram_1.mp4",
+          "title": "Metro"
+        },
+        {
+          "source": "local",
+          "url": "videos/metro-tram_2.mp4",
+          "title": "Tramway"
+        }
+      ]
     }
   ]
 }

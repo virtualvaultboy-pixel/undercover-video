@@ -661,6 +661,66 @@ input[type="checkbox"][role="switch"]:checked::before {
 }
 .field input[type="text"]::placeholder { color: var(--text-dim); opacity: 0.6; }
 
+/* ----- Options avancées (details) ----- */
+.advanced-options {
+  width: 100%;
+  max-width: 320px;
+  background: transparent;
+  border-radius: 12px;
+  margin-top: 4px;
+}
+.advanced-options > summary {
+  cursor: pointer;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  text-align: center;
+  list-style: none;
+  user-select: none;
+}
+.advanced-options > summary::-webkit-details-marker { display: none; }
+.advanced-options[open] > summary {
+  background: var(--bg-elev);
+  border-style: solid;
+  margin-bottom: 12px;
+}
+.advanced-options > .field,
+.advanced-options > .toggle-row {
+  margin-top: 12px;
+}
+
+/* Timer field (inline select) */
+.timer-field select {
+  font-size: 1rem;
+  padding: 12px 14px;
+}
+
+/* ----- Timer affiché pendant le tour ----- */
+.turn-timer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+.turn-timer-value {
+  font-size: 2rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  min-width: 80px;
+  text-align: center;
+}
+.turn-timer[data-state="warn"] .turn-timer-value { color: var(--accent); }
+.turn-timer[data-state="over"] .turn-timer-value { color: var(--accent); font-size: 1.1rem; animation: pulse 0.6s ease-in-out infinite alternate; }
+@keyframes pulse { from { opacity: 1 } to { opacity: 0.5 } }
+
 /* ----- Toast notifications ----- */
 .toast {
   position: fixed;

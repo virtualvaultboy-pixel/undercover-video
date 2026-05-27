@@ -107,6 +107,16 @@ const I18N = {
     statsCivilsWin: "Civils",
     statsUndercoverWin: "Undercover",
 
+    // Options avancées
+    advancedOptions: "⚙️ Options avancées",
+    timerLabel: "⏱️ Timer par tour de parole",
+    timerOff: "Désactivé",
+    muteByDefaultLabel: "🔇 Vidéos sans son par défaut",
+    muteByDefaultHint: "Pratique dans les lieux publics",
+    twoUndercoversLabel: "👥 2 undercovers (≥ 8 joueurs)",
+    twoUndercoversHint: "Plus dur pour les civils. Sans effet à moins de 8 joueurs.",
+    timerEnd: "⏰ Fin du temps !",
+
     // Custom AI
     customAiOption: "✨ Mode Personnalisé",
     customAiTitle: "✨ Mode Personnalisé",
@@ -212,6 +222,15 @@ const I18N = {
     statsCivilsWin: "Civilians",
     statsUndercoverWin: "Undercover",
 
+    advancedOptions: "⚙️ Advanced options",
+    timerLabel: "⏱️ Timer per speaking turn",
+    timerOff: "Off",
+    muteByDefaultLabel: "🔇 Videos muted by default",
+    muteByDefaultHint: "Handy in public places",
+    twoUndercoversLabel: "👥 2 undercovers (8+ players)",
+    twoUndercoversHint: "Harder for civilians. No effect under 8 players.",
+    timerEnd: "⏰ Time's up!",
+
     customAiOption: "✨ Custom Mode",
     customAiTitle: "✨ Custom Mode",
     customAiSubtitle: "Type 2 similar ideas. The app will find an image for each.",
@@ -315,6 +334,15 @@ const I18N = {
     statsGames: "Partidas",
     statsCivilsWin: "Civiles",
     statsUndercoverWin: "Infiltrado",
+
+    advancedOptions: "⚙️ Opciones avanzadas",
+    timerLabel: "⏱️ Temporizador por turno",
+    timerOff: "Desactivado",
+    muteByDefaultLabel: "🔇 Vídeos sin sonido por defecto",
+    muteByDefaultHint: "Práctico en lugares públicos",
+    twoUndercoversLabel: "👥 2 infiltrados (≥ 8 jugadores)",
+    twoUndercoversHint: "Más difícil para los civiles. Sin efecto con menos de 8.",
+    timerEnd: "⏰ ¡Se acabó el tiempo!",
 
     customAiOption: "✨ Modo Personalizado",
     customAiTitle: "✨ Modo Personalizado",
