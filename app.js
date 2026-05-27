@@ -317,19 +317,18 @@ async function handleCustomGenerate() {
   setLoadingMsg(i18n.t('customAiGenerating'));
 
   try {
-    // Stable Horde : asynchrone avec polling. On suit la progression.
-    const pair = await aiGenerator.generatePair(idea1, idea2, (role, status) => {
-      updateLoadingProgress(role, status);
-    });
-    // Précharge les 2 images pour éviter latence au moment du gameplay
-    await preloadImage(pair.civils.url, 30000).catch(() => {});
-    await preloadImage(pair.undercover.url, 30000).catch(() => {});
+    // LoremFlickr : URLs immédiates, on précharge les 2 images en parallèle.
+    const pair = await aiGenerator.generatePair(idea1, idea2);
+    setLoadingMsg('Image 1/2…');
+    await preloadImage(pair.civils.url, 20000);
+    setLoadingMsg('Image 2/2…');
+    await preloadImage(pair.undercover.url, 20000);
 
     state.customCivils = pair.civils;
     state.customUndercover = pair.undercover;
     goToNamesScreen();
   } catch (e) {
-    console.warn('[AI] Generation failed', e);
+    console.warn('[Custom] Generation failed', e);
     toast(i18n.t('videoErrorTitle') + ' (' + (e.message || 'unknown') + ')');
     switchScreen('screen-custom-ai');
   } finally {
@@ -341,25 +340,6 @@ async function handleCustomGenerate() {
 function setLoadingMsg(msg) {
   const el = document.querySelector('#screen-ai-loading .subtitle');
   if (el) el.textContent = msg;
-}
-
-function updateLoadingProgress(role, status) {
-  // role: 'civils' | 'undercover'
-  // status: { phase?: 'submit', waiting, processing, finished, queue_position, wait_time }
-  const roleLabel = role === 'civils' ? '1/2' : '2/2';
-  let detail = '';
-  if (status.phase === 'submit') {
-    detail = '⏳ Envoi…';
-  } else if (typeof status.queue_position === 'number' && status.queue_position > 0) {
-    detail = `📋 En file (#${status.queue_position}) · ~${status.wait_time || '?'}s`;
-  } else if (status.processing > 0) {
-    detail = '🎨 Génération…';
-  } else if (status.finished > 0) {
-    detail = '✅ Récupération…';
-  } else {
-    detail = '⏳ En attente…';
-  }
-  setLoadingMsg(`Image ${roleLabel} — ${detail}`);
 }
 
 function preloadImage(url, timeoutMs = 25000) {

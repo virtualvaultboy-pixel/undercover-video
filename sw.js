@@ -1,5 +1,5 @@
 // Service Worker — cache du shell de l'app
-const CACHE_NAME = 'undercover-video-v8';
+const CACHE_NAME = 'undercover-video-v9';
 const SHELL_FILES = [
   './',
   'index.html',
