@@ -25,6 +25,7 @@ const I18N = {
     helpWinCivils: "✅ Si le vote est bon → <strong>les civils gagnent</strong>",
     helpWrongVote: "❌ Si le vote est mauvais → ce joueur est éliminé, on recommence un tour",
     helpWinUndercover: "🕵️ Si tous les civils sont éliminés → <strong>l'undercover gagne</strong>",
+    helpSurprise: "<strong>🎲 Mode Surprise :</strong> au lancement, l'app tire au sort entre 3 variantes : un undercover seul, un Mr White seul (joueur sans vidéo qui doit bluffer), ou les deux à la fois. Personne ne sait à l'avance laquelle !",
     btnHelpClose: "J'ai compris",
 
     // Noms
@@ -95,9 +96,9 @@ const I18N = {
     // Langue
     languageLabel: "Langue",
 
-    // Mr White
-    mrWhiteToggle: "Mode Mr White",
-    mrWhiteToggleHint: "Un joueur n'a pas de vidéo et doit bluffer",
+    // Mode Surprise (anciennement Mr White)
+    mrWhiteToggle: "🎲 Mode Surprise",
+    mrWhiteToggleHint: "Aléatoire entre Undercover, Mr White, ou les 2",
     mrWhiteTitle: "🃏 Tu es Mr White !",
     mrWhiteSubtitle: "Tu n'as pas de vidéo. À toi de bluffer pour ne pas te faire griller.",
 
@@ -143,6 +144,7 @@ const I18N = {
     helpWinCivils: "✅ Right vote → <strong>civilians win</strong>",
     helpWrongVote: "❌ Wrong vote → that player is eliminated, new round starts",
     helpWinUndercover: "🕵️ All civilians eliminated → <strong>undercover wins</strong>",
+    helpSurprise: "<strong>🎲 Surprise Mode:</strong> at start, the app randomly picks between 3 variants: one undercover alone, one Mr White alone (player without a video who has to bluff), or both at once. Nobody knows which one!",
     btnHelpClose: "Got it",
 
     namesTitle: "👥 Player names",
@@ -201,8 +203,8 @@ const I18N = {
 
     languageLabel: "Language",
 
-    mrWhiteToggle: "Mr White mode",
-    mrWhiteToggleHint: "One player has no video and must bluff",
+    mrWhiteToggle: "🎲 Surprise Mode",
+    mrWhiteToggleHint: "Random between Undercover, Mr White, or both",
     mrWhiteTitle: "🃏 You are Mr White!",
     mrWhiteSubtitle: "You have no video. Bluff your way through to avoid being caught.",
 
@@ -246,6 +248,7 @@ const I18N = {
     helpWinCivils: "✅ Voto correcto → <strong>los civiles ganan</strong>",
     helpWrongVote: "❌ Voto incorrecto → ese jugador es eliminado, nueva ronda",
     helpWinUndercover: "🕵️ Todos los civiles eliminados → <strong>el infiltrado gana</strong>",
+    helpSurprise: "<strong>🎲 Modo Sorpresa:</strong> al iniciar, la app elige al azar entre 3 variantes: un infiltrado solo, un Mr White solo (jugador sin vídeo que debe farolear), o ambos a la vez. ¡Nadie sabe cuál!",
     btnHelpClose: "Entendido",
 
     namesTitle: "👥 Nombres de los jugadores",
@@ -304,8 +307,8 @@ const I18N = {
 
     languageLabel: "Idioma",
 
-    mrWhiteToggle: "Modo Mr White",
-    mrWhiteToggleHint: "Un jugador no tiene vídeo y debe farolear",
+    mrWhiteToggle: "🎲 Modo Sorpresa",
+    mrWhiteToggleHint: "Aleatorio entre Infiltrado, Mr White, o los dos",
     mrWhiteTitle: "🃏 ¡Eres Mr White!",
     mrWhiteSubtitle: "No tienes vídeo. Tienes que farolear para no ser descubierto.",
 

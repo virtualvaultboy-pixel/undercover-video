@@ -23,6 +23,8 @@
 html, body {
   height: 100%;
   overflow: hidden;
+  overscroll-behavior: none; /* Bloque le pull-to-refresh + bounce */
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -239,13 +241,23 @@ button:active {
 /* ----- Top bar (langue + aide) ----- */
 .top-bar {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
+  top: max(16px, env(safe-area-inset-top, 16px));
+  left: 16px;
+  right: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  pointer-events: none; /* laisse passer les clics ailleurs */
+}
+.top-bar > * { pointer-events: auto; }
+
+/* Décale le contenu de l'accueil pour éviter le chevauchement avec la top-bar */
+#screen-setup {
+  padding-top: 90px;
+  padding-bottom: 24px;
+  justify-content: flex-start;
+  gap: 18px;
 }
 
 .lang-select {
@@ -446,10 +458,15 @@ button.small {
 /* ----- Comparatif 2 vidéos côte à côte ----- */
 .compare-zone {
   width: 100%;
-  max-width: 420px;
+  max-width: 480px;
   display: flex;
-  gap: 8px;
+  gap: 6px;
   margin-top: 8px;
+  flex-wrap: nowrap;
+}
+.compare-zone[data-cols="3"] .compare-half {
+  /* Cases plus étroites quand on a 3 colonnes (mode Surprise avec les 2 imposteurs) */
+  font-size: 0.85em;
 }
 
 .compare-half {
@@ -566,26 +583,31 @@ input[type="checkbox"][role="switch"]:checked::before {
   background: var(--bg-elev);
 }
 
-/* ----- Stats locales ----- */
+/* ----- Stats locales (compactes, 1 ligne inline) ----- */
 .stats-row {
   display: flex;
-  gap: 8px;
+  gap: 14px;
   justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 320px;
-  margin-top: 8px;
+  margin-top: 4px;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  font-weight: 600;
+  flex-wrap: wrap;
 }
 .stats-row:empty { display: none; }
 .stat {
-  flex: 1;
-  background: var(--bg-elev);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 10px 6px;
-  text-align: center;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  border: none;
+  padding: 0;
+  background: none;
 }
 .stat-num {
-  font-size: 1.3rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: var(--text);
 }
@@ -593,7 +615,7 @@ input[type="checkbox"][role="switch"]:checked::before {
   font-size: 0.7rem;
   color: var(--text-dim);
   text-transform: uppercase;
-  margin-top: 2px;
+  letter-spacing: 0.04em;
 }
 
 /* ----- Image IA (Custom AI mode) ----- */

@@ -10,8 +10,9 @@ const state = {
   playerNames: [],
   civilsVideo: null,
   undercoverVideo: null,
-  undercoverIndex: 0,
-  mrWhiteMode: false,
+  undercoverIndex: null,    // null si pas d'undercover dans la variante surprise
+  mrWhiteIndex: null,       // null si pas de Mr White dans la variante surprise
+  mrWhiteMode: false,       // toggle UI = "Mode Surprise"
   assignments: [],
   currentPlayerIndex: 0,
   wrongVotes: [],
@@ -314,15 +315,16 @@ async function handleCustomGenerate() {
   btn.disabled = true;
   switchScreen('screen-ai-loading');
 
-  const pair = aiGenerator.generatePair(idea1, idea2, i18n.current);
+  const pair = aiGenerator.generatePair(idea1, idea2);
 
   try {
-    await Promise.all([
-      preloadImage(pair.civils.url),
-      preloadImage(pair.undercover.url),
+    // Pour chaque image, essaie les URLs candidates en cascade (turbo puis flux)
+    const [civilsUrl, ucUrl] = await Promise.all([
+      tryLoadFirst(pair.civils.urls),
+      tryLoadFirst(pair.undercover.urls),
     ]);
-    state.customCivils = pair.civils;
-    state.customUndercover = pair.undercover;
+    state.customCivils = { ...pair.civils, url: civilsUrl };
+    state.customUndercover = { ...pair.undercover, url: ucUrl };
     goToNamesScreen();
   } catch (e) {
     console.warn('[AI] Generation failed', e);
@@ -334,14 +336,30 @@ async function handleCustomGenerate() {
   }
 }
 
-function preloadImage(url) {
+// Charge la 1ere URL qui répond ; sinon throw après le dernier candidate.
+async function tryLoadFirst(urls) {
+  let lastErr = null;
+  for (const u of urls) {
+    try {
+      await preloadImage(u, 60000);
+      return u;
+    } catch (e) {
+      lastErr = e;
+      console.warn('[AI] Candidate failed, trying next', u, e.message);
+    }
+  }
+  throw lastErr || new Error('all_candidates_failed');
+}
+
+function preloadImage(url, timeoutMs = 25000) {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    img.onload = () => resolve(img);
-    img.onerror = () => reject(new Error('image_load_failed'));
+    let done = false;
+    const finish = (fn, val) => { if (done) return; done = true; fn(val); };
+    img.onload = () => finish(resolve, img);
+    img.onerror = () => finish(reject, new Error('image_load_failed'));
     img.src = url;
-    // Timeout 25s pour ne pas bloquer indefiniment
-    setTimeout(() => reject(new Error('image_load_timeout')), 25000);
+    setTimeout(() => finish(reject, new Error('image_load_timeout')), timeoutMs);
   });
 }
 
@@ -402,13 +420,35 @@ function startGame() {
     state.undercoverVideo = shuffled[1];
   }
 
-  state.undercoverIndex = Math.floor(Math.random() * state.playersCount);
+  // ---- Détermine la composition des imposteurs ----
+  // Par défaut : 1 undercover seul
+  // En Mode Surprise : random entre (undercover seul) / (mr white seul) / (les 2)
+  let hasUndercover = true;
+  let hasMrWhite = false;
+  if (state.mrWhiteMode) {
+    // Pour avoir "les 2" il faut au moins 4 joueurs (sinon trop d'imposteurs)
+    const can2 = state.playersCount >= 4;
+    const variants = can2 ? ['undercover', 'mrwhite', 'both'] : ['undercover', 'mrwhite'];
+    const variant = variants[Math.floor(Math.random() * variants.length)];
+    hasUndercover = (variant === 'undercover' || variant === 'both');
+    hasMrWhite   = (variant === 'mrwhite' || variant === 'both');
+  }
 
-  state.assignments = state.playerNames.map((name, i) => ({
-    name,
-    video: i === state.undercoverIndex ? state.undercoverVideo : state.civilsVideo,
-    isUndercover: i === state.undercoverIndex,
-  }));
+  // Tire des indices distincts pour les imposteurs
+  const allIndices = [...Array(state.playersCount).keys()].sort(() => Math.random() - 0.5);
+  let cursor = 0;
+  state.undercoverIndex = hasUndercover ? allIndices[cursor++] : null;
+  state.mrWhiteIndex    = hasMrWhite    ? allIndices[cursor++] : null;
+
+  state.assignments = state.playerNames.map((name, i) => {
+    if (i === state.undercoverIndex) {
+      return { name, video: state.undercoverVideo, role: 'undercover', isUndercover: true };
+    }
+    if (i === state.mrWhiteIndex) {
+      return { name, video: null, role: 'mrwhite', isUndercover: true };
+    }
+    return { name, video: state.civilsVideo, role: 'civil', isUndercover: false };
+  });
 
   state.currentPlayerIndex = 0;
   state.wrongVotes = [];
@@ -424,8 +464,8 @@ function showTransition() {
 
 function showVideo() {
   const a = state.assignments[state.currentPlayerIndex];
-  // Mr White : pas de vidéo, on affiche l'écran spécial bluff
-  if (a.isUndercover && state.mrWhiteMode) {
+  // Mr White : pas de vidéo, écran spécial bluff
+  if (a.role === 'mrwhite') {
     switchScreen('screen-mrwhite-video');
     return;
   }
@@ -540,9 +580,10 @@ function handleVote(idx) {
 
   state.wrongVotes.push(voted.name);
 
+  // Imposteurs gagnent si plus aucun civil restant
   const remaining = state.assignments.filter(a => !state.wrongVotes.includes(a.name));
-  const onlyUndercoverLeft = remaining.length === 1 && remaining[0].isUndercover;
-  if (onlyUndercoverLeft) {
+  const civilsLeft = remaining.filter(a => !a.isUndercover).length;
+  if (civilsLeft === 0) {
     showUndercoverWins();
   } else {
     showMiss(voted);
@@ -552,40 +593,48 @@ function handleVote(idx) {
 function renderCompare(containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = '';
-  const ucIsMrWhite = state.mrWhiteMode;
-  const ucTitle = ucIsMrWhite ? '🃏 Mr White' : state.undercoverVideo.title;
 
-  function buildHalf(labelKey, title) {
+  function buildHalf(labelText, title) {
     const half = document.createElement('div');
     half.className = 'compare-half';
     const label = document.createElement('div');
     label.className = 'compare-label';
-    label.textContent = i18n.t(labelKey); // safe (controlled)
+    label.textContent = labelText;
     const video = document.createElement('div');
     video.className = 'compare-video';
     const t = document.createElement('div');
     t.className = 'compare-title';
-    t.textContent = title; // safe (user input -> textContent)
+    t.textContent = title;
     half.appendChild(label);
     half.appendChild(video);
     half.appendChild(t);
     return { half, video };
   }
 
-  const civils = buildHalf('compareCivils', state.civilsVideo.title);
-  const undercover = buildHalf('compareUndercover', ucTitle);
+  // 1) Case Civils — toujours présente
+  const civils = buildHalf(i18n.t('compareCivils'), state.civilsVideo.title);
   container.appendChild(civils.half);
-  container.appendChild(undercover.half);
-
   mountComparisonVideo(civils.video, state.civilsVideo);
-  if (ucIsMrWhite) {
+
+  // 2) Case Undercover (si la variante en contient un)
+  if (state.undercoverIndex !== null) {
+    const uc = buildHalf(i18n.t('compareUndercover'), state.undercoverVideo.title);
+    container.appendChild(uc.half);
+    mountComparisonVideo(uc.video, state.undercoverVideo);
+  }
+
+  // 3) Case Mr White (si la variante en contient un)
+  if (state.mrWhiteIndex !== null) {
+    const mw = buildHalf('🃏 Mr White', i18n.t('mrWhiteTitle').replace('🃏 ', ''));
+    container.appendChild(mw.half);
     const placeholder = document.createElement('div');
     placeholder.className = 'compare-placeholder';
     placeholder.textContent = '🃏';
-    undercover.video.appendChild(placeholder);
-  } else {
-    mountComparisonVideo(undercover.video, state.undercoverVideo);
+    mw.video.appendChild(placeholder);
   }
+
+  // Layout adaptatif : 2 ou 3 cases
+  container.dataset.cols = String(container.children.length);
 }
 
 function mountComparisonVideo(slot, video) {
