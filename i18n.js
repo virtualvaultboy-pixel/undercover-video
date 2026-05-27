@@ -117,6 +117,15 @@ const I18N = {
     twoUndercoversHint: "Plus dur pour les civils. Sans effet à moins de 8 joueurs.",
     timerEnd: "⏰ Fin du temps !",
 
+    // Options avancees v1.9
+    vibrationsLabel: "📳 Vibrations",
+    vibrationsHint: "Feedback haptique aux moments clés",
+    fastModeLabel: "⚡ Mode rapide",
+    fastModeHint: "Saute l'écran « passe le téléphone »",
+    resetStatsLabel: "🗑️ Réinitialiser les statistiques",
+    resetStatsConfirm: "Réinitialiser les statistiques ?",
+    statsResetDone: "✅ Statistiques réinitialisées",
+
     // Custom AI
     customAiOption: "✨ Mode Personnalisé",
     customAiTitle: "✨ Mode Personnalisé",
@@ -231,6 +240,14 @@ const I18N = {
     twoUndercoversHint: "Harder for civilians. No effect under 8 players.",
     timerEnd: "⏰ Time's up!",
 
+    vibrationsLabel: "📳 Vibrations",
+    vibrationsHint: "Haptic feedback at key moments",
+    fastModeLabel: "⚡ Fast mode",
+    fastModeHint: "Skip the « pass the phone » screen",
+    resetStatsLabel: "🗑️ Reset statistics",
+    resetStatsConfirm: "Reset all statistics?",
+    statsResetDone: "✅ Statistics reset",
+
     customAiOption: "✨ Custom Mode",
     customAiTitle: "✨ Custom Mode",
     customAiSubtitle: "Type 2 similar ideas. The app will find an image for each.",
@@ -343,6 +360,14 @@ const I18N = {
     twoUndercoversLabel: "👥 2 infiltrados (≥ 8 jugadores)",
     twoUndercoversHint: "Más difícil para los civiles. Sin efecto con menos de 8.",
     timerEnd: "⏰ ¡Se acabó el tiempo!",
+
+    vibrationsLabel: "📳 Vibraciones",
+    vibrationsHint: "Feedback háptico en momentos clave",
+    fastModeLabel: "⚡ Modo rápido",
+    fastModeHint: "Salta la pantalla « pasa el teléfono »",
+    resetStatsLabel: "🗑️ Reiniciar estadísticas",
+    resetStatsConfirm: "¿Reiniciar todas las estadísticas?",
+    statsResetDone: "✅ Estadísticas reiniciadas",
 
     customAiOption: "✨ Modo Personalizado",
     customAiTitle: "✨ Modo Personalizado",

@@ -17,6 +17,8 @@ const state = {
   twoUndercovers: false,    // 2 undercovers (≥ 8 joueurs)
   muteByDefault: false,     // vidéos sans son
   timerSeconds: 0,          // 0 = pas de timer
+  vibrations: false,        // feedback haptique
+  fastMode: false,          // skip écran transition
   assignments: [],
   currentPlayerIndex: 0,
   wrongVotes: [],
@@ -30,6 +32,8 @@ function loadPrefs() {
     state.twoUndercovers = !!p.twoUndercovers;
     state.muteByDefault  = !!p.muteByDefault;
     state.timerSeconds   = Number(p.timerSeconds) || 0;
+    state.vibrations     = !!p.vibrations;
+    state.fastMode       = !!p.fastMode;
   } catch {}
 }
 function savePrefs() {
@@ -39,8 +43,16 @@ function savePrefs() {
       twoUndercovers: state.twoUndercovers,
       muteByDefault: state.muteByDefault,
       timerSeconds: state.timerSeconds,
+      vibrations: state.vibrations,
+      fastMode: state.fastMode,
     }));
   } catch {}
+}
+
+// Vibration helper (no-op si non supporté ou désactivé)
+function vibrate(pattern) {
+  if (!state.vibrations) return;
+  if (navigator.vibrate) navigator.vibrate(pattern);
 }
 
 // ----------- Stats locales -----------
@@ -298,6 +310,26 @@ function bindEvents() {
 
   const btnTimerRestart = document.getElementById('btn-timer-restart');
   if (btnTimerRestart) btnTimerRestart.onclick = startTurnTimer;
+
+  const vibToggle = document.getElementById('vibrations-toggle');
+  vibToggle.checked = state.vibrations;
+  vibToggle.onchange = e => {
+    state.vibrations = e.target.checked;
+    savePrefs();
+    vibrate(40); // petit feedback de test
+  };
+
+  const fastToggle = document.getElementById('fast-toggle');
+  fastToggle.checked = state.fastMode;
+  fastToggle.onchange = e => { state.fastMode = e.target.checked; savePrefs(); };
+
+  const btnResetStats = document.getElementById('btn-reset-stats');
+  if (btnResetStats) btnResetStats.onclick = () => {
+    if (!confirm(i18n.t('resetStatsConfirm'))) return;
+    try { localStorage.removeItem(STATS_KEY); } catch {}
+    renderStats();
+    toast(i18n.t('statsResetDone'));
+  };
   document.getElementById('btn-go-vote').onclick = goToVote;
   document.getElementById('btn-new-round').onclick = newSpeakingRound;
   document.getElementById('btn-restart').onclick = restart;
@@ -490,7 +522,15 @@ function startGame() {
 // ----------- Boucle de distribution -----------
 function showTransition() {
   const a = state.assignments[state.currentPlayerIndex];
+  // Mode rapide : on saute l'écran "passe le téléphone", juste un toast + showVideo
+  if (state.fastMode) {
+    toast(`📱 ${a.name}`, 1500);
+    vibrate([30, 60, 30]);
+    setTimeout(() => showVideo(), 600);
+    return;
+  }
   document.getElementById('transition-player').textContent = a.name;
+  vibrate(40);
   switchScreen('screen-transition');
 }
 
@@ -733,6 +773,7 @@ function showVictory(voted) {
   document.getElementById('victory-name').textContent = voted.name;
   renderCompare('victory-compare');
   bumpStats('civils');
+  vibrate([50, 80, 50, 80, 100]); // pattern victoire
   switchScreen('screen-victory');
 }
 
@@ -741,11 +782,13 @@ function showUndercoverWins() {
   document.getElementById('undercover-name').textContent = uc.name;
   renderCompare('undercover-compare');
   bumpStats('undercover');
+  vibrate([200, 100, 200]); // pattern défaite
   switchScreen('screen-undercover-wins');
 }
 
 function showMiss(voted) {
   document.getElementById('miss-name').textContent = voted.name;
+  vibrate([100, 50, 100]); // pattern raté
   switchScreen('screen-miss');
 }
 
