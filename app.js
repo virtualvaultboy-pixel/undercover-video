@@ -314,18 +314,19 @@ async function handleCustomGenerate() {
   const btn = document.getElementById('btn-custom-generate');
   btn.disabled = true;
   switchScreen('screen-ai-loading');
-
-  const pair = aiGenerator.generatePair(idea1, idea2);
+  setLoadingMsg(i18n.t('customAiGenerating'));
 
   try {
-    // IMPORTANT : Pollinations limite a 1 requete simultanee par IP.
-    // On charge SEQUENTIELLEMENT (pas en parallele) + petit delai entre les 2
-    // pour laisser la queue se vider, sinon la 2e echoue avec HTTP 402.
-    const civilsUrl = await tryLoadFirst(pair.civils.urls);
-    await new Promise(r => setTimeout(r, 800)); // laisse Pollinations souffler
-    const ucUrl     = await tryLoadFirst(pair.undercover.urls);
-    state.customCivils = { ...pair.civils, url: civilsUrl };
-    state.customUndercover = { ...pair.undercover, url: ucUrl };
+    // Stable Horde : asynchrone avec polling. On suit la progression.
+    const pair = await aiGenerator.generatePair(idea1, idea2, (role, status) => {
+      updateLoadingProgress(role, status);
+    });
+    // Précharge les 2 images pour éviter latence au moment du gameplay
+    await preloadImage(pair.civils.url, 30000).catch(() => {});
+    await preloadImage(pair.undercover.url, 30000).catch(() => {});
+
+    state.customCivils = pair.civils;
+    state.customUndercover = pair.undercover;
     goToNamesScreen();
   } catch (e) {
     console.warn('[AI] Generation failed', e);
@@ -337,19 +338,28 @@ async function handleCustomGenerate() {
   }
 }
 
-// Charge la 1ere URL qui répond ; sinon throw après le dernier candidate.
-async function tryLoadFirst(urls) {
-  let lastErr = null;
-  for (const u of urls) {
-    try {
-      await preloadImage(u, 60000);
-      return u;
-    } catch (e) {
-      lastErr = e;
-      console.warn('[AI] Candidate failed, trying next', u, e.message);
-    }
+function setLoadingMsg(msg) {
+  const el = document.querySelector('#screen-ai-loading .subtitle');
+  if (el) el.textContent = msg;
+}
+
+function updateLoadingProgress(role, status) {
+  // role: 'civils' | 'undercover'
+  // status: { phase?: 'submit', waiting, processing, finished, queue_position, wait_time }
+  const roleLabel = role === 'civils' ? '1/2' : '2/2';
+  let detail = '';
+  if (status.phase === 'submit') {
+    detail = '⏳ Envoi…';
+  } else if (typeof status.queue_position === 'number' && status.queue_position > 0) {
+    detail = `📋 En file (#${status.queue_position}) · ~${status.wait_time || '?'}s`;
+  } else if (status.processing > 0) {
+    detail = '🎨 Génération…';
+  } else if (status.finished > 0) {
+    detail = '✅ Récupération…';
+  } else {
+    detail = '⏳ En attente…';
   }
-  throw lastErr || new Error('all_candidates_failed');
+  setLoadingMsg(`Image ${roleLabel} — ${detail}`);
 }
 
 function preloadImage(url, timeoutMs = 25000) {
