@@ -318,11 +318,12 @@ async function handleCustomGenerate() {
   const pair = aiGenerator.generatePair(idea1, idea2);
 
   try {
-    // Pour chaque image, essaie les URLs candidates en cascade (turbo puis flux)
-    const [civilsUrl, ucUrl] = await Promise.all([
-      tryLoadFirst(pair.civils.urls),
-      tryLoadFirst(pair.undercover.urls),
-    ]);
+    // IMPORTANT : Pollinations limite a 1 requete simultanee par IP.
+    // On charge SEQUENTIELLEMENT (pas en parallele) + petit delai entre les 2
+    // pour laisser la queue se vider, sinon la 2e echoue avec HTTP 402.
+    const civilsUrl = await tryLoadFirst(pair.civils.urls);
+    await new Promise(r => setTimeout(r, 800)); // laisse Pollinations souffler
+    const ucUrl     = await tryLoadFirst(pair.undercover.urls);
     state.customCivils = { ...pair.civils, url: civilsUrl };
     state.customUndercover = { ...pair.undercover, url: ucUrl };
     goToNamesScreen();
