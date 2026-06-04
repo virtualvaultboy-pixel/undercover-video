@@ -153,42 +153,6 @@
       ]
     },
     {
-      "id": "danse-urbaine",
-      "name": "Danse urbaine",
-      "emoji": "🕺",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/danse-urbaine_1.mp4",
-          "title": "Hip-hop",
-          "duration": 8
-        },
-        {
-          "source": "local",
-          "url": "videos/danse-urbaine_2.mp4",
-          "title": "Breakdance",
-          "duration": 7
-        }
-      ]
-    },
-    {
-      "id": "magie-cartoon",
-      "name": "Magie cartoon",
-      "emoji": "🧙",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/magie-cartoon_1.mp4",
-          "title": "Magicien"
-        },
-        {
-          "source": "local",
-          "url": "videos/magie-cartoon_2.mp4",
-          "title": "Sorciere"
-        }
-      ]
-    },
-    {
       "id": "reaction-meme",
       "name": "Reaction expressive",
       "emoji": "🤯",
@@ -550,25 +514,6 @@
       ]
     },
     {
-      "id": "macro-insecte",
-      "name": "Macro insecte",
-      "emoji": "🪲",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/macro-insecte_1.mp4",
-          "title": "Abeille fleur",
-          "duration": 12
-        },
-        {
-          "source": "local",
-          "url": "videos/macro-insecte_2.mp4",
-          "title": "Papillon ailes",
-          "duration": 9
-        }
-      ]
-    },
-    {
       "id": "course-vitesse",
       "name": "Course de vitesse",
       "emoji": "🏎️",
@@ -839,23 +784,6 @@
           "source": "local",
           "url": "videos/pied-au-chaud_2.mp4",
           "title": "Chaussons"
-        }
-      ]
-    },
-    {
-      "id": "protection-meteo",
-      "name": "Protection météo",
-      "emoji": "☂️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/protection-meteo_1.mp4",
-          "title": "Parapluie"
-        },
-        {
-          "source": "local",
-          "url": "videos/protection-meteo_2.mp4",
-          "title": "Ombrelle"
         }
       ]
     },
@@ -1422,25 +1350,6 @@
       ]
     },
     {
-      "id": "sport-glace",
-      "name": "Sport de glace",
-      "emoji": "⛸️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sport-glace_1.mp4",
-          "title": "Hockey",
-          "duration": 12
-        },
-        {
-          "source": "local",
-          "url": "videos/sport-glace_2.mp4",
-          "title": "Patinage",
-          "duration": 10
-        }
-      ]
-    },
-    {
       "id": "sport-nautique",
       "name": "Sport nautique",
       "emoji": "⛵",
@@ -1551,25 +1460,6 @@
           "url": "videos/outil-cuisine_2.mp4",
           "title": "Casserole",
           "duration": 9
-        }
-      ]
-    },
-    {
-      "id": "couvert-repas",
-      "name": "Couvert",
-      "emoji": "🍴",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/couvert-repas_1.mp4",
-          "title": "Couteau",
-          "duration": 8
-        },
-        {
-          "source": "local",
-          "url": "videos/couvert-repas_2.mp4",
-          "title": "Fourchette",
-          "duration": 7
         }
       ]
     },
@@ -1798,25 +1688,6 @@
           "url": "videos/petite-fixation_2.mp4",
           "title": "Clou",
           "duration": 7
-        }
-      ]
-    },
-    {
-      "id": "outils-menage",
-      "name": "Outil de ménage",
-      "emoji": "🧹",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/outils-menage_1.mp4",
-          "title": "Aspirateur",
-          "duration": 10
-        },
-        {
-          "source": "local",
-          "url": "videos/outils-menage_2.mp4",
-          "title": "Balai",
-          "duration": 13
         }
       ]
     },
@@ -2144,25 +2015,6 @@
       ]
     },
     {
-      "id": "sport-fitness",
-      "name": "Fitness",
-      "emoji": "💪",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sport-fitness_1.mp4",
-          "title": "Musculation",
-          "duration": 12
-        },
-        {
-          "source": "local",
-          "url": "videos/sport-fitness_2.mp4",
-          "title": "Pilates",
-          "duration": 8
-        }
-      ]
-    },
-    {
       "id": "jardinage",
       "name": "Jardinage",
       "emoji": "🌱",
@@ -2216,25 +2068,6 @@
           "url": "videos/accessoire-tete_2.mp4",
           "title": "Chapeau",
           "duration": 7
-        }
-      ]
-    },
-    {
-      "id": "bijou",
-      "name": "Bijou",
-      "emoji": "💍",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/bijou_1.mp4",
-          "title": "Bague",
-          "duration": 8
-        },
-        {
-          "source": "local",
-          "url": "videos/bijou_2.mp4",
-          "title": "Collier",
-          "duration": 8
         }
       ]
     },

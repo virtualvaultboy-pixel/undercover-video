@@ -32,14 +32,6 @@
       "en": "Flames",
       "es": "Llamas"
     },
-    "danse-urbaine": {
-      "en": "Urban dance",
-      "es": "Baile urbano"
-    },
-    "magie-cartoon": {
-      "en": "Cartoon magic",
-      "es": "Magia animada"
-    },
     "reaction-meme": {
       "en": "Expressive reaction",
       "es": "Reacción expresiva"
@@ -1010,41 +1002,6 @@
         ]
       }
     },
-    "sport-glace": {
-      "fr": {
-        "name": "Sport de glace",
-        "videos": [
-          {
-            "title": "Hockey"
-          },
-          {
-            "title": "Patinage"
-          }
-        ]
-      },
-      "en": {
-        "name": "Sport de glace",
-        "videos": [
-          {
-            "title": "Hockey"
-          },
-          {
-            "title": "Skating"
-          }
-        ]
-      },
-      "es": {
-        "name": "Sport de glace",
-        "videos": [
-          {
-            "title": "Hockey"
-          },
-          {
-            "title": "Patinaje"
-          }
-        ]
-      }
-    },
     "sport-nautique": {
       "fr": {
         "name": "Sport nautique",
@@ -1251,41 +1208,6 @@
           },
           {
             "title": "Cacerola"
-          }
-        ]
-      }
-    },
-    "couvert-repas": {
-      "fr": {
-        "name": "Couvert",
-        "videos": [
-          {
-            "title": "Couteau"
-          },
-          {
-            "title": "Fourchette"
-          }
-        ]
-      },
-      "en": {
-        "name": "Couvert",
-        "videos": [
-          {
-            "title": "Knife"
-          },
-          {
-            "title": "Fork"
-          }
-        ]
-      },
-      "es": {
-        "name": "Couvert",
-        "videos": [
-          {
-            "title": "Cuchillo"
-          },
-          {
-            "title": "Tenedor"
           }
         ]
       }
@@ -1706,41 +1628,6 @@
           },
           {
             "title": "Clavo"
-          }
-        ]
-      }
-    },
-    "outils-menage": {
-      "fr": {
-        "name": "Outil de ménage",
-        "videos": [
-          {
-            "title": "Aspirateur"
-          },
-          {
-            "title": "Balai"
-          }
-        ]
-      },
-      "en": {
-        "name": "Outil de ménage",
-        "videos": [
-          {
-            "title": "Vacuum"
-          },
-          {
-            "title": "Broom"
-          }
-        ]
-      },
-      "es": {
-        "name": "Outil de ménage",
-        "videos": [
-          {
-            "title": "Aspiradora"
-          },
-          {
-            "title": "Escoba"
           }
         ]
       }
@@ -2340,41 +2227,6 @@
         ]
       }
     },
-    "sport-fitness": {
-      "fr": {
-        "name": "Fitness",
-        "videos": [
-          {
-            "title": "Musculation"
-          },
-          {
-            "title": "Pilates"
-          }
-        ]
-      },
-      "en": {
-        "name": "Fitness",
-        "videos": [
-          {
-            "title": "Weightlifting"
-          },
-          {
-            "title": "Pilates"
-          }
-        ]
-      },
-      "es": {
-        "name": "Fitness",
-        "videos": [
-          {
-            "title": "Pesas"
-          },
-          {
-            "title": "Pilates"
-          }
-        ]
-      }
-    },
     "jardinage": {
       "fr": {
         "name": "Jardinage",
@@ -2476,41 +2328,6 @@
           },
           {
             "title": "Sombrero"
-          }
-        ]
-      }
-    },
-    "bijou": {
-      "fr": {
-        "name": "Bijou",
-        "videos": [
-          {
-            "title": "Bague"
-          },
-          {
-            "title": "Collier"
-          }
-        ]
-      },
-      "en": {
-        "name": "Bijou",
-        "videos": [
-          {
-            "title": "Ring"
-          },
-          {
-            "title": "Necklace"
-          }
-        ]
-      },
-      "es": {
-        "name": "Bijou",
-        "videos": [
-          {
-            "title": "Anillo"
-          },
-          {
-            "title": "Collar"
           }
         ]
       }
