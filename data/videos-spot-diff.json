@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "id": "sd-car",
+      "name": "🔍 Voiture qui passe",
+      "emoji": "🚗",
+      "videos": [
+        { "source": "local", "url": "videos/spot-diff/car_a.mp4", "title": "Voiture rouge" },
+        { "source": "local", "url": "videos/spot-diff/car_b.mp4", "title": "Voiture bleue" }
+      ]
+    },
+    {
+      "id": "sd-cocktail",
+      "name": "🔍 Cocktail préparé",
+      "emoji": "🍸",
+      "videos": [
+        { "source": "local", "url": "videos/spot-diff/cocktail_a.mp4", "title": "Avec olive" },
+        { "source": "local", "url": "videos/spot-diff/cocktail_b.mp4", "title": "Avec cerise" }
+      ]
+    },
+    {
+      "id": "sd-balloon",
+      "name": "🔍 Ballon qui s'envole",
+      "emoji": "🎈",
+      "videos": [
+        { "source": "local", "url": "videos/spot-diff/balloon_a.mp4", "title": "Ballon rouge" },
+        { "source": "local", "url": "videos/spot-diff/balloon_b.mp4", "title": "Ballon vert" }
+      ]
+    },
+    {
+      "id": "sd-smiley",
+      "name": "🔍 Visage emoji",
+      "emoji": "😀",
+      "videos": [
+        { "source": "local", "url": "videos/spot-diff/smiley_a.mp4", "title": "Souriant" },
+        { "source": "local", "url": "videos/spot-diff/smiley_b.mp4", "title": "Triste avec larme" }
+      ]
+    },
+    {
+      "id": "sd-pizza",
+      "name": "🔍 Pizza qui tourne",
+      "emoji": "🍕",
+      "videos": [
+        { "source": "local", "url": "videos/spot-diff/pizza_a.mp4", "title": "Pepperoni rouge" },
+        { "source": "local", "url": "videos/spot-diff/pizza_b.mp4", "title": "Olives noires" }
+      ]
+    }
+  ]
+}

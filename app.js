@@ -122,12 +122,21 @@ async function init() {
 }
 
 async function loadVideos() {
-  const [resV, resT] = await Promise.all([
+  const [resV, resT, resSD] = await Promise.all([
     fetch('data/videos.json'),
     fetch('data/translations.json').catch(() => null),
+    fetch('data/videos-spot-diff.json').catch(() => null),
   ]);
   const data = await resV.json();
   state.categories = data.categories;
+
+  // Pack "Spot the difference" - modulaire, supprimable (videos/spot-diff/ + ce JSON)
+  if (resSD && resSD.ok) {
+    try {
+      const sd = await resSD.json();
+      state.categories = state.categories.concat(sd.categories || []);
+    } catch {}
+  }
 
   if (resT && resT.ok) {
     try {
