@@ -1,5 +1,5 @@
 // Service Worker — cache du shell de l'app
-const CACHE_NAME = 'undercover-video-v23';
+const CACHE_NAME = 'undercover-video-v24';
 const SHELL_FILES = [
   './',
   'index.html',
@@ -58,7 +58,23 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Stratégie classique pour le shell
+  // Network-first pour le code (HTML/JS/CSS/JSON) : evite que l'utilisateur
+  // reste bloque sur une ancienne version apres un deploy. Fallback cache offline.
+  const isCode = url.pathname.match(/\.(html|js|css|json)$/i) || url.pathname === '/' || url.pathname.endsWith('/');
+  if (isCode) {
+    event.respondWith(
+      fetch(event.request).then(res => {
+        if (res.ok) {
+          const clone = res.clone();
+          caches.open(CACHE_NAME).then(c => c.put(event.request, clone));
+        }
+        return res;
+      }).catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // Stratégie cache-first pour le reste (images, fonts, etc.)
   event.respondWith(
     caches.match(event.request).then(cached =>
       cached || fetch(event.request).then(res => {
