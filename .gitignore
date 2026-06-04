@@ -15,4 +15,6 @@ __pycache__/
 
 # Audit local
 audit-frames/
+audit-frames-v2/
+audit-xclip.json
 .pexels_key
