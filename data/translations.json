@@ -99,6 +99,1826 @@
     "moyen-transport": {
       "en": "Means of transport",
       "es": "Medio de transporte"
+    },
+    "petit-dej": {
+      "fr": {
+        "name": "Petit-déjeuner",
+        "videos": [
+          {
+            "title": "Pancakes"
+          },
+          {
+            "title": "Gaufres"
+          }
+        ]
+      },
+      "en": {
+        "name": "Petit-déjeuner",
+        "videos": [
+          {
+            "title": "Pancakes"
+          },
+          {
+            "title": "Waffles"
+          }
+        ]
+      },
+      "es": {
+        "name": "Petit-déjeuner",
+        "videos": [
+          {
+            "title": "Tortitas"
+          },
+          {
+            "title": "Gofres"
+          }
+        ]
+      }
+    },
+    "patisserie-fine": {
+      "fr": {
+        "name": "Pâtisserie fine",
+        "videos": [
+          {
+            "title": "Éclair"
+          },
+          {
+            "title": "Macaron"
+          }
+        ]
+      },
+      "en": {
+        "name": "Pâtisserie fine",
+        "videos": [
+          {
+            "title": "Eclair"
+          },
+          {
+            "title": "Macaron"
+          }
+        ]
+      },
+      "es": {
+        "name": "Pâtisserie fine",
+        "videos": [
+          {
+            "title": "Pepito"
+          },
+          {
+            "title": "Macaron"
+          }
+        ]
+      }
+    },
+    "fruit-exotique": {
+      "fr": {
+        "name": "Fruit exotique",
+        "videos": [
+          {
+            "title": "Mangue"
+          },
+          {
+            "title": "Ananas"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fruit exotique",
+        "videos": [
+          {
+            "title": "Mango"
+          },
+          {
+            "title": "Pineapple"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fruit exotique",
+        "videos": [
+          {
+            "title": "Mango"
+          },
+          {
+            "title": "Piña"
+          }
+        ]
+      }
+    },
+    "dessert-glace": {
+      "fr": {
+        "name": "Dessert glacé",
+        "videos": [
+          {
+            "title": "Glace boule"
+          },
+          {
+            "title": "Sundae"
+          }
+        ]
+      },
+      "en": {
+        "name": "Dessert glacé",
+        "videos": [
+          {
+            "title": "Ice cream"
+          },
+          {
+            "title": "Sundae"
+          }
+        ]
+      },
+      "es": {
+        "name": "Dessert glacé",
+        "videos": [
+          {
+            "title": "Helado"
+          },
+          {
+            "title": "Sundae"
+          }
+        ]
+      }
+    },
+    "snack-rapide": {
+      "fr": {
+        "name": "Snack rapide",
+        "videos": [
+          {
+            "title": "Burger"
+          },
+          {
+            "title": "Hot dog"
+          }
+        ]
+      },
+      "en": {
+        "name": "Snack rapide",
+        "videos": [
+          {
+            "title": "Burger"
+          },
+          {
+            "title": "Hot dog"
+          }
+        ]
+      },
+      "es": {
+        "name": "Snack rapide",
+        "videos": [
+          {
+            "title": "Hamburguesa"
+          },
+          {
+            "title": "Perrito caliente"
+          }
+        ]
+      }
+    },
+    "gourmand": {
+      "fr": {
+        "name": "Sucrerie",
+        "videos": [
+          {
+            "title": "Chocolat"
+          },
+          {
+            "title": "Bonbons"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sucrerie",
+        "videos": [
+          {
+            "title": "Chocolate"
+          },
+          {
+            "title": "Candy"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sucrerie",
+        "videos": [
+          {
+            "title": "Chocolate"
+          },
+          {
+            "title": "Caramelos"
+          }
+        ]
+      }
+    },
+    "fruit-pop": {
+      "fr": {
+        "name": "Fruit populaire",
+        "videos": [
+          {
+            "title": "Pomme"
+          },
+          {
+            "title": "Banane"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fruit populaire",
+        "videos": [
+          {
+            "title": "Apple"
+          },
+          {
+            "title": "Banana"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fruit populaire",
+        "videos": [
+          {
+            "title": "Manzana"
+          },
+          {
+            "title": "Plátano"
+          }
+        ]
+      }
+    },
+    "fruit-simple": {
+      "fr": {
+        "name": "Fruit simple",
+        "videos": [
+          {
+            "title": "Poire"
+          },
+          {
+            "title": "Pêche"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fruit simple",
+        "videos": [
+          {
+            "title": "Pear"
+          },
+          {
+            "title": "Peach"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fruit simple",
+        "videos": [
+          {
+            "title": "Pera"
+          },
+          {
+            "title": "Melocotón"
+          }
+        ]
+      }
+    },
+    "plat-italien": {
+      "fr": {
+        "name": "Plat italien",
+        "videos": [
+          {
+            "title": "Pâtes"
+          },
+          {
+            "title": "Pizza"
+          }
+        ]
+      },
+      "en": {
+        "name": "Plat italien",
+        "videos": [
+          {
+            "title": "Pasta"
+          },
+          {
+            "title": "Pizza"
+          }
+        ]
+      },
+      "es": {
+        "name": "Plat italien",
+        "videos": [
+          {
+            "title": "Pasta"
+          },
+          {
+            "title": "Pizza"
+          }
+        ]
+      }
+    },
+    "boisson-chaude": {
+      "fr": {
+        "name": "Boisson chaude",
+        "videos": [
+          {
+            "title": "Café"
+          },
+          {
+            "title": "Thé"
+          }
+        ]
+      },
+      "en": {
+        "name": "Boisson chaude",
+        "videos": [
+          {
+            "title": "Coffee"
+          },
+          {
+            "title": "Tea"
+          }
+        ]
+      },
+      "es": {
+        "name": "Boisson chaude",
+        "videos": [
+          {
+            "title": "Café"
+          },
+          {
+            "title": "Té"
+          }
+        ]
+      }
+    },
+    "boisson-tropicale": {
+      "fr": {
+        "name": "Boisson tropicale",
+        "videos": [
+          {
+            "title": "Mojito"
+          },
+          {
+            "title": "Piña colada"
+          }
+        ]
+      },
+      "en": {
+        "name": "Boisson tropicale",
+        "videos": [
+          {
+            "title": "Mojito"
+          },
+          {
+            "title": "Pina colada"
+          }
+        ]
+      },
+      "es": {
+        "name": "Boisson tropicale",
+        "videos": [
+          {
+            "title": "Mojito"
+          },
+          {
+            "title": "Piña colada"
+          }
+        ]
+      }
+    },
+    "boisson-fraiche": {
+      "fr": {
+        "name": "Boisson fraîche",
+        "videos": [
+          {
+            "title": "Soda"
+          },
+          {
+            "title": "Jus d'orange"
+          }
+        ]
+      },
+      "en": {
+        "name": "Boisson fraîche",
+        "videos": [
+          {
+            "title": "Soda"
+          },
+          {
+            "title": "Orange juice"
+          }
+        ]
+      },
+      "es": {
+        "name": "Boisson fraîche",
+        "videos": [
+          {
+            "title": "Refresco"
+          },
+          {
+            "title": "Zumo de naranja"
+          }
+        ]
+      }
+    },
+    "boulangerie": {
+      "fr": {
+        "name": "Boulangerie",
+        "videos": [
+          {
+            "title": "Baguette"
+          },
+          {
+            "title": "Pain de mie"
+          }
+        ]
+      },
+      "en": {
+        "name": "Boulangerie",
+        "videos": [
+          {
+            "title": "Baguette"
+          },
+          {
+            "title": "Sliced bread"
+          }
+        ]
+      },
+      "es": {
+        "name": "Boulangerie",
+        "videos": [
+          {
+            "title": "Baguette"
+          },
+          {
+            "title": "Pan de molde"
+          }
+        ]
+      }
+    },
+    "racine-comestible": {
+      "fr": {
+        "name": "Racine comestible",
+        "videos": [
+          {
+            "title": "Carotte"
+          },
+          {
+            "title": "Radis"
+          }
+        ]
+      },
+      "en": {
+        "name": "Racine comestible",
+        "videos": [
+          {
+            "title": "Carrot"
+          },
+          {
+            "title": "Radish"
+          }
+        ]
+      },
+      "es": {
+        "name": "Racine comestible",
+        "videos": [
+          {
+            "title": "Zanahoria"
+          },
+          {
+            "title": "Rábano"
+          }
+        ]
+      }
+    },
+    "liquide-blanc": {
+      "fr": {
+        "name": "Liquide blanc",
+        "videos": [
+          {
+            "title": "Lait"
+          },
+          {
+            "title": "Yaourt"
+          }
+        ]
+      },
+      "en": {
+        "name": "Liquide blanc",
+        "videos": [
+          {
+            "title": "Milk"
+          },
+          {
+            "title": "Yogurt"
+          }
+        ]
+      },
+      "es": {
+        "name": "Liquide blanc",
+        "videos": [
+          {
+            "title": "Leche"
+          },
+          {
+            "title": "Yogur"
+          }
+        ]
+      }
+    },
+    "animal-ferme": {
+      "fr": {
+        "name": "Animal de ferme",
+        "videos": [
+          {
+            "title": "Vache"
+          },
+          {
+            "title": "Cochon"
+          }
+        ]
+      },
+      "en": {
+        "name": "Animal de ferme",
+        "videos": [
+          {
+            "title": "Cow"
+          },
+          {
+            "title": "Pig"
+          }
+        ]
+      },
+      "es": {
+        "name": "Animal de ferme",
+        "videos": [
+          {
+            "title": "Vaca"
+          },
+          {
+            "title": "Cerdo"
+          }
+        ]
+      }
+    },
+    "animal-ferme-2": {
+      "fr": {
+        "name": "Volaille",
+        "videos": [
+          {
+            "title": "Poule"
+          },
+          {
+            "title": "Canard"
+          }
+        ]
+      },
+      "en": {
+        "name": "Volaille",
+        "videos": [
+          {
+            "title": "Chicken"
+          },
+          {
+            "title": "Duck"
+          }
+        ]
+      },
+      "es": {
+        "name": "Volaille",
+        "videos": [
+          {
+            "title": "Gallina"
+          },
+          {
+            "title": "Pato"
+          }
+        ]
+      }
+    },
+    "animal-savane": {
+      "fr": {
+        "name": "Animal de savane",
+        "videos": [
+          {
+            "title": "Girafe"
+          },
+          {
+            "title": "Éléphant"
+          }
+        ]
+      },
+      "en": {
+        "name": "Animal de savane",
+        "videos": [
+          {
+            "title": "Giraffe"
+          },
+          {
+            "title": "Elephant"
+          }
+        ]
+      },
+      "es": {
+        "name": "Animal de savane",
+        "videos": [
+          {
+            "title": "Jirafa"
+          },
+          {
+            "title": "Elefante"
+          }
+        ]
+      }
+    },
+    "primate": {
+      "fr": {
+        "name": "Primate",
+        "videos": [
+          {
+            "title": "Singe"
+          },
+          {
+            "title": "Gorille"
+          }
+        ]
+      },
+      "en": {
+        "name": "Primate",
+        "videos": [
+          {
+            "title": "Monkey"
+          },
+          {
+            "title": "Gorilla"
+          }
+        ]
+      },
+      "es": {
+        "name": "Primate",
+        "videos": [
+          {
+            "title": "Mono"
+          },
+          {
+            "title": "Gorila"
+          }
+        ]
+      }
+    },
+    "animal-calin": {
+      "fr": {
+        "name": "Animal câlin",
+        "videos": [
+          {
+            "title": "Panda"
+          },
+          {
+            "title": "Koala"
+          }
+        ]
+      },
+      "en": {
+        "name": "Animal câlin",
+        "videos": [
+          {
+            "title": "Panda"
+          },
+          {
+            "title": "Koala"
+          }
+        ]
+      },
+      "es": {
+        "name": "Animal câlin",
+        "videos": [
+          {
+            "title": "Panda"
+          },
+          {
+            "title": "Koala"
+          }
+        ]
+      }
+    },
+    "marin-mammif": {
+      "fr": {
+        "name": "Mammifère marin",
+        "videos": [
+          {
+            "title": "Dauphin"
+          },
+          {
+            "title": "Baleine"
+          }
+        ]
+      },
+      "en": {
+        "name": "Mammifère marin",
+        "videos": [
+          {
+            "title": "Dolphin"
+          },
+          {
+            "title": "Whale"
+          }
+        ]
+      },
+      "es": {
+        "name": "Mammifère marin",
+        "videos": [
+          {
+            "title": "Delfín"
+          },
+          {
+            "title": "Ballena"
+          }
+        ]
+      }
+    },
+    "mammifere-marin-2": {
+      "fr": {
+        "name": "Mammifère marin 2",
+        "videos": [
+          {
+            "title": "Phoque"
+          },
+          {
+            "title": "Otarie"
+          }
+        ]
+      },
+      "en": {
+        "name": "Mammifère marin 2",
+        "videos": [
+          {
+            "title": "Seal"
+          },
+          {
+            "title": "Sea lion"
+          }
+        ]
+      },
+      "es": {
+        "name": "Mammifère marin 2",
+        "videos": [
+          {
+            "title": "Foca"
+          },
+          {
+            "title": "León marino"
+          }
+        ]
+      }
+    },
+    "reptile-lent": {
+      "fr": {
+        "name": "Reptile lent",
+        "videos": [
+          {
+            "title": "Tortue"
+          },
+          {
+            "title": "Lézard"
+          }
+        ]
+      },
+      "en": {
+        "name": "Reptile lent",
+        "videos": [
+          {
+            "title": "Turtle"
+          },
+          {
+            "title": "Lizard"
+          }
+        ]
+      },
+      "es": {
+        "name": "Reptile lent",
+        "videos": [
+          {
+            "title": "Tortuga"
+          },
+          {
+            "title": "Lagarto"
+          }
+        ]
+      }
+    },
+    "oiseau-tropical": {
+      "fr": {
+        "name": "Oiseau tropical",
+        "videos": [
+          {
+            "title": "Perroquet"
+          },
+          {
+            "title": "Toucan"
+          }
+        ]
+      },
+      "en": {
+        "name": "Oiseau tropical",
+        "videos": [
+          {
+            "title": "Parrot"
+          },
+          {
+            "title": "Toucan"
+          }
+        ]
+      },
+      "es": {
+        "name": "Oiseau tropical",
+        "videos": [
+          {
+            "title": "Loro"
+          },
+          {
+            "title": "Tucán"
+          }
+        ]
+      }
+    },
+    "creature-marine": {
+      "fr": {
+        "name": "Créature marine",
+        "videos": [
+          {
+            "title": "Pieuvre"
+          },
+          {
+            "title": "Méduse"
+          }
+        ]
+      },
+      "en": {
+        "name": "Créature marine",
+        "videos": [
+          {
+            "title": "Octopus"
+          },
+          {
+            "title": "Jellyfish"
+          }
+        ]
+      },
+      "es": {
+        "name": "Créature marine",
+        "videos": [
+          {
+            "title": "Pulpo"
+          },
+          {
+            "title": "Medusa"
+          }
+        ]
+      }
+    },
+    "rongeur-mignon": {
+      "fr": {
+        "name": "Petit rongeur",
+        "videos": [
+          {
+            "title": "Hamster"
+          },
+          {
+            "title": "Écureuil"
+          }
+        ]
+      },
+      "en": {
+        "name": "Petit rongeur",
+        "videos": [
+          {
+            "title": "Hamster"
+          },
+          {
+            "title": "Squirrel"
+          }
+        ]
+      },
+      "es": {
+        "name": "Petit rongeur",
+        "videos": [
+          {
+            "title": "Hámster"
+          },
+          {
+            "title": "Ardilla"
+          }
+        ]
+      }
+    },
+    "sport-glace": {
+      "fr": {
+        "name": "Sport de glace",
+        "videos": [
+          {
+            "title": "Hockey"
+          },
+          {
+            "title": "Patinage"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sport de glace",
+        "videos": [
+          {
+            "title": "Hockey"
+          },
+          {
+            "title": "Skating"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sport de glace",
+        "videos": [
+          {
+            "title": "Hockey"
+          },
+          {
+            "title": "Patinaje"
+          }
+        ]
+      }
+    },
+    "sport-nautique": {
+      "fr": {
+        "name": "Sport nautique",
+        "videos": [
+          {
+            "title": "Voile"
+          },
+          {
+            "title": "Kayak"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sport nautique",
+        "videos": [
+          {
+            "title": "Sailing"
+          },
+          {
+            "title": "Kayak"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sport nautique",
+        "videos": [
+          {
+            "title": "Vela"
+          },
+          {
+            "title": "Kayak"
+          }
+        ]
+      }
+    },
+    "sport-hiver": {
+      "fr": {
+        "name": "Sport d'hiver",
+        "videos": [
+          {
+            "title": "Ski"
+          },
+          {
+            "title": "Snowboard"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sport d'hiver",
+        "videos": [
+          {
+            "title": "Skiing"
+          },
+          {
+            "title": "Snowboard"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sport d'hiver",
+        "videos": [
+          {
+            "title": "Esquí"
+          },
+          {
+            "title": "Snowboard"
+          }
+        ]
+      }
+    },
+    "sport-raquette": {
+      "fr": {
+        "name": "Sport de raquette",
+        "videos": [
+          {
+            "title": "Tennis"
+          },
+          {
+            "title": "Badminton"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sport de raquette",
+        "videos": [
+          {
+            "title": "Tennis"
+          },
+          {
+            "title": "Badminton"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sport de raquette",
+        "videos": [
+          {
+            "title": "Tenis"
+          },
+          {
+            "title": "Bádminton"
+          }
+        ]
+      }
+    },
+    "outil-bricolage": {
+      "fr": {
+        "name": "Outil de bricolage",
+        "videos": [
+          {
+            "title": "Marteau"
+          },
+          {
+            "title": "Scie"
+          }
+        ]
+      },
+      "en": {
+        "name": "Outil de bricolage",
+        "videos": [
+          {
+            "title": "Hammer"
+          },
+          {
+            "title": "Saw"
+          }
+        ]
+      },
+      "es": {
+        "name": "Outil de bricolage",
+        "videos": [
+          {
+            "title": "Martillo"
+          },
+          {
+            "title": "Sierra"
+          }
+        ]
+      }
+    },
+    "instrument-musique": {
+      "fr": {
+        "name": "Instrument",
+        "videos": [
+          {
+            "title": "Guitare"
+          },
+          {
+            "title": "Piano"
+          }
+        ]
+      },
+      "en": {
+        "name": "Instrument",
+        "videos": [
+          {
+            "title": "Guitar"
+          },
+          {
+            "title": "Piano"
+          }
+        ]
+      },
+      "es": {
+        "name": "Instrument",
+        "videos": [
+          {
+            "title": "Guitarra"
+          },
+          {
+            "title": "Piano"
+          }
+        ]
+      }
+    },
+    "outil-cuisine": {
+      "fr": {
+        "name": "Ustensile cuisine",
+        "videos": [
+          {
+            "title": "Poêle"
+          },
+          {
+            "title": "Casserole"
+          }
+        ]
+      },
+      "en": {
+        "name": "Ustensile cuisine",
+        "videos": [
+          {
+            "title": "Frying pan"
+          },
+          {
+            "title": "Pot"
+          }
+        ]
+      },
+      "es": {
+        "name": "Ustensile cuisine",
+        "videos": [
+          {
+            "title": "Sartén"
+          },
+          {
+            "title": "Cacerola"
+          }
+        ]
+      }
+    },
+    "couvert-repas": {
+      "fr": {
+        "name": "Couvert",
+        "videos": [
+          {
+            "title": "Couteau"
+          },
+          {
+            "title": "Fourchette"
+          }
+        ]
+      },
+      "en": {
+        "name": "Couvert",
+        "videos": [
+          {
+            "title": "Knife"
+          },
+          {
+            "title": "Fork"
+          }
+        ]
+      },
+      "es": {
+        "name": "Couvert",
+        "videos": [
+          {
+            "title": "Cuchillo"
+          },
+          {
+            "title": "Tenedor"
+          }
+        ]
+      }
+    },
+    "contenant-boisson": {
+      "fr": {
+        "name": "Contenant à boisson",
+        "videos": [
+          {
+            "title": "Verre"
+          },
+          {
+            "title": "Tasse"
+          }
+        ]
+      },
+      "en": {
+        "name": "Contenant à boisson",
+        "videos": [
+          {
+            "title": "Glass"
+          },
+          {
+            "title": "Mug"
+          }
+        ]
+      },
+      "es": {
+        "name": "Contenant à boisson",
+        "videos": [
+          {
+            "title": "Vaso"
+          },
+          {
+            "title": "Taza"
+          }
+        ]
+      }
+    },
+    "boisson-fermee": {
+      "fr": {
+        "name": "Boisson fermée",
+        "videos": [
+          {
+            "title": "Bouteille"
+          },
+          {
+            "title": "Canette"
+          }
+        ]
+      },
+      "en": {
+        "name": "Boisson fermée",
+        "videos": [
+          {
+            "title": "Bottle"
+          },
+          {
+            "title": "Can"
+          }
+        ]
+      },
+      "es": {
+        "name": "Boisson fermée",
+        "videos": [
+          {
+            "title": "Botella"
+          },
+          {
+            "title": "Lata"
+          }
+        ]
+      }
+    },
+    "sac-porter": {
+      "fr": {
+        "name": "Sac à porter",
+        "videos": [
+          {
+            "title": "Sac à main"
+          },
+          {
+            "title": "Cabas"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sac à porter",
+        "videos": [
+          {
+            "title": "Handbag"
+          },
+          {
+            "title": "Tote bag"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sac à porter",
+        "videos": [
+          {
+            "title": "Bolso"
+          },
+          {
+            "title": "Bolsa"
+          }
+        ]
+      }
+    },
+    "bagage": {
+      "fr": {
+        "name": "Bagage",
+        "videos": [
+          {
+            "title": "Sac à dos"
+          },
+          {
+            "title": "Valise"
+          }
+        ]
+      },
+      "en": {
+        "name": "Bagage",
+        "videos": [
+          {
+            "title": "Backpack"
+          },
+          {
+            "title": "Suitcase"
+          }
+        ]
+      },
+      "es": {
+        "name": "Bagage",
+        "videos": [
+          {
+            "title": "Mochila"
+          },
+          {
+            "title": "Maleta"
+          }
+        ]
+      }
+    },
+    "haut-chaud": {
+      "fr": {
+        "name": "Haut chaud",
+        "videos": [
+          {
+            "title": "Manteau"
+          },
+          {
+            "title": "Veste"
+          }
+        ]
+      },
+      "en": {
+        "name": "Haut chaud",
+        "videos": [
+          {
+            "title": "Coat"
+          },
+          {
+            "title": "Jacket"
+          }
+        ]
+      },
+      "es": {
+        "name": "Haut chaud",
+        "videos": [
+          {
+            "title": "Abrigo"
+          },
+          {
+            "title": "Chaqueta"
+          }
+        ]
+      }
+    },
+    "haut-leger": {
+      "fr": {
+        "name": "Haut léger",
+        "videos": [
+          {
+            "title": "T-shirt"
+          },
+          {
+            "title": "Blouse"
+          }
+        ]
+      },
+      "en": {
+        "name": "Haut léger",
+        "videos": [
+          {
+            "title": "T-shirt"
+          },
+          {
+            "title": "Blouse"
+          }
+        ]
+      },
+      "es": {
+        "name": "Haut léger",
+        "videos": [
+          {
+            "title": "Camiseta"
+          },
+          {
+            "title": "Blusa"
+          }
+        ]
+      }
+    },
+    "bas-long": {
+      "fr": {
+        "name": "Bas long",
+        "videos": [
+          {
+            "title": "Jean"
+          },
+          {
+            "title": "Pantalon"
+          }
+        ]
+      },
+      "en": {
+        "name": "Bas long",
+        "videos": [
+          {
+            "title": "Jeans"
+          },
+          {
+            "title": "Trousers"
+          }
+        ]
+      },
+      "es": {
+        "name": "Bas long",
+        "videos": [
+          {
+            "title": "Vaqueros"
+          },
+          {
+            "title": "Pantalón"
+          }
+        ]
+      }
+    },
+    "siege": {
+      "fr": {
+        "name": "Siège",
+        "videos": [
+          {
+            "title": "Chaise"
+          },
+          {
+            "title": "Tabouret"
+          }
+        ]
+      },
+      "en": {
+        "name": "Siège",
+        "videos": [
+          {
+            "title": "Chair"
+          },
+          {
+            "title": "Stool"
+          }
+        ]
+      },
+      "es": {
+        "name": "Siège",
+        "videos": [
+          {
+            "title": "Silla"
+          },
+          {
+            "title": "Taburete"
+          }
+        ]
+      }
+    },
+    "literie-couverture": {
+      "fr": {
+        "name": "Couverture de lit",
+        "videos": [
+          {
+            "title": "Couverture"
+          },
+          {
+            "title": "Drap"
+          }
+        ]
+      },
+      "en": {
+        "name": "Couverture de lit",
+        "videos": [
+          {
+            "title": "Blanket"
+          },
+          {
+            "title": "Sheet"
+          }
+        ]
+      },
+      "es": {
+        "name": "Couverture de lit",
+        "videos": [
+          {
+            "title": "Manta"
+          },
+          {
+            "title": "Sábana"
+          }
+        ]
+      }
+    },
+    "mesure-temps": {
+      "fr": {
+        "name": "Mesure du temps",
+        "videos": [
+          {
+            "title": "Réveil"
+          },
+          {
+            "title": "Horloge murale"
+          }
+        ]
+      },
+      "en": {
+        "name": "Mesure du temps",
+        "videos": [
+          {
+            "title": "Alarm clock"
+          },
+          {
+            "title": "Wall clock"
+          }
+        ]
+      },
+      "es": {
+        "name": "Mesure du temps",
+        "videos": [
+          {
+            "title": "Despertador"
+          },
+          {
+            "title": "Reloj de pared"
+          }
+        ]
+      }
+    },
+    "papier-range": {
+      "fr": {
+        "name": "Papier rangé",
+        "videos": [
+          {
+            "title": "Cahier"
+          },
+          {
+            "title": "Classeur"
+          }
+        ]
+      },
+      "en": {
+        "name": "Papier rangé",
+        "videos": [
+          {
+            "title": "Notebook"
+          },
+          {
+            "title": "Binder"
+          }
+        ]
+      },
+      "es": {
+        "name": "Papier rangé",
+        "videos": [
+          {
+            "title": "Cuaderno"
+          },
+          {
+            "title": "Carpeta"
+          }
+        ]
+      }
+    },
+    "petite-fixation": {
+      "fr": {
+        "name": "Petite fixation",
+        "videos": [
+          {
+            "title": "Vis"
+          },
+          {
+            "title": "Clou"
+          }
+        ]
+      },
+      "en": {
+        "name": "Petite fixation",
+        "videos": [
+          {
+            "title": "Screw"
+          },
+          {
+            "title": "Nail"
+          }
+        ]
+      },
+      "es": {
+        "name": "Petite fixation",
+        "videos": [
+          {
+            "title": "Tornillo"
+          },
+          {
+            "title": "Clavo"
+          }
+        ]
+      }
+    },
+    "outils-menage": {
+      "fr": {
+        "name": "Outil de ménage",
+        "videos": [
+          {
+            "title": "Aspirateur"
+          },
+          {
+            "title": "Balai"
+          }
+        ]
+      },
+      "en": {
+        "name": "Outil de ménage",
+        "videos": [
+          {
+            "title": "Vacuum"
+          },
+          {
+            "title": "Broom"
+          }
+        ]
+      },
+      "es": {
+        "name": "Outil de ménage",
+        "videos": [
+          {
+            "title": "Aspiradora"
+          },
+          {
+            "title": "Escoba"
+          }
+        ]
+      }
+    },
+    "outil-main": {
+      "fr": {
+        "name": "Outil à main",
+        "videos": [
+          {
+            "title": "Pince"
+          },
+          {
+            "title": "Tournevis"
+          }
+        ]
+      },
+      "en": {
+        "name": "Outil à main",
+        "videos": [
+          {
+            "title": "Pliers"
+          },
+          {
+            "title": "Screwdriver"
+          }
+        ]
+      },
+      "es": {
+        "name": "Outil à main",
+        "videos": [
+          {
+            "title": "Alicates"
+          },
+          {
+            "title": "Destornillador"
+          }
+        ]
+      }
+    },
+    "medical": {
+      "fr": {
+        "name": "Personnel médical",
+        "videos": [
+          {
+            "title": "Docteur"
+          },
+          {
+            "title": "Infirmière"
+          }
+        ]
+      },
+      "en": {
+        "name": "Personnel médical",
+        "videos": [
+          {
+            "title": "Doctor"
+          },
+          {
+            "title": "Nurse"
+          }
+        ]
+      },
+      "es": {
+        "name": "Personnel médical",
+        "videos": [
+          {
+            "title": "Doctor"
+          },
+          {
+            "title": "Enfermera"
+          }
+        ]
+      }
+    },
+    "vehicule-utilitaire": {
+      "fr": {
+        "name": "Véhicule utilitaire",
+        "videos": [
+          {
+            "title": "Camion pompier"
+          },
+          {
+            "title": "Ambulance"
+          }
+        ]
+      },
+      "en": {
+        "name": "Véhicule utilitaire",
+        "videos": [
+          {
+            "title": "Fire truck"
+          },
+          {
+            "title": "Ambulance"
+          }
+        ]
+      },
+      "es": {
+        "name": "Véhicule utilitaire",
+        "videos": [
+          {
+            "title": "Camión bomberos"
+          },
+          {
+            "title": "Ambulancia"
+          }
+        ]
+      }
+    },
+    "plante-deco": {
+      "fr": {
+        "name": "Plante déco",
+        "videos": [
+          {
+            "title": "Monstera"
+          },
+          {
+            "title": "Cactus"
+          }
+        ]
+      },
+      "en": {
+        "name": "Plante déco",
+        "videos": [
+          {
+            "title": "Monstera"
+          },
+          {
+            "title": "Cactus"
+          }
+        ]
+      },
+      "es": {
+        "name": "Plante déco",
+        "videos": [
+          {
+            "title": "Monstera"
+          },
+          {
+            "title": "Cactus"
+          }
+        ]
+      }
+    },
+    "geste-victoire": {
+      "fr": {
+        "name": "Geste de victoire",
+        "videos": [
+          {
+            "title": "Pouce levé"
+          },
+          {
+            "title": "Biceps"
+          }
+        ]
+      },
+      "en": {
+        "name": "Geste de victoire",
+        "videos": [
+          {
+            "title": "Thumbs up"
+          },
+          {
+            "title": "Biceps"
+          }
+        ]
+      },
+      "es": {
+        "name": "Geste de victoire",
+        "videos": [
+          {
+            "title": "Pulgar arriba"
+          },
+          {
+            "title": "Bíceps"
+          }
+        ]
+      }
     }
   }
 }

@@ -926,6 +926,994 @@
           "title": "Sandales"
         }
       ]
+    },
+    {
+      "id": "petit-dej",
+      "name": "Petit-déjeuner",
+      "emoji": "🥞",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/petit-dej_1.mp4",
+          "title": "Pancakes",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/petit-dej_2.mp4",
+          "title": "Gaufres",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "patisserie-fine",
+      "name": "Pâtisserie fine",
+      "emoji": "🥐",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/patisserie-fine_1.mp4",
+          "title": "Éclair",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/patisserie-fine_2.mp4",
+          "title": "Macaron",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "fruit-exotique",
+      "name": "Fruit exotique",
+      "emoji": "🥭",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fruit-exotique_1.mp4",
+          "title": "Mangue",
+          "duration": 6
+        },
+        {
+          "source": "local",
+          "url": "videos/fruit-exotique_2.mp4",
+          "title": "Ananas",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "dessert-glace",
+      "name": "Dessert glacé",
+      "emoji": "🍧",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/dessert-glace_1.mp4",
+          "title": "Glace boule",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/dessert-glace_2.mp4",
+          "title": "Sundae",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "snack-rapide",
+      "name": "Snack rapide",
+      "emoji": "🍔",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/snack-rapide_1.mp4",
+          "title": "Burger",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/snack-rapide_2.mp4",
+          "title": "Hot dog",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "gourmand",
+      "name": "Sucrerie",
+      "emoji": "🍫",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/gourmand_1.mp4",
+          "title": "Chocolat",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/gourmand_2.mp4",
+          "title": "Bonbons",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "fruit-pop",
+      "name": "Fruit populaire",
+      "emoji": "🍎",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fruit-pop_1.mp4",
+          "title": "Pomme",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/fruit-pop_2.mp4",
+          "title": "Banane",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "fruit-simple",
+      "name": "Fruit simple",
+      "emoji": "🍐",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fruit-simple_1.mp4",
+          "title": "Poire",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/fruit-simple_2.mp4",
+          "title": "Pêche",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "plat-italien",
+      "name": "Plat italien",
+      "emoji": "🍝",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/plat-italien_1.mp4",
+          "title": "Pâtes",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/plat-italien_2.mp4",
+          "title": "Pizza",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "boisson-chaude",
+      "name": "Boisson chaude",
+      "emoji": "☕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-chaude_1.mp4",
+          "title": "Café",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-chaude_2.mp4",
+          "title": "Thé",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "boisson-tropicale",
+      "name": "Boisson tropicale",
+      "emoji": "🍹",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-tropicale_1.mp4",
+          "title": "Mojito",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-tropicale_2.mp4",
+          "title": "Piña colada",
+          "duration": 6
+        }
+      ]
+    },
+    {
+      "id": "boisson-fraiche",
+      "name": "Boisson fraîche",
+      "emoji": "🥤",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-fraiche_1.mp4",
+          "title": "Soda",
+          "duration": 14
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-fraiche_2.mp4",
+          "title": "Jus d'orange",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "boulangerie",
+      "name": "Boulangerie",
+      "emoji": "🥖",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boulangerie_1.mp4",
+          "title": "Baguette",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/boulangerie_2.mp4",
+          "title": "Pain de mie",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "racine-comestible",
+      "name": "Racine comestible",
+      "emoji": "🥕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/racine-comestible_1.mp4",
+          "title": "Carotte",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/racine-comestible_2.mp4",
+          "title": "Radis",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "liquide-blanc",
+      "name": "Liquide blanc",
+      "emoji": "🥛",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/liquide-blanc_1.mp4",
+          "title": "Lait",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/liquide-blanc_2.mp4",
+          "title": "Yaourt",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "animal-ferme",
+      "name": "Animal de ferme",
+      "emoji": "🐄",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-ferme_1.mp4",
+          "title": "Vache",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-ferme_2.mp4",
+          "title": "Cochon",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "animal-ferme-2",
+      "name": "Volaille",
+      "emoji": "🐔",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-ferme-2_1.mp4",
+          "title": "Poule",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-ferme-2_2.mp4",
+          "title": "Canard",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "animal-savane",
+      "name": "Animal de savane",
+      "emoji": "🦒",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-savane_1.mp4",
+          "title": "Girafe",
+          "duration": 13
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-savane_2.mp4",
+          "title": "Éléphant",
+          "duration": 19
+        }
+      ]
+    },
+    {
+      "id": "primate",
+      "name": "Primate",
+      "emoji": "🐒",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/primate_1.mp4",
+          "title": "Singe",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/primate_2.mp4",
+          "title": "Gorille",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "animal-calin",
+      "name": "Animal câlin",
+      "emoji": "🐼",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-calin_1.mp4",
+          "title": "Panda",
+          "duration": 17
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-calin_2.mp4",
+          "title": "Koala",
+          "duration": 15
+        }
+      ]
+    },
+    {
+      "id": "marin-mammif",
+      "name": "Mammifère marin",
+      "emoji": "🐬",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/marin-mammif_1.mp4",
+          "title": "Dauphin",
+          "duration": 5
+        },
+        {
+          "source": "local",
+          "url": "videos/marin-mammif_2.mp4",
+          "title": "Baleine",
+          "duration": 6
+        }
+      ]
+    },
+    {
+      "id": "mammifere-marin-2",
+      "name": "Mammifère marin 2",
+      "emoji": "🦭",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/mammifere-marin-2_1.mp4",
+          "title": "Phoque",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/mammifere-marin-2_2.mp4",
+          "title": "Otarie",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "reptile-lent",
+      "name": "Reptile lent",
+      "emoji": "🐢",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/reptile-lent_1.mp4",
+          "title": "Tortue",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/reptile-lent_2.mp4",
+          "title": "Lézard",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "oiseau-tropical",
+      "name": "Oiseau tropical",
+      "emoji": "🦜",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/oiseau-tropical_1.mp4",
+          "title": "Perroquet",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/oiseau-tropical_2.mp4",
+          "title": "Toucan",
+          "duration": 12
+        }
+      ]
+    },
+    {
+      "id": "creature-marine",
+      "name": "Créature marine",
+      "emoji": "🐙",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/creature-marine_1.mp4",
+          "title": "Pieuvre",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/creature-marine_2.mp4",
+          "title": "Méduse",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "rongeur-mignon",
+      "name": "Petit rongeur",
+      "emoji": "🐹",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/rongeur-mignon_1.mp4",
+          "title": "Hamster",
+          "duration": 13
+        },
+        {
+          "source": "local",
+          "url": "videos/rongeur-mignon_2.mp4",
+          "title": "Écureuil",
+          "duration": 6
+        }
+      ]
+    },
+    {
+      "id": "sport-glace",
+      "name": "Sport de glace",
+      "emoji": "⛸️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-glace_1.mp4",
+          "title": "Hockey",
+          "duration": 12
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-glace_2.mp4",
+          "title": "Patinage",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "sport-nautique",
+      "name": "Sport nautique",
+      "emoji": "⛵",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-nautique_1.mp4",
+          "title": "Voile",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-nautique_2.mp4",
+          "title": "Kayak",
+          "duration": 11
+        }
+      ]
+    },
+    {
+      "id": "sport-hiver",
+      "name": "Sport d'hiver",
+      "emoji": "🎿",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-hiver_1.mp4",
+          "title": "Ski",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-hiver_2.mp4",
+          "title": "Snowboard",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "sport-raquette",
+      "name": "Sport de raquette",
+      "emoji": "🎾",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-raquette_1.mp4",
+          "title": "Tennis",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-raquette_2.mp4",
+          "title": "Badminton",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "outil-bricolage",
+      "name": "Outil de bricolage",
+      "emoji": "🔨",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outil-bricolage_1.mp4",
+          "title": "Marteau",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/outil-bricolage_2.mp4",
+          "title": "Scie",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "instrument-musique",
+      "name": "Instrument",
+      "emoji": "🎸",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/instrument-musique_1.mp4",
+          "title": "Guitare",
+          "duration": 11
+        },
+        {
+          "source": "local",
+          "url": "videos/instrument-musique_2.mp4",
+          "title": "Piano",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "outil-cuisine",
+      "name": "Ustensile cuisine",
+      "emoji": "🍳",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outil-cuisine_1.mp4",
+          "title": "Poêle",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/outil-cuisine_2.mp4",
+          "title": "Casserole",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "couvert-repas",
+      "name": "Couvert",
+      "emoji": "🍴",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/couvert-repas_1.mp4",
+          "title": "Couteau",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/couvert-repas_2.mp4",
+          "title": "Fourchette",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "contenant-boisson",
+      "name": "Contenant à boisson",
+      "emoji": "🥛",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/contenant-boisson_1.mp4",
+          "title": "Verre",
+          "duration": 5
+        },
+        {
+          "source": "local",
+          "url": "videos/contenant-boisson_2.mp4",
+          "title": "Tasse",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "boisson-fermee",
+      "name": "Boisson fermée",
+      "emoji": "🥤",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-fermee_1.mp4",
+          "title": "Bouteille",
+          "duration": 14
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-fermee_2.mp4",
+          "title": "Canette",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "sac-porter",
+      "name": "Sac à porter",
+      "emoji": "👜",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sac-porter_1.mp4",
+          "title": "Sac à main",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/sac-porter_2.mp4",
+          "title": "Cabas",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "bagage",
+      "name": "Bagage",
+      "emoji": "🧳",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/bagage_1.mp4",
+          "title": "Sac à dos",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/bagage_2.mp4",
+          "title": "Valise",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "haut-chaud",
+      "name": "Haut chaud",
+      "emoji": "🧥",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/haut-chaud_1.mp4",
+          "title": "Manteau",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/haut-chaud_2.mp4",
+          "title": "Veste",
+          "duration": 6
+        }
+      ]
+    },
+    {
+      "id": "haut-leger",
+      "name": "Haut léger",
+      "emoji": "👕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/haut-leger_1.mp4",
+          "title": "T-shirt",
+          "duration": 12
+        },
+        {
+          "source": "local",
+          "url": "videos/haut-leger_2.mp4",
+          "title": "Blouse",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "bas-long",
+      "name": "Bas long",
+      "emoji": "👖",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/bas-long_1.mp4",
+          "title": "Jean",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/bas-long_2.mp4",
+          "title": "Pantalon",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "siege",
+      "name": "Siège",
+      "emoji": "🪑",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/siege_1.mp4",
+          "title": "Chaise",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/siege_2.mp4",
+          "title": "Tabouret",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "literie-couverture",
+      "name": "Couverture de lit",
+      "emoji": "🛌",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/literie-couverture_1.mp4",
+          "title": "Couverture",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/literie-couverture_2.mp4",
+          "title": "Drap",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "mesure-temps",
+      "name": "Mesure du temps",
+      "emoji": "⏰",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/mesure-temps_1.mp4",
+          "title": "Réveil",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/mesure-temps_2.mp4",
+          "title": "Horloge murale",
+          "duration": 12
+        }
+      ]
+    },
+    {
+      "id": "papier-range",
+      "name": "Papier rangé",
+      "emoji": "📓",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/papier-range_1.mp4",
+          "title": "Cahier",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/papier-range_2.mp4",
+          "title": "Classeur",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "petite-fixation",
+      "name": "Petite fixation",
+      "emoji": "🔩",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/petite-fixation_1.mp4",
+          "title": "Vis",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/petite-fixation_2.mp4",
+          "title": "Clou",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "outils-menage",
+      "name": "Outil de ménage",
+      "emoji": "🧹",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outils-menage_1.mp4",
+          "title": "Aspirateur",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/outils-menage_2.mp4",
+          "title": "Balai",
+          "duration": 13
+        }
+      ]
+    },
+    {
+      "id": "outil-main",
+      "name": "Outil à main",
+      "emoji": "🔧",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outil-main_1.mp4",
+          "title": "Pince",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/outil-main_2.mp4",
+          "title": "Tournevis",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "medical",
+      "name": "Personnel médical",
+      "emoji": "👨‍⚕️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/medical_1.mp4",
+          "title": "Docteur",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/medical_2.mp4",
+          "title": "Infirmière",
+          "duration": 14
+        }
+      ]
+    },
+    {
+      "id": "vehicule-utilitaire",
+      "name": "Véhicule utilitaire",
+      "emoji": "🚒",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/vehicule-utilitaire_1.mp4",
+          "title": "Camion pompier",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/vehicule-utilitaire_2.mp4",
+          "title": "Ambulance",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "plante-deco",
+      "name": "Plante déco",
+      "emoji": "🪴",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/plante-deco_1.mp4",
+          "title": "Monstera",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/plante-deco_2.mp4",
+          "title": "Cactus",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "geste-victoire",
+      "name": "Geste de victoire",
+      "emoji": "💪",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/geste-victoire_1.mp4",
+          "title": "Pouce levé",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/geste-victoire_2.mp4",
+          "title": "Biceps",
+          "duration": 10
+        }
+      ]
     }
   ]
 }
