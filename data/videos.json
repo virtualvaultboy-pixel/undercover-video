@@ -77,25 +77,6 @@
       ]
     },
     {
-      "id": "eau",
-      "name": "Élément d'eau",
-      "emoji": "💧",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/eau_1.mp4",
-          "title": "Vagues",
-          "duration": 10
-        },
-        {
-          "source": "local",
-          "url": "videos/eau_2.mp4",
-          "title": "Cascade",
-          "duration": 12
-        }
-      ]
-    },
-    {
       "id": "sport-extreme",
       "name": "Sport extreme",
       "emoji": "🛹",
@@ -170,23 +151,6 @@
       ]
     },
     {
-      "id": "halloween",
-      "name": "Halloween",
-      "emoji": "🎃",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/halloween_1.mp4",
-          "title": "Citrouille"
-        },
-        {
-          "source": "local",
-          "url": "videos/halloween_2.mp4",
-          "title": "Chauve-souris"
-        }
-      ]
-    },
-    {
       "id": "emotion-forte",
       "name": "Emotion forte",
       "emoji": "😂",
@@ -240,23 +204,6 @@
       ]
     },
     {
-      "id": "patisserie",
-      "name": "Patisserie",
-      "emoji": "🍰",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/patisserie_1.mp4",
-          "title": "Donut"
-        },
-        {
-          "source": "local",
-          "url": "videos/patisserie_2.mp4",
-          "title": "Cupcake"
-        }
-      ]
-    },
-    {
       "id": "sport-combat",
       "name": "Sport de combat",
       "emoji": "🥊",
@@ -270,57 +217,6 @@
           "source": "local",
           "url": "videos/sport-combat_2.mp4",
           "title": "Karate"
-        }
-      ]
-    },
-    {
-      "id": "engin-aerien",
-      "name": "Engin aerien",
-      "emoji": "✈️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/engin-aerien_1.mp4",
-          "title": "Avion"
-        },
-        {
-          "source": "local",
-          "url": "videos/engin-aerien_2.mp4",
-          "title": "Helicoptere"
-        }
-      ]
-    },
-    {
-      "id": "ours",
-      "name": "Ours",
-      "emoji": "🐻",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/ours_1.mp4",
-          "title": "Ours brun"
-        },
-        {
-          "source": "local",
-          "url": "videos/ours_2.mp4",
-          "title": "Ours polaire"
-        }
-      ]
-    },
-    {
-      "id": "reptile",
-      "name": "Reptile",
-      "emoji": "🐍",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/reptile_1.mp4",
-          "title": "Serpent"
-        },
-        {
-          "source": "local",
-          "url": "videos/reptile_2.mp4",
-          "title": "Crocodile"
         }
       ]
     },
@@ -393,23 +289,6 @@
       ]
     },
     {
-      "id": "moyen-transport",
-      "name": "Moyen de transport",
-      "emoji": "🚂",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/moyen-transport_1.mp4",
-          "title": "Train"
-        },
-        {
-          "source": "local",
-          "url": "videos/moyen-transport_2.mp4",
-          "title": "Bus"
-        }
-      ]
-    },
-    {
       "id": "genre-musique",
       "name": "Genre de musique",
       "emoji": "🎸",
@@ -457,40 +336,6 @@
           "source": "local",
           "url": "videos/sport-olympique_2.mp4",
           "title": "Athletisme"
-        }
-      ]
-    },
-    {
-      "id": "celebration",
-      "name": "Celebration",
-      "emoji": "🙌",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/celebration_1.mp4",
-          "title": "High five"
-        },
-        {
-          "source": "local",
-          "url": "videos/celebration_2.mp4",
-          "title": "Fete"
-        }
-      ]
-    },
-    {
-      "id": "emoji-coeur",
-      "name": "Emoji coeur",
-      "emoji": "❤️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/emoji-coeur_1.mp4",
-          "title": "Coeur dans les yeux"
-        },
-        {
-          "source": "local",
-          "url": "videos/emoji-coeur_2.mp4",
-          "title": "Bisou coeur"
         }
       ]
     },
@@ -546,23 +391,6 @@
           "source": "local",
           "url": "videos/lever-coucher_2.mp4",
           "title": "Coucher de soleil"
-        }
-      ]
-    },
-    {
-      "id": "fete-evenement",
-      "name": "Fete d'evenement",
-      "emoji": "🎂",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/fete-evenement_1.mp4",
-          "title": "Mariage"
-        },
-        {
-          "source": "local",
-          "url": "videos/fete-evenement_2.mp4",
-          "title": "Anniversaire"
         }
       ]
     },
@@ -754,23 +582,6 @@
       ]
     },
     {
-      "id": "lunettes",
-      "name": "Lunettes",
-      "emoji": "👓",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/lunettes_1.mp4",
-          "title": "Lunettes de vue"
-        },
-        {
-          "source": "local",
-          "url": "videos/lunettes_2.mp4",
-          "title": "Lunettes de soleil"
-        }
-      ]
-    },
-    {
       "id": "pied-au-chaud",
       "name": "Pied au chaud",
       "emoji": "🧦",
@@ -805,23 +616,6 @@
       ]
     },
     {
-      "id": "liquide-chaud",
-      "name": "Liquide chaud",
-      "emoji": "🍲",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/liquide-chaud_1.mp4",
-          "title": "Soupe"
-        },
-        {
-          "source": "local",
-          "url": "videos/liquide-chaud_2.mp4",
-          "title": "Bouillon"
-        }
-      ]
-    },
-    {
       "id": "outil-ecriture",
       "name": "Outil d'écriture",
       "emoji": "✏️",
@@ -835,23 +629,6 @@
           "source": "local",
           "url": "videos/outil-ecriture_2.mp4",
           "title": "Crayon"
-        }
-      ]
-    },
-    {
-      "id": "chaussure",
-      "name": "Chaussure",
-      "emoji": "👞",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/chaussure_1.mp4",
-          "title": "Bottes"
-        },
-        {
-          "source": "local",
-          "url": "videos/chaussure_2.mp4",
-          "title": "Sandales"
         }
       ]
     },
@@ -1217,25 +994,6 @@
       ]
     },
     {
-      "id": "animal-calin",
-      "name": "Animal câlin",
-      "emoji": "🐼",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/animal-calin_1.mp4",
-          "title": "Panda",
-          "duration": 17
-        },
-        {
-          "source": "local",
-          "url": "videos/animal-calin_2.mp4",
-          "title": "Koala",
-          "duration": 15
-        }
-      ]
-    },
-    {
       "id": "marin-mammif",
       "name": "Mammifère marin",
       "emoji": "🐬",
@@ -1498,25 +1256,6 @@
           "url": "videos/boisson-fermee_2.mp4",
           "title": "Canette",
           "duration": 8
-        }
-      ]
-    },
-    {
-      "id": "sac-porter",
-      "name": "Sac à porter",
-      "emoji": "👜",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sac-porter_1.mp4",
-          "title": "Sac à main",
-          "duration": 10
-        },
-        {
-          "source": "local",
-          "url": "videos/sac-porter_2.mp4",
-          "title": "Cabas",
-          "duration": 10
         }
       ]
     },
@@ -2258,6 +1997,576 @@
           "url": "videos/desert-nature_2.mp4",
           "title": "Oasis",
           "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "viande-grillee",
+      "name": "Viande grillée",
+      "emoji": "🥩",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/viande-grillee_1.mp4",
+          "title": "Steak",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/viande-grillee_2.mp4",
+          "title": "Poulet grillé",
+          "duration": 11
+        }
+      ]
+    },
+    {
+      "id": "fromage",
+      "name": "Fromage",
+      "emoji": "🧀",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fromage_1.mp4",
+          "title": "Camembert",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/fromage_2.mp4",
+          "title": "Parmesan",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "pates-italiennes",
+      "name": "Pâtes italiennes",
+      "emoji": "🍝",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/pates-italiennes_1.mp4",
+          "title": "Spaghetti",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/pates-italiennes_2.mp4",
+          "title": "Tagliatelle",
+          "duration": 11
+        }
+      ]
+    },
+    {
+      "id": "noix-graines",
+      "name": "Noix et graines",
+      "emoji": "🥜",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/noix-graines_1.mp4",
+          "title": "Amandes",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/noix-graines_2.mp4",
+          "title": "Cacahuètes",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "epice-cuisine",
+      "name": "Épice cuisine",
+      "emoji": "🌶️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/epice-cuisine_1.mp4",
+          "title": "Cannelle",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/epice-cuisine_2.mp4",
+          "title": "Paprika",
+          "duration": 11
+        }
+      ]
+    },
+    {
+      "id": "legume-tubercule",
+      "name": "Légume tubercule",
+      "emoji": "🥔",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/legume-tubercule_1.mp4",
+          "title": "Pomme de terre",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/legume-tubercule_2.mp4",
+          "title": "Oignon",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "fleur-jaune",
+      "name": "Fleur jaune",
+      "emoji": "🌻",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fleur-jaune_1.mp4",
+          "title": "Tournesol",
+          "duration": 15
+        },
+        {
+          "source": "local",
+          "url": "videos/fleur-jaune_2.mp4",
+          "title": "Marguerite",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "arbre-feuille",
+      "name": "Arbre",
+      "emoji": "🌳",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/arbre-feuille_1.mp4",
+          "title": "Chêne",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/arbre-feuille_2.mp4",
+          "title": "Palmier",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "animal-foret",
+      "name": "Animal de forêt",
+      "emoji": "🦌",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-foret_1.mp4",
+          "title": "Cerf",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-foret_2.mp4",
+          "title": "Sanglier",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "oiseau-nuit",
+      "name": "Oiseau de nuit",
+      "emoji": "🦉",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/oiseau-nuit_1.mp4",
+          "title": "Hibou",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/oiseau-nuit_2.mp4",
+          "title": "Chauve-souris",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "amphibien",
+      "name": "Amphibien",
+      "emoji": "🐸",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/amphibien_1.mp4",
+          "title": "Grenouille",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/amphibien_2.mp4",
+          "title": "Salamandre",
+          "duration": 6
+        }
+      ]
+    },
+    {
+      "id": "sport-glisse-eau",
+      "name": "Sport de glisse",
+      "emoji": "🏄",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-glisse-eau_1.mp4",
+          "title": "Surf",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-glisse-eau_2.mp4",
+          "title": "Wakeboard",
+          "duration": 13
+        }
+      ]
+    },
+    {
+      "id": "sport-velo",
+      "name": "Sport vélo",
+      "emoji": "🚵",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-velo_1.mp4",
+          "title": "VTT",
+          "duration": 11
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-velo_2.mp4",
+          "title": "Vélo route",
+          "duration": 11
+        }
+      ]
+    },
+    {
+      "id": "danse-classique",
+      "name": "Danse classique",
+      "emoji": "🩰",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/danse-classique_1.mp4",
+          "title": "Ballet",
+          "duration": 5
+        },
+        {
+          "source": "local",
+          "url": "videos/danse-classique_2.mp4",
+          "title": "Valse",
+          "duration": 4
+        }
+      ]
+    },
+    {
+      "id": "musique-classique",
+      "name": "Musique classique",
+      "emoji": "🎻",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/musique-classique_1.mp4",
+          "title": "Violon",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/musique-classique_2.mp4",
+          "title": "Violoncelle",
+          "duration": 12
+        }
+      ]
+    },
+    {
+      "id": "musique-vent",
+      "name": "Musique à vent",
+      "emoji": "🎷",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/musique-vent_1.mp4",
+          "title": "Saxophone",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/musique-vent_2.mp4",
+          "title": "Trompette",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "art-mur",
+      "name": "Art mural",
+      "emoji": "🎨",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/art-mur_1.mp4",
+          "title": "Graffiti",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/art-mur_2.mp4",
+          "title": "Fresque",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "art-objet",
+      "name": "Art objet",
+      "emoji": "🏺",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/art-objet_1.mp4",
+          "title": "Sculpture",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/art-objet_2.mp4",
+          "title": "Poterie",
+          "duration": 6
+        }
+      ]
+    },
+    {
+      "id": "transport-luxe",
+      "name": "Transport luxe",
+      "emoji": "🛥️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/transport-luxe_1.mp4",
+          "title": "Limousine",
+          "duration": 15
+        },
+        {
+          "source": "local",
+          "url": "videos/transport-luxe_2.mp4",
+          "title": "Yacht",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "camping-nature",
+      "name": "Camping",
+      "emoji": "⛺",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/camping-nature_1.mp4",
+          "title": "Tente",
+          "duration": 12
+        },
+        {
+          "source": "local",
+          "url": "videos/camping-nature_2.mp4",
+          "title": "Feu de camp nuit",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "ordinateur-cas",
+      "name": "Type d'ordinateur",
+      "emoji": "🖥️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/ordinateur-cas_1.mp4",
+          "title": "PC fixe",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/ordinateur-cas_2.mp4",
+          "title": "PC portable gaming",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "voyage-monument",
+      "name": "Monument célèbre",
+      "emoji": "🗽",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/voyage-monument_1.mp4",
+          "title": "Tour Eiffel",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/voyage-monument_2.mp4",
+          "title": "Colisée",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "phenomene-eau",
+      "name": "Phénomène d'eau",
+      "emoji": "🌊",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/phenomene-eau_1.mp4",
+          "title": "Cascade montagne",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/phenomene-eau_2.mp4",
+          "title": "Geyser",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "hygiene-perso",
+      "name": "Hygiène",
+      "emoji": "🧴",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/hygiene-perso_1.mp4",
+          "title": "Brosse à dents",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/hygiene-perso_2.mp4",
+          "title": "Savon",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "nettoyage-prod",
+      "name": "Produit ménager",
+      "emoji": "🧼",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nettoyage-prod_1.mp4",
+          "title": "Liquide vaisselle",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/nettoyage-prod_2.mp4",
+          "title": "Lessive",
+          "duration": 5
+        }
+      ]
+    },
+    {
+      "id": "fourniture-bureau",
+      "name": "Fourniture bureau",
+      "emoji": "📎",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fourniture-bureau_1.mp4",
+          "title": "Trombones",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/fourniture-bureau_2.mp4",
+          "title": "Agrafeuse",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "electromenager-pain",
+      "name": "Petit électroménager",
+      "emoji": "🍞",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/electromenager-pain_1.mp4",
+          "title": "Grille-pain",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/electromenager-pain_2.mp4",
+          "title": "Micro-ondes",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "electromenager-froid",
+      "name": "Électroménager froid",
+      "emoji": "🧊",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/electromenager-froid_1.mp4",
+          "title": "Frigo",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/electromenager-froid_2.mp4",
+          "title": "Congélateur",
+          "duration": 4
+        }
+      ]
+    },
+    {
+      "id": "fete-religieuse",
+      "name": "Fête religieuse",
+      "emoji": "🎄",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fete-religieuse_1.mp4",
+          "title": "Noël",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/fete-religieuse_2.mp4",
+          "title": "Pâques",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "rivage-mer",
+      "name": "Rivage",
+      "emoji": "🏖️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/rivage-mer_1.mp4",
+          "title": "Falaise",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/rivage-mer_2.mp4",
+          "title": "Plage sable",
+          "duration": 7
         }
       ]
     }

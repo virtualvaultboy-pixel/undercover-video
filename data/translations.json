@@ -16,10 +16,6 @@
       "en": "Moving vehicle",
       "es": "Vehículo en movimiento"
     },
-    "eau": {
-      "en": "Water element",
-      "es": "Elemento de agua"
-    },
     "sport-extreme": {
       "en": "Extreme sport",
       "es": "Deporte extremo"
@@ -36,10 +32,6 @@
       "en": "Expressive reaction",
       "es": "Reacción expresiva"
     },
-    "halloween": {
-      "en": "Halloween",
-      "es": "Halloween"
-    },
     "emotion-forte": {
       "en": "Strong emotion",
       "es": "Emoción fuerte"
@@ -52,25 +44,9 @@
       "en": "Small animal",
       "es": "Animal pequeño"
     },
-    "patisserie": {
-      "en": "Pastry",
-      "es": "Pastelería"
-    },
     "sport-combat": {
       "en": "Combat sport",
       "es": "Deporte de combate"
-    },
-    "engin-aerien": {
-      "en": "Aerial vehicle",
-      "es": "Vehículo aéreo"
-    },
-    "ours": {
-      "en": "Bear",
-      "es": "Oso"
-    },
-    "reptile": {
-      "en": "Reptile",
-      "es": "Reptil"
     },
     "espace": {
       "en": "Space",
@@ -87,10 +63,6 @@
     "dinosaure": {
       "en": "Dinosaur",
       "es": "Dinosaurio"
-    },
-    "moyen-transport": {
-      "en": "Means of transport",
-      "es": "Medio de transporte"
     },
     "petit-dej": {
       "fr": {
@@ -757,41 +729,6 @@
         ]
       }
     },
-    "animal-calin": {
-      "fr": {
-        "name": "Animal câlin",
-        "videos": [
-          {
-            "title": "Panda"
-          },
-          {
-            "title": "Koala"
-          }
-        ]
-      },
-      "en": {
-        "name": "Animal câlin",
-        "videos": [
-          {
-            "title": "Panda"
-          },
-          {
-            "title": "Koala"
-          }
-        ]
-      },
-      "es": {
-        "name": "Animal câlin",
-        "videos": [
-          {
-            "title": "Panda"
-          },
-          {
-            "title": "Koala"
-          }
-        ]
-      }
-    },
     "marin-mammif": {
       "fr": {
         "name": "Mammifère marin",
@@ -1278,41 +1215,6 @@
           },
           {
             "title": "Lata"
-          }
-        ]
-      }
-    },
-    "sac-porter": {
-      "fr": {
-        "name": "Sac à porter",
-        "videos": [
-          {
-            "title": "Sac à main"
-          },
-          {
-            "title": "Cabas"
-          }
-        ]
-      },
-      "en": {
-        "name": "Sac à porter",
-        "videos": [
-          {
-            "title": "Handbag"
-          },
-          {
-            "title": "Tote bag"
-          }
-        ]
-      },
-      "es": {
-        "name": "Sac à porter",
-        "videos": [
-          {
-            "title": "Bolso"
-          },
-          {
-            "title": "Bolsa"
           }
         ]
       }
@@ -2678,6 +2580,1056 @@
           },
           {
             "title": "Oasis"
+          }
+        ]
+      }
+    },
+    "viande-grillee": {
+      "fr": {
+        "name": "Viande grillée",
+        "videos": [
+          {
+            "title": "Steak"
+          },
+          {
+            "title": "Poulet grillé"
+          }
+        ]
+      },
+      "en": {
+        "name": "Viande grillée",
+        "videos": [
+          {
+            "title": "Steak"
+          },
+          {
+            "title": "Grilled chicken"
+          }
+        ]
+      },
+      "es": {
+        "name": "Viande grillée",
+        "videos": [
+          {
+            "title": "Bistec"
+          },
+          {
+            "title": "Pollo a la parrilla"
+          }
+        ]
+      }
+    },
+    "fromage": {
+      "fr": {
+        "name": "Fromage",
+        "videos": [
+          {
+            "title": "Camembert"
+          },
+          {
+            "title": "Parmesan"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fromage",
+        "videos": [
+          {
+            "title": "Camembert"
+          },
+          {
+            "title": "Parmesan"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fromage",
+        "videos": [
+          {
+            "title": "Camembert"
+          },
+          {
+            "title": "Parmesano"
+          }
+        ]
+      }
+    },
+    "pates-italiennes": {
+      "fr": {
+        "name": "Pâtes italiennes",
+        "videos": [
+          {
+            "title": "Spaghetti"
+          },
+          {
+            "title": "Tagliatelle"
+          }
+        ]
+      },
+      "en": {
+        "name": "Pâtes italiennes",
+        "videos": [
+          {
+            "title": "Spaghetti"
+          },
+          {
+            "title": "Tagliatelle"
+          }
+        ]
+      },
+      "es": {
+        "name": "Pâtes italiennes",
+        "videos": [
+          {
+            "title": "Espaguetis"
+          },
+          {
+            "title": "Tagliatelle"
+          }
+        ]
+      }
+    },
+    "noix-graines": {
+      "fr": {
+        "name": "Noix et graines",
+        "videos": [
+          {
+            "title": "Amandes"
+          },
+          {
+            "title": "Cacahuètes"
+          }
+        ]
+      },
+      "en": {
+        "name": "Noix et graines",
+        "videos": [
+          {
+            "title": "Almonds"
+          },
+          {
+            "title": "Peanuts"
+          }
+        ]
+      },
+      "es": {
+        "name": "Noix et graines",
+        "videos": [
+          {
+            "title": "Almendras"
+          },
+          {
+            "title": "Cacahuetes"
+          }
+        ]
+      }
+    },
+    "epice-cuisine": {
+      "fr": {
+        "name": "Épice cuisine",
+        "videos": [
+          {
+            "title": "Cannelle"
+          },
+          {
+            "title": "Paprika"
+          }
+        ]
+      },
+      "en": {
+        "name": "Épice cuisine",
+        "videos": [
+          {
+            "title": "Cinnamon"
+          },
+          {
+            "title": "Paprika"
+          }
+        ]
+      },
+      "es": {
+        "name": "Épice cuisine",
+        "videos": [
+          {
+            "title": "Canela"
+          },
+          {
+            "title": "Pimentón"
+          }
+        ]
+      }
+    },
+    "legume-tubercule": {
+      "fr": {
+        "name": "Légume tubercule",
+        "videos": [
+          {
+            "title": "Pomme de terre"
+          },
+          {
+            "title": "Oignon"
+          }
+        ]
+      },
+      "en": {
+        "name": "Légume tubercule",
+        "videos": [
+          {
+            "title": "Potato"
+          },
+          {
+            "title": "Onion"
+          }
+        ]
+      },
+      "es": {
+        "name": "Légume tubercule",
+        "videos": [
+          {
+            "title": "Patata"
+          },
+          {
+            "title": "Cebolla"
+          }
+        ]
+      }
+    },
+    "fleur-jaune": {
+      "fr": {
+        "name": "Fleur jaune",
+        "videos": [
+          {
+            "title": "Tournesol"
+          },
+          {
+            "title": "Marguerite"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fleur jaune",
+        "videos": [
+          {
+            "title": "Sunflower"
+          },
+          {
+            "title": "Daisy"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fleur jaune",
+        "videos": [
+          {
+            "title": "Girasol"
+          },
+          {
+            "title": "Margarita"
+          }
+        ]
+      }
+    },
+    "arbre-feuille": {
+      "fr": {
+        "name": "Arbre",
+        "videos": [
+          {
+            "title": "Chêne"
+          },
+          {
+            "title": "Palmier"
+          }
+        ]
+      },
+      "en": {
+        "name": "Arbre",
+        "videos": [
+          {
+            "title": "Oak tree"
+          },
+          {
+            "title": "Palm tree"
+          }
+        ]
+      },
+      "es": {
+        "name": "Arbre",
+        "videos": [
+          {
+            "title": "Roble"
+          },
+          {
+            "title": "Palmera"
+          }
+        ]
+      }
+    },
+    "animal-foret": {
+      "fr": {
+        "name": "Animal de forêt",
+        "videos": [
+          {
+            "title": "Cerf"
+          },
+          {
+            "title": "Sanglier"
+          }
+        ]
+      },
+      "en": {
+        "name": "Animal de forêt",
+        "videos": [
+          {
+            "title": "Deer"
+          },
+          {
+            "title": "Wild boar"
+          }
+        ]
+      },
+      "es": {
+        "name": "Animal de forêt",
+        "videos": [
+          {
+            "title": "Ciervo"
+          },
+          {
+            "title": "Jabalí"
+          }
+        ]
+      }
+    },
+    "oiseau-nuit": {
+      "fr": {
+        "name": "Oiseau de nuit",
+        "videos": [
+          {
+            "title": "Hibou"
+          },
+          {
+            "title": "Chauve-souris"
+          }
+        ]
+      },
+      "en": {
+        "name": "Oiseau de nuit",
+        "videos": [
+          {
+            "title": "Owl"
+          },
+          {
+            "title": "Bat"
+          }
+        ]
+      },
+      "es": {
+        "name": "Oiseau de nuit",
+        "videos": [
+          {
+            "title": "Búho"
+          },
+          {
+            "title": "Murciélago"
+          }
+        ]
+      }
+    },
+    "amphibien": {
+      "fr": {
+        "name": "Amphibien",
+        "videos": [
+          {
+            "title": "Grenouille"
+          },
+          {
+            "title": "Salamandre"
+          }
+        ]
+      },
+      "en": {
+        "name": "Amphibien",
+        "videos": [
+          {
+            "title": "Frog"
+          },
+          {
+            "title": "Salamander"
+          }
+        ]
+      },
+      "es": {
+        "name": "Amphibien",
+        "videos": [
+          {
+            "title": "Rana"
+          },
+          {
+            "title": "Salamandra"
+          }
+        ]
+      }
+    },
+    "sport-glisse-eau": {
+      "fr": {
+        "name": "Sport de glisse",
+        "videos": [
+          {
+            "title": "Surf"
+          },
+          {
+            "title": "Wakeboard"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sport de glisse",
+        "videos": [
+          {
+            "title": "Surfing"
+          },
+          {
+            "title": "Wakeboard"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sport de glisse",
+        "videos": [
+          {
+            "title": "Surf"
+          },
+          {
+            "title": "Wakeboard"
+          }
+        ]
+      }
+    },
+    "sport-velo": {
+      "fr": {
+        "name": "Sport vélo",
+        "videos": [
+          {
+            "title": "VTT"
+          },
+          {
+            "title": "Vélo route"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sport vélo",
+        "videos": [
+          {
+            "title": "Mountain bike"
+          },
+          {
+            "title": "Road bike"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sport vélo",
+        "videos": [
+          {
+            "title": "Bicicleta de montaña"
+          },
+          {
+            "title": "Bicicleta de carretera"
+          }
+        ]
+      }
+    },
+    "danse-classique": {
+      "fr": {
+        "name": "Danse classique",
+        "videos": [
+          {
+            "title": "Ballet"
+          },
+          {
+            "title": "Valse"
+          }
+        ]
+      },
+      "en": {
+        "name": "Danse classique",
+        "videos": [
+          {
+            "title": "Ballet"
+          },
+          {
+            "title": "Waltz"
+          }
+        ]
+      },
+      "es": {
+        "name": "Danse classique",
+        "videos": [
+          {
+            "title": "Ballet"
+          },
+          {
+            "title": "Vals"
+          }
+        ]
+      }
+    },
+    "musique-classique": {
+      "fr": {
+        "name": "Musique classique",
+        "videos": [
+          {
+            "title": "Violon"
+          },
+          {
+            "title": "Violoncelle"
+          }
+        ]
+      },
+      "en": {
+        "name": "Musique classique",
+        "videos": [
+          {
+            "title": "Violin"
+          },
+          {
+            "title": "Cello"
+          }
+        ]
+      },
+      "es": {
+        "name": "Musique classique",
+        "videos": [
+          {
+            "title": "Violín"
+          },
+          {
+            "title": "Violonchelo"
+          }
+        ]
+      }
+    },
+    "musique-vent": {
+      "fr": {
+        "name": "Musique à vent",
+        "videos": [
+          {
+            "title": "Saxophone"
+          },
+          {
+            "title": "Trompette"
+          }
+        ]
+      },
+      "en": {
+        "name": "Musique à vent",
+        "videos": [
+          {
+            "title": "Saxophone"
+          },
+          {
+            "title": "Trumpet"
+          }
+        ]
+      },
+      "es": {
+        "name": "Musique à vent",
+        "videos": [
+          {
+            "title": "Saxofón"
+          },
+          {
+            "title": "Trompeta"
+          }
+        ]
+      }
+    },
+    "art-mur": {
+      "fr": {
+        "name": "Art mural",
+        "videos": [
+          {
+            "title": "Graffiti"
+          },
+          {
+            "title": "Fresque"
+          }
+        ]
+      },
+      "en": {
+        "name": "Art mural",
+        "videos": [
+          {
+            "title": "Graffiti"
+          },
+          {
+            "title": "Mural"
+          }
+        ]
+      },
+      "es": {
+        "name": "Art mural",
+        "videos": [
+          {
+            "title": "Grafiti"
+          },
+          {
+            "title": "Mural"
+          }
+        ]
+      }
+    },
+    "art-objet": {
+      "fr": {
+        "name": "Art objet",
+        "videos": [
+          {
+            "title": "Sculpture"
+          },
+          {
+            "title": "Poterie"
+          }
+        ]
+      },
+      "en": {
+        "name": "Art objet",
+        "videos": [
+          {
+            "title": "Sculpture"
+          },
+          {
+            "title": "Pottery"
+          }
+        ]
+      },
+      "es": {
+        "name": "Art objet",
+        "videos": [
+          {
+            "title": "Escultura"
+          },
+          {
+            "title": "Cerámica"
+          }
+        ]
+      }
+    },
+    "transport-luxe": {
+      "fr": {
+        "name": "Transport luxe",
+        "videos": [
+          {
+            "title": "Limousine"
+          },
+          {
+            "title": "Yacht"
+          }
+        ]
+      },
+      "en": {
+        "name": "Transport luxe",
+        "videos": [
+          {
+            "title": "Limousine"
+          },
+          {
+            "title": "Yacht"
+          }
+        ]
+      },
+      "es": {
+        "name": "Transport luxe",
+        "videos": [
+          {
+            "title": "Limusina"
+          },
+          {
+            "title": "Yate"
+          }
+        ]
+      }
+    },
+    "camping-nature": {
+      "fr": {
+        "name": "Camping",
+        "videos": [
+          {
+            "title": "Tente"
+          },
+          {
+            "title": "Feu de camp nuit"
+          }
+        ]
+      },
+      "en": {
+        "name": "Camping",
+        "videos": [
+          {
+            "title": "Tent"
+          },
+          {
+            "title": "Campfire"
+          }
+        ]
+      },
+      "es": {
+        "name": "Camping",
+        "videos": [
+          {
+            "title": "Tienda"
+          },
+          {
+            "title": "Hoguera"
+          }
+        ]
+      }
+    },
+    "ordinateur-cas": {
+      "fr": {
+        "name": "Type d'ordinateur",
+        "videos": [
+          {
+            "title": "PC fixe"
+          },
+          {
+            "title": "PC portable gaming"
+          }
+        ]
+      },
+      "en": {
+        "name": "Type d'ordinateur",
+        "videos": [
+          {
+            "title": "Desktop PC"
+          },
+          {
+            "title": "Gaming laptop"
+          }
+        ]
+      },
+      "es": {
+        "name": "Type d'ordinateur",
+        "videos": [
+          {
+            "title": "PC fijo"
+          },
+          {
+            "title": "Portátil gaming"
+          }
+        ]
+      }
+    },
+    "voyage-monument": {
+      "fr": {
+        "name": "Monument célèbre",
+        "videos": [
+          {
+            "title": "Tour Eiffel"
+          },
+          {
+            "title": "Colisée"
+          }
+        ]
+      },
+      "en": {
+        "name": "Monument célèbre",
+        "videos": [
+          {
+            "title": "Eiffel tower"
+          },
+          {
+            "title": "Colosseum"
+          }
+        ]
+      },
+      "es": {
+        "name": "Monument célèbre",
+        "videos": [
+          {
+            "title": "Torre Eiffel"
+          },
+          {
+            "title": "Coliseo"
+          }
+        ]
+      }
+    },
+    "phenomene-eau": {
+      "fr": {
+        "name": "Phénomène d'eau",
+        "videos": [
+          {
+            "title": "Cascade montagne"
+          },
+          {
+            "title": "Geyser"
+          }
+        ]
+      },
+      "en": {
+        "name": "Phénomène d'eau",
+        "videos": [
+          {
+            "title": "Mountain waterfall"
+          },
+          {
+            "title": "Geyser"
+          }
+        ]
+      },
+      "es": {
+        "name": "Phénomène d'eau",
+        "videos": [
+          {
+            "title": "Cascada"
+          },
+          {
+            "title": "Géiser"
+          }
+        ]
+      }
+    },
+    "hygiene-perso": {
+      "fr": {
+        "name": "Hygiène",
+        "videos": [
+          {
+            "title": "Brosse à dents"
+          },
+          {
+            "title": "Savon"
+          }
+        ]
+      },
+      "en": {
+        "name": "Hygiène",
+        "videos": [
+          {
+            "title": "Toothbrush"
+          },
+          {
+            "title": "Soap"
+          }
+        ]
+      },
+      "es": {
+        "name": "Hygiène",
+        "videos": [
+          {
+            "title": "Cepillo dental"
+          },
+          {
+            "title": "Jabón"
+          }
+        ]
+      }
+    },
+    "nettoyage-prod": {
+      "fr": {
+        "name": "Produit ménager",
+        "videos": [
+          {
+            "title": "Liquide vaisselle"
+          },
+          {
+            "title": "Lessive"
+          }
+        ]
+      },
+      "en": {
+        "name": "Produit ménager",
+        "videos": [
+          {
+            "title": "Dish soap"
+          },
+          {
+            "title": "Laundry"
+          }
+        ]
+      },
+      "es": {
+        "name": "Produit ménager",
+        "videos": [
+          {
+            "title": "Lavavajillas"
+          },
+          {
+            "title": "Detergente"
+          }
+        ]
+      }
+    },
+    "fourniture-bureau": {
+      "fr": {
+        "name": "Fourniture bureau",
+        "videos": [
+          {
+            "title": "Trombones"
+          },
+          {
+            "title": "Agrafeuse"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fourniture bureau",
+        "videos": [
+          {
+            "title": "Paperclips"
+          },
+          {
+            "title": "Stapler"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fourniture bureau",
+        "videos": [
+          {
+            "title": "Clips"
+          },
+          {
+            "title": "Grapadora"
+          }
+        ]
+      }
+    },
+    "electromenager-pain": {
+      "fr": {
+        "name": "Petit électroménager",
+        "videos": [
+          {
+            "title": "Grille-pain"
+          },
+          {
+            "title": "Micro-ondes"
+          }
+        ]
+      },
+      "en": {
+        "name": "Petit électroménager",
+        "videos": [
+          {
+            "title": "Toaster"
+          },
+          {
+            "title": "Microwave"
+          }
+        ]
+      },
+      "es": {
+        "name": "Petit électroménager",
+        "videos": [
+          {
+            "title": "Tostadora"
+          },
+          {
+            "title": "Microondas"
+          }
+        ]
+      }
+    },
+    "electromenager-froid": {
+      "fr": {
+        "name": "Électroménager froid",
+        "videos": [
+          {
+            "title": "Frigo"
+          },
+          {
+            "title": "Congélateur"
+          }
+        ]
+      },
+      "en": {
+        "name": "Électroménager froid",
+        "videos": [
+          {
+            "title": "Refrigerator"
+          },
+          {
+            "title": "Freezer"
+          }
+        ]
+      },
+      "es": {
+        "name": "Électroménager froid",
+        "videos": [
+          {
+            "title": "Refrigerador"
+          },
+          {
+            "title": "Congelador"
+          }
+        ]
+      }
+    },
+    "fete-religieuse": {
+      "fr": {
+        "name": "Fête religieuse",
+        "videos": [
+          {
+            "title": "Noël"
+          },
+          {
+            "title": "Pâques"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fête religieuse",
+        "videos": [
+          {
+            "title": "Christmas"
+          },
+          {
+            "title": "Easter"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fête religieuse",
+        "videos": [
+          {
+            "title": "Navidad"
+          },
+          {
+            "title": "Pascua"
+          }
+        ]
+      }
+    },
+    "rivage-mer": {
+      "fr": {
+        "name": "Rivage",
+        "videos": [
+          {
+            "title": "Falaise"
+          },
+          {
+            "title": "Plage sable"
+          }
+        ]
+      },
+      "en": {
+        "name": "Rivage",
+        "videos": [
+          {
+            "title": "Cliff"
+          },
+          {
+            "title": "Sandy beach"
+          }
+        ]
+      },
+      "es": {
+        "name": "Rivage",
+        "videos": [
+          {
+            "title": "Acantilado"
+          },
+          {
+            "title": "Playa arena"
           }
         ]
       }

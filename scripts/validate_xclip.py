@@ -22,6 +22,7 @@ from transformers import XCLIPProcessor, XCLIPModel
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_PATH = os.path.join(ROOT, "data", "videos.json")
+TR_PATH = os.path.join(ROOT, "data", "translations.json")
 OUT_JSON = os.path.join(ROOT, "audit-xclip.json")
 
 NEGATIVE_LABELS = [
@@ -59,23 +60,49 @@ def read_video_frames(path, num_frames=8):
     return frames
 
 
-def title_to_label(title, name):
-    """Cree un label en anglais simple a partir du titre francais."""
-    # Mini-dico FR -> EN pour les titres frequents
+def get_en_label(cat_id, video_idx, cat_name_fr, video_title_fr, translations):
+    """Recupere le label EN depuis translations.json (multi-formats).
+    Fallback : nom categorie EN, puis dico FR->EN, puis titre FR."""
+    entry = translations.get("categories", {}).get(cat_id, {})
+    en = entry.get("en")
+
+    # Format 1 : {en: {name, videos: [{title}, ...]}}
+    if isinstance(en, dict):
+        videos = en.get("videos", [])
+        if video_idx < len(videos):
+            t = videos[video_idx].get("title")
+            if t:
+                return f"a video of {t.lower()}"
+        n = en.get("name")
+        if n:
+            return f"a video of {n.lower()}"
+
+    # Format 2 : {en: "Category Name"}
+    if isinstance(en, str):
+        return f"a video of {en.lower()}"
+
+    # Fallback : mini-dico FR -> EN
     mapping = {
-        "café": "coffee", "thé": "tea", "vin": "wine", "biere": "beer",
+        "café": "coffee", "the": "tea", "vin": "wine", "biere": "beer",
         "chat": "cat", "chien": "dog", "cheval": "horse", "vache": "cow",
+        "ours": "bear", "lion": "lion", "tigre": "tiger", "loup": "wolf",
         "voiture": "car", "moto": "motorcycle", "velo": "bicycle",
         "salade": "salad", "burger": "burger", "pizza": "pizza",
         "course": "running", "yoga": "yoga", "foot": "soccer",
         "plage": "beach", "ocean": "ocean", "montagne": "mountain",
-        "feu": "fire", "neige": "snow", "pluie": "rain",
+        "feu": "fire", "neige": "snow", "pluie": "rain", "bougie": "candle",
+        "tulipe": "tulip", "rose": "rose", "fleur": "flower",
+        "vagues": "ocean waves", "cascade": "waterfall",
+        "orange": "orange fruit", "citron": "lemon",
+        "magicien": "wizard", "sorciere": "witch",
+        "ninja": "ninja", "samourai": "samurai",
     }
-    t = title.lower()
-    for fr, en in mapping.items():
+    t = video_title_fr.lower()
+    for fr, en_w in mapping.items():
         if fr in t:
-            return f"a video of {en}"
-    return f"a video of {title.lower()}"
+            return f"a video of {en_w}"
+    # Dernier recours : nom catégorie FR
+    return f"a video of {cat_name_fr.lower()}"
 
 
 def main():
@@ -88,6 +115,10 @@ def main():
 
     with open(JSON_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
+    translations = {"categories": {}}
+    if os.path.exists(TR_PATH):
+        with open(TR_PATH, "r", encoding="utf-8") as f:
+            translations = json.load(f)
 
     cats = data["categories"]
     if targets:
@@ -115,7 +146,7 @@ def main():
                     cat_suspect = True
                     continue
 
-                expected = title_to_label(video["title"], cat["name"])
+                expected = get_en_label(cat["id"], vi, cat["name"], video["title"], translations)
                 labels = [expected] + NEGATIVE_LABELS
                 inputs = proc(text=labels, videos=list(frames), return_tensors="pt", padding=True)
                 with torch.no_grad():
