@@ -19,6 +19,7 @@ const state = {
   timerSeconds: 0,          // 0 = pas de timer
   vibrations: false,        // feedback haptique
   fastMode: false,          // skip écran transition
+  nsfwMode: false,          // 🔞 débloque catégories adultes
   assignments: [],
   currentPlayerIndex: 0,
   wrongVotes: [],
@@ -34,6 +35,7 @@ function loadPrefs() {
     state.timerSeconds   = Number(p.timerSeconds) || 0;
     state.vibrations     = !!p.vibrations;
     state.fastMode       = !!p.fastMode;
+    state.nsfwMode       = !!p.nsfwMode;
   } catch {}
 }
 function savePrefs() {
@@ -45,6 +47,7 @@ function savePrefs() {
       timerSeconds: state.timerSeconds,
       vibrations: state.vibrations,
       fastMode: state.fastMode,
+      nsfwMode: state.nsfwMode,
     }));
   } catch {}
 }
@@ -147,11 +150,19 @@ function categoryName(cat) {
   return cat.name; // fallback FR
 }
 
+function isVisibleCategory(cat) {
+  if (cat.videos.length < 2) return false;
+  // Filtre NSFW : caché si Mode Adulte désactivé
+  if (cat.nsfw && !state.nsfwMode) return false;
+  return true;
+}
+
 function updateCategoryCounter() {
   const el = document.getElementById('cat-counter');
   if (!el) return;
-  const total = state.categories.filter(c => c.videos.length >= 2).length;
-  const free = state.categories.slice(0, FREE_COUNT).filter(c => c.videos.length >= 2).length;
+  const visible = state.categories.filter(isVisibleCategory);
+  const total = visible.length;
+  const free = visible.slice(0, FREE_COUNT).length;
   const n = isPremium() ? total : free;
   el.textContent = i18n.t('catCounterTpl', { n: `${n}/${total}` });
 }
@@ -193,11 +204,12 @@ function buildCategorySelect() {
   sel.appendChild(optRandom);
 
   state.categories.forEach(cat => {
-    if (cat.videos.length < 2) return;
+    if (!isVisibleCategory(cat)) return;
     const opt = document.createElement('option');
     opt.value = cat.id;
     const locked = !isCategoryAvailable(cat);
-    opt.textContent = `${cat.emoji} ${categoryName(cat)}${locked ? '  ' + i18n.t('categoryLocked') : ''}`;
+    const tag = cat.nsfw ? '  ' + i18n.t('nsfwTag') : '';
+    opt.textContent = `${cat.emoji} ${categoryName(cat)}${tag}${locked ? '  ' + i18n.t('categoryLocked') : ''}`;
     opt.dataset.locked = locked ? '1' : '0';
     sel.appendChild(opt);
   });
@@ -329,6 +341,23 @@ function bindEvents() {
     try { localStorage.removeItem(STATS_KEY); } catch {}
     renderStats();
     toast(i18n.t('statsResetDone'));
+  };
+
+  const nsfwToggle = document.getElementById('nsfw-toggle');
+  nsfwToggle.checked = state.nsfwMode;
+  nsfwToggle.onchange = e => {
+    if (e.target.checked) {
+      // Confirmation 18+ obligatoire à l'activation
+      if (!confirm(i18n.t('nsfwConfirm'))) {
+        e.target.checked = false;
+        return;
+      }
+      toast(i18n.t('nsfwEnabled'));
+    }
+    state.nsfwMode = e.target.checked;
+    savePrefs();
+    buildCategorySelect(); // refresh menu déroulant
+    updateCategoryCounter();
   };
   document.getElementById('btn-go-vote').onclick = goToVote;
   document.getElementById('btn-new-round').onclick = newSpeakingRound;
@@ -842,8 +871,8 @@ function pushRecentCategory(catId) {
 }
 
 function pickRandomCategory() {
-  // En mode aléatoire, on ne pioche que dans les catégories accessibles à l'utilisateur
-  const playable = state.categories.filter(c => isCategoryAvailable(c));
+  // En mode aléatoire, on ne pioche que dans les catégories accessibles ET visibles (NSFW respecté)
+  const playable = state.categories.filter(c => isCategoryAvailable(c) && isVisibleCategory(c));
   if (playable.length === 0) return null;
 
   const recent = getRecentCategories();

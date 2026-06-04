@@ -126,6 +126,13 @@ const I18N = {
     resetStatsConfirm: "Réinitialiser les statistiques ?",
     statsResetDone: "✅ Statistiques réinitialisées",
 
+    // Mode Adulte 18+
+    nsfwLabel: "🔞 Mode Adulte (18+)",
+    nsfwHint: "Débloque des catégories pour soirées entre adultes (humour suggestif, alcool, etc.)",
+    nsfwConfirm: "⚠️ Tu confirmes avoir 18 ans ou plus ? Le mode Adulte ajoute des catégories à humour suggestif et thèmes de soirée arrosée. À utiliser uniquement entre adultes consentants.",
+    nsfwEnabled: "🔞 Mode Adulte activé",
+    nsfwTag: "🔞 Adulte",
+
     // Custom AI
     customAiOption: "✨ Mode Personnalisé",
     customAiTitle: "✨ Mode Personnalisé",
@@ -248,6 +255,12 @@ const I18N = {
     resetStatsConfirm: "Reset all statistics?",
     statsResetDone: "✅ Statistics reset",
 
+    nsfwLabel: "🔞 Adult Mode (18+)",
+    nsfwHint: "Unlocks categories for adult parties (suggestive humor, alcohol, etc.)",
+    nsfwConfirm: "⚠️ Confirm you are 18 or older? Adult Mode adds categories with suggestive humor and party themes. For consenting adults only.",
+    nsfwEnabled: "🔞 Adult Mode enabled",
+    nsfwTag: "🔞 Adult",
+
     customAiOption: "✨ Custom Mode",
     customAiTitle: "✨ Custom Mode",
     customAiSubtitle: "Type 2 similar ideas. The app will find an image for each.",
@@ -368,6 +381,12 @@ const I18N = {
     resetStatsLabel: "🗑️ Reiniciar estadísticas",
     resetStatsConfirm: "¿Reiniciar todas las estadísticas?",
     statsResetDone: "✅ Estadísticas reiniciadas",
+
+    nsfwLabel: "🔞 Modo Adulto (18+)",
+    nsfwHint: "Desbloquea categorías para fiestas de adultos (humor sugerente, alcohol, etc.)",
+    nsfwConfirm: "⚠️ ¿Confirmas tener 18 años o más? El Modo Adulto añade categorías con humor sugerente y temas de fiesta. Solo para adultos consintientes.",
+    nsfwEnabled: "🔞 Modo Adulto activado",
+    nsfwTag: "🔞 Adulto",
 
     customAiOption: "✨ Modo Personalizado",
     customAiTitle: "✨ Modo Personalizado",
