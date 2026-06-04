@@ -130,7 +130,7 @@ const I18N = {
     // Custom AI
     customAiOption: "✨ Mode Personnalisé",
     customAiTitle: "✨ Mode Personnalisé",
-    customAiSubtitle: "Entrez 2 idées proches. L'app trouve une image pour chacune.",
+    customAiSubtitle: "Entrez 2 idées proches. Sujets concrets (chat, voiture, pizza) — les sujets fictifs comme \"pokemon\" donnent des résultats aléatoires.",
     customAiIdea1: "Idée des civils",
     customAiIdea1Placeholder: "Ex : un chat qui danse",
     customAiIdea2: "Idée de l'undercover",
@@ -252,7 +252,7 @@ const I18N = {
 
     customAiOption: "✨ Custom Mode",
     customAiTitle: "✨ Custom Mode",
-    customAiSubtitle: "Type 2 similar ideas. The app will find an image for each.",
+    customAiSubtitle: "Type 2 similar ideas. Use concrete subjects (cat, car, pizza) — fictional ones like \"pokemon\" give random results.",
     customAiIdea1: "Civilians' idea",
     customAiIdea1Placeholder: "Ex: a dancing cat",
     customAiIdea2: "Undercover's idea",
@@ -374,7 +374,7 @@ const I18N = {
 
     customAiOption: "✨ Modo Personalizado",
     customAiTitle: "✨ Modo Personalizado",
-    customAiSubtitle: "Escribe 2 ideas parecidas. La app encontrará una imagen para cada una.",
+    customAiSubtitle: "Escribe 2 ideas parecidas. Sujetos concretos (gato, coche, pizza) — los ficticios como \"pokemon\" dan resultados aleatorios.",
     customAiIdea1: "Idea de los civiles",
     customAiIdea1Placeholder: "Ej: un gato bailando",
     customAiIdea2: "Idea del infiltrado",
