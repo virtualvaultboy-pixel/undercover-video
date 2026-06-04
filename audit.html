@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit visuel — Undercover Vidéo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0d0d12;
+      color: #f5f5f7;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ff3366, #6633ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .info {
+      color: #9999a8;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+    .stats {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .stat-chip {
+      background: #1a1a24;
+      border: 1px solid #2a2a38;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .stat-chip strong { color: #ff3366; }
+
+    .filters {
+      margin-bottom: 24px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .filters input, .filters button {
+      background: #1a1a24;
+      border: 1px solid #2a2a38;
+      color: #f5f5f7;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .filters input { flex: 1; max-width: 400px; }
+    .filters button { cursor: pointer; }
+    .filters button.active { background: #ff3366; border-color: #ff3366; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1a1a24;
+      border: 2px solid #2a2a38;
+      border-radius: 12px;
+      padding: 14px;
+      transition: border-color 0.2s;
+    }
+    .card.flagged { border-color: #ff3366; background: rgba(255, 51, 102, 0.08); }
+    .card.validated { border-color: #33cc88; background: rgba(51, 204, 136, 0.08); }
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-id {
+      font-size: 0.75rem;
+      color: #9999a8;
+      font-weight: normal;
+      font-family: monospace;
+    }
+    .card-name { font-size: 0.85rem; color: #9999a8; margin-bottom: 12px; }
+
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .vid-cell {
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 9 / 16;
+      position: relative;
+    }
+    .vid-cell video {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .vid-title {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      padding: 14px 8px 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .actions {
+      display: flex;
+      gap: 6px;
+    }
+    .actions button {
+      flex: 1;
+      background: #2a2a38;
+      border: none;
+      color: #f5f5f7;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .actions button.flag-btn:hover { background: #ff3366; }
+    .actions button.ok-btn:hover { background: #33cc88; }
+    .actions button.reset-btn:hover { background: #555; }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 Audit visuel — toutes les paires</h1>
+  <p class="info">
+    Vérifie que chaque vidéo correspond à son titre. Clique <strong>Flag</strong> sur les paires foireuses, <strong>OK</strong> sur les bonnes. La liste des flagged s'enregistre dans le navigateur. Les vidéos sont en autoplay muet et loop pour scroll rapide.
+  </p>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="filters">
+    <input type="text" id="search" placeholder="🔎 Filtrer par nom ou id…">
+    <button id="show-all" class="active">Tout</button>
+    <button id="show-flagged">Flagged</button>
+    <button id="show-unset">Non vus</button>
+    <button id="export-btn">📋 Copier flagged</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <script>
+    const STORAGE_KEY = 'undercover_audit_flagged';
+    const VALIDATED_KEY = 'undercover_audit_validated';
+
+    let categories = [];
+    let flagged = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'));
+    let validated = new Set(JSON.parse(localStorage.getItem(VALIDATED_KEY) || '[]'));
+    let filter = 'all'; // all | flagged | unset
+    let searchTerm = '';
+
+    function saveFlagged() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify([...flagged]));
+      localStorage.setItem(VALIDATED_KEY, JSON.stringify([...validated]));
+      renderStats();
+    }
+
+    function renderStats() {
+      const el = document.getElementById('stats');
+      el.innerHTML = `
+        <div class="stat-chip"><strong>${categories.length}</strong> paires totales</div>
+        <div class="stat-chip">✅ <strong>${validated.size}</strong> validées</div>
+        <div class="stat-chip">🚩 <strong>${flagged.size}</strong> flagged</div>
+        <div class="stat-chip">❓ <strong>${categories.length - validated.size - flagged.size}</strong> non vues</div>
+      `;
+    }
+
+    function render() {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = '';
+      categories.forEach(cat => {
+        // Filtre recherche
+        if (searchTerm && !cat.id.toLowerCase().includes(searchTerm) && !cat.name.toLowerCase().includes(searchTerm)) return;
+        // Filtre statut
+        if (filter === 'flagged' && !flagged.has(cat.id)) return;
+        if (filter === 'unset' && (flagged.has(cat.id) || validated.has(cat.id))) return;
+
+        const card = document.createElement('div');
+        card.className = 'card';
+        if (flagged.has(cat.id)) card.classList.add('flagged');
+        if (validated.has(cat.id)) card.classList.add('validated');
+
+        card.innerHTML = `
+          <h3>${cat.emoji} ${cat.name} <span class="card-id">${cat.id}</span></h3>
+          <div class="pair">
+            ${cat.videos.map(v => `
+              <div class="vid-cell">
+                <video src="${v.url}" autoplay loop muted playsinline></video>
+                <div class="vid-title">${v.title}</div>
+              </div>
+            `).join('')}
+          </div>
+          <div class="actions">
+            <button class="flag-btn" data-action="flag" data-id="${cat.id}">🚩 Flag</button>
+            <button class="ok-btn" data-action="ok" data-id="${cat.id}">✅ OK</button>
+            <button class="reset-btn" data-action="reset" data-id="${cat.id}">↺</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      // Bind actions
+      grid.querySelectorAll('button[data-action]').forEach(btn => {
+        btn.onclick = () => {
+          const id = btn.dataset.id;
+          const action = btn.dataset.action;
+          if (action === 'flag') { flagged.add(id); validated.delete(id); }
+          if (action === 'ok')   { validated.add(id); flagged.delete(id); }
+          if (action === 'reset'){ flagged.delete(id); validated.delete(id); }
+          saveFlagged();
+          render();
+        };
+      });
+    }
+
+    async function init() {
+      const r = await fetch('data/videos.json');
+      const d = await r.json();
+      categories = d.categories;
+      renderStats();
+      render();
+
+      document.getElementById('search').oninput = e => {
+        searchTerm = e.target.value.trim().toLowerCase();
+        render();
+      };
+      document.querySelectorAll('.filters button[id^="show-"]').forEach(b => {
+        b.onclick = () => {
+          filter = b.id.replace('show-', '');
+          document.querySelectorAll('.filters button[id^="show-"]').forEach(x => x.classList.remove('active'));
+          b.classList.add('active');
+          render();
+        };
+      });
+      document.getElementById('export-btn').onclick = () => {
+        const ids = [...flagged].sort();
+        const text = ids.length ? ids.join(',\n') : '(aucune paire flagged)';
+        navigator.clipboard.writeText(text).then(() => alert(`✅ ${ids.length} ids flagged copiés dans le presse-papier !\n\n${text}`));
+      };
+    }
+
+    init();
+  </script>
+</body>
+</html>

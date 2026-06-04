@@ -2069,6 +2069,227 @@
           "title": "Bouillon"
         }
       ]
+    },
+    {
+      "id": "outils-menage",
+      "name": "Outil de ménage",
+      "emoji": "🧹",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outils-menage_1.mp4",
+          "title": "Aspirateur"
+        },
+        {
+          "source": "local",
+          "url": "videos/outils-menage_2.mp4",
+          "title": "Balai"
+        }
+      ]
+    },
+    {
+      "id": "siege",
+      "name": "Siège",
+      "emoji": "🪑",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/siege_1.mp4",
+          "title": "Chaise"
+        },
+        {
+          "source": "local",
+          "url": "videos/siege_2.mp4",
+          "title": "Tabouret"
+        }
+      ]
+    },
+    {
+      "id": "outil-ecriture",
+      "name": "Outil d'écriture",
+      "emoji": "✏️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outil-ecriture_1.mp4",
+          "title": "Stylo"
+        },
+        {
+          "source": "local",
+          "url": "videos/outil-ecriture_2.mp4",
+          "title": "Crayon"
+        }
+      ]
+    },
+    {
+      "id": "boulangerie",
+      "name": "Boulangerie",
+      "emoji": "🥖",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boulangerie_1.mp4",
+          "title": "Baguette"
+        },
+        {
+          "source": "local",
+          "url": "videos/boulangerie_2.mp4",
+          "title": "Pain de mie"
+        }
+      ]
+    },
+    {
+      "id": "chaussure",
+      "name": "Chaussure",
+      "emoji": "👞",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/chaussure_1.mp4",
+          "title": "Bottes"
+        },
+        {
+          "source": "local",
+          "url": "videos/chaussure_2.mp4",
+          "title": "Sandales"
+        }
+      ]
+    },
+    {
+      "id": "petite-fixation",
+      "name": "Petite fixation",
+      "emoji": "📌",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/petite-fixation_1.mp4",
+          "title": "Vis"
+        },
+        {
+          "source": "local",
+          "url": "videos/petite-fixation_2.mp4",
+          "title": "Clou"
+        }
+      ]
+    },
+    {
+      "id": "liquide-blanc",
+      "name": "Liquide blanc",
+      "emoji": "🥛",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/liquide-blanc_1.mp4",
+          "title": "Lait"
+        },
+        {
+          "source": "local",
+          "url": "videos/liquide-blanc_2.mp4",
+          "title": "Crème"
+        }
+      ]
+    },
+    {
+      "id": "literie-moelleux",
+      "name": "Literie moelleuse",
+      "emoji": "🛌",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/literie-moelleux_1.mp4",
+          "title": "Oreiller"
+        },
+        {
+          "source": "local",
+          "url": "videos/literie-moelleux_2.mp4",
+          "title": "Coussin"
+        }
+      ]
+    },
+    {
+      "id": "literie-couverture",
+      "name": "Couverture de lit",
+      "emoji": "🛏️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/literie-couverture_1.mp4",
+          "title": "Couette"
+        },
+        {
+          "source": "local",
+          "url": "videos/literie-couverture_2.mp4",
+          "title": "Drap"
+        }
+      ]
+    },
+    {
+      "id": "mesure-temps",
+      "name": "Mesure du temps",
+      "emoji": "⏰",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/mesure-temps_1.mp4",
+          "title": "Réveil"
+        },
+        {
+          "source": "local",
+          "url": "videos/mesure-temps_2.mp4",
+          "title": "Horloge murale"
+        }
+      ]
+    },
+    {
+      "id": "papier-range",
+      "name": "Papier rangé",
+      "emoji": "📓",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/papier-range_1.mp4",
+          "title": "Cahier"
+        },
+        {
+          "source": "local",
+          "url": "videos/papier-range_2.mp4",
+          "title": "Classeur"
+        }
+      ]
+    },
+    {
+      "id": "haut-leger",
+      "name": "Haut léger",
+      "emoji": "👕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/haut-leger_1.mp4",
+          "title": "T-shirt"
+        },
+        {
+          "source": "local",
+          "url": "videos/haut-leger_2.mp4",
+          "title": "Débardeur"
+        }
+      ]
+    },
+    {
+      "id": "bas-long",
+      "name": "Bas long",
+      "emoji": "👖",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/bas-long_1.mp4",
+          "title": "Pantalon"
+        },
+        {
+          "source": "local",
+          "url": "videos/bas-long_2.mp4",
+          "title": "Jean"
+        }
+      ]
     }
   ]
 }
