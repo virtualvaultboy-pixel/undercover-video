@@ -144,8 +144,25 @@ function categoryName(cat) {
   const lang = i18n.current;
   if (lang === 'fr') return cat.name;
   const tr = state.translations[cat.id];
-  if (tr && tr[lang]) return tr[lang];
-  return cat.name; // fallback FR
+  if (tr && tr[lang]) {
+    // Nouveau format : {name, videos:[...]}
+    if (typeof tr[lang] === 'object' && tr[lang].name) return tr[lang].name;
+    // Ancien format : string
+    if (typeof tr[lang] === 'string') return tr[lang];
+  }
+  return cat.name;
+}
+
+// Renvoie le titre traduit d'une video selon i18n.current
+function videoTitleI18n(cat, video, videoIdx) {
+  const lang = i18n.current;
+  if (lang === 'fr') return video.title || '';
+  const tr = state.translations[cat.id];
+  if (tr && tr[lang] && typeof tr[lang] === 'object') {
+    const v = (tr[lang].videos || [])[videoIdx];
+    if (v && v.title) return v.title;
+  }
+  return video.title || '';
 }
 
 function isVisibleCategory(cat) {
@@ -485,6 +502,11 @@ function startGame() {
     const shuffled = [...cat.videos].sort(() => Math.random() - 0.5);
     state.civilsVideo = shuffled[0];
     state.undercoverVideo = shuffled[1];
+    // Enrichit avec titre traduit selon langue active (pour le badge ecran video)
+    const idxCivils = cat.videos.indexOf(state.civilsVideo);
+    const idxUC = cat.videos.indexOf(state.undercoverVideo);
+    state.civilsVideo = { ...state.civilsVideo, title: videoTitleI18n(cat, state.civilsVideo, idxCivils) };
+    state.undercoverVideo = { ...state.undercoverVideo, title: videoTitleI18n(cat, state.undercoverVideo, idxUC) };
   }
 
   // ---- Détermine la composition des imposteurs ----
@@ -567,6 +589,21 @@ function nextPlayer() {
 function renderVideo(video) {
   const container = document.getElementById('video-container');
   container.innerHTML = '';
+
+  // Badge "Ton mot : XYZ" au-dessus de la video
+  if (video.title) {
+    const badge = document.createElement('div');
+    badge.className = 'video-word-badge';
+    const lbl = document.createElement('span');
+    lbl.className = 'video-word-label';
+    lbl.textContent = i18n.t('yourWord');
+    const val = document.createElement('span');
+    val.className = 'video-word-value';
+    val.textContent = video.title;
+    badge.appendChild(lbl);
+    badge.appendChild(val);
+    container.appendChild(badge);
+  }
 
   if (video.source === 'ai-image') {
     const img = document.createElement('img');

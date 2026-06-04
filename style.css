@@ -191,23 +191,53 @@ button:active {
 #video-container {
   width: 100%;
   flex: 1;
-  max-height: 70vh;
+  max-height: 75vh;
   background: black;
   border-radius: 16px;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 #video-container iframe,
 #video-container video {
   width: 100%;
-  height: 100%;
-  min-height: 400px;
+  flex: 1;
+  min-height: 0;
   border: none;
   object-fit: contain;
   background: black;
+}
+
+/* Badge "Ton mot : XYZ" affiche au-dessus de la video */
+.video-word-badge {
+  width: 100%;
+  background: linear-gradient(135deg, #ff3366, #6633ff);
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(102, 51, 255, 0.35);
+}
+
+.video-word-label {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.9;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.video-word-value {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 
 #video-container .tiktok-embed {

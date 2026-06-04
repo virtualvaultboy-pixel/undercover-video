@@ -40,6 +40,7 @@ const I18N = {
     btnReady: "Je suis prêt à voir ma vidéo",
 
     // Vidéo
+    yourWord: "Ton mot",
     btnHide: "✅ J'ai vu, cacher",
 
     // Tour de parole
@@ -175,6 +176,7 @@ const I18N = {
     passPhoneTo: "📱 Pass the phone to",
     btnReady: "I'm ready to see my video",
 
+    yourWord: "Your word",
     btnHide: "✅ I've seen it, hide",
 
     playTitle: "🎤 Your turn!",
@@ -296,6 +298,7 @@ const I18N = {
     passPhoneTo: "📱 Pasa el teléfono a",
     btnReady: "Estoy listo para ver mi vídeo",
 
+    yourWord: "Tu palabra",
     btnHide: "✅ Lo he visto, ocultar",
 
     playTitle: "🎤 ¡Os toca!",
