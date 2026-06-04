@@ -19,6 +19,15 @@ JSON_PATH = os.path.join(ROOT, "data", "videos.json")
 os.makedirs(VIDEOS_DIR, exist_ok=True)
 
 # Paires surreallistes / cartoon / fun
+# Categories deja supprimees pour copyright - on les skip definitivement
+# pour eviter qu'elles soient re-telechargees a chaque run.
+COPYRIGHT_BLOCKED = {
+    "perso-jeuvideo", "sous-marin", "vilain-dc", "simpsons", "sonic-univers",
+    "jeu-retro", "personnage-disney", "anti-heros", "studio-ghibli",
+    "personnage-marvel", "manga-shonen", "super-heros", "freres-mario",
+    "pokemon-starter", "meme-culte", "doge-meme",
+}
+
 SURREAL_PAIRS = [
     {"id": "animal-danse", "name": "Animal qui danse", "emoji": "💃",
      "items": [
@@ -352,6 +361,57 @@ SURREAL_PAIRS = [
      "items": [("disco ball lights party", "Boule disco"), ("laser show concert", "Laser")]},
     {"id": "fete-foraine", "name": "Fête foraine", "emoji": "🎡",
      "items": [("ferris wheel night", "Grande roue"), ("carousel horses lights", "Carrousel")]},
+    # --- Pack 9 : paires PROCHES sémantiquement (difficile pour les joueurs habitués) ---
+    {"id": "accessoire-poignet", "name": "Accessoire au poignet", "emoji": "⌚",
+     "items": [("watch wrist closeup", "Montre"), ("bracelet wrist gold", "Bracelet")]},
+    {"id": "siege", "name": "Siège", "emoji": "🪑",
+     "items": [("wooden chair empty", "Chaise"), ("bar stool wooden", "Tabouret")]},
+    {"id": "outil-ecriture", "name": "Outil d'écriture", "emoji": "✏️",
+     "items": [("ballpoint pen writing", "Stylo"), ("pencil writing paper", "Crayon")]},
+    {"id": "contenant-boisson", "name": "Contenant à boisson", "emoji": "🥃",
+     "items": [("water glass pouring", "Verre"), ("mug coffee ceramic", "Tasse")]},
+    {"id": "couvert-repas", "name": "Couvert", "emoji": "🍴",
+     "items": [("knife cutting board", "Couteau"), ("fork twirling pasta", "Fourchette")]},
+    {"id": "meuble-allonge", "name": "Meuble pour s'allonger", "emoji": "🛋️",
+     "items": [("bed bedroom", "Lit"), ("sofa living room", "Canapé")]},
+    {"id": "boisson-fermee", "name": "Boisson en récipient fermé", "emoji": "🥤",
+     "items": [("glass bottle drink", "Bouteille"), ("aluminum can soda", "Canette")]},
+    {"id": "sac-porter", "name": "Sac à porter", "emoji": "👜",
+     "items": [("handbag woman fashion", "Sac à main"), ("shopping tote bag", "Cabas")]},
+    {"id": "lecture", "name": "Support de lecture", "emoji": "📖",
+     "items": [("book reading pages", "Livre"), ("magazine flipping", "Magazine")]},
+    {"id": "informatique-input", "name": "Périphérique ordinateur", "emoji": "⌨️",
+     "items": [("keyboard typing fast", "Clavier"), ("computer mouse clicking", "Souris")]},
+    {"id": "lunettes", "name": "Lunettes", "emoji": "👓",
+     "items": [("glasses on eyes", "Lunettes de vue"), ("sunglasses cool", "Lunettes de soleil")]},
+    {"id": "boulangerie", "name": "Boulangerie", "emoji": "🥖",
+     "items": [("french baguette bread", "Baguette"), ("loaf bread sliced", "Pain de mie")]},
+    {"id": "fruit-simple", "name": "Fruit simple", "emoji": "🍎",
+     "items": [("apple red shiny", "Pomme"), ("pear yellow", "Poire")]},
+    {"id": "couvre-chef", "name": "Couvre-chef", "emoji": "🧢",
+     "items": [("baseball cap", "Casquette"), ("fedora hat man", "Chapeau")]},
+    {"id": "haut-chaud", "name": "Haut chaud", "emoji": "🧥",
+     "items": [("winter coat snow", "Manteau"), ("jacket leather", "Veste")]},
+    {"id": "pied-au-chaud", "name": "Pied au chaud", "emoji": "🧦",
+     "items": [("warm socks knit", "Chaussettes"), ("slippers cozy fireplace", "Chaussons")]},
+    {"id": "chaussure", "name": "Chaussure", "emoji": "👞",
+     "items": [("leather boots winter", "Bottes"), ("summer sandals beach", "Sandales")]},
+    {"id": "bagage", "name": "Bagage", "emoji": "🎒",
+     "items": [("backpack hiking", "Sac à dos"), ("suitcase rolling airport", "Valise")]},
+    {"id": "protection-meteo", "name": "Protection météo", "emoji": "☂️",
+     "items": [("umbrella rain", "Parapluie"), ("parasol beach sun", "Ombrelle")]},
+    {"id": "ustensile-creux", "name": "Ustensile creux", "emoji": "🥄",
+     "items": [("spoon stirring soup", "Cuillère"), ("ladle pouring broth", "Louche")]},
+    {"id": "outil-main", "name": "Outil à main", "emoji": "🔨",
+     "items": [("hammer nail wood", "Marteau"), ("screwdriver phillips", "Tournevis")]},
+    {"id": "petite-fixation", "name": "Petite fixation", "emoji": "📌",
+     "items": [("screw screwing", "Vis"), ("nail hammering wood", "Clou")]},
+    {"id": "legume-rouge", "name": "Légume rouge", "emoji": "🍅",
+     "items": [("tomato slicing fresh", "Tomate"), ("bell pepper red", "Poivron")]},
+    {"id": "racine-comestible", "name": "Racine comestible", "emoji": "🥕",
+     "items": [("carrot vegetable", "Carotte"), ("radish red round", "Radis")]},
+    {"id": "liquide-chaud", "name": "Liquide chaud", "emoji": "🍲",
+     "items": [("soup hot bowl", "Soupe"), ("broth simmering pot", "Bouillon")]},
 ]
 
 
@@ -398,6 +458,9 @@ def main():
     for pair in SURREAL_PAIRS:
         if pair["id"] in existing_ids:
             print(f"\n[SKIP] {pair['name']} deja present")
+            continue
+        if pair["id"] in COPYRIGHT_BLOCKED:
+            print(f"\n[BLOCK] {pair['name']} (copyright)")
             continue
 
         print(f"\n=== {pair['name']} ===")

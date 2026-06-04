@@ -1958,6 +1958,431 @@
           "title": "Carrousel"
         }
       ]
+    },
+    {
+      "id": "cocktail-color",
+      "name": "Cocktail coloré",
+      "emoji": "🍸",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/cocktail-color_1.mp4",
+          "title": "Margarita"
+        },
+        {
+          "source": "local",
+          "url": "videos/cocktail-color_2.mp4",
+          "title": "Daiquiri"
+        }
+      ]
+    },
+    {
+      "id": "plante-deco",
+      "name": "Plante déco",
+      "emoji": "🌵",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/plante-deco_1.mp4",
+          "title": "Monstera"
+        },
+        {
+          "source": "local",
+          "url": "videos/plante-deco_2.mp4",
+          "title": "Cactus"
+        }
+      ]
+    },
+    {
+      "id": "street-food",
+      "name": "Street food",
+      "emoji": "🌮",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/street-food_1.mp4",
+          "title": "Tacos"
+        },
+        {
+          "source": "local",
+          "url": "videos/street-food_2.mp4",
+          "title": "Kebab"
+        }
+      ]
+    },
+    {
+      "id": "activite-matin",
+      "name": "Activité matinale",
+      "emoji": "🧘",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/activite-matin_1.mp4",
+          "title": "Jogging"
+        },
+        {
+          "source": "local",
+          "url": "videos/activite-matin_2.mp4",
+          "title": "Yoga"
+        }
+      ]
+    },
+    {
+      "id": "lumiere-spectacle",
+      "name": "Lumière spectacle",
+      "emoji": "💡",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/lumiere-spectacle_1.mp4",
+          "title": "Boule disco"
+        },
+        {
+          "source": "local",
+          "url": "videos/lumiere-spectacle_2.mp4",
+          "title": "Laser"
+        }
+      ]
+    },
+    {
+      "id": "accessoire-poignet",
+      "name": "Accessoire au poignet",
+      "emoji": "⌚",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/accessoire-poignet_1.mp4",
+          "title": "Montre"
+        },
+        {
+          "source": "local",
+          "url": "videos/accessoire-poignet_2.mp4",
+          "title": "Bracelet"
+        }
+      ]
+    },
+    {
+      "id": "contenant-boisson",
+      "name": "Contenant à boisson",
+      "emoji": "🥃",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/contenant-boisson_1.mp4",
+          "title": "Verre"
+        },
+        {
+          "source": "local",
+          "url": "videos/contenant-boisson_2.mp4",
+          "title": "Tasse"
+        }
+      ]
+    },
+    {
+      "id": "couvert-repas",
+      "name": "Couvert",
+      "emoji": "🍴",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/couvert-repas_1.mp4",
+          "title": "Couteau"
+        },
+        {
+          "source": "local",
+          "url": "videos/couvert-repas_2.mp4",
+          "title": "Fourchette"
+        }
+      ]
+    },
+    {
+      "id": "meuble-allonge",
+      "name": "Meuble pour s'allonger",
+      "emoji": "🛋️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/meuble-allonge_1.mp4",
+          "title": "Lit"
+        },
+        {
+          "source": "local",
+          "url": "videos/meuble-allonge_2.mp4",
+          "title": "Canapé"
+        }
+      ]
+    },
+    {
+      "id": "boisson-fermee",
+      "name": "Boisson en récipient fermé",
+      "emoji": "🥤",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-fermee_1.mp4",
+          "title": "Bouteille"
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-fermee_2.mp4",
+          "title": "Canette"
+        }
+      ]
+    },
+    {
+      "id": "sac-porter",
+      "name": "Sac à porter",
+      "emoji": "👜",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sac-porter_1.mp4",
+          "title": "Sac à main"
+        },
+        {
+          "source": "local",
+          "url": "videos/sac-porter_2.mp4",
+          "title": "Cabas"
+        }
+      ]
+    },
+    {
+      "id": "lecture",
+      "name": "Support de lecture",
+      "emoji": "📖",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/lecture_1.mp4",
+          "title": "Livre"
+        },
+        {
+          "source": "local",
+          "url": "videos/lecture_2.mp4",
+          "title": "Magazine"
+        }
+      ]
+    },
+    {
+      "id": "informatique-input",
+      "name": "Périphérique ordinateur",
+      "emoji": "⌨️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/informatique-input_1.mp4",
+          "title": "Clavier"
+        },
+        {
+          "source": "local",
+          "url": "videos/informatique-input_2.mp4",
+          "title": "Souris"
+        }
+      ]
+    },
+    {
+      "id": "lunettes",
+      "name": "Lunettes",
+      "emoji": "👓",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/lunettes_1.mp4",
+          "title": "Lunettes de vue"
+        },
+        {
+          "source": "local",
+          "url": "videos/lunettes_2.mp4",
+          "title": "Lunettes de soleil"
+        }
+      ]
+    },
+    {
+      "id": "fruit-simple",
+      "name": "Fruit simple",
+      "emoji": "🍎",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/fruit-simple_1.mp4",
+          "title": "Pomme"
+        },
+        {
+          "source": "local",
+          "url": "videos/fruit-simple_2.mp4",
+          "title": "Poire"
+        }
+      ]
+    },
+    {
+      "id": "couvre-chef",
+      "name": "Couvre-chef",
+      "emoji": "🧢",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/couvre-chef_1.mp4",
+          "title": "Casquette"
+        },
+        {
+          "source": "local",
+          "url": "videos/couvre-chef_2.mp4",
+          "title": "Chapeau"
+        }
+      ]
+    },
+    {
+      "id": "haut-chaud",
+      "name": "Haut chaud",
+      "emoji": "🧥",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/haut-chaud_1.mp4",
+          "title": "Manteau"
+        },
+        {
+          "source": "local",
+          "url": "videos/haut-chaud_2.mp4",
+          "title": "Veste"
+        }
+      ]
+    },
+    {
+      "id": "pied-au-chaud",
+      "name": "Pied au chaud",
+      "emoji": "🧦",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/pied-au-chaud_1.mp4",
+          "title": "Chaussettes"
+        },
+        {
+          "source": "local",
+          "url": "videos/pied-au-chaud_2.mp4",
+          "title": "Chaussons"
+        }
+      ]
+    },
+    {
+      "id": "bagage",
+      "name": "Bagage",
+      "emoji": "🎒",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/bagage_1.mp4",
+          "title": "Sac à dos"
+        },
+        {
+          "source": "local",
+          "url": "videos/bagage_2.mp4",
+          "title": "Valise"
+        }
+      ]
+    },
+    {
+      "id": "protection-meteo",
+      "name": "Protection météo",
+      "emoji": "☂️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/protection-meteo_1.mp4",
+          "title": "Parapluie"
+        },
+        {
+          "source": "local",
+          "url": "videos/protection-meteo_2.mp4",
+          "title": "Ombrelle"
+        }
+      ]
+    },
+    {
+      "id": "ustensile-creux",
+      "name": "Ustensile creux",
+      "emoji": "🥄",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/ustensile-creux_1.mp4",
+          "title": "Cuillère"
+        },
+        {
+          "source": "local",
+          "url": "videos/ustensile-creux_2.mp4",
+          "title": "Louche"
+        }
+      ]
+    },
+    {
+      "id": "outil-main",
+      "name": "Outil à main",
+      "emoji": "🔨",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outil-main_1.mp4",
+          "title": "Marteau"
+        },
+        {
+          "source": "local",
+          "url": "videos/outil-main_2.mp4",
+          "title": "Tournevis"
+        }
+      ]
+    },
+    {
+      "id": "legume-rouge",
+      "name": "Légume rouge",
+      "emoji": "🍅",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/legume-rouge_1.mp4",
+          "title": "Tomate"
+        },
+        {
+          "source": "local",
+          "url": "videos/legume-rouge_2.mp4",
+          "title": "Poivron"
+        }
+      ]
+    },
+    {
+      "id": "racine-comestible",
+      "name": "Racine comestible",
+      "emoji": "🥕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/racine-comestible_1.mp4",
+          "title": "Carotte"
+        },
+        {
+          "source": "local",
+          "url": "videos/racine-comestible_2.mp4",
+          "title": "Radis"
+        }
+      ]
+    },
+    {
+      "id": "liquide-chaud",
+      "name": "Liquide chaud",
+      "emoji": "🍲",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/liquide-chaud_1.mp4",
+          "title": "Soupe"
+        },
+        {
+          "source": "local",
+          "url": "videos/liquide-chaud_2.mp4",
+          "title": "Bouillon"
+        }
+      ]
     }
   ]
 }
