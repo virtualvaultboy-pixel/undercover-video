@@ -413,9 +413,9 @@ async function handleCustomGenerate() {
     // LoremFlickr : URLs immédiates, on précharge les 2 images en parallèle.
     const pair = await aiGenerator.generatePair(idea1, idea2);
     setLoadingMsg('Image 1/2…');
-    await preloadImage(pair.civils.url, 20000);
+    await preloadImage(pair.civils.url, 60000);
     setLoadingMsg('Image 2/2…');
-    await preloadImage(pair.undercover.url, 20000);
+    await preloadImage(pair.undercover.url, 60000);
 
     state.customCivils = pair.civils;
     state.customUndercover = pair.undercover;
