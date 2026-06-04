@@ -721,13 +721,6 @@ input[type="checkbox"][role="switch"]:checked::before {
 .turn-timer[data-state="over"] .turn-timer-value { color: var(--accent); font-size: 1.1rem; animation: pulse 0.6s ease-in-out infinite alternate; }
 @keyframes pulse { from { opacity: 1 } to { opacity: 0.5 } }
 
-/* ----- Mode Adulte toggle ----- */
-.nsfw-toggle-row {
-  border-color: rgba(255, 51, 102, 0.4) !important;
-  background: rgba(255, 51, 102, 0.08) !important;
-}
-.nsfw-toggle-row .toggle-label { color: var(--accent); }
-
 /* ----- Toast notifications ----- */
 .toast {
   position: fixed;

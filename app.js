@@ -19,7 +19,6 @@ const state = {
   timerSeconds: 0,          // 0 = pas de timer
   vibrations: false,        // feedback haptique
   fastMode: false,          // skip écran transition
-  nsfwMode: false,          // 🔞 débloque catégories adultes
   assignments: [],
   currentPlayerIndex: 0,
   wrongVotes: [],
@@ -35,7 +34,6 @@ function loadPrefs() {
     state.timerSeconds   = Number(p.timerSeconds) || 0;
     state.vibrations     = !!p.vibrations;
     state.fastMode       = !!p.fastMode;
-    state.nsfwMode       = !!p.nsfwMode;
   } catch {}
 }
 function savePrefs() {
@@ -47,7 +45,6 @@ function savePrefs() {
       timerSeconds: state.timerSeconds,
       vibrations: state.vibrations,
       fastMode: state.fastMode,
-      nsfwMode: state.nsfwMode,
     }));
   } catch {}
 }
@@ -132,11 +129,6 @@ async function loadVideos() {
   const data = await resV.json();
   state.categories = data.categories;
 
-  // Charge le pack NSFW de façon conditionnelle (modulaire, supprimable)
-  if (state.nsfwMode) {
-    await loadNsfwPack();
-  }
-
   if (resT && resT.ok) {
     try {
       const tr = await resT.json();
@@ -148,21 +140,6 @@ async function loadVideos() {
   updateCategoryCounter();
 }
 
-// Pack NSFW chargé séparément. Marque les catégories nsfw:true au passage
-// pour qu'elles soient filtrées si le toggle est désactivé en cours.
-let _nsfwLoaded = false;
-async function loadNsfwPack() {
-  if (_nsfwLoaded) return;
-  try {
-    const r = await fetch('data/videos-nsfw.json');
-    if (!r.ok) return;
-    const d = await r.json();
-    const cats = (d.categories || []).map(c => ({ ...c, nsfw: true }));
-    state.categories = state.categories.concat(cats);
-    _nsfwLoaded = true;
-  } catch (e) { console.warn('[NSFW] load failed', e); }
-}
-
 function categoryName(cat) {
   const lang = i18n.current;
   if (lang === 'fr') return cat.name;
@@ -172,10 +149,7 @@ function categoryName(cat) {
 }
 
 function isVisibleCategory(cat) {
-  if (cat.videos.length < 2) return false;
-  // Filtre NSFW : caché si Mode Adulte désactivé
-  if (cat.nsfw && !state.nsfwMode) return false;
-  return true;
+  return cat.videos.length >= 2;
 }
 
 function updateCategoryCounter() {
@@ -229,8 +203,7 @@ function buildCategorySelect() {
     const opt = document.createElement('option');
     opt.value = cat.id;
     const locked = !isCategoryAvailable(cat);
-    const tag = cat.nsfw ? '  ' + i18n.t('nsfwTag') : '';
-    opt.textContent = `${cat.emoji} ${categoryName(cat)}${tag}${locked ? '  ' + i18n.t('categoryLocked') : ''}`;
+    opt.textContent = `${cat.emoji} ${categoryName(cat)}${locked ? '  ' + i18n.t('categoryLocked') : ''}`;
     opt.dataset.locked = locked ? '1' : '0';
     sel.appendChild(opt);
   });
@@ -364,24 +337,6 @@ function bindEvents() {
     toast(i18n.t('statsResetDone'));
   };
 
-  const nsfwToggle = document.getElementById('nsfw-toggle');
-  nsfwToggle.checked = state.nsfwMode;
-  nsfwToggle.onchange = async e => {
-    if (e.target.checked) {
-      // Confirmation 18+ obligatoire à l'activation
-      if (!confirm(i18n.t('nsfwConfirm'))) {
-        e.target.checked = false;
-        return;
-      }
-      toast(i18n.t('nsfwEnabled'));
-      // Charge le pack NSFW à la volée s'il n'est pas déjà en mémoire
-      await loadNsfwPack();
-    }
-    state.nsfwMode = e.target.checked;
-    savePrefs();
-    buildCategorySelect();
-    updateCategoryCounter();
-  };
   document.getElementById('btn-go-vote').onclick = goToVote;
   document.getElementById('btn-new-round').onclick = newSpeakingRound;
   document.getElementById('btn-restart').onclick = restart;
@@ -894,7 +849,7 @@ function pushRecentCategory(catId) {
 }
 
 function pickRandomCategory() {
-  // En mode aléatoire, on ne pioche que dans les catégories accessibles ET visibles (NSFW respecté)
+  // En mode aléatoire, on ne pioche que dans les catégories accessibles
   const playable = state.categories.filter(c => isCategoryAvailable(c) && isVisibleCategory(c));
   if (playable.length === 0) return null;
 
