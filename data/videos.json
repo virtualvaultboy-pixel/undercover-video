@@ -605,23 +605,6 @@
       ]
     },
     {
-      "id": "ile-paradis",
-      "name": "Ile paradisiaque",
-      "emoji": "🏝️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/ile-paradis_1.mp4",
-          "title": "Plage tropicale"
-        },
-        {
-          "source": "local",
-          "url": "videos/ile-paradis_2.mp4",
-          "title": "Lagon bleu"
-        }
-      ]
-    },
-    {
       "id": "fete-evenement",
       "name": "Fete d'evenement",
       "emoji": "🎂",
@@ -737,23 +720,6 @@
           "source": "local",
           "url": "videos/cuisine-asiatique_2.mp4",
           "title": "Pho"
-        }
-      ]
-    },
-    {
-      "id": "insecte-rond",
-      "name": "Petit insecte rond",
-      "emoji": "🐞",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/insecte-rond_1.mp4",
-          "title": "Coccinelle"
-        },
-        {
-          "source": "local",
-          "url": "videos/insecte-rond_2.mp4",
-          "title": "Scarabee"
         }
       ]
     },
