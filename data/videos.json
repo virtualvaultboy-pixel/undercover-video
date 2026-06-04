@@ -20,25 +20,6 @@
       ]
     },
     {
-      "id": "boisson-chaude",
-      "name": "Boisson chaude",
-      "emoji": "☕",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/boisson-chaude_1.mp4",
-          "title": "Café versé",
-          "duration": 10
-        },
-        {
-          "source": "local",
-          "url": "videos/boisson-chaude_2.mp4",
-          "title": "Thé versé",
-          "duration": 11
-        }
-      ]
-    },
-    {
       "id": "agrume",
       "name": "Agrume coupé",
       "emoji": "🍊",
@@ -134,25 +115,6 @@
       ]
     },
     {
-      "id": "slow-motion",
-      "name": "Slow motion eclat",
-      "emoji": "💥",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/slow-motion_1.mp4",
-          "title": "Eclat d'eau",
-          "duration": 8
-        },
-        {
-          "source": "local",
-          "url": "videos/slow-motion_2.mp4",
-          "title": "Eclat de peinture",
-          "duration": 15
-        }
-      ]
-    },
-    {
       "id": "vue-aerienne",
       "name": "Vue aerienne",
       "emoji": "🚁",
@@ -210,40 +172,6 @@
       ]
     },
     {
-      "id": "animal-danse",
-      "name": "Animal qui danse",
-      "emoji": "💃",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/animal-danse_1.mp4",
-          "title": "Chat qui danse"
-        },
-        {
-          "source": "local",
-          "url": "videos/animal-danse_2.mp4",
-          "title": "Chien qui danse"
-        }
-      ]
-    },
-    {
-      "id": "creature-mythique",
-      "name": "Creature mythique",
-      "emoji": "🦄",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/creature-mythique_1.mp4",
-          "title": "Licorne"
-        },
-        {
-          "source": "local",
-          "url": "videos/creature-mythique_2.mp4",
-          "title": "Dragon"
-        }
-      ]
-    },
-    {
       "id": "magie-cartoon",
       "name": "Magie cartoon",
       "emoji": "🧙",
@@ -278,40 +206,6 @@
       ]
     },
     {
-      "id": "monstre-nuit",
-      "name": "Monstre de la nuit",
-      "emoji": "🧛",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/monstre-nuit_1.mp4",
-          "title": "Zombie"
-        },
-        {
-          "source": "local",
-          "url": "videos/monstre-nuit_2.mp4",
-          "title": "Vampire"
-        }
-      ]
-    },
-    {
-      "id": "animal-calin",
-      "name": "Animal calin",
-      "emoji": "🐼",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/animal-calin_1.mp4",
-          "title": "Panda"
-        },
-        {
-          "source": "local",
-          "url": "videos/animal-calin_2.mp4",
-          "title": "Koala"
-        }
-      ]
-    },
-    {
       "id": "halloween",
       "name": "Halloween",
       "emoji": "🎃",
@@ -325,23 +219,6 @@
           "source": "local",
           "url": "videos/halloween_2.mp4",
           "title": "Chauve-souris"
-        }
-      ]
-    },
-    {
-      "id": "combattant",
-      "name": "Combattant japonais",
-      "emoji": "🥷",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/combattant_1.mp4",
-          "title": "Ninja"
-        },
-        {
-          "source": "local",
-          "url": "videos/combattant_2.mp4",
-          "title": "Samourai"
         }
       ]
     },
@@ -382,23 +259,6 @@
       ]
     },
     {
-      "id": "primate",
-      "name": "Primate",
-      "emoji": "🐒",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/primate_1.mp4",
-          "title": "Singe"
-        },
-        {
-          "source": "local",
-          "url": "videos/primate_2.mp4",
-          "title": "Gorille"
-        }
-      ]
-    },
-    {
       "id": "petit-animal",
       "name": "Petit animal",
       "emoji": "🐰",
@@ -412,23 +272,6 @@
           "source": "local",
           "url": "videos/petit-animal_2.mp4",
           "title": "Hamster"
-        }
-      ]
-    },
-    {
-      "id": "snack-rapide",
-      "name": "Snack rapide",
-      "emoji": "🌭",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/snack-rapide_1.mp4",
-          "title": "Burger"
-        },
-        {
-          "source": "local",
-          "url": "videos/snack-rapide_2.mp4",
-          "title": "Hot dog"
         }
       ]
     },
@@ -484,57 +327,6 @@
       ]
     },
     {
-      "id": "medical",
-      "name": "Personnel medical",
-      "emoji": "👨‍⚕️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/medical_1.mp4",
-          "title": "Docteur"
-        },
-        {
-          "source": "local",
-          "url": "videos/medical_2.mp4",
-          "title": "Infirmiere"
-        }
-      ]
-    },
-    {
-      "id": "metier-aventure",
-      "name": "Metier d'aventure",
-      "emoji": "🚀",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/metier-aventure_1.mp4",
-          "title": "Pilote"
-        },
-        {
-          "source": "local",
-          "url": "videos/metier-aventure_2.mp4",
-          "title": "Astronaute"
-        }
-      ]
-    },
-    {
-      "id": "catastrophe",
-      "name": "Catastrophe naturelle",
-      "emoji": "🌋",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/catastrophe_1.mp4",
-          "title": "Volcan"
-        },
-        {
-          "source": "local",
-          "url": "videos/catastrophe_2.mp4",
-          "title": "Tornade"
-        }
-      ]
-    },
-    {
       "id": "ours",
       "name": "Ours",
       "emoji": "🐻",
@@ -552,23 +344,6 @@
       ]
     },
     {
-      "id": "felin-sauvage",
-      "name": "Felin sauvage",
-      "emoji": "🐆",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/felin-sauvage_1.mp4",
-          "title": "Tigre"
-        },
-        {
-          "source": "local",
-          "url": "videos/felin-sauvage_2.mp4",
-          "title": "Leopard"
-        }
-      ]
-    },
-    {
       "id": "reptile",
       "name": "Reptile",
       "emoji": "🐍",
@@ -582,108 +357,6 @@
           "source": "local",
           "url": "videos/reptile_2.mp4",
           "title": "Crocodile"
-        }
-      ]
-    },
-    {
-      "id": "oiseau-tropical",
-      "name": "Oiseau tropical",
-      "emoji": "🦜",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/oiseau-tropical_1.mp4",
-          "title": "Perroquet"
-        },
-        {
-          "source": "local",
-          "url": "videos/oiseau-tropical_2.mp4",
-          "title": "Toucan"
-        }
-      ]
-    },
-    {
-      "id": "marin-mammif",
-      "name": "Mammifere marin",
-      "emoji": "🐬",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/marin-mammif_1.mp4",
-          "title": "Dauphin"
-        },
-        {
-          "source": "local",
-          "url": "videos/marin-mammif_2.mp4",
-          "title": "Baleine"
-        }
-      ]
-    },
-    {
-      "id": "boisson-fete",
-      "name": "Boisson de fete",
-      "emoji": "🍹",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/boisson-fete_1.mp4",
-          "title": "Cocktail"
-        },
-        {
-          "source": "local",
-          "url": "videos/boisson-fete_2.mp4",
-          "title": "Champagne"
-        }
-      ]
-    },
-    {
-      "id": "gourmand",
-      "name": "Sucrerie",
-      "emoji": "🍫",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/gourmand_1.mp4",
-          "title": "Chocolat"
-        },
-        {
-          "source": "local",
-          "url": "videos/gourmand_2.mp4",
-          "title": "Glace"
-        }
-      ]
-    },
-    {
-      "id": "fruit-pop",
-      "name": "Fruit populaire",
-      "emoji": "🍎",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/fruit-pop_1.mp4",
-          "title": "Pomme"
-        },
-        {
-          "source": "local",
-          "url": "videos/fruit-pop_2.mp4",
-          "title": "Banane"
-        }
-      ]
-    },
-    {
-      "id": "duo-clown",
-      "name": "Duo clown classique",
-      "emoji": "🤡",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/duo-clown_1.mp4",
-          "title": "Clown joyeux"
-        },
-        {
-          "source": "local",
-          "url": "videos/duo-clown_2.mp4",
-          "title": "Clown effrayant"
         }
       ]
     },
@@ -739,91 +412,6 @@
       ]
     },
     {
-      "id": "outil-bricolage",
-      "name": "Outil de bricolage",
-      "emoji": "🔨",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/outil-bricolage_1.mp4",
-          "title": "Marteau"
-        },
-        {
-          "source": "local",
-          "url": "videos/outil-bricolage_2.mp4",
-          "title": "Scie"
-        }
-      ]
-    },
-    {
-      "id": "instrument-musique",
-      "name": "Instrument de musique",
-      "emoji": "🎸",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/instrument-musique_1.mp4",
-          "title": "Guitare"
-        },
-        {
-          "source": "local",
-          "url": "videos/instrument-musique_2.mp4",
-          "title": "Piano"
-        }
-      ]
-    },
-    {
-      "id": "spectacle-cirque",
-      "name": "Spectacle de cirque",
-      "emoji": "🎪",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/spectacle-cirque_1.mp4",
-          "title": "Jongleur"
-        },
-        {
-          "source": "local",
-          "url": "videos/spectacle-cirque_2.mp4",
-          "title": "Acrobate"
-        }
-      ]
-    },
-    {
-      "id": "metier-uniforme",
-      "name": "Metier en uniforme",
-      "emoji": "👮",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/metier-uniforme_1.mp4",
-          "title": "Policier"
-        },
-        {
-          "source": "local",
-          "url": "videos/metier-uniforme_2.mp4",
-          "title": "Pompier"
-        }
-      ]
-    },
-    {
-      "id": "creature-marine",
-      "name": "Creature marine etrange",
-      "emoji": "🐙",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/creature-marine_1.mp4",
-          "title": "Pieuvre"
-        },
-        {
-          "source": "local",
-          "url": "videos/creature-marine_2.mp4",
-          "title": "Meduse"
-        }
-      ]
-    },
-    {
       "id": "dinosaure",
       "name": "Dinosaure",
       "emoji": "🦖",
@@ -841,23 +429,6 @@
       ]
     },
     {
-      "id": "vehicule-utilitaire",
-      "name": "Vehicule utilitaire",
-      "emoji": "🚒",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/vehicule-utilitaire_1.mp4",
-          "title": "Camion pompier"
-        },
-        {
-          "source": "local",
-          "url": "videos/vehicule-utilitaire_2.mp4",
-          "title": "Ambulance"
-        }
-      ]
-    },
-    {
       "id": "moyen-transport",
       "name": "Moyen de transport",
       "emoji": "🚂",
@@ -871,40 +442,6 @@
           "source": "local",
           "url": "videos/moyen-transport_2.mp4",
           "title": "Bus"
-        }
-      ]
-    },
-    {
-      "id": "geste-victoire",
-      "name": "Geste de victoire",
-      "emoji": "💪",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/geste-victoire_1.mp4",
-          "title": "Pouce leve"
-        },
-        {
-          "source": "local",
-          "url": "videos/geste-victoire_2.mp4",
-          "title": "Biceps"
-        }
-      ]
-    },
-    {
-      "id": "salutation",
-      "name": "Salutation",
-      "emoji": "👋",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/salutation_1.mp4",
-          "title": "Coucou"
-        },
-        {
-          "source": "local",
-          "url": "videos/salutation_2.mp4",
-          "title": "Bisou"
         }
       ]
     },
@@ -939,74 +476,6 @@
           "source": "local",
           "url": "videos/saison-douce_2.mp4",
           "title": "Printemps"
-        }
-      ]
-    },
-    {
-      "id": "outil-cuisine",
-      "name": "Outil de cuisine",
-      "emoji": "🍳",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/outil-cuisine_1.mp4",
-          "title": "Poele"
-        },
-        {
-          "source": "local",
-          "url": "videos/outil-cuisine_2.mp4",
-          "title": "Casserole"
-        }
-      ]
-    },
-    {
-      "id": "boisson-fraiche",
-      "name": "Boisson fraiche",
-      "emoji": "🥤",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/boisson-fraiche_1.mp4",
-          "title": "Soda"
-        },
-        {
-          "source": "local",
-          "url": "videos/boisson-fraiche_2.mp4",
-          "title": "Jus"
-        }
-      ]
-    },
-    {
-      "id": "animal-ferme",
-      "name": "Animal de ferme",
-      "emoji": "🐄",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/animal-ferme_1.mp4",
-          "title": "Vache"
-        },
-        {
-          "source": "local",
-          "url": "videos/animal-ferme_2.mp4",
-          "title": "Cochon"
-        }
-      ]
-    },
-    {
-      "id": "animal-savane",
-      "name": "Animal de savane",
-      "emoji": "🦒",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/animal-savane_1.mp4",
-          "title": "Girafe"
-        },
-        {
-          "source": "local",
-          "url": "videos/animal-savane_2.mp4",
-          "title": "Elephant"
         }
       ]
     },
@@ -1170,40 +639,6 @@
       ]
     },
     {
-      "id": "boisson-tropicale",
-      "name": "Boisson tropicale",
-      "emoji": "🍹",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/boisson-tropicale_1.mp4",
-          "title": "Mojito"
-        },
-        {
-          "source": "local",
-          "url": "videos/boisson-tropicale_2.mp4",
-          "title": "Pina colada"
-        }
-      ]
-    },
-    {
-      "id": "plat-italien",
-      "name": "Plat italien",
-      "emoji": "🍝",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/plat-italien_1.mp4",
-          "title": "Pates"
-        },
-        {
-          "source": "local",
-          "url": "videos/plat-italien_2.mp4",
-          "title": "Risotto"
-        }
-      ]
-    },
-    {
       "id": "phenomene-rare",
       "name": "Phenomene celeste rare",
       "emoji": "🌌",
@@ -1238,57 +673,6 @@
       ]
     },
     {
-      "id": "sport-raquette",
-      "name": "Sport de raquette",
-      "emoji": "🎾",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sport-raquette_1.mp4",
-          "title": "Tennis"
-        },
-        {
-          "source": "local",
-          "url": "videos/sport-raquette_2.mp4",
-          "title": "Badminton"
-        }
-      ]
-    },
-    {
-      "id": "sport-glace",
-      "name": "Sport de glace",
-      "emoji": "⛸️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sport-glace_1.mp4",
-          "title": "Hockey"
-        },
-        {
-          "source": "local",
-          "url": "videos/sport-glace_2.mp4",
-          "title": "Patinage"
-        }
-      ]
-    },
-    {
-      "id": "sport-nautique",
-      "name": "Sport nautique",
-      "emoji": "⛵",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sport-nautique_1.mp4",
-          "title": "Voile"
-        },
-        {
-          "source": "local",
-          "url": "videos/sport-nautique_2.mp4",
-          "title": "Kayak"
-        }
-      ]
-    },
-    {
       "id": "deux-roues",
       "name": "Vehicule deux roues",
       "emoji": "🚲",
@@ -1306,40 +690,6 @@
       ]
     },
     {
-      "id": "sport-hiver",
-      "name": "Sport d'hiver",
-      "emoji": "🎿",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sport-hiver_1.mp4",
-          "title": "Ski"
-        },
-        {
-          "source": "local",
-          "url": "videos/sport-hiver_2.mp4",
-          "title": "Snowboard"
-        }
-      ]
-    },
-    {
-      "id": "rongeur-mignon",
-      "name": "Petit rongeur",
-      "emoji": "🐹",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/rongeur-mignon_1.mp4",
-          "title": "Hamster"
-        },
-        {
-          "source": "local",
-          "url": "videos/rongeur-mignon_2.mp4",
-          "title": "Ecureuil"
-        }
-      ]
-    },
-    {
       "id": "canide-sauvage",
       "name": "Canide sauvage",
       "emoji": "🦊",
@@ -1353,74 +703,6 @@
           "source": "local",
           "url": "videos/canide-sauvage_2.mp4",
           "title": "Loup"
-        }
-      ]
-    },
-    {
-      "id": "mammifere-marin-2",
-      "name": "Mammifere marin 2",
-      "emoji": "🦭",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/mammifere-marin-2_1.mp4",
-          "title": "Phoque"
-        },
-        {
-          "source": "local",
-          "url": "videos/mammifere-marin-2_2.mp4",
-          "title": "Otarie"
-        }
-      ]
-    },
-    {
-      "id": "reptile-lent",
-      "name": "Reptile lent",
-      "emoji": "🐢",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/reptile-lent_1.mp4",
-          "title": "Tortue"
-        },
-        {
-          "source": "local",
-          "url": "videos/reptile-lent_2.mp4",
-          "title": "Lezard"
-        }
-      ]
-    },
-    {
-      "id": "creature-mer-mystere",
-      "name": "Creature de mer mysterieuse",
-      "emoji": "🪼",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/creature-mer-mystere_1.mp4",
-          "title": "Meduse"
-        },
-        {
-          "source": "local",
-          "url": "videos/creature-mer-mystere_2.mp4",
-          "title": "Etoile de mer"
-        }
-      ]
-    },
-    {
-      "id": "art-japonais",
-      "name": "Art japonais",
-      "emoji": "🎴",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/art-japonais_1.mp4",
-          "title": "Origami"
-        },
-        {
-          "source": "local",
-          "url": "videos/art-japonais_2.mp4",
-          "title": "Calligraphie"
         }
       ]
     },
@@ -1459,159 +741,6 @@
       ]
     },
     {
-      "id": "petit-dej",
-      "name": "Petit-déjeuner",
-      "emoji": "🥞",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/petit-dej_1.mp4",
-          "title": "Pancakes"
-        },
-        {
-          "source": "local",
-          "url": "videos/petit-dej_2.mp4",
-          "title": "Gaufres"
-        }
-      ]
-    },
-    {
-      "id": "patisserie-fine",
-      "name": "Pâtisserie fine",
-      "emoji": "🍰",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/patisserie-fine_1.mp4",
-          "title": "Eclair"
-        },
-        {
-          "source": "local",
-          "url": "videos/patisserie-fine_2.mp4",
-          "title": "Macaron"
-        }
-      ]
-    },
-    {
-      "id": "fruit-exotique",
-      "name": "Fruit exotique",
-      "emoji": "🥭",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/fruit-exotique_1.mp4",
-          "title": "Mangue"
-        },
-        {
-          "source": "local",
-          "url": "videos/fruit-exotique_2.mp4",
-          "title": "Ananas"
-        }
-      ]
-    },
-    {
-      "id": "legume-vert",
-      "name": "Légume vert",
-      "emoji": "🥦",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/legume-vert_1.mp4",
-          "title": "Epinard"
-        },
-        {
-          "source": "local",
-          "url": "videos/legume-vert_2.mp4",
-          "title": "Brocoli"
-        }
-      ]
-    },
-    {
-      "id": "cuisine-indienne",
-      "name": "Cuisine indienne",
-      "emoji": "🍛",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/cuisine-indienne_1.mp4",
-          "title": "Curry"
-        },
-        {
-          "source": "local",
-          "url": "videos/cuisine-indienne_2.mp4",
-          "title": "Biryani"
-        }
-      ]
-    },
-    {
-      "id": "dessert-glace",
-      "name": "Dessert glacé",
-      "emoji": "🍨",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/dessert-glace_1.mp4",
-          "title": "Sorbet"
-        },
-        {
-          "source": "local",
-          "url": "videos/dessert-glace_2.mp4",
-          "title": "Sundae"
-        }
-      ]
-    },
-    {
-      "id": "boisson-froide",
-      "name": "Boisson froide",
-      "emoji": "🍋",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/boisson-froide_1.mp4",
-          "title": "Limonade"
-        },
-        {
-          "source": "local",
-          "url": "videos/boisson-froide_2.mp4",
-          "title": "The glace"
-        }
-      ]
-    },
-    {
-      "id": "animal-ferme-2",
-      "name": "Animal de basse-cour",
-      "emoji": "🐓",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/animal-ferme-2_1.mp4",
-          "title": "Poule"
-        },
-        {
-          "source": "local",
-          "url": "videos/animal-ferme-2_2.mp4",
-          "title": "Canard"
-        }
-      ]
-    },
-    {
-      "id": "oiseau-proie",
-      "name": "Oiseau de proie",
-      "emoji": "🦅",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/oiseau-proie_1.mp4",
-          "title": "Aigle"
-        },
-        {
-          "source": "local",
-          "url": "videos/oiseau-proie_2.mp4",
-          "title": "Faucon"
-        }
-      ]
-    },
-    {
       "id": "insecte-rond",
       "name": "Petit insecte rond",
       "emoji": "🐞",
@@ -1625,23 +754,6 @@
           "source": "local",
           "url": "videos/insecte-rond_2.mp4",
           "title": "Scarabee"
-        }
-      ]
-    },
-    {
-      "id": "sport-extreme-2",
-      "name": "Sport extrême 2",
-      "emoji": "🪂",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sport-extreme-2_1.mp4",
-          "title": "Parapente"
-        },
-        {
-          "source": "local",
-          "url": "videos/sport-extreme-2_2.mp4",
-          "title": "Saut elastique"
         }
       ]
     },
@@ -1680,23 +792,6 @@
       ]
     },
     {
-      "id": "plante-deco",
-      "name": "Plante déco",
-      "emoji": "🌵",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/plante-deco_1.mp4",
-          "title": "Monstera"
-        },
-        {
-          "source": "local",
-          "url": "videos/plante-deco_2.mp4",
-          "title": "Cactus"
-        }
-      ]
-    },
-    {
       "id": "street-food",
       "name": "Street food",
       "emoji": "🌮",
@@ -1731,57 +826,6 @@
       ]
     },
     {
-      "id": "accessoire-poignet",
-      "name": "Accessoire au poignet",
-      "emoji": "⌚",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/accessoire-poignet_1.mp4",
-          "title": "Montre"
-        },
-        {
-          "source": "local",
-          "url": "videos/accessoire-poignet_2.mp4",
-          "title": "Bracelet"
-        }
-      ]
-    },
-    {
-      "id": "contenant-boisson",
-      "name": "Contenant à boisson",
-      "emoji": "🥃",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/contenant-boisson_1.mp4",
-          "title": "Verre"
-        },
-        {
-          "source": "local",
-          "url": "videos/contenant-boisson_2.mp4",
-          "title": "Tasse"
-        }
-      ]
-    },
-    {
-      "id": "couvert-repas",
-      "name": "Couvert",
-      "emoji": "🍴",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/couvert-repas_1.mp4",
-          "title": "Couteau"
-        },
-        {
-          "source": "local",
-          "url": "videos/couvert-repas_2.mp4",
-          "title": "Fourchette"
-        }
-      ]
-    },
-    {
       "id": "meuble-allonge",
       "name": "Meuble pour s'allonger",
       "emoji": "🛋️",
@@ -1795,74 +839,6 @@
           "source": "local",
           "url": "videos/meuble-allonge_2.mp4",
           "title": "Canapé"
-        }
-      ]
-    },
-    {
-      "id": "boisson-fermee",
-      "name": "Boisson en récipient fermé",
-      "emoji": "🥤",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/boisson-fermee_1.mp4",
-          "title": "Bouteille"
-        },
-        {
-          "source": "local",
-          "url": "videos/boisson-fermee_2.mp4",
-          "title": "Canette"
-        }
-      ]
-    },
-    {
-      "id": "sac-porter",
-      "name": "Sac à porter",
-      "emoji": "👜",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/sac-porter_1.mp4",
-          "title": "Sac à main"
-        },
-        {
-          "source": "local",
-          "url": "videos/sac-porter_2.mp4",
-          "title": "Cabas"
-        }
-      ]
-    },
-    {
-      "id": "lecture",
-      "name": "Support de lecture",
-      "emoji": "📖",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/lecture_1.mp4",
-          "title": "Livre"
-        },
-        {
-          "source": "local",
-          "url": "videos/lecture_2.mp4",
-          "title": "Magazine"
-        }
-      ]
-    },
-    {
-      "id": "informatique-input",
-      "name": "Périphérique ordinateur",
-      "emoji": "⌨️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/informatique-input_1.mp4",
-          "title": "Clavier"
-        },
-        {
-          "source": "local",
-          "url": "videos/informatique-input_2.mp4",
-          "title": "Souris"
         }
       ]
     },
@@ -1884,57 +860,6 @@
       ]
     },
     {
-      "id": "fruit-simple",
-      "name": "Fruit simple",
-      "emoji": "🍎",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/fruit-simple_1.mp4",
-          "title": "Pomme"
-        },
-        {
-          "source": "local",
-          "url": "videos/fruit-simple_2.mp4",
-          "title": "Poire"
-        }
-      ]
-    },
-    {
-      "id": "couvre-chef",
-      "name": "Couvre-chef",
-      "emoji": "🧢",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/couvre-chef_1.mp4",
-          "title": "Casquette"
-        },
-        {
-          "source": "local",
-          "url": "videos/couvre-chef_2.mp4",
-          "title": "Chapeau"
-        }
-      ]
-    },
-    {
-      "id": "haut-chaud",
-      "name": "Haut chaud",
-      "emoji": "🧥",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/haut-chaud_1.mp4",
-          "title": "Manteau"
-        },
-        {
-          "source": "local",
-          "url": "videos/haut-chaud_2.mp4",
-          "title": "Veste"
-        }
-      ]
-    },
-    {
       "id": "pied-au-chaud",
       "name": "Pied au chaud",
       "emoji": "🧦",
@@ -1948,23 +873,6 @@
           "source": "local",
           "url": "videos/pied-au-chaud_2.mp4",
           "title": "Chaussons"
-        }
-      ]
-    },
-    {
-      "id": "bagage",
-      "name": "Bagage",
-      "emoji": "🎒",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/bagage_1.mp4",
-          "title": "Sac à dos"
-        },
-        {
-          "source": "local",
-          "url": "videos/bagage_2.mp4",
-          "title": "Valise"
         }
       ]
     },
@@ -1986,40 +894,6 @@
       ]
     },
     {
-      "id": "ustensile-creux",
-      "name": "Ustensile creux",
-      "emoji": "🥄",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/ustensile-creux_1.mp4",
-          "title": "Cuillère"
-        },
-        {
-          "source": "local",
-          "url": "videos/ustensile-creux_2.mp4",
-          "title": "Louche"
-        }
-      ]
-    },
-    {
-      "id": "outil-main",
-      "name": "Outil à main",
-      "emoji": "🔨",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/outil-main_1.mp4",
-          "title": "Marteau"
-        },
-        {
-          "source": "local",
-          "url": "videos/outil-main_2.mp4",
-          "title": "Tournevis"
-        }
-      ]
-    },
-    {
       "id": "legume-rouge",
       "name": "Légume rouge",
       "emoji": "🍅",
@@ -2033,23 +907,6 @@
           "source": "local",
           "url": "videos/legume-rouge_2.mp4",
           "title": "Poivron"
-        }
-      ]
-    },
-    {
-      "id": "racine-comestible",
-      "name": "Racine comestible",
-      "emoji": "🥕",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/racine-comestible_1.mp4",
-          "title": "Carotte"
-        },
-        {
-          "source": "local",
-          "url": "videos/racine-comestible_2.mp4",
-          "title": "Radis"
         }
       ]
     },
@@ -2071,40 +928,6 @@
       ]
     },
     {
-      "id": "outils-menage",
-      "name": "Outil de ménage",
-      "emoji": "🧹",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/outils-menage_1.mp4",
-          "title": "Aspirateur"
-        },
-        {
-          "source": "local",
-          "url": "videos/outils-menage_2.mp4",
-          "title": "Balai"
-        }
-      ]
-    },
-    {
-      "id": "siege",
-      "name": "Siège",
-      "emoji": "🪑",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/siege_1.mp4",
-          "title": "Chaise"
-        },
-        {
-          "source": "local",
-          "url": "videos/siege_2.mp4",
-          "title": "Tabouret"
-        }
-      ]
-    },
-    {
       "id": "outil-ecriture",
       "name": "Outil d'écriture",
       "emoji": "✏️",
@@ -2122,23 +945,6 @@
       ]
     },
     {
-      "id": "boulangerie",
-      "name": "Boulangerie",
-      "emoji": "🥖",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/boulangerie_1.mp4",
-          "title": "Baguette"
-        },
-        {
-          "source": "local",
-          "url": "videos/boulangerie_2.mp4",
-          "title": "Pain de mie"
-        }
-      ]
-    },
-    {
       "id": "chaussure",
       "name": "Chaussure",
       "emoji": "👞",
@@ -2152,142 +958,6 @@
           "source": "local",
           "url": "videos/chaussure_2.mp4",
           "title": "Sandales"
-        }
-      ]
-    },
-    {
-      "id": "petite-fixation",
-      "name": "Petite fixation",
-      "emoji": "📌",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/petite-fixation_1.mp4",
-          "title": "Vis"
-        },
-        {
-          "source": "local",
-          "url": "videos/petite-fixation_2.mp4",
-          "title": "Clou"
-        }
-      ]
-    },
-    {
-      "id": "liquide-blanc",
-      "name": "Liquide blanc",
-      "emoji": "🥛",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/liquide-blanc_1.mp4",
-          "title": "Lait"
-        },
-        {
-          "source": "local",
-          "url": "videos/liquide-blanc_2.mp4",
-          "title": "Crème"
-        }
-      ]
-    },
-    {
-      "id": "literie-moelleux",
-      "name": "Literie moelleuse",
-      "emoji": "🛌",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/literie-moelleux_1.mp4",
-          "title": "Oreiller"
-        },
-        {
-          "source": "local",
-          "url": "videos/literie-moelleux_2.mp4",
-          "title": "Coussin"
-        }
-      ]
-    },
-    {
-      "id": "literie-couverture",
-      "name": "Couverture de lit",
-      "emoji": "🛏️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/literie-couverture_1.mp4",
-          "title": "Couette"
-        },
-        {
-          "source": "local",
-          "url": "videos/literie-couverture_2.mp4",
-          "title": "Drap"
-        }
-      ]
-    },
-    {
-      "id": "mesure-temps",
-      "name": "Mesure du temps",
-      "emoji": "⏰",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/mesure-temps_1.mp4",
-          "title": "Réveil"
-        },
-        {
-          "source": "local",
-          "url": "videos/mesure-temps_2.mp4",
-          "title": "Horloge murale"
-        }
-      ]
-    },
-    {
-      "id": "papier-range",
-      "name": "Papier rangé",
-      "emoji": "📓",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/papier-range_1.mp4",
-          "title": "Cahier"
-        },
-        {
-          "source": "local",
-          "url": "videos/papier-range_2.mp4",
-          "title": "Classeur"
-        }
-      ]
-    },
-    {
-      "id": "haut-leger",
-      "name": "Haut léger",
-      "emoji": "👕",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/haut-leger_1.mp4",
-          "title": "T-shirt"
-        },
-        {
-          "source": "local",
-          "url": "videos/haut-leger_2.mp4",
-          "title": "Débardeur"
-        }
-      ]
-    },
-    {
-      "id": "bas-long",
-      "name": "Bas long",
-      "emoji": "👖",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/bas-long_1.mp4",
-          "title": "Pantalon"
-        },
-        {
-          "source": "local",
-          "url": "videos/bas-long_2.mp4",
-          "title": "Jean"
         }
       ]
     }
