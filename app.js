@@ -131,6 +131,12 @@ async function loadVideos() {
   ]);
   const data = await resV.json();
   state.categories = data.categories;
+
+  // Charge le pack NSFW de façon conditionnelle (modulaire, supprimable)
+  if (state.nsfwMode) {
+    await loadNsfwPack();
+  }
+
   if (resT && resT.ok) {
     try {
       const tr = await resT.json();
@@ -140,6 +146,21 @@ async function loadVideos() {
     state.translations = {};
   }
   updateCategoryCounter();
+}
+
+// Pack NSFW chargé séparément. Marque les catégories nsfw:true au passage
+// pour qu'elles soient filtrées si le toggle est désactivé en cours.
+let _nsfwLoaded = false;
+async function loadNsfwPack() {
+  if (_nsfwLoaded) return;
+  try {
+    const r = await fetch('data/videos-nsfw.json');
+    if (!r.ok) return;
+    const d = await r.json();
+    const cats = (d.categories || []).map(c => ({ ...c, nsfw: true }));
+    state.categories = state.categories.concat(cats);
+    _nsfwLoaded = true;
+  } catch (e) { console.warn('[NSFW] load failed', e); }
 }
 
 function categoryName(cat) {
@@ -345,7 +366,7 @@ function bindEvents() {
 
   const nsfwToggle = document.getElementById('nsfw-toggle');
   nsfwToggle.checked = state.nsfwMode;
-  nsfwToggle.onchange = e => {
+  nsfwToggle.onchange = async e => {
     if (e.target.checked) {
       // Confirmation 18+ obligatoire à l'activation
       if (!confirm(i18n.t('nsfwConfirm'))) {
@@ -353,10 +374,12 @@ function bindEvents() {
         return;
       }
       toast(i18n.t('nsfwEnabled'));
+      // Charge le pack NSFW à la volée s'il n'est pas déjà en mémoire
+      await loadNsfwPack();
     }
     state.nsfwMode = e.target.checked;
     savePrefs();
-    buildCategorySelect(); // refresh menu déroulant
+    buildCategorySelect();
     updateCategoryCounter();
   };
   document.getElementById('btn-go-vote').onclick = goToVote;

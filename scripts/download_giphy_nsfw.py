@@ -15,8 +15,8 @@ if len(sys.argv) < 2:
 
 API_KEY = sys.argv[1]
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VIDEOS_DIR = os.path.join(ROOT, "videos")
-JSON_PATH = os.path.join(ROOT, "data", "videos.json")
+VIDEOS_DIR = os.path.join(ROOT, "videos", "nsfw")  # ARCHITECTURE MODULAIRE: dossier separe
+JSON_PATH = os.path.join(ROOT, "data", "videos-nsfw.json")  # fichier separe
 os.makedirs(VIDEOS_DIR, exist_ok=True)
 
 # Paires NSFW - rating "r" sur Giphy = adulte mais pas X (suggestif, humour soiree)
@@ -125,24 +125,27 @@ def main():
             if not link:
                 print(f"  [!] Pas de resultat, skip.")
                 continue
-            filename = f"{pair['id']}_{i+1}.mp4"
+            # Retire le prefixe "nsfw-" du nom (le dossier nsfw/ est deja explicite)
+            clean_id = pair['id'][len('nsfw-'):] if pair['id'].startswith('nsfw-') else pair['id']
+            filename = f"{clean_id}_{i+1}.mp4"
             dest = os.path.join(VIDEOS_DIR, filename)
             try:
                 download(link, dest)
                 videos.append({
                     "source": "local",
-                    "url": f"videos/{filename}",
+                    "url": f"videos/nsfw/{filename}",
                     "title": title,
                 })
             except Exception as e:
                 print(f"  [X] Erreur : {e}")
 
         if len(videos) >= 2:
+            # Toutes les categories de videos-nsfw.json sont marquees nsfw=true
+            # par app.js au chargement. Inutile de le repeter dans le JSON.
             data["categories"].append({
                 "id": pair["id"],
                 "name": pair["name"],
                 "emoji": pair["emoji"],
-                "nsfw": True,  # flag pour le toggle Mode Adulte
                 "videos": videos,
             })
 

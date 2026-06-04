@@ -1,0 +1,310 @@
+{
+  "categories": [
+    {
+      "id": "nsfw-shot",
+      "name": "Shot d'alcool fort",
+      "emoji": "🥃",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/shot_1.mp4",
+          "title": "Shot tequila"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/shot_2.mp4",
+          "title": "Shot vodka"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-avant-apres",
+      "name": "Avant/après alcool",
+      "emoji": "🥴",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/avant-apres_1.mp4",
+          "title": "Sobre"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/avant-apres_2.mp4",
+          "title": "Bourré"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-gueule-bois",
+      "name": "Gueule de bois",
+      "emoji": "🤢",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/gueule-bois_1.mp4",
+          "title": "Mal de tête"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/gueule-bois_2.mp4",
+          "title": "Vomi"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-pole-dance",
+      "name": "Pole dance",
+      "emoji": "💃",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/pole-dance_1.mp4",
+          "title": "Pole dance"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/pole-dance_2.mp4",
+          "title": "Lap dance"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-twerk",
+      "name": "Twerk",
+      "emoji": "🍑",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/twerk_1.mp4",
+          "title": "Twerk solo"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/twerk_2.mp4",
+          "title": "Booty crew"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-tinder",
+      "name": "Mood Tinder",
+      "emoji": "💘",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/tinder_1.mp4",
+          "title": "Swipe right"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/tinder_2.mp4",
+          "title": "Match!"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-drag-queen",
+      "name": "Drag show",
+      "emoji": "👑",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/drag-queen_1.mp4",
+          "title": "Drag queen"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/drag-queen_2.mp4",
+          "title": "Burlesque"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-sextoy",
+      "name": "Sexy fruit slo-mo",
+      "emoji": "🍆",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/sextoy_1.mp4",
+          "title": "Aubergine"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/sextoy_2.mp4",
+          "title": "Banane"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-make-out",
+      "name": "Make out",
+      "emoji": "💋",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/make-out_1.mp4",
+          "title": "French kiss"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/make-out_2.mp4",
+          "title": "Slow couple"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-meme-bro",
+      "name": "Bro humor",
+      "emoji": "🍺",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/meme-bro_1.mp4",
+          "title": "Boire cul sec"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/meme-bro_2.mp4",
+          "title": "Rot"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-bouteille-bar",
+      "name": "Bouteille de bar",
+      "emoji": "🍾",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/bouteille-bar_1.mp4",
+          "title": "Champagne spray"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/bouteille-bar_2.mp4",
+          "title": "Bouteille bar"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-fail-bourre",
+      "name": "Fail bourré",
+      "emoji": "🤡",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/fail-bourre_1.mp4",
+          "title": "Chute"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/fail-bourre_2.mp4",
+          "title": "Danse fail"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-tenue-sexy",
+      "name": "Tenue sexy",
+      "emoji": "👗",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/tenue-sexy_1.mp4",
+          "title": "Robe cocktail"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/tenue-sexy_2.mp4",
+          "title": "Mini jupe"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-muscle",
+      "name": "Muscle show",
+      "emoji": "💪",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/muscle_1.mp4",
+          "title": "Bodybuilder"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/muscle_2.mp4",
+          "title": "Tablette choco"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-langoureux",
+      "name": "Regard langoureux",
+      "emoji": "👀",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/langoureux_1.mp4",
+          "title": "Regard chaud"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/langoureux_2.mp4",
+          "title": "Mordre lèvre"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-rideau-rouge",
+      "name": "Cabaret",
+      "emoji": "🎭",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/rideau-rouge_1.mp4",
+          "title": "Cabaret plumes"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/rideau-rouge_2.mp4",
+          "title": "Can-can"
+        }
+      ]
+    },
+    {
+      "id": "nsfw-shotgun",
+      "name": "Shotgun de bière",
+      "emoji": "🥫",
+      "nsfw": true,
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/nsfw/shotgun_1.mp4",
+          "title": "Shotgun bière"
+        },
+        {
+          "source": "local",
+          "url": "videos/nsfw/shotgun_2.mp4",
+          "title": "Keg stand"
+        }
+      ]
+    }
+  ]
+}
