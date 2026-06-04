@@ -729,10 +729,12 @@ function handleVote(idx) {
 
   state.wrongVotes.push(voted.name);
 
-  // Imposteurs gagnent si plus aucun civil restant
+  // Imposteurs gagnent quand ils atteignent la parite avec les civils restants
+  // (regle classique Undercover : 1 UC vs 1 civil = UC gagne)
   const remaining = state.assignments.filter(a => !state.wrongVotes.includes(a.name));
   const civilsLeft = remaining.filter(a => !a.isUndercover).length;
-  if (civilsLeft === 0) {
+  const impostersLeft = remaining.filter(a => a.isUndercover).length;
+  if (civilsLeft <= impostersLeft) {
     showUndercoverWins();
   } else {
     showMiss(voted);
