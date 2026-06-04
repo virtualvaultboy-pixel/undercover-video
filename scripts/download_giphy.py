@@ -28,6 +28,16 @@ COPYRIGHT_BLOCKED = {
     "pokemon-starter", "meme-culte", "doge-meme",
 }
 
+# Categories supprimees apres audit de qualite de paires (audit v2.3):
+# paires trop eloignees ou doublons - cassent le doute permanent du jeu.
+WEAK_BLOCKED = {
+    "spectacle-nuit", "engin-volant", "nourriture-vivante", "etre-etrange",
+    "reaction-sociale", "animal-majestueux", "phenomene-ciel", "insecte",
+    "poisson", "legume", "pirate-mer", "danse-classique",
+    "activite-quotidienne", "paysage-montagne", "fast-cooking",
+    "fromage-charcuterie", "art-corporel", "activite-matin",
+}
+
 SURREAL_PAIRS = [
     {"id": "animal-danse", "name": "Animal qui danse", "emoji": "💃",
      "items": [
@@ -461,6 +471,9 @@ def main():
             continue
         if pair["id"] in COPYRIGHT_BLOCKED:
             print(f"\n[BLOCK] {pair['name']} (copyright)")
+            continue
+        if pair["id"] in WEAK_BLOCKED:
+            print(f"\n[BLOCK] {pair['name']} (paire faible)")
             continue
 
         print(f"\n=== {pair['name']} ===")

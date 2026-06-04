@@ -134,25 +134,6 @@
       ]
     },
     {
-      "id": "spectacle-nuit",
-      "name": "Spectacle nocturne",
-      "emoji": "🎆",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/spectacle-nuit_1.mp4",
-          "title": "Feu d'artifice",
-          "duration": 3
-        },
-        {
-          "source": "local",
-          "url": "videos/spectacle-nuit_2.mp4",
-          "title": "Orage",
-          "duration": 10
-        }
-      ]
-    },
-    {
       "id": "slow-motion",
       "name": "Slow motion eclat",
       "emoji": "💥",
@@ -246,23 +227,6 @@
       ]
     },
     {
-      "id": "engin-volant",
-      "name": "Engin volant fantastique",
-      "emoji": "🚀",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/engin-volant_1.mp4",
-          "title": "Voiture volante"
-        },
-        {
-          "source": "local",
-          "url": "videos/engin-volant_2.mp4",
-          "title": "Bateau volant"
-        }
-      ]
-    },
-    {
       "id": "creature-mythique",
       "name": "Creature mythique",
       "emoji": "🦄",
@@ -293,23 +257,6 @@
           "source": "local",
           "url": "videos/magie-cartoon_2.mp4",
           "title": "Sorciere"
-        }
-      ]
-    },
-    {
-      "id": "nourriture-vivante",
-      "name": "Nourriture qui bouge",
-      "emoji": "🍕",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/nourriture-vivante_1.mp4",
-          "title": "Pizza qui danse"
-        },
-        {
-          "source": "local",
-          "url": "videos/nourriture-vivante_2.mp4",
-          "title": "Banane qui danse"
         }
       ]
     },
@@ -348,23 +295,6 @@
       ]
     },
     {
-      "id": "etre-etrange",
-      "name": "Etre etrange",
-      "emoji": "👽",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/etre-etrange_1.mp4",
-          "title": "Alien"
-        },
-        {
-          "source": "local",
-          "url": "videos/etre-etrange_2.mp4",
-          "title": "Robot"
-        }
-      ]
-    },
-    {
       "id": "animal-calin",
       "name": "Animal calin",
       "emoji": "🐼",
@@ -399,23 +329,6 @@
       ]
     },
     {
-      "id": "reaction-sociale",
-      "name": "Reaction sociale",
-      "emoji": "🙄",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/reaction-sociale_1.mp4",
-          "title": "Facepalm"
-        },
-        {
-          "source": "local",
-          "url": "videos/reaction-sociale_2.mp4",
-          "title": "Applaudissements"
-        }
-      ]
-    },
-    {
       "id": "combattant",
       "name": "Combattant japonais",
       "emoji": "🥷",
@@ -446,25 +359,6 @@
           "source": "local",
           "url": "videos/emotion-forte_2.mp4",
           "title": "Rire"
-        }
-      ]
-    },
-    {
-      "id": "animal-majestueux",
-      "name": "Animal majestueux",
-      "emoji": "🦅",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/animal-majestueux_1.mp4",
-          "title": "Aigle",
-          "duration": 9
-        },
-        {
-          "source": "local",
-          "url": "videos/animal-majestueux_2.mp4",
-          "title": "Loup",
-          "duration": 8
         }
       ]
     },
@@ -641,23 +535,6 @@
       ]
     },
     {
-      "id": "phenomene-ciel",
-      "name": "Phenomene celeste",
-      "emoji": "🌈",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/phenomene-ciel_1.mp4",
-          "title": "Arc-en-ciel"
-        },
-        {
-          "source": "local",
-          "url": "videos/phenomene-ciel_2.mp4",
-          "title": "Eclair"
-        }
-      ]
-    },
-    {
       "id": "ours",
       "name": "Ours",
       "emoji": "🐻",
@@ -722,40 +599,6 @@
           "source": "local",
           "url": "videos/oiseau-tropical_2.mp4",
           "title": "Toucan"
-        }
-      ]
-    },
-    {
-      "id": "insecte",
-      "name": "Insecte",
-      "emoji": "🦋",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/insecte_1.mp4",
-          "title": "Papillon"
-        },
-        {
-          "source": "local",
-          "url": "videos/insecte_2.mp4",
-          "title": "Abeille"
-        }
-      ]
-    },
-    {
-      "id": "poisson",
-      "name": "Poisson",
-      "emoji": "🐠",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/poisson_1.mp4",
-          "title": "Poisson clown"
-        },
-        {
-          "source": "local",
-          "url": "videos/poisson_2.mp4",
-          "title": "Requin"
         }
       ]
     },
@@ -828,23 +671,6 @@
       ]
     },
     {
-      "id": "legume",
-      "name": "Legume",
-      "emoji": "🥕",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/legume_1.mp4",
-          "title": "Carotte"
-        },
-        {
-          "source": "local",
-          "url": "videos/legume_2.mp4",
-          "title": "Brocoli"
-        }
-      ]
-    },
-    {
       "id": "duo-clown",
       "name": "Duo clown classique",
       "emoji": "🤡",
@@ -858,23 +684,6 @@
           "source": "local",
           "url": "videos/duo-clown_2.mp4",
           "title": "Clown effrayant"
-        }
-      ]
-    },
-    {
-      "id": "pirate-mer",
-      "name": "Pirate des mers",
-      "emoji": "🏴‍☠️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/pirate-mer_1.mp4",
-          "title": "Pirate"
-        },
-        {
-          "source": "local",
-          "url": "videos/pirate-mer_2.mp4",
-          "title": "Navire"
         }
       ]
     },
@@ -960,23 +769,6 @@
           "source": "local",
           "url": "videos/instrument-musique_2.mp4",
           "title": "Piano"
-        }
-      ]
-    },
-    {
-      "id": "danse-classique",
-      "name": "Danse classique",
-      "emoji": "🩰",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/danse-classique_1.mp4",
-          "title": "Ballet"
-        },
-        {
-          "source": "local",
-          "url": "videos/danse-classique_2.mp4",
-          "title": "Salsa"
         }
       ]
     },
@@ -1113,23 +905,6 @@
           "source": "local",
           "url": "videos/salutation_2.mp4",
           "title": "Bisou"
-        }
-      ]
-    },
-    {
-      "id": "activite-quotidienne",
-      "name": "Activite quotidienne",
-      "emoji": "😴",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/activite-quotidienne_1.mp4",
-          "title": "Dormir"
-        },
-        {
-          "source": "local",
-          "url": "videos/activite-quotidienne_2.mp4",
-          "title": "Se reveiller"
         }
       ]
     },
@@ -1287,25 +1062,6 @@
       ]
     },
     {
-      "id": "paysage-montagne",
-      "name": "Paysage de montagne",
-      "emoji": "🏔️",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/paysage-montagne_1.mp4",
-          "title": "Montagne enneigee",
-          "duration": 14
-        },
-        {
-          "source": "local",
-          "url": "videos/paysage-montagne_2.mp4",
-          "title": "Vallee verte",
-          "duration": 11
-        }
-      ]
-    },
-    {
       "id": "espace-cosmos",
       "name": "Espace cosmique",
       "emoji": "🌠",
@@ -1321,25 +1077,6 @@
           "url": "videos/espace-cosmos_2.mp4",
           "title": "Planete",
           "duration": 10
-        }
-      ]
-    },
-    {
-      "id": "fast-cooking",
-      "name": "Cuisine rapide",
-      "emoji": "🍔",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/fast-cooking_1.mp4",
-          "title": "Cuisson poele",
-          "duration": 8
-        },
-        {
-          "source": "local",
-          "url": "videos/fast-cooking_2.mp4",
-          "title": "Petrissage pate",
-          "duration": 7
         }
       ]
     },
@@ -1463,23 +1200,6 @@
           "source": "local",
           "url": "videos/plat-italien_2.mp4",
           "title": "Risotto"
-        }
-      ]
-    },
-    {
-      "id": "fromage-charcuterie",
-      "name": "Fromage ou charcuterie",
-      "emoji": "🧀",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/fromage-charcuterie_1.mp4",
-          "title": "Fromage"
-        },
-        {
-          "source": "local",
-          "url": "videos/fromage-charcuterie_2.mp4",
-          "title": "Charcuterie"
         }
       ]
     },
@@ -1909,23 +1629,6 @@
       ]
     },
     {
-      "id": "art-corporel",
-      "name": "Art corporel",
-      "emoji": "💅",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/art-corporel_1.mp4",
-          "title": "Nail art"
-        },
-        {
-          "source": "local",
-          "url": "videos/art-corporel_2.mp4",
-          "title": "Tatouage"
-        }
-      ]
-    },
-    {
       "id": "sport-extreme-2",
       "name": "Sport extrême 2",
       "emoji": "🪂",
@@ -2007,23 +1710,6 @@
           "source": "local",
           "url": "videos/street-food_2.mp4",
           "title": "Kebab"
-        }
-      ]
-    },
-    {
-      "id": "activite-matin",
-      "name": "Activité matinale",
-      "emoji": "🧘",
-      "videos": [
-        {
-          "source": "local",
-          "url": "videos/activite-matin_1.mp4",
-          "title": "Jogging"
-        },
-        {
-          "source": "local",
-          "url": "videos/activite-matin_2.mp4",
-          "title": "Yoga"
         }
       ]
     },

@@ -28,10 +28,6 @@
       "en": "Extreme sport",
       "es": "Deporte extremo"
     },
-    "spectacle-nuit": {
-      "en": "Night spectacle",
-      "es": "Espectáculo nocturno"
-    },
     "slow-motion": {
       "en": "Slow-mo splash",
       "es": "Salpicadura lenta"
@@ -52,10 +48,6 @@
       "en": "Dancing animal",
       "es": "Animal bailando"
     },
-    "engin-volant": {
-      "en": "Flying contraption",
-      "es": "Artefacto volador"
-    },
     "creature-mythique": {
       "en": "Mythical creature",
       "es": "Criatura mítica"
@@ -63,10 +55,6 @@
     "magie-cartoon": {
       "en": "Cartoon magic",
       "es": "Magia animada"
-    },
-    "nourriture-vivante": {
-      "en": "Moving food",
-      "es": "Comida que se mueve"
     },
     "reaction-meme": {
       "en": "Expressive reaction",
@@ -76,10 +64,6 @@
       "en": "Night monster",
       "es": "Monstruo nocturno"
     },
-    "etre-etrange": {
-      "en": "Strange being",
-      "es": "Ser extraño"
-    },
     "animal-calin": {
       "en": "Cuddly animal",
       "es": "Animal tierno"
@@ -88,10 +72,6 @@
       "en": "Halloween",
       "es": "Halloween"
     },
-    "reaction-sociale": {
-      "en": "Social reaction",
-      "es": "Reacción social"
-    },
     "combattant": {
       "en": "Japanese fighter",
       "es": "Luchador japonés"
@@ -99,10 +79,6 @@
     "emotion-forte": {
       "en": "Strong emotion",
       "es": "Emoción fuerte"
-    },
-    "animal-majestueux": {
-      "en": "Majestic animal",
-      "es": "Animal majestuoso"
     },
     "ville-nuit": {
       "en": "City at night",
@@ -144,10 +120,6 @@
       "en": "Natural disaster",
       "es": "Catástrofe natural"
     },
-    "phenomene-ciel": {
-      "en": "Sky phenomenon",
-      "es": "Fenómeno celeste"
-    },
     "ours": {
       "en": "Bear",
       "es": "Oso"
@@ -163,14 +135,6 @@
     "oiseau-tropical": {
       "en": "Tropical bird",
       "es": "Ave tropical"
-    },
-    "insecte": {
-      "en": "Insect",
-      "es": "Insecto"
-    },
-    "poisson": {
-      "en": "Fish",
-      "es": "Pez"
     },
     "marin-mammif": {
       "en": "Marine mammal",
@@ -188,17 +152,9 @@
       "en": "Popular fruit",
       "es": "Fruta popular"
     },
-    "legume": {
-      "en": "Vegetable",
-      "es": "Verdura"
-    },
     "duo-clown": {
       "en": "Classic clown duo",
       "es": "Dúo de payasos"
-    },
-    "pirate-mer": {
-      "en": "Sea pirate",
-      "es": "Pirata marino"
     },
     "espace": {
       "en": "Space",
@@ -219,10 +175,6 @@
     "instrument-musique": {
       "en": "Musical instrument",
       "es": "Instrumento musical"
-    },
-    "danse-classique": {
-      "en": "Classical dance",
-      "es": "Baile clásico"
     },
     "spectacle-cirque": {
       "en": "Circus show",
