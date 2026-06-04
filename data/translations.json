@@ -1919,6 +1919,951 @@
           }
         ]
       }
+    },
+    "fruit-rouge": {
+      "fr": {
+        "name": "Fruit rouge",
+        "videos": [
+          {
+            "title": "Fraise"
+          },
+          {
+            "title": "Framboise"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fruit rouge",
+        "videos": [
+          {
+            "title": "Strawberry"
+          },
+          {
+            "title": "Raspberry"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fruit rouge",
+        "videos": [
+          {
+            "title": "Fresa"
+          },
+          {
+            "title": "Frambuesa"
+          }
+        ]
+      }
+    },
+    "fruit-vert": {
+      "fr": {
+        "name": "Fruit vert",
+        "videos": [
+          {
+            "title": "Kiwi"
+          },
+          {
+            "title": "Pomme verte"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fruit vert",
+        "videos": [
+          {
+            "title": "Kiwi"
+          },
+          {
+            "title": "Green apple"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fruit vert",
+        "videos": [
+          {
+            "title": "Kiwi"
+          },
+          {
+            "title": "Manzana verde"
+          }
+        ]
+      }
+    },
+    "legume-vert": {
+      "fr": {
+        "name": "Légume vert",
+        "videos": [
+          {
+            "title": "Brocoli"
+          },
+          {
+            "title": "Salade"
+          }
+        ]
+      },
+      "en": {
+        "name": "Légume vert",
+        "videos": [
+          {
+            "title": "Broccoli"
+          },
+          {
+            "title": "Lettuce"
+          }
+        ]
+      },
+      "es": {
+        "name": "Légume vert",
+        "videos": [
+          {
+            "title": "Brócoli"
+          },
+          {
+            "title": "Lechuga"
+          }
+        ]
+      }
+    },
+    "boisson-alcool": {
+      "fr": {
+        "name": "Boisson alcoolisée",
+        "videos": [
+          {
+            "title": "Bière"
+          },
+          {
+            "title": "Vin"
+          }
+        ]
+      },
+      "en": {
+        "name": "Boisson alcoolisée",
+        "videos": [
+          {
+            "title": "Beer"
+          },
+          {
+            "title": "Wine"
+          }
+        ]
+      },
+      "es": {
+        "name": "Boisson alcoolisée",
+        "videos": [
+          {
+            "title": "Cerveza"
+          },
+          {
+            "title": "Vino"
+          }
+        ]
+      }
+    },
+    "boisson-festive": {
+      "fr": {
+        "name": "Boisson festive",
+        "videos": [
+          {
+            "title": "Champagne"
+          },
+          {
+            "title": "Whisky"
+          }
+        ]
+      },
+      "en": {
+        "name": "Boisson festive",
+        "videos": [
+          {
+            "title": "Champagne"
+          },
+          {
+            "title": "Whiskey"
+          }
+        ]
+      },
+      "es": {
+        "name": "Boisson festive",
+        "videos": [
+          {
+            "title": "Champán"
+          },
+          {
+            "title": "Whisky"
+          }
+        ]
+      }
+    },
+    "fast-food": {
+      "fr": {
+        "name": "Fast food",
+        "videos": [
+          {
+            "title": "Frites"
+          },
+          {
+            "title": "Nuggets"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fast food",
+        "videos": [
+          {
+            "title": "Fries"
+          },
+          {
+            "title": "Nuggets"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fast food",
+        "videos": [
+          {
+            "title": "Patatas fritas"
+          },
+          {
+            "title": "Nuggets"
+          }
+        ]
+      }
+    },
+    "dessert-cremeux": {
+      "fr": {
+        "name": "Dessert crémeux",
+        "videos": [
+          {
+            "title": "Tiramisu"
+          },
+          {
+            "title": "Crème brûlée"
+          }
+        ]
+      },
+      "en": {
+        "name": "Dessert crémeux",
+        "videos": [
+          {
+            "title": "Tiramisu"
+          },
+          {
+            "title": "Creme brulee"
+          }
+        ]
+      },
+      "es": {
+        "name": "Dessert crémeux",
+        "videos": [
+          {
+            "title": "Tiramisú"
+          },
+          {
+            "title": "Crema catalana"
+          }
+        ]
+      }
+    },
+    "equide": {
+      "fr": {
+        "name": "Équidé",
+        "videos": [
+          {
+            "title": "Cheval"
+          },
+          {
+            "title": "Âne"
+          }
+        ]
+      },
+      "en": {
+        "name": "Équidé",
+        "videos": [
+          {
+            "title": "Horse"
+          },
+          {
+            "title": "Donkey"
+          }
+        ]
+      },
+      "es": {
+        "name": "Équidé",
+        "videos": [
+          {
+            "title": "Caballo"
+          },
+          {
+            "title": "Burro"
+          }
+        ]
+      }
+    },
+    "poisson-aquarium": {
+      "fr": {
+        "name": "Poisson",
+        "videos": [
+          {
+            "title": "Poisson rouge"
+          },
+          {
+            "title": "Poisson tropical"
+          }
+        ]
+      },
+      "en": {
+        "name": "Poisson",
+        "videos": [
+          {
+            "title": "Goldfish"
+          },
+          {
+            "title": "Tropical fish"
+          }
+        ]
+      },
+      "es": {
+        "name": "Poisson",
+        "videos": [
+          {
+            "title": "Pez dorado"
+          },
+          {
+            "title": "Pez tropical"
+          }
+        ]
+      }
+    },
+    "insecte-volant": {
+      "fr": {
+        "name": "Insecte volant",
+        "videos": [
+          {
+            "title": "Abeille"
+          },
+          {
+            "title": "Libellule"
+          }
+        ]
+      },
+      "en": {
+        "name": "Insecte volant",
+        "videos": [
+          {
+            "title": "Bee"
+          },
+          {
+            "title": "Dragonfly"
+          }
+        ]
+      },
+      "es": {
+        "name": "Insecte volant",
+        "videos": [
+          {
+            "title": "Abeja"
+          },
+          {
+            "title": "Libélula"
+          }
+        ]
+      }
+    },
+    "sport-equipe": {
+      "fr": {
+        "name": "Sport d'équipe",
+        "videos": [
+          {
+            "title": "Foot"
+          },
+          {
+            "title": "Basket"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sport d'équipe",
+        "videos": [
+          {
+            "title": "Soccer"
+          },
+          {
+            "title": "Basketball"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sport d'équipe",
+        "videos": [
+          {
+            "title": "Fútbol"
+          },
+          {
+            "title": "Baloncesto"
+          }
+        ]
+      }
+    },
+    "sport-individuel": {
+      "fr": {
+        "name": "Sport individuel",
+        "videos": [
+          {
+            "title": "Course"
+          },
+          {
+            "title": "Yoga"
+          }
+        ]
+      },
+      "en": {
+        "name": "Sport individuel",
+        "videos": [
+          {
+            "title": "Running"
+          },
+          {
+            "title": "Yoga"
+          }
+        ]
+      },
+      "es": {
+        "name": "Sport individuel",
+        "videos": [
+          {
+            "title": "Carrera"
+          },
+          {
+            "title": "Yoga"
+          }
+        ]
+      }
+    },
+    "sport-fitness": {
+      "fr": {
+        "name": "Fitness",
+        "videos": [
+          {
+            "title": "Musculation"
+          },
+          {
+            "title": "Pilates"
+          }
+        ]
+      },
+      "en": {
+        "name": "Fitness",
+        "videos": [
+          {
+            "title": "Weightlifting"
+          },
+          {
+            "title": "Pilates"
+          }
+        ]
+      },
+      "es": {
+        "name": "Fitness",
+        "videos": [
+          {
+            "title": "Pesas"
+          },
+          {
+            "title": "Pilates"
+          }
+        ]
+      }
+    },
+    "jardinage": {
+      "fr": {
+        "name": "Jardinage",
+        "videos": [
+          {
+            "title": "Planter"
+          },
+          {
+            "title": "Arroser"
+          }
+        ]
+      },
+      "en": {
+        "name": "Jardinage",
+        "videos": [
+          {
+            "title": "Planting"
+          },
+          {
+            "title": "Watering"
+          }
+        ]
+      },
+      "es": {
+        "name": "Jardinage",
+        "videos": [
+          {
+            "title": "Plantar"
+          },
+          {
+            "title": "Regar"
+          }
+        ]
+      }
+    },
+    "travail-bureau": {
+      "fr": {
+        "name": "Travail bureau",
+        "videos": [
+          {
+            "title": "Taper"
+          },
+          {
+            "title": "Écrire"
+          }
+        ]
+      },
+      "en": {
+        "name": "Travail bureau",
+        "videos": [
+          {
+            "title": "Typing"
+          },
+          {
+            "title": "Writing"
+          }
+        ]
+      },
+      "es": {
+        "name": "Travail bureau",
+        "videos": [
+          {
+            "title": "Teclear"
+          },
+          {
+            "title": "Escribir"
+          }
+        ]
+      }
+    },
+    "accessoire-tete": {
+      "fr": {
+        "name": "Couvre-chef",
+        "videos": [
+          {
+            "title": "Casquette"
+          },
+          {
+            "title": "Chapeau"
+          }
+        ]
+      },
+      "en": {
+        "name": "Couvre-chef",
+        "videos": [
+          {
+            "title": "Cap"
+          },
+          {
+            "title": "Hat"
+          }
+        ]
+      },
+      "es": {
+        "name": "Couvre-chef",
+        "videos": [
+          {
+            "title": "Gorra"
+          },
+          {
+            "title": "Sombrero"
+          }
+        ]
+      }
+    },
+    "bijou": {
+      "fr": {
+        "name": "Bijou",
+        "videos": [
+          {
+            "title": "Bague"
+          },
+          {
+            "title": "Collier"
+          }
+        ]
+      },
+      "en": {
+        "name": "Bijou",
+        "videos": [
+          {
+            "title": "Ring"
+          },
+          {
+            "title": "Necklace"
+          }
+        ]
+      },
+      "es": {
+        "name": "Bijou",
+        "videos": [
+          {
+            "title": "Anillo"
+          },
+          {
+            "title": "Collar"
+          }
+        ]
+      }
+    },
+    "montre-objet": {
+      "fr": {
+        "name": "Montre",
+        "videos": [
+          {
+            "title": "Montre"
+          },
+          {
+            "title": "Montre connectée"
+          }
+        ]
+      },
+      "en": {
+        "name": "Montre",
+        "videos": [
+          {
+            "title": "Watch"
+          },
+          {
+            "title": "Smartwatch"
+          }
+        ]
+      },
+      "es": {
+        "name": "Montre",
+        "videos": [
+          {
+            "title": "Reloj"
+          },
+          {
+            "title": "Reloj inteligente"
+          }
+        ]
+      }
+    },
+    "ecran-info": {
+      "fr": {
+        "name": "Écran info",
+        "videos": [
+          {
+            "title": "Laptop"
+          },
+          {
+            "title": "Tablette"
+          }
+        ]
+      },
+      "en": {
+        "name": "Écran info",
+        "videos": [
+          {
+            "title": "Laptop"
+          },
+          {
+            "title": "Tablet"
+          }
+        ]
+      },
+      "es": {
+        "name": "Écran info",
+        "videos": [
+          {
+            "title": "Portátil"
+          },
+          {
+            "title": "Tableta"
+          }
+        ]
+      }
+    },
+    "piece-maison": {
+      "fr": {
+        "name": "Pièce maison",
+        "videos": [
+          {
+            "title": "Salon"
+          },
+          {
+            "title": "Chambre"
+          }
+        ]
+      },
+      "en": {
+        "name": "Pièce maison",
+        "videos": [
+          {
+            "title": "Living room"
+          },
+          {
+            "title": "Bedroom"
+          }
+        ]
+      },
+      "es": {
+        "name": "Pièce maison",
+        "videos": [
+          {
+            "title": "Salón"
+          },
+          {
+            "title": "Dormitorio"
+          }
+        ]
+      }
+    },
+    "piece-eau": {
+      "fr": {
+        "name": "Pièce d'eau",
+        "videos": [
+          {
+            "title": "Salle de bain"
+          },
+          {
+            "title": "Cuisine"
+          }
+        ]
+      },
+      "en": {
+        "name": "Pièce d'eau",
+        "videos": [
+          {
+            "title": "Bathroom"
+          },
+          {
+            "title": "Kitchen"
+          }
+        ]
+      },
+      "es": {
+        "name": "Pièce d'eau",
+        "videos": [
+          {
+            "title": "Baño"
+          },
+          {
+            "title": "Cocina"
+          }
+        ]
+      }
+    },
+    "luminaire": {
+      "fr": {
+        "name": "Luminaire",
+        "videos": [
+          {
+            "title": "Lampe"
+          },
+          {
+            "title": "Lustre"
+          }
+        ]
+      },
+      "en": {
+        "name": "Luminaire",
+        "videos": [
+          {
+            "title": "Lamp"
+          },
+          {
+            "title": "Chandelier"
+          }
+        ]
+      },
+      "es": {
+        "name": "Luminaire",
+        "videos": [
+          {
+            "title": "Lámpara"
+          },
+          {
+            "title": "Lámpara de araña"
+          }
+        ]
+      }
+    },
+    "vacances-hotel": {
+      "fr": {
+        "name": "Vacances hôtel",
+        "videos": [
+          {
+            "title": "Lobby"
+          },
+          {
+            "title": "Piscine hôtel"
+          }
+        ]
+      },
+      "en": {
+        "name": "Vacances hôtel",
+        "videos": [
+          {
+            "title": "Lobby"
+          },
+          {
+            "title": "Hotel pool"
+          }
+        ]
+      },
+      "es": {
+        "name": "Vacances hôtel",
+        "videos": [
+          {
+            "title": "Vestíbulo"
+          },
+          {
+            "title": "Piscina hotel"
+          }
+        ]
+      }
+    },
+    "meteo-pluvieuse": {
+      "fr": {
+        "name": "Météo froide",
+        "videos": [
+          {
+            "title": "Pluie"
+          },
+          {
+            "title": "Neige"
+          }
+        ]
+      },
+      "en": {
+        "name": "Météo froide",
+        "videos": [
+          {
+            "title": "Rain"
+          },
+          {
+            "title": "Snow"
+          }
+        ]
+      },
+      "es": {
+        "name": "Météo froide",
+        "videos": [
+          {
+            "title": "Lluvia"
+          },
+          {
+            "title": "Nieve"
+          }
+        ]
+      }
+    },
+    "paysage-montagne": {
+      "fr": {
+        "name": "Paysage montagne",
+        "videos": [
+          {
+            "title": "Montagne"
+          },
+          {
+            "title": "Colline"
+          }
+        ]
+      },
+      "en": {
+        "name": "Paysage montagne",
+        "videos": [
+          {
+            "title": "Mountain"
+          },
+          {
+            "title": "Hill"
+          }
+        ]
+      },
+      "es": {
+        "name": "Paysage montagne",
+        "videos": [
+          {
+            "title": "Montaña"
+          },
+          {
+            "title": "Colina"
+          }
+        ]
+      }
+    },
+    "foret-nature": {
+      "fr": {
+        "name": "Forêt",
+        "videos": [
+          {
+            "title": "Forêt jour"
+          },
+          {
+            "title": "Forêt brume"
+          }
+        ]
+      },
+      "en": {
+        "name": "Forêt",
+        "videos": [
+          {
+            "title": "Forest day"
+          },
+          {
+            "title": "Misty forest"
+          }
+        ]
+      },
+      "es": {
+        "name": "Forêt",
+        "videos": [
+          {
+            "title": "Bosque día"
+          },
+          {
+            "title": "Bosque niebla"
+          }
+        ]
+      }
+    },
+    "desert-nature": {
+      "fr": {
+        "name": "Désert",
+        "videos": [
+          {
+            "title": "Désert"
+          },
+          {
+            "title": "Oasis"
+          }
+        ]
+      },
+      "en": {
+        "name": "Désert",
+        "videos": [
+          {
+            "title": "Desert"
+          },
+          {
+            "title": "Oasis"
+          }
+        ]
+      },
+      "es": {
+        "name": "Désert",
+        "videos": [
+          {
+            "title": "Desierto"
+          },
+          {
+            "title": "Oasis"
+          }
+        ]
+      }
     }
   }
 }
