@@ -374,7 +374,23 @@ function bindEvents() {
   // === Mode Adulte (18+) ===
   const adultToggle = document.getElementById('adult-toggle');
   const btnAdultMode = document.getElementById('btn-adult-mode');
-  const refreshAdultBtn = () => { if (btnAdultMode) btnAdultMode.hidden = !window.adultMode.isOn(); };
+  const workerField = document.getElementById('worker-field');
+  const workerInput = document.getElementById('worker-url-input');
+  const refreshAdultBtn = () => {
+    if (btnAdultMode) btnAdultMode.hidden = !window.adultMode.isOn();
+    if (workerField) workerField.hidden = !window.adultMode.isOn();
+  };
+  if (workerInput) {
+    workerInput.value = localStorage.getItem('rg_worker_url') || '';
+    workerInput.onchange = () => {
+      const v = workerInput.value.trim();
+      if (v) localStorage.setItem('rg_worker_url', v);
+      else localStorage.removeItem('rg_worker_url');
+      // Reset le token cached pour forcer re-auth via le nouveau proxy
+      sessionStorage.removeItem('rg_tok');
+      toast(v ? 'Worker URL sauvegardée. Recharge la page pour appliquer.' : 'Worker URL effacée.');
+    };
+  }
   if (adultToggle) {
     adultToggle.checked = window.adultMode.isOn();
     refreshAdultBtn();

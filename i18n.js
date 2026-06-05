@@ -46,6 +46,8 @@ const I18N = {
     // Mode Adulte 18+
     adultModeLabel: "🔞 Mode Adulte (18+)",
     adultModeHint: "Active une catégorie NSFW (Redgifs). Vérification d'âge obligatoire.",
+    workerUrlLabel: "⚡ URL Cloudflare Worker (fiable, optionnel)",
+    workerUrlHint: "Si tu as déployé ton Worker (voir cloudflare-worker/README.md). Sinon laisse vide.",
     adultGoBtn: "🔞 Jouer en Mode Adulte (18+)",
     nsfwTitle: "🔞 Mode Adulte",
     nsfwSubtitle: "Entrez 2 mots-clés (anglais conseillé). Contenu Redgifs.com réservé aux 18+.",
@@ -196,6 +198,8 @@ const I18N = {
 
     adultModeLabel: "🔞 Adult Mode (18+)",
     adultModeHint: "Enables NSFW category (Redgifs). Age verification required.",
+    workerUrlLabel: "⚡ Cloudflare Worker URL (reliable, optional)",
+    workerUrlHint: "If you deployed your own Worker (see cloudflare-worker/README.md). Otherwise leave empty.",
     adultGoBtn: "🔞 Play Adult Mode (18+)",
     nsfwTitle: "🔞 Adult Mode",
     nsfwSubtitle: "Enter 2 keywords (English recommended). Redgifs.com content, 18+ only.",
@@ -332,6 +336,8 @@ const I18N = {
 
     adultModeLabel: "🔞 Modo Adulto (18+)",
     adultModeHint: "Activa categoría NSFW (Redgifs). Verificación de edad obligatoria.",
+    workerUrlLabel: "⚡ URL Cloudflare Worker (fiable, opcional)",
+    workerUrlHint: "Si has desplegado tu Worker (ver cloudflare-worker/README.md). Si no, déjalo vacío.",
     adultGoBtn: "🔞 Jugar en Modo Adulto (18+)",
     nsfwTitle: "🔞 Modo Adulto",
     nsfwSubtitle: "Escribe 2 palabras clave (inglés recomendado). Contenido Redgifs.com, solo 18+.",

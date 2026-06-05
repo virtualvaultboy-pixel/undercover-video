@@ -7,14 +7,26 @@
 // Token temporaire (23h), cache en sessionStorage.
 // ============================================================
 
-// Redgifs CORS = redgifs.com seul -> on cascade plusieurs proxies CORS publics
-// jusqu'a en trouver un qui repond.
-const PROXIES = [
-  (u) => 'https://corsproxy.io/?' + encodeURIComponent(u),
-  (u) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
-  (u) => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u),
-  (u) => 'https://proxy.cors.sh/' + u,
-];
+// Redgifs CORS = redgifs.com seul -> on passe par un proxy.
+// Si l'utilisateur a deploye son propre Cloudflare Worker (voir
+// cloudflare-worker/README.md) on l'utilise EN PREMIER (100% fiable).
+// Sinon, cascade de proxies publics gratuits (parfois down).
+function getProxies() {
+  const customWorker = (localStorage.getItem('rg_worker_url') || '').trim();
+  const publicProxies = [
+    (u) => 'https://corsproxy.io/?' + encodeURIComponent(u),
+    (u) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
+    (u) => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u),
+    (u) => 'https://proxy.cors.sh/' + u,
+  ];
+  if (customWorker) {
+    // Format Worker : https://xxx.workers.dev/?url={target}
+    const base = customWorker.replace(/\/+$/, '');
+    return [(u) => base + '/?url=' + encodeURIComponent(u), ...publicProxies];
+  }
+  return publicProxies;
+}
+const PROXIES = getProxies();
 const REDGIFS_BASE = 'https://api.redgifs.com/v2';
 const TOKEN_KEY = 'rg_tok';
 const TOKEN_TTL_MS = 23 * 60 * 60 * 1000; // 23h
