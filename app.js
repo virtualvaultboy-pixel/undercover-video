@@ -779,14 +779,28 @@ function renderVideo(video) {
     container.appendChild(img);
   } else if (video.source === 'local' || video.source === 'redgifs') {
     const vid = document.createElement('video');
+    // Pour Redgifs : si chargement direct echoue (Referer/CORS CDN),
+    // on retry via proxy CORS. Pas de crossOrigin = simple GET classique.
     vid.src = video.url;
     vid.controls = true;
     vid.autoplay = true;
     vid.loop = true;
     vid.playsInline = true;
     vid.muted = state.muteByDefault === true; // pref user
-    vid.crossOrigin = video.source === 'redgifs' ? 'anonymous' : null;
-    vid.onerror = () => showVideoError(container);
+    if (video.source === 'redgifs') {
+      // 1er fail -> retry via proxy. 2e fail -> erreur affichee.
+      let retried = false;
+      vid.onerror = () => {
+        if (!retried && video.url && !video.url.includes('corsproxy.io')) {
+          retried = true;
+          vid.src = 'https://corsproxy.io/?' + encodeURIComponent(video.url);
+        } else {
+          showVideoError(container);
+        }
+      };
+    } else {
+      vid.onerror = () => showVideoError(container);
+    }
     container.appendChild(vid);
   } else if (video.source === 'youtube') {
     const iframe = document.createElement('iframe');
@@ -972,6 +986,15 @@ function mountComparisonVideo(slot, video) {
     vid.muted = true;
     vid.playsInline = true;
     vid.controls = false;
+    if (video.source === 'redgifs') {
+      let retried = false;
+      vid.onerror = () => {
+        if (!retried && video.url && !video.url.includes('corsproxy.io')) {
+          retried = true;
+          vid.src = 'https://corsproxy.io/?' + encodeURIComponent(video.url);
+        }
+      };
+    }
     slot.appendChild(vid);
   } else if (video.source === 'youtube') {
     const iframe = document.createElement('iframe');
