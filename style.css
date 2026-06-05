@@ -842,6 +842,13 @@ button:focus-visible, select:focus-visible, input:focus-visible {
 }
 .nsfw-cat-btn:active { transform: translateY(0); }
 .nsfw-cat-emoji { font-size: 1.6rem; }
+.nsfw-random-btn {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #ff1744, #6633ff);
+  border-color: #ff1744;
+  box-shadow: 0 4px 16px rgba(255, 23, 68, 0.4);
+}
+.nsfw-random-btn .nsfw-cat-name { font-size: 1rem; }
 .nsfw-cat-name {
   font-size: 0.85rem;
   font-weight: 700;

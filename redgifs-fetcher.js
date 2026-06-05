@@ -7,15 +7,31 @@
 // Token temporaire (23h), cache en sessionStorage.
 // ============================================================
 
-// Redgifs CORS = limite a redgifs.com seul -> on passe par un proxy CORS public.
-// corsproxy.io supporte les headers Authorization en passthrough.
-const CORS_PROXY = 'https://corsproxy.io/?';
+// Redgifs CORS = redgifs.com seul -> on cascade plusieurs proxies CORS publics
+// jusqu'a en trouver un qui repond.
+const PROXIES = [
+  (u) => 'https://corsproxy.io/?' + encodeURIComponent(u),
+  (u) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
+  (u) => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u),
+  (u) => 'https://proxy.cors.sh/' + u,
+];
 const REDGIFS_BASE = 'https://api.redgifs.com/v2';
 const TOKEN_KEY = 'rg_tok';
 const TOKEN_TTL_MS = 23 * 60 * 60 * 1000; // 23h
 
-function viaProxy(url) {
-  return CORS_PROXY + encodeURIComponent(url);
+/** Tente la requete via chaque proxy jusqu'a obtenir un 2xx. */
+async function fetchViaProxies(url, opts = {}) {
+  let lastErr;
+  for (const buildUrl of PROXIES) {
+    try {
+      const r = await fetch(buildUrl(url), opts);
+      if (r.ok) return r;
+      lastErr = new Error('proxy_' + r.status);
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr || new Error('all_proxies_failed');
 }
 
 async function getToken() {
@@ -25,9 +41,9 @@ async function getToken() {
       return cached.token;
     }
   } catch {}
-  const r = await fetch(viaProxy(`${REDGIFS_BASE}/auth/temporary`));
-  if (!r.ok) throw new Error('redgifs_auth_failed_' + r.status);
+  const r = await fetchViaProxies(`${REDGIFS_BASE}/auth/temporary`);
   const data = await r.json();
+  if (!data || !data.token) throw new Error('redgifs_no_token');
   sessionStorage.setItem(TOKEN_KEY, JSON.stringify({
     token: data.token,
     expires: Date.now() + TOKEN_TTL_MS,
@@ -38,10 +54,9 @@ async function getToken() {
 async function search(query, count = 20, order = 'trending') {
   const token = await getToken();
   const url = `${REDGIFS_BASE}/gifs/search?search_text=${encodeURIComponent(query)}&count=${count}&order=${order}`;
-  const r = await fetch(viaProxy(url), {
+  const r = await fetchViaProxies(url, {
     headers: { 'Authorization': `Bearer ${token}` },
   });
-  if (!r.ok) throw new Error('redgifs_search_failed_' + r.status);
   return await r.json();
 }
 

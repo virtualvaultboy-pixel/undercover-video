@@ -533,16 +533,30 @@ async function renderNsfwGrid() {
     grid.innerHTML = '<p class="subtitle">Chargement…</p>';
     await reloadNsfwCategories();
   }
-  state.categories.filter(c => c.isNsfw).forEach(cat => {
+  const cats = state.categories.filter(c => c.isNsfw);
+
+  // Bouton aleatoire en tete (full width)
+  const randomBtn = document.createElement('button');
+  randomBtn.type = 'button';
+  randomBtn.className = 'nsfw-cat-btn nsfw-random-btn';
+  randomBtn.innerHTML = '<span class="nsfw-cat-emoji">🎲</span><span class="nsfw-cat-name">Aléatoire 18+</span>';
+  randomBtn.onclick = async () => {
+    if (cats.length === 0) return;
+    const cat = cats[Math.floor(Math.random() * cats.length)];
+    state.selectedCategoryId = cat.id;
+    switchScreen('screen-setup');
+    await handleStartClick();
+  };
+  grid.appendChild(randomBtn);
+
+  cats.forEach(cat => {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'nsfw-cat-btn';
     btn.innerHTML = `<span class="nsfw-cat-emoji">${cat.emoji}</span><span class="nsfw-cat-name">${cat.name}</span>`;
     btn.onclick = async () => {
-      // Lance le jeu sur cette categorie NSFW (passe par handleStartClick logic)
       state.selectedCategoryId = cat.id;
       switchScreen('screen-setup');
-      // Re-trigger handleStartClick comme si on avait clique Suivant
       await handleStartClick();
     };
     grid.appendChild(btn);
