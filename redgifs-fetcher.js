@@ -30,7 +30,7 @@ const TOKEN_KEY = 'rg_tok';
 const TOKEN_TTL_MS = 23 * 60 * 60 * 1000; // 23h
 
 /** Tente la requete via chaque proxy avec timeout 8s, jusqu'a un 2xx. */
-async function fetchViaProxies(url, opts = {}, perProxyTimeoutMs = 8000) {
+async function fetchViaProxies(url, opts = {}, perProxyTimeoutMs = 12000) {
   let lastErr;
   // Re-evaluation pour prendre en compte localStorage modifie depuis le chargement
   const proxies = getProxies();
@@ -74,13 +74,21 @@ async function getToken() {
   return data.token;
 }
 
-async function search(query, count = 30, order = 'best') {
+async function search(query, count = 30, order = 'trending') {
   const token = await getToken();
   const url = `${REDGIFS_BASE}/gifs/search?search_text=${encodeURIComponent(query)}&count=${count}&order=${order}`;
   const r = await fetchViaProxies(url, {
     headers: { 'Authorization': `Bearer ${token}` },
   });
-  return await r.json();
+  const data = await r.json();
+  // Si vide ou erreur, retry avec order=recent (plus permissif)
+  if (!data || !Array.isArray(data.gifs) || data.gifs.length === 0) {
+    if (order !== 'recent') {
+      console.warn('[Redgifs] empty result for', query, 'with order', order, '-> retry recent');
+      return search(query, count, 'recent');
+    }
+  }
+  return data;
 }
 
 /**
