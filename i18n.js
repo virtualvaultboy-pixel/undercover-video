@@ -43,6 +43,19 @@ const I18N = {
     yourWord: "Ton mot",
     btnHide: "✅ J'ai vu, cacher",
 
+    // Mode Adulte 18+
+    adultModeLabel: "🔞 Mode Adulte (18+)",
+    adultModeHint: "Active une catégorie NSFW (Redgifs). Vérification d'âge obligatoire.",
+    adultGoBtn: "🔞 Jouer en Mode Adulte (18+)",
+    nsfwTitle: "🔞 Mode Adulte",
+    nsfwSubtitle: "Entrez 2 mots-clés (anglais conseillé). Contenu Redgifs.com réservé aux 18+.",
+    nsfwIdea1: "Mot-clé des civils",
+    nsfwIdea2: "Mot-clé de l'undercover",
+    nsfwIdea1Placeholder: "Ex : couple amateur",
+    nsfwIdea2Placeholder: "Ex : threesome",
+    nsfwGenerate: "🔥 Lancer (18+)",
+    nsfwGenerating: "Recherche sur Redgifs…",
+
     // Tour de parole
     playTitle: "🎤 À vous de jouer !",
     playSubtitle: "Décrivez votre vidéo à tour de rôle.<br>Trouvez l'undercover.",
@@ -179,6 +192,18 @@ const I18N = {
     yourWord: "Your word",
     btnHide: "✅ I've seen it, hide",
 
+    adultModeLabel: "🔞 Adult Mode (18+)",
+    adultModeHint: "Enables NSFW category (Redgifs). Age verification required.",
+    adultGoBtn: "🔞 Play Adult Mode (18+)",
+    nsfwTitle: "🔞 Adult Mode",
+    nsfwSubtitle: "Enter 2 keywords (English recommended). Redgifs.com content, 18+ only.",
+    nsfwIdea1: "Civilians' keyword",
+    nsfwIdea2: "Undercover's keyword",
+    nsfwIdea1Placeholder: "Ex: couple amateur",
+    nsfwIdea2Placeholder: "Ex: threesome",
+    nsfwGenerate: "🔥 Start (18+)",
+    nsfwGenerating: "Searching Redgifs…",
+
     playTitle: "🎤 Your turn!",
     playSubtitle: "Describe your video in turn.<br>Find the undercover.",
     speakingOrder: "Speaking order:",
@@ -300,6 +325,18 @@ const I18N = {
 
     yourWord: "Tu palabra",
     btnHide: "✅ Lo he visto, ocultar",
+
+    adultModeLabel: "🔞 Modo Adulto (18+)",
+    adultModeHint: "Activa categoría NSFW (Redgifs). Verificación de edad obligatoria.",
+    adultGoBtn: "🔞 Jugar en Modo Adulto (18+)",
+    nsfwTitle: "🔞 Modo Adulto",
+    nsfwSubtitle: "Escribe 2 palabras clave (inglés recomendado). Contenido Redgifs.com, solo 18+.",
+    nsfwIdea1: "Palabra de los civiles",
+    nsfwIdea2: "Palabra del undercover",
+    nsfwIdea1Placeholder: "Ej: couple amateur",
+    nsfwIdea2Placeholder: "Ej: threesome",
+    nsfwGenerate: "🔥 Iniciar (18+)",
+    nsfwGenerating: "Buscando en Redgifs…",
 
     playTitle: "🎤 ¡Os toca!",
     playSubtitle: "Describid vuestro vídeo por turnos.<br>Encontrad al infiltrado.",

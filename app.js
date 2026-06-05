@@ -346,6 +346,37 @@ function bindEvents() {
   fastToggle.checked = state.fastMode;
   fastToggle.onchange = e => { state.fastMode = e.target.checked; savePrefs(); };
 
+  // === Mode Adulte (18+) ===
+  const adultToggle = document.getElementById('adult-toggle');
+  const btnAdultMode = document.getElementById('btn-adult-mode');
+  const refreshAdultBtn = () => { if (btnAdultMode) btnAdultMode.hidden = !window.adultMode.isOn(); };
+  if (adultToggle) {
+    adultToggle.checked = window.adultMode.isOn();
+    refreshAdultBtn();
+    adultToggle.onchange = async (e) => {
+      if (e.target.checked) {
+        const ok = await window.adultMode.requestConfirmation(true);
+        if (!ok) { e.target.checked = false; return; }
+        window.adultMode.setOn(true);
+      } else {
+        window.adultMode.setOn(false);
+        window.adultMode.clearConfirmation();
+      }
+      refreshAdultBtn();
+    };
+  }
+  if (btnAdultMode) {
+    btnAdultMode.onclick = async () => {
+      const ok = await window.adultMode.requestConfirmation(false);
+      if (!ok) return;
+      switchScreen('screen-nsfw-custom');
+    };
+  }
+  const btnNsfwBack = document.getElementById('btn-nsfw-back');
+  if (btnNsfwBack) btnNsfwBack.onclick = () => switchScreen('screen-setup');
+  const btnNsfwGen = document.getElementById('btn-nsfw-generate');
+  if (btnNsfwGen) btnNsfwGen.onclick = handleNsfwGenerate;
+
   const btnResetStats = document.getElementById('btn-reset-stats');
   if (btnResetStats) btnResetStats.onclick = () => {
     if (!confirm(i18n.t('resetStatsConfirm'))) return;
@@ -433,6 +464,43 @@ async function handleCustomGenerate() {
 function setLoadingMsg(msg) {
   const el = document.querySelector('#screen-ai-loading .subtitle');
   if (el) el.textContent = msg;
+}
+
+// === NSFW custom (Redgifs) — meme flux que Custom AI mais video au lieu d'image ===
+let _nsfwGenerating = false;
+async function handleNsfwGenerate() {
+  if (_nsfwGenerating) return;
+  const idea1 = document.getElementById('nsfw-idea-1').value.trim();
+  const idea2 = document.getElementById('nsfw-idea-2').value.trim();
+  if (!idea1 || !idea2) {
+    toast(i18n.t('customAiInvalid'));
+    return;
+  }
+  if (!window.adultMode || !window.adultMode.isConfirmationFresh()) {
+    const ok = window.adultMode && await window.adultMode.requestConfirmation(true);
+    if (!ok) return;
+  }
+
+  _nsfwGenerating = true;
+  const btn = document.getElementById('btn-nsfw-generate');
+  if (btn) btn.disabled = true;
+  switchScreen('screen-ai-loading');
+  setLoadingMsg(i18n.t('nsfwGenerating') || 'Recherche Redgifs…');
+
+  try {
+    const pair = await window.redgifsFetcher.generatePair(idea1, idea2);
+    state.selectedCategoryId = 'custom-ai';
+    state.customCivils = pair.civils;
+    state.customUndercover = pair.undercover;
+    goToNamesScreen();
+  } catch (e) {
+    console.warn('[NSFW] Generation failed', e);
+    toast((i18n.t('videoErrorTitle') || 'Erreur') + ' : ' + (e.message || 'unknown'));
+    switchScreen('screen-nsfw-custom');
+  } finally {
+    if (btn) btn.disabled = false;
+    _nsfwGenerating = false;
+  }
 }
 
 function preloadImage(url, timeoutMs = 25000) {
@@ -612,7 +680,7 @@ function renderVideo(video) {
     img.className = 'ai-image-full';
     img.onerror = () => showVideoError(container);
     container.appendChild(img);
-  } else if (video.source === 'local') {
+  } else if (video.source === 'local' || video.source === 'redgifs') {
     const vid = document.createElement('video');
     vid.src = video.url;
     vid.controls = true;
@@ -620,6 +688,7 @@ function renderVideo(video) {
     vid.loop = true;
     vid.playsInline = true;
     vid.muted = state.muteByDefault === true; // pref user
+    vid.crossOrigin = video.source === 'redgifs' ? 'anonymous' : null;
     vid.onerror = () => showVideoError(container);
     container.appendChild(vid);
   } else if (video.source === 'youtube') {
@@ -798,7 +867,7 @@ function mountComparisonVideo(slot, video) {
     slot.appendChild(img);
     return;
   }
-  if (video.source === 'local') {
+  if (video.source === 'local' || video.source === 'redgifs') {
     const vid = document.createElement('video');
     vid.src = video.url;
     vid.autoplay = true;
