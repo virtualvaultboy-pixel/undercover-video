@@ -29,6 +29,27 @@
     { "id": "nsfw-finish",     "name": "Finish",           "emoji": "💦", "isNsfw": true,
       "redgifsTags": ["cumshot facial", "creampie"], "videos": [] },
     { "id": "nsfw-petite",     "name": "Petite vs Curvy",  "emoji": "📏", "isNsfw": true,
-      "redgifsTags": ["petite fuck", "curvy fuck"], "videos": [] }
+      "redgifsTags": ["petite fuck", "curvy fuck"], "videos": [] },
+
+    { "id": "nsfw-feet",       "name": "Foot fetish",      "emoji": "🦶", "isNsfw": true,
+      "redgifsTags": ["feet fetish", "footjob"], "videos": [] },
+    { "id": "nsfw-tease",      "name": "Tease & strip",    "emoji": "💃", "isNsfw": true,
+      "redgifsTags": ["striptease", "lapdance"], "videos": [] },
+    { "id": "nsfw-fetish",     "name": "Fetish look",      "emoji": "🧤", "isNsfw": true,
+      "redgifsTags": ["latex fuck", "leather fetish"], "videos": [] },
+    { "id": "nsfw-rough",      "name": "Rough sex",        "emoji": "🔥", "isNsfw": true,
+      "redgifsTags": ["rough sex", "hair pulling"], "videos": [] },
+    { "id": "nsfw-ebony",      "name": "Ethnies 1",        "emoji": "🌍", "isNsfw": true,
+      "redgifsTags": ["ebony fuck", "latina fuck"], "videos": [] },
+    { "id": "nsfw-bigass",     "name": "Big ass",          "emoji": "🍑", "isNsfw": true,
+      "redgifsTags": ["big ass fuck", "twerking"], "videos": [] },
+    { "id": "nsfw-bigtits",    "name": "Big tits",         "emoji": "🍒", "isNsfw": true,
+      "redgifsTags": ["big tits fuck", "boobs bounce"], "videos": [] },
+    { "id": "nsfw-redhead",    "name": "Cheveux",          "emoji": "👩‍🦰", "isNsfw": true,
+      "redgifsTags": ["redhead fuck", "blonde fuck"], "videos": [] },
+    { "id": "nsfw-shower",     "name": "Eau & douche",     "emoji": "🚿", "isNsfw": true,
+      "redgifsTags": ["shower fuck", "bath sex"], "videos": [] },
+    { "id": "nsfw-mature-50",  "name": "Mature",           "emoji": "👵", "isNsfw": true,
+      "redgifsTags": ["mature fuck", "gilf"], "videos": [] }
   ]
 }

@@ -2569,6 +2569,937 @@
           "duration": 7
         }
       ]
+    },
+    {
+      "id": "poivron-couleur",
+      "name": "Poivron",
+      "emoji": "🫑",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/poivron-couleur_1.mp4",
+          "title": "Poivron rouge",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/poivron-couleur_2.mp4",
+          "title": "Poivron jaune",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "champignon",
+      "name": "Champignon",
+      "emoji": "🍄",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/champignon_1.mp4",
+          "title": "Cèpe",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/champignon_2.mp4",
+          "title": "Champignon blanc",
+          "duration": 4
+        }
+      ]
+    },
+    {
+      "id": "graine-cereale",
+      "name": "Céréale",
+      "emoji": "🌾",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/graine-cereale_1.mp4",
+          "title": "Riz",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/graine-cereale_2.mp4",
+          "title": "Quinoa",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "baie-rouge",
+      "name": "Baie rouge",
+      "emoji": "🫐",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/baie-rouge_1.mp4",
+          "title": "Myrtille",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/baie-rouge_2.mp4",
+          "title": "Cranberry",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "sauvage-savane",
+      "name": "Sauvage savane",
+      "emoji": "🦓",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sauvage-savane_1.mp4",
+          "title": "Zèbre",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/sauvage-savane_2.mp4",
+          "title": "Hippopotame",
+          "duration": 3
+        }
+      ]
+    },
+    {
+      "id": "sauvage-arctique",
+      "name": "Animal arctique",
+      "emoji": "🐧",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sauvage-arctique_1.mp4",
+          "title": "Pingouin",
+          "duration": 11
+        },
+        {
+          "source": "local",
+          "url": "videos/sauvage-arctique_2.mp4",
+          "title": "Morse",
+          "duration": 15
+        }
+      ]
+    },
+    {
+      "id": "oiseau-couleur",
+      "name": "Oiseau coloré",
+      "emoji": "🦚",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/oiseau-couleur_1.mp4",
+          "title": "Paon",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/oiseau-couleur_2.mp4",
+          "title": "Flamant rose",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "reptile-trop",
+      "name": "Reptile tropical",
+      "emoji": "🦎",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/reptile-trop_1.mp4",
+          "title": "Iguane",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/reptile-trop_2.mp4",
+          "title": "Caméléon",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "insecte-rampant",
+      "name": "Insecte rampant",
+      "emoji": "🪲",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/insecte-rampant_1.mp4",
+          "title": "Scarabée",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/insecte-rampant_2.mp4",
+          "title": "Mille-pattes",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "rongeur-grand",
+      "name": "Gros rongeur",
+      "emoji": "🦫",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/rongeur-grand_1.mp4",
+          "title": "Capybara",
+          "duration": 6
+        },
+        {
+          "source": "local",
+          "url": "videos/rongeur-grand_2.mp4",
+          "title": "Castor",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "sport-equestre",
+      "name": "Sport équestre",
+      "emoji": "🏇",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-equestre_1.mp4",
+          "title": "Saut obstacle",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-equestre_2.mp4",
+          "title": "Polo",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "sport-aventure",
+      "name": "Sport aventure",
+      "emoji": "🧗",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-aventure_1.mp4",
+          "title": "Escalade",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-aventure_2.mp4",
+          "title": "Rafting",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "art-martial",
+      "name": "Art martial",
+      "emoji": "🥋",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/art-martial_1.mp4",
+          "title": "Judo",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/art-martial_2.mp4",
+          "title": "Aikido",
+          "duration": 13
+        }
+      ]
+    },
+    {
+      "id": "sport-piscine",
+      "name": "Sport piscine",
+      "emoji": "🏊",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-piscine_1.mp4",
+          "title": "Nage couloir",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-piscine_2.mp4",
+          "title": "Plongeon",
+          "duration": 12
+        }
+      ]
+    },
+    {
+      "id": "sport-glisse-snow",
+      "name": "Glisse neige",
+      "emoji": "🛷",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/sport-glisse-snow_1.mp4",
+          "title": "Luge",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/sport-glisse-snow_2.mp4",
+          "title": "Bobsleigh",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "metier-batiment",
+      "name": "Métier bâtiment",
+      "emoji": "🧱",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/metier-batiment_1.mp4",
+          "title": "Maçon",
+          "duration": 6
+        },
+        {
+          "source": "local",
+          "url": "videos/metier-batiment_2.mp4",
+          "title": "Charpentier",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "metier-creatif",
+      "name": "Métier créatif",
+      "emoji": "🎨",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/metier-creatif_1.mp4",
+          "title": "Graphiste",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/metier-creatif_2.mp4",
+          "title": "Architecte",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "metier-sante",
+      "name": "Métier santé",
+      "emoji": "🩺",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/metier-sante_1.mp4",
+          "title": "Dentiste",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/metier-sante_2.mp4",
+          "title": "Chirurgien",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "metier-bien-etre",
+      "name": "Bien-être",
+      "emoji": "💆",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/metier-bien-etre_1.mp4",
+          "title": "Coach yoga",
+          "duration": 12
+        },
+        {
+          "source": "local",
+          "url": "videos/metier-bien-etre_2.mp4",
+          "title": "Masseur",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "jeu-video",
+      "name": "Jeu vidéo",
+      "emoji": "🎮",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/jeu-video_1.mp4",
+          "title": "Console",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/jeu-video_2.mp4",
+          "title": "Manette",
+          "duration": 14
+        }
+      ]
+    },
+    {
+      "id": "realite-virt",
+      "name": "Réalité virtuelle",
+      "emoji": "🥽",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/realite-virt_1.mp4",
+          "title": "Casque VR",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/realite-virt_2.mp4",
+          "title": "Tablette graphique",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "photo-equipement",
+      "name": "Photo équipement",
+      "emoji": "📸",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/photo-equipement_1.mp4",
+          "title": "Trépied",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/photo-equipement_2.mp4",
+          "title": "Objectif",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "avion-aeroport",
+      "name": "Aéroport",
+      "emoji": "✈️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/avion-aeroport_1.mp4",
+          "title": "Tarmac",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/avion-aeroport_2.mp4",
+          "title": "Terminal",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "hotel-luxe",
+      "name": "Hôtel luxe",
+      "emoji": "🏩",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/hotel-luxe_1.mp4",
+          "title": "Suite",
+          "duration": 6
+        },
+        {
+          "source": "local",
+          "url": "videos/hotel-luxe_2.mp4",
+          "title": "Spa hôtel",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "meuble-rangement",
+      "name": "Rangement",
+      "emoji": "🗄️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/meuble-rangement_1.mp4",
+          "title": "Armoire",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/meuble-rangement_2.mp4",
+          "title": "Commode",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "deco-mur",
+      "name": "Décoration murale",
+      "emoji": "🖼️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/deco-mur_1.mp4",
+          "title": "Tableau",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/deco-mur_2.mp4",
+          "title": "Vase",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "petit-electro",
+      "name": "Petit électroménager",
+      "emoji": "☕",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/petit-electro_1.mp4",
+          "title": "Bouilloire",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/petit-electro_2.mp4",
+          "title": "Cafetière",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "eclairage-deco",
+      "name": "Éclairage déco",
+      "emoji": "🕯️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/eclairage-deco_1.mp4",
+          "title": "Bougeoir",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/eclairage-deco_2.mp4",
+          "title": "Guirlande",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "emotion-tendresse",
+      "name": "Tendresse",
+      "emoji": "🤗",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/emotion-tendresse_1.mp4",
+          "title": "Câlin",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/emotion-tendresse_2.mp4",
+          "title": "Bisou",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "emotion-action",
+      "name": "Action expressive",
+      "emoji": "🗣️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/emotion-action_1.mp4",
+          "title": "Cri",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/emotion-action_2.mp4",
+          "title": "Frustration",
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "paysage-rural",
+      "name": "Paysage rural",
+      "emoji": "🌾",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/paysage-rural_1.mp4",
+          "title": "Champ de blé",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/paysage-rural_2.mp4",
+          "title": "Vigne",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "paysage-urbain",
+      "name": "Paysage urbain",
+      "emoji": "🏙️",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/paysage-urbain_1.mp4",
+          "title": "Skyline",
+          "duration": 14
+        },
+        {
+          "source": "local",
+          "url": "videos/paysage-urbain_2.mp4",
+          "title": "Avenue",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "jardin-fleur",
+      "name": "Jardin fleuri",
+      "emoji": "🌸",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/jardin-fleur_1.mp4",
+          "title": "Massif",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/jardin-fleur_2.mp4",
+          "title": "Allée fleurie",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "dessert-fruit",
+      "name": "Dessert aux fruits",
+      "emoji": "🍰",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/dessert-fruit_1.mp4",
+          "title": "Tarte fruits",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/dessert-fruit_2.mp4",
+          "title": "Salade fruits",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "viennoiserie",
+      "name": "Viennoiserie",
+      "emoji": "🥐",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/viennoiserie_1.mp4",
+          "title": "Croissant",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/viennoiserie_2.mp4",
+          "title": "Pain au chocolat",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "chocolat-forme",
+      "name": "Chocolat",
+      "emoji": "🍫",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/chocolat-forme_1.mp4",
+          "title": "Tablette",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/chocolat-forme_2.mp4",
+          "title": "Truffe",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "boisson-petit-dej",
+      "name": "Petit-déj boisson",
+      "emoji": "🥛",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/boisson-petit-dej_1.mp4",
+          "title": "Smoothie",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/boisson-petit-dej_2.mp4",
+          "title": "Chocolat chaud",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "vetement-femme",
+      "name": "Tenue femme",
+      "emoji": "👗",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/vetement-femme_1.mp4",
+          "title": "Robe",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/vetement-femme_2.mp4",
+          "title": "Jupe",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "metier-route",
+      "name": "Métier route",
+      "emoji": "🚛",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/metier-route_1.mp4",
+          "title": "Camionneur",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/metier-route_2.mp4",
+          "title": "Chauffeur taxi",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "vie-marine",
+      "name": "Vie marine",
+      "emoji": "🐚",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/vie-marine_1.mp4",
+          "title": "Étoile de mer",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/vie-marine_2.mp4",
+          "title": "Hippocampe",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "outil-jardin",
+      "name": "Outil de jardin",
+      "emoji": "🪴",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/outil-jardin_1.mp4",
+          "title": "Arrosoir",
+          "duration": 9
+        },
+        {
+          "source": "local",
+          "url": "videos/outil-jardin_2.mp4",
+          "title": "Pelle",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "eau-petillante",
+      "name": "Eau pétillante",
+      "emoji": "🥤",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/eau-petillante_1.mp4",
+          "title": "Eau pétillante",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/eau-petillante_2.mp4",
+          "title": "Eau aromatisée",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "ustensile-trance",
+      "name": "Ustensile coupe",
+      "emoji": "🔪",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/ustensile-trance_1.mp4",
+          "title": "Couteau cuisine",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/ustensile-trance_2.mp4",
+          "title": "Ciseaux",
+          "duration": 5
+        }
+      ]
+    },
+    {
+      "id": "animal-laine",
+      "name": "Animal à laine",
+      "emoji": "🐑",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/animal-laine_1.mp4",
+          "title": "Mouton",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/animal-laine_2.mp4",
+          "title": "Chèvre",
+          "duration": 8
+        }
+      ]
+    },
+    {
+      "id": "repos-detente",
+      "name": "Repos détente",
+      "emoji": "🛀",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/repos-detente_1.mp4",
+          "title": "Bain",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/repos-detente_2.mp4",
+          "title": "Hamac",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "loisir-creatif",
+      "name": "Loisir créatif",
+      "emoji": "🧶",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/loisir-creatif_1.mp4",
+          "title": "Tricot",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/loisir-creatif_2.mp4",
+          "title": "Origami",
+          "duration": 9
+        }
+      ]
+    },
+    {
+      "id": "evenement-sport",
+      "name": "Événement sport",
+      "emoji": "🏆",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/evenement-sport_1.mp4",
+          "title": "Trophée",
+          "duration": 8
+        },
+        {
+          "source": "local",
+          "url": "videos/evenement-sport_2.mp4",
+          "title": "Médaille",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "papeterie",
+      "name": "Papeterie",
+      "emoji": "📐",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/papeterie_1.mp4",
+          "title": "Règle crayons",
+          "duration": 7
+        },
+        {
+          "source": "local",
+          "url": "videos/papeterie_2.mp4",
+          "title": "Cahier ouvert",
+          "duration": 7
+        }
+      ]
+    },
+    {
+      "id": "salle-bain-acces",
+      "name": "Accessoire bain",
+      "emoji": "🪥",
+      "videos": [
+        {
+          "source": "local",
+          "url": "videos/salle-bain-acces_1.mp4",
+          "title": "Rasoir",
+          "duration": 10
+        },
+        {
+          "source": "local",
+          "url": "videos/salle-bain-acces_2.mp4",
+          "title": "Serviette",
+          "duration": 10
+        }
+      ]
     }
   ]
 }
