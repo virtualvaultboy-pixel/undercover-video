@@ -74,7 +74,7 @@ async function getToken() {
   return data.token;
 }
 
-async function search(query, count = 20, order = 'trending') {
+async function search(query, count = 30, order = 'best') {
   const token = await getToken();
   const url = `${REDGIFS_BASE}/gifs/search?search_text=${encodeURIComponent(query)}&count=${count}&order=${order}`;
   const r = await fetchViaProxies(url, {
@@ -91,20 +91,24 @@ async function search(query, count = 20, order = 'trending') {
  */
 async function fetchRandomVideo(query) {
   const data = await search(query, 30);
-  const gifs = (data.gifs || []).filter(g => g.urls && (g.urls.hd || g.urls.sd));
+  // Filtre : duration > 6s (evite teasers/photos), urls hd ou sd dispo
+  const gifs = (data.gifs || []).filter(g => g.urls && (g.urls.hd || g.urls.sd) && (g.duration || 10) > 6);
   if (gifs.length === 0) throw new Error('no_results_for_' + query);
-  const gif = gifs[Math.floor(Math.random() * gifs.length)];
-  const directUrl = gif.urls.hd || gif.urls.sd;
-  // Wrap via le Worker -- le Worker spoof Origin/Referer = CDN repond OK
+  // Shuffle, prend 4 candidates : si la 1ere plante au <video> load,
+  // le tag video essaie la suivante automatiquement.
+  const shuffled = [...gifs].sort(() => Math.random() - 0.5).slice(0, 4);
   const workerBase = ((localStorage.getItem('rg_worker_url') || '').trim() || DEFAULT_WORKER).replace(/\/+$/, '');
-  const proxiedUrl = workerBase + '/?url=' + encodeURIComponent(directUrl);
+  const wrap = (u) => workerBase + '/?url=' + encodeURIComponent(u);
+  const candidates = shuffled.map(g => wrap(g.urls.hd || g.urls.sd));
+  const first = shuffled[0];
   return {
     source: 'redgifs',
-    url: proxiedUrl,
-    originalUrl: directUrl,
-    title: (gif.tags && gif.tags[0]) || query,
-    duration: gif.duration || 10,
-    id: gif.id,
+    url: candidates[0],
+    candidates,
+    originalUrl: first.urls.hd || first.urls.sd,
+    title: (first.tags && first.tags[0]) || query,
+    duration: first.duration || 10,
+    id: first.id,
   };
 }
 

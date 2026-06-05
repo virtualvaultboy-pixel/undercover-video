@@ -795,27 +795,27 @@ function renderVideo(video) {
     container.appendChild(img);
   } else if (video.source === 'local' || video.source === 'redgifs') {
     const vid = document.createElement('video');
-    // Pour Redgifs : si chargement direct echoue (Referer/CORS CDN),
-    // on retry via proxy CORS. Pas de crossOrigin = simple GET classique.
-    vid.src = video.url;
     vid.controls = true;
     vid.autoplay = true;
     vid.loop = true;
     vid.playsInline = true;
     vid.muted = state.muteByDefault === true; // pref user
-    if (video.source === 'redgifs') {
-      // 1er fail -> retry via proxy. 2e fail -> erreur affichee.
-      let retried = false;
+    if (video.source === 'redgifs' && Array.isArray(video.candidates) && video.candidates.length > 1) {
+      // Cascade : si url N plante, on essaie N+1 avant d'afficher l'erreur
+      let idx = 0;
       vid.onerror = () => {
-        if (!retried && video.url && !video.url.includes('corsproxy.io')) {
-          retried = true;
-          vid.src = 'https://corsproxy.io/?' + encodeURIComponent(video.url);
+        idx++;
+        if (idx < video.candidates.length) {
+          console.warn('[Video] candidate', idx, 'failed, try next');
+          vid.src = video.candidates[idx];
         } else {
           showVideoError(container);
         }
       };
+      vid.src = video.candidates[0];
     } else {
       vid.onerror = () => showVideoError(container);
+      vid.src = video.url;
     }
     container.appendChild(vid);
   } else if (video.source === 'youtube') {
@@ -996,20 +996,20 @@ function mountComparisonVideo(slot, video) {
   }
   if (video.source === 'local' || video.source === 'redgifs') {
     const vid = document.createElement('video');
-    vid.src = video.url;
     vid.autoplay = true;
     vid.loop = true;
     vid.muted = true;
     vid.playsInline = true;
     vid.controls = false;
-    if (video.source === 'redgifs') {
-      let retried = false;
+    if (video.source === 'redgifs' && Array.isArray(video.candidates) && video.candidates.length > 1) {
+      let idx = 0;
       vid.onerror = () => {
-        if (!retried && video.url && !video.url.includes('corsproxy.io')) {
-          retried = true;
-          vid.src = 'https://corsproxy.io/?' + encodeURIComponent(video.url);
-        }
+        idx++;
+        if (idx < video.candidates.length) vid.src = video.candidates[idx];
       };
+      vid.src = video.candidates[0];
+    } else {
+      vid.src = video.url;
     }
     slot.appendChild(vid);
   } else if (video.source === 'youtube') {
