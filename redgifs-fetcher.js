@@ -32,27 +32,29 @@ const TOKEN_TTL_MS = 23 * 60 * 60 * 1000; // 23h
 /** Tente la requete via chaque proxy avec timeout 8s, jusqu'a un 2xx. */
 async function fetchViaProxies(url, opts = {}, perProxyTimeoutMs = 8000) {
   let lastErr;
-  for (let i = 0; i < PROXIES.length; i++) {
-    const buildUrl = PROXIES[i];
+  // Re-evaluation pour prendre en compte localStorage modifie depuis le chargement
+  const proxies = getProxies();
+  for (let i = 0; i < proxies.length; i++) {
+    const buildUrl = proxies[i];
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), perProxyTimeoutMs);
     try {
-      console.log('[Redgifs] try proxy', i + 1, '/', PROXIES.length);
+      console.log('[Redgifs] try proxy', i + 1, '/', proxies.length, '→', buildUrl(url).slice(0, 80));
       const r = await fetch(buildUrl(url), { ...opts, signal: controller.signal });
       clearTimeout(timer);
       if (r.ok) {
-        console.log('[Redgifs] proxy', i + 1, 'OK');
+        console.log('[Redgifs] ✅ proxy', i + 1, 'OK');
         return r;
       }
       lastErr = new Error('proxy_' + (i + 1) + '_status_' + r.status);
-      console.warn('[Redgifs] proxy', i + 1, 'HTTP', r.status);
+      console.warn('[Redgifs] ❌ proxy', i + 1, 'HTTP', r.status);
     } catch (e) {
       clearTimeout(timer);
       lastErr = e;
-      console.warn('[Redgifs] proxy', i + 1, 'error:', e.message);
+      console.warn('[Redgifs] ❌ proxy', i + 1, 'error:', e.message);
     }
   }
-  throw new Error('all_4_proxies_failed_last_' + (lastErr && lastErr.message || '?'));
+  throw new Error('all_' + proxies.length + '_proxies_failed_last_' + (lastErr && lastErr.message || '?'));
 }
 
 async function getToken() {
