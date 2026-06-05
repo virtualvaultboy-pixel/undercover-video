@@ -86,16 +86,22 @@ async function search(query, count = 20, order = 'trending') {
 /**
  * Tire une video aleatoire matching la query (cache 30 candidates, en prend 1).
  * Renvoie { source: 'redgifs', url, title, duration, id }.
+ * IMPORTANT : l'URL renvoyee passe DEJA par le Worker car le CDN Redgifs
+ * (files.redgifs.com) bloque les requetes sans Referer redgifs.com.
  */
 async function fetchRandomVideo(query) {
   const data = await search(query, 30);
   const gifs = (data.gifs || []).filter(g => g.urls && (g.urls.hd || g.urls.sd));
   if (gifs.length === 0) throw new Error('no_results_for_' + query);
   const gif = gifs[Math.floor(Math.random() * gifs.length)];
-  const url = gif.urls.hd || gif.urls.sd;
+  const directUrl = gif.urls.hd || gif.urls.sd;
+  // Wrap via le Worker -- le Worker spoof Origin/Referer = CDN repond OK
+  const workerBase = ((localStorage.getItem('rg_worker_url') || '').trim() || DEFAULT_WORKER).replace(/\/+$/, '');
+  const proxiedUrl = workerBase + '/?url=' + encodeURIComponent(directUrl);
   return {
     source: 'redgifs',
-    url,
+    url: proxiedUrl,
+    originalUrl: directUrl,
     title: (gif.tags && gif.tags[0]) || query,
     duration: gif.duration || 10,
     id: gif.id,
