@@ -8,23 +8,21 @@
 // ============================================================
 
 // Redgifs CORS = redgifs.com seul -> on passe par un proxy.
-// Si l'utilisateur a deploye son propre Cloudflare Worker (voir
-// cloudflare-worker/README.md) on l'utilise EN PREMIER (100% fiable).
-// Sinon, cascade de proxies publics gratuits (parfois down).
+// Worker Cloudflare deploye par defaut (URL du proprietaire de l'app).
+// L'utilisateur peut override avec son propre Worker via localStorage.
+const DEFAULT_WORKER = 'https://undercover-cors.virtual-vaultboy.workers.dev';
+
 function getProxies() {
-  const customWorker = (localStorage.getItem('rg_worker_url') || '').trim();
+  const customWorker = (localStorage.getItem('rg_worker_url') || '').trim() || DEFAULT_WORKER;
+  const base = customWorker.replace(/\/+$/, '');
   const publicProxies = [
     (u) => 'https://corsproxy.io/?' + encodeURIComponent(u),
     (u) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
     (u) => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u),
     (u) => 'https://proxy.cors.sh/' + u,
   ];
-  if (customWorker) {
-    // Format Worker : https://xxx.workers.dev/?url={target}
-    const base = customWorker.replace(/\/+$/, '');
-    return [(u) => base + '/?url=' + encodeURIComponent(u), ...publicProxies];
-  }
-  return publicProxies;
+  // Worker en PREMIER (fiable). Proxies publics en fallback.
+  return [(u) => base + '/?url=' + encodeURIComponent(u), ...publicProxies];
 }
 const PROXIES = getProxies();
 const REDGIFS_BASE = 'https://api.redgifs.com/v2';
