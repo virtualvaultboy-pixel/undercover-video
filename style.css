@@ -939,6 +939,17 @@ button:focus-visible, select:focus-visible, input:focus-visible {
   gap: 10px;
 }
 
+/* ----- Numero de version (footer) ----- */
+.app-version {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #555;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  margin: 20px 0 8px;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
 /* ----- Responsive ----- */
 @media (min-width: 600px) {
   h1 { font-size: 2.5rem; }
