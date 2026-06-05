@@ -7,9 +7,16 @@
 // Token temporaire (23h), cache en sessionStorage.
 // ============================================================
 
+// Redgifs CORS = limite a redgifs.com seul -> on passe par un proxy CORS public.
+// corsproxy.io supporte les headers Authorization en passthrough.
+const CORS_PROXY = 'https://corsproxy.io/?';
 const REDGIFS_BASE = 'https://api.redgifs.com/v2';
 const TOKEN_KEY = 'rg_tok';
 const TOKEN_TTL_MS = 23 * 60 * 60 * 1000; // 23h
+
+function viaProxy(url) {
+  return CORS_PROXY + encodeURIComponent(url);
+}
 
 async function getToken() {
   try {
@@ -18,7 +25,7 @@ async function getToken() {
       return cached.token;
     }
   } catch {}
-  const r = await fetch(`${REDGIFS_BASE}/auth/temporary`);
+  const r = await fetch(viaProxy(`${REDGIFS_BASE}/auth/temporary`));
   if (!r.ok) throw new Error('redgifs_auth_failed_' + r.status);
   const data = await r.json();
   sessionStorage.setItem(TOKEN_KEY, JSON.stringify({
@@ -31,7 +38,7 @@ async function getToken() {
 async function search(query, count = 20, order = 'trending') {
   const token = await getToken();
   const url = `${REDGIFS_BASE}/gifs/search?search_text=${encodeURIComponent(query)}&count=${count}&order=${order}`;
-  const r = await fetch(url, {
+  const r = await fetch(viaProxy(url), {
     headers: { 'Authorization': `Bearer ${token}` },
   });
   if (!r.ok) throw new Error('redgifs_search_failed_' + r.status);
@@ -59,17 +66,30 @@ async function fetchRandomVideo(query) {
 
 /**
  * Genere une paire de videos (civils + undercover) a partir de 2 queries.
- * Comme Custom AI mais avec Redgifs.
+ * Tente Promise.all ; si echec, retry sequentiel pour avoir des erreurs claires.
  */
 async function generatePair(query1, query2) {
-  const [v1, v2] = await Promise.all([
-    fetchRandomVideo(query1),
-    fetchRandomVideo(query2),
-  ]);
-  return {
-    civils: { ...v1, title: query1.trim() },
-    undercover: { ...v2, title: query2.trim() },
-  };
+  try {
+    const [v1, v2] = await Promise.all([
+      fetchRandomVideo(query1),
+      fetchRandomVideo(query2),
+    ]);
+    return {
+      civils: { ...v1, title: query1.trim() },
+      undercover: { ...v2, title: query2.trim() },
+    };
+  } catch (e) {
+    // Re-essaie en sequentiel pour identifier laquelle a foire
+    let v1, v2;
+    try { v1 = await fetchRandomVideo(query1); }
+    catch (e1) { throw new Error('civils_failed_' + query1 + ': ' + e1.message); }
+    try { v2 = await fetchRandomVideo(query2); }
+    catch (e2) { throw new Error('undercover_failed_' + query2 + ': ' + e2.message); }
+    return {
+      civils: { ...v1, title: query1.trim() },
+      undercover: { ...v2, title: query2.trim() },
+    };
+  }
 }
 
 window.redgifsFetcher = { fetchRandomVideo, generatePair, search };

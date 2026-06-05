@@ -453,13 +453,14 @@ async function handleStartClick() {
     switchScreen('screen-ai-loading');
     setLoadingMsg(i18n.t('nsfwGenerating') || 'Recherche Redgifs…');
     try {
-      const tag = cat.redgifsTag || cat.name;
-      const pair = await window.redgifsFetcher.generatePair(tag, tag);
-      // 2 videos differentes du meme tag (civils & undercover) -- aiguillage
-      // pour que les joueurs aient toujours 2 visuels distincts
+      const tags = Array.isArray(cat.redgifsTags) && cat.redgifsTags.length >= 2
+        ? cat.redgifsTags
+        : [cat.redgifsTag || cat.name, cat.redgifsTag || cat.name];
+      const pair = await window.redgifsFetcher.generatePair(tags[0], tags[1]);
       state.selectedCategoryId = 'custom-ai'; // reutilise le flow custom
-      state.customCivils = { ...pair.civils, title: cat.emoji + ' ' + categoryName(cat) };
-      state.customUndercover = { ...pair.undercover, title: cat.emoji + ' ' + categoryName(cat) };
+      // Titre = nom du tag pour que les joueurs sachent leur mot
+      state.customCivils = { ...pair.civils, title: tags[0] };
+      state.customUndercover = { ...pair.undercover, title: tags[1] };
       goToNamesScreen();
     } catch (e) {
       console.warn('[NSFW cat]', e);
