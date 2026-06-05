@@ -137,7 +137,27 @@ async function loadVideos() {
   } else {
     state.translations = {};
   }
+
+  // Charge les categories NSFW si Mode Adulte actif
+  await reloadNsfwCategories();
   updateCategoryCounter();
+}
+
+async function reloadNsfwCategories() {
+  // Retire d'eventuelles categories NSFW deja chargees
+  state.categories = state.categories.filter(c => !c.isNsfw);
+  if (!window.adultMode || !window.adultMode.isOn()) return;
+  try {
+    const r = await fetch('data/videos-nsfw.json');
+    if (!r.ok) return;
+    const data = await r.json();
+    if (Array.isArray(data.categories)) {
+      // Ajoute en tete de liste pour visibilite
+      state.categories = data.categories.concat(state.categories);
+    }
+  } catch (e) {
+    console.warn('[NSFW] reload failed', e);
+  }
 }
 
 function categoryName(cat) {
@@ -166,6 +186,8 @@ function videoTitleI18n(cat, video, videoIdx) {
 }
 
 function isVisibleCategory(cat) {
+  // NSFW : pas de videos pre-load, fetch a la demande -> visible si tag defini
+  if (cat.isNsfw) return !!cat.redgifsTag;
   return cat.videos.length >= 2;
 }
 
@@ -363,6 +385,10 @@ function bindEvents() {
         window.adultMode.clearConfirmation();
       }
       refreshAdultBtn();
+      // Re-charge le set de categories (ajoute ou retire les NSFW)
+      await reloadNsfwCategories();
+      buildCategorySelect();
+      updateCategoryCounter();
     };
   }
   if (btnAdultMode) {
@@ -407,7 +433,7 @@ function changePlayers(delta) {
 }
 
 // ----------- Aiguillage Suivant -----------
-function handleStartClick() {
+async function handleStartClick() {
   if (state.selectedCategoryId === 'custom-ai') {
     if (!isPremium()) {
       toast(i18n.t('customAiPremiumOnly'));
@@ -415,6 +441,31 @@ function handleStartClick() {
       return;
     }
     switchScreen('screen-custom-ai');
+    return;
+  }
+  // Si categorie NSFW selectionnee : fetch Redgifs avant de passer aux noms
+  const cat = state.categories.find(c => c.id === state.selectedCategoryId);
+  if (cat && cat.isNsfw) {
+    if (!window.adultMode.isConfirmationFresh()) {
+      const ok = await window.adultMode.requestConfirmation(true);
+      if (!ok) return;
+    }
+    switchScreen('screen-ai-loading');
+    setLoadingMsg(i18n.t('nsfwGenerating') || 'Recherche Redgifs…');
+    try {
+      const tag = cat.redgifsTag || cat.name;
+      const pair = await window.redgifsFetcher.generatePair(tag, tag);
+      // 2 videos differentes du meme tag (civils & undercover) -- aiguillage
+      // pour que les joueurs aient toujours 2 visuels distincts
+      state.selectedCategoryId = 'custom-ai'; // reutilise le flow custom
+      state.customCivils = { ...pair.civils, title: cat.emoji + ' ' + categoryName(cat) };
+      state.customUndercover = { ...pair.undercover, title: cat.emoji + ' ' + categoryName(cat) };
+      goToNamesScreen();
+    } catch (e) {
+      console.warn('[NSFW cat]', e);
+      toast((i18n.t('videoErrorTitle') || 'Erreur') + ' : ' + (e.message || 'unknown'));
+      switchScreen('screen-setup');
+    }
     return;
   }
   goToNamesScreen();
@@ -957,8 +1008,8 @@ function pushRecentCategory(catId) {
 }
 
 function pickRandomCategory() {
-  // En mode aléatoire, on ne pioche que dans les catégories accessibles
-  const playable = state.categories.filter(c => isCategoryAvailable(c) && isVisibleCategory(c));
+  // En mode aléatoire, on ne pioche que dans les SFW (NSFW = choix explicite)
+  const playable = state.categories.filter(c => !c.isNsfw && isCategoryAvailable(c) && isVisibleCategory(c));
   if (playable.length === 0) return null;
 
   const recent = getRecentCategories();

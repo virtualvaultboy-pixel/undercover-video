@@ -1,0 +1,16 @@
+{
+  "categories": [
+    { "id": "nsfw-couple",    "name": "Couple amateur", "emoji": "💕", "isNsfw": true, "redgifsTag": "couple amateur",  "videos": [] },
+    { "id": "nsfw-milf",      "name": "MILF",           "emoji": "🥵", "isNsfw": true, "redgifsTag": "milf",            "videos": [] },
+    { "id": "nsfw-amateur",   "name": "Amateur",        "emoji": "📸", "isNsfw": true, "redgifsTag": "amateur",         "videos": [] },
+    { "id": "nsfw-pov",       "name": "POV",            "emoji": "👀", "isNsfw": true, "redgifsTag": "pov",             "videos": [] },
+    { "id": "nsfw-lesbian",   "name": "Lesbiennes",     "emoji": "👩‍❤️‍👩", "isNsfw": true, "redgifsTag": "lesbian",   "videos": [] },
+    { "id": "nsfw-blowjob",   "name": "Oral",           "emoji": "👄", "isNsfw": true, "redgifsTag": "blowjob",         "videos": [] },
+    { "id": "nsfw-anal",      "name": "Anal",           "emoji": "🍑", "isNsfw": true, "redgifsTag": "anal",            "videos": [] },
+    { "id": "nsfw-threesome", "name": "Threesome",      "emoji": "👫", "isNsfw": true, "redgifsTag": "threesome",       "videos": [] },
+    { "id": "nsfw-asian",     "name": "Asiatique",      "emoji": "🌸", "isNsfw": true, "redgifsTag": "asian",           "videos": [] },
+    { "id": "nsfw-cosplay",   "name": "Cosplay",        "emoji": "🎭", "isNsfw": true, "redgifsTag": "cosplay",         "videos": [] },
+    { "id": "nsfw-lingerie",  "name": "Lingerie",       "emoji": "👙", "isNsfw": true, "redgifsTag": "lingerie",        "videos": [] },
+    { "id": "nsfw-bdsm",      "name": "BDSM",           "emoji": "🖤", "isNsfw": true, "redgifsTag": "bdsm",            "videos": [] }
+  ]
+}
