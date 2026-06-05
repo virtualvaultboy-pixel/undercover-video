@@ -53,8 +53,10 @@ const I18N = {
     nsfwIdea2: "Mot-clé de l'undercover",
     nsfwIdea1Placeholder: "Ex : couple amateur",
     nsfwIdea2Placeholder: "Ex : threesome",
-    nsfwGenerate: "🔥 Lancer (18+)",
+    nsfwGenerate: "🔥 Lancer custom (18+)",
     nsfwGenerating: "Recherche sur Redgifs…",
+    nsfwGridTitle: "Choisis une catégorie (clic = lancement direct).",
+    nsfwCustomToggle: "✏️ Ou personnalise tes 2 mots-clés",
 
     // Tour de parole
     playTitle: "🎤 À vous de jouer !",
@@ -201,8 +203,10 @@ const I18N = {
     nsfwIdea2: "Undercover's keyword",
     nsfwIdea1Placeholder: "Ex: couple amateur",
     nsfwIdea2Placeholder: "Ex: threesome",
-    nsfwGenerate: "🔥 Start (18+)",
+    nsfwGenerate: "🔥 Start custom (18+)",
     nsfwGenerating: "Searching Redgifs…",
+    nsfwGridTitle: "Pick a category (1-click launch).",
+    nsfwCustomToggle: "✏️ Or customize your 2 keywords",
 
     playTitle: "🎤 Your turn!",
     playSubtitle: "Describe your video in turn.<br>Find the undercover.",
@@ -335,8 +339,10 @@ const I18N = {
     nsfwIdea2: "Palabra del undercover",
     nsfwIdea1Placeholder: "Ej: couple amateur",
     nsfwIdea2Placeholder: "Ej: threesome",
-    nsfwGenerate: "🔥 Iniciar (18+)",
+    nsfwGenerate: "🔥 Iniciar custom (18+)",
     nsfwGenerating: "Buscando en Redgifs…",
+    nsfwGridTitle: "Elige una categoría (1 clic = inicio directo).",
+    nsfwCustomToggle: "✏️ O personaliza tus 2 palabras",
 
     playTitle: "🎤 ¡Os toca!",
     playSubtitle: "Describid vuestro vídeo por turnos.<br>Encontrad al infiltrado.",

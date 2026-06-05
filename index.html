@@ -160,25 +160,31 @@
     <p class="subtitle" data-i18n="customAiGenerating">Génération des images en cours…</p>
   </section>
 
-  <!-- ÉCRAN 1.8 : NSFW Custom (mode adulte) -->
+  <!-- ÉCRAN 1.8 : NSFW (mode adulte) -->
   <section id="screen-nsfw-custom" class="screen">
     <h2 data-i18n="nsfwTitle">🔞 Mode Adulte</h2>
-    <p class="subtitle" data-i18n="nsfwSubtitle">Entrez 2 mots-clés (anglais conseillé). Contenu Redgifs.com adultes 18+.</p>
+    <p class="subtitle" data-i18n="nsfwGridTitle">Choisis une catégorie (clic = lancement direct).</p>
 
-    <label class="field">
-      <span data-i18n="nsfwIdea1">Mot-clé des civils</span>
-      <input type="text" id="nsfw-idea-1" maxlength="60"
-             data-i18n-placeholder="nsfwIdea1Placeholder"
-             placeholder="Ex : couple amateur">
-    </label>
-    <label class="field">
-      <span data-i18n="nsfwIdea2">Mot-clé de l'undercover</span>
-      <input type="text" id="nsfw-idea-2" maxlength="60"
-             data-i18n-placeholder="nsfwIdea2Placeholder"
-             placeholder="Ex : threesome">
-    </label>
+    <div id="nsfw-categories-grid" class="nsfw-grid"></div>
 
-    <button id="btn-nsfw-generate" class="primary nsfw-btn" data-i18n="nsfwGenerate">🔥 Lancer (18+)</button>
+    <details class="nsfw-custom-details">
+      <summary data-i18n="nsfwCustomToggle">✏️ Ou personnalise tes 2 mots-clés</summary>
+      <p class="subtitle small" data-i18n="nsfwSubtitle">Entrez 2 mots-clés (anglais conseillé). Contenu Redgifs.com 18+.</p>
+      <label class="field">
+        <span data-i18n="nsfwIdea1">Mot-clé des civils</span>
+        <input type="text" id="nsfw-idea-1" maxlength="60"
+               data-i18n-placeholder="nsfwIdea1Placeholder"
+               placeholder="Ex : couple amateur">
+      </label>
+      <label class="field">
+        <span data-i18n="nsfwIdea2">Mot-clé de l'undercover</span>
+        <input type="text" id="nsfw-idea-2" maxlength="60"
+               data-i18n-placeholder="nsfwIdea2Placeholder"
+               placeholder="Ex : threesome">
+      </label>
+      <button id="btn-nsfw-generate" class="primary nsfw-btn" data-i18n="nsfwGenerate">🔥 Lancer custom (18+)</button>
+    </details>
+
     <button id="btn-nsfw-back" class="secondary" data-i18n="customAiBack">Retour</button>
   </section>
 
@@ -294,11 +300,11 @@
   <!-- Toast (notifications discretes, role status pour SR) -->
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-  <script src="i18n.js?v=28"></script>
-  <script src="play-billing.js?v=28"></script>
-  <script src="ai-generator.js?v=28"></script>
-  <script src="redgifs-fetcher.js?v=28"></script>
-  <script src="adult-mode.js?v=28"></script>
-  <script src="app.js?v=28"></script>
+  <script src="i18n.js?v=30"></script>
+  <script src="play-billing.js?v=30"></script>
+  <script src="ai-generator.js?v=30"></script>
+  <script src="redgifs-fetcher.js?v=30"></script>
+  <script src="adult-mode.js?v=30"></script>
+  <script src="app.js?v=30"></script>
 </body>
 </html>

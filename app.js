@@ -101,6 +101,9 @@ function isCategoryFree(catId) {
   return idx >= 0 && idx < FREE_COUNT;
 }
 function isCategoryAvailable(cat) {
+  // NSFW : gate par toggle Mode Adulte + gating 18+, pas par Premium
+  // (le toggle adult est deja un gate suffisant + l'app est gratuite en mode adulte)
+  if (cat.isNsfw) return true;
   if (cat.videos.length < 2) return false;
   return isPremium() || isCategoryFree(cat.id);
 }
@@ -395,6 +398,7 @@ function bindEvents() {
     btnAdultMode.onclick = async () => {
       const ok = await window.adultMode.requestConfirmation(false);
       if (!ok) return;
+      renderNsfwGrid();
       switchScreen('screen-nsfw-custom');
     };
   }
@@ -516,6 +520,33 @@ async function handleCustomGenerate() {
 function setLoadingMsg(msg) {
   const el = document.querySelector('#screen-ai-loading .subtitle');
   if (el) el.textContent = msg;
+}
+
+// === NSFW : grille de categories predefinies dans screen-nsfw-custom ===
+async function renderNsfwGrid() {
+  const grid = document.getElementById('nsfw-categories-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+  // S'assure que les categories NSFW sont chargees
+  const nsfwCats = state.categories.filter(c => c.isNsfw);
+  if (nsfwCats.length === 0) {
+    grid.innerHTML = '<p class="subtitle">Chargement…</p>';
+    await reloadNsfwCategories();
+  }
+  state.categories.filter(c => c.isNsfw).forEach(cat => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'nsfw-cat-btn';
+    btn.innerHTML = `<span class="nsfw-cat-emoji">${cat.emoji}</span><span class="nsfw-cat-name">${cat.name}</span>`;
+    btn.onclick = async () => {
+      // Lance le jeu sur cette categorie NSFW (passe par handleStartClick logic)
+      state.selectedCategoryId = cat.id;
+      switchScreen('screen-setup');
+      // Re-trigger handleStartClick comme si on avait clique Suivant
+      await handleStartClick();
+    };
+    grid.appendChild(btn);
+  });
 }
 
 // === NSFW custom (Redgifs) — meme flux que Custom AI mais video au lieu d'image ===
