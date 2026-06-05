@@ -125,9 +125,10 @@ async function init() {
 }
 
 async function loadVideos() {
+  const bust = '?v=' + Date.now();
   const [resV, resT] = await Promise.all([
-    fetch('data/videos.json'),
-    fetch('data/translations.json').catch(() => null),
+    fetch('data/videos.json' + bust),
+    fetch('data/translations.json' + bust).catch(() => null),
   ]);
   const data = await resV.json();
   state.categories = data.categories;
@@ -151,7 +152,7 @@ async function reloadNsfwCategories() {
   state.categories = state.categories.filter(c => !c.isNsfw);
   if (!window.adultMode || !window.adultMode.isOn()) return;
   try {
-    const r = await fetch('data/videos-nsfw.json');
+    const r = await fetch('data/videos-nsfw.json?v=' + Date.now());
     if (!r.ok) return;
     const data = await r.json();
     if (Array.isArray(data.categories)) {
